@@ -1,0 +1,6 @@
+---
+title: "Computational methods in landscape ecology"
+bibliography: CLER.bib
+---
+
+Landscape ecology is fun [@Turner1989].
