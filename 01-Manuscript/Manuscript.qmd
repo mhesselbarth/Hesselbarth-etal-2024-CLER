@@ -1,6 +1,15 @@
 ---
 title: "Computational methods in landscape ecology"
+author:
+  - name: Maximilian H.K. Hesselbarth
+    orcid: 0000-0003-1125-9918
+    email: mhk.hesselbarth@gmail.com
+    affiliations:
+      - name: International Institute for Applied Systems Analysis (IIASA) 
+        city: Laxenburg
 bibliography: CLER.bib
+format:
+  pdf
 ---
 
 Landscape ecology is fun [@Turner1989].
