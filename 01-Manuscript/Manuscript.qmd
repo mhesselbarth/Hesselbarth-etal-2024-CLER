@@ -9,7 +9,17 @@ author:
         city: Laxenburg
 bibliography: CLER.bib
 format:
-  pdf
+  pdf:
+    documentclass: scrartcl
+    number-sections: true
+    include-in-header: 
+      text: '\usepackage{lineno}\linenumbers'
 ---
 
+# Introduction
+
 Landscape ecology is fun [@Turner1989].
+There are many things to explore [@With2019].
+
+
+\printbibliography
