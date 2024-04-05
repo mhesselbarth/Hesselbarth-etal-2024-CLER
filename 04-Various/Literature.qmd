@@ -1,0 +1,10 @@
+---
+title: Interesting literature
+format: html
+---
+
+Most recent update: `r format(Sys.time(), "%B %d, %Y // %H:%M:%S")`
+
+# Literature to look at
+[10.1007/s10980-021-01366-9](www.doi.org/10.1007/s10980-021-01366-9)
+
