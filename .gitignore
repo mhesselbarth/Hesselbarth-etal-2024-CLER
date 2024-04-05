@@ -3,6 +3,8 @@
 .RData
 .Ruserdata
 .DS_Store
+nul
 /.quarto/
 *.docx
-01-Manuscript/Manuscript_files
+01-Manuscript/*_files
+04-Various/*_files
