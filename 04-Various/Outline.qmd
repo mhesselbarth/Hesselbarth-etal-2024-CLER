@@ -1,4 +1,5 @@
 ---
+title: Outline
 format: html
 ---
 
@@ -44,7 +45,3 @@ Most recent update: `r format(Sys.time(), "%B %d, %Y // %H:%M:%S")`
 
 -	Remote sensing?
 -	General spatial data developments?
-
-# Literature to look at
-[10.1007/s10980-021-01366-9](www.doi.org/10.1007/s10980-021-01366-9)
-
