@@ -6,7 +6,7 @@
 
 -   Try to write informative commit messages (mine will become increasingly passive-aggressive over time :))
 
--   Please indicate comments to already written text using your initial, e.g., <!-- MH: This needs a reference -->.
+-   Please indicate comments to already written text using your initial, e.g., \<!-- MH: This needs a reference \-->.
 
 -   Please add all references to the `.bib.` file in alphabetical order trying to be as consistent as possible.
 
@@ -14,7 +14,7 @@
 
 -   Please be nice and respectful :)
 
--   New code should follow the tidyverse [style guide](https://style.tidyverse.org).
+-   New code should follow the tidyverse [style guide](https://style.tidyverse.org) (well...at least as close as possible)
 
 ## Code of Conduct
 
