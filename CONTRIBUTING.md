@@ -16,6 +16,8 @@
 
 -   New code should follow the tidyverse [style guide](https://style.tidyverse.org) (well...at least as close as possible)
 
+-   For all text files, remeber to knit and push once you are done for the writting session.
+
 ## Code of Conduct
 
 Please note that the Hesselbarth-etal-CLER project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this project you agree to abide by its terms.
