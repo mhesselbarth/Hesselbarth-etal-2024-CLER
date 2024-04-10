@@ -1,6 +1,6 @@
 # Contributing to Hesselbarth-etal-CLER
 
--   Remeber to pull first thing.
+-   Remember to pull first thing.
 
 -   Please write one sentence per line so changes can be easily tracked in *git*.
 
