@@ -19,29 +19,34 @@ Most recent update: `r format(Sys.time(), "%B %d, %Y // %H:%M:%S")`
 
 1. Please feel free to add topics to the outline. This is just based on some brief brain storming and more a conversation starter
 2. Please feel free to add your name to a section as lead. Of course multiple people can work on one section
-3. Please feel free to add general comments, remarks, etc.
+3. Please feel free to add general comments, remarks, etc. (using your initals)
+4. Knit and push changes
 
 # Outline
 
 - Introduction to landscape ecology (*Hesselbarth*)
-  - Definition of landscape ecology
-  - Brief history of landscape ecology
+  - Brief definition of landscape ecology
   - Computational aspects of landscape ecology
-- Open source vs. proprietary software
-- GUI vs. script based software
-- Programming language
-  - R (*Hesselbarth*, *Nowosad*)
-  - Python (*Bosch*)
-  - Julia (*Schouten*)
-- Classic/traditional tools
-- Upcoming/modern tools
-  - AI/ML tools
-  - Virtual reality
-- Spatial planning perspective (*Jung*)
-- Spatial patterns (*Nowosad*, *Hesselbarth?*)
-- Landscape genetics (*Breitbart*)
+- Software and programming language for landscape ecology
+  - Open source vs. proprietary software
+  - GUI vs. script based software
+  - Programming language
+    - R (*Hesselbarth*, *Nowosad*)
+    - Python (*Bosch*)
+    - Julia (*Schouten*)
+- Computational methods
+  - Visualization (i.e., maps)
+  - Spatial patterns (*Nowosad*, *Hesselbarth?*)
+  - Connectivity
+  - Simulations (e.g., neutral landscapes) (*Hesselbarth*)
+  - Optimization
+  - Spatial planning perspective (*Jung*)
+  - Landscape genetics (*Breitbart?*)
+- Discussion
+  - General spatial data developments
+  - AI impacts on landscape ecology
 
 # Open Questions
 
--	Remote sensing?
--	General spatial data developments?
+-	Remote sensing developments?
+
