@@ -1,10 +1,12 @@
 ---
 title: Interesting literature
 format: html
+engine: knitr
 ---
 
-Most recent update: `r format(Sys.time(), "%B %d, %Y // %H:%M:%S")`
+Most recent update: `r format(Sys.time(), "%B %d, %Y // %H:%M")`
 
 # Literature to look at
 [10.1007/s10980-021-01366-9](www.doi.org/10.1007/s10980-021-01366-9)
 [https://doi.org/10.1111/2041-210X.14061](https://doi.org/10.1111/2041-210X.14061)
+[https://sustainability.fb.com/blog/2024/04/22/using-artificial-intelligence-to-map-the-earths-forests/](https://sustainability.fb.com/blog/2024/04/22/using-artificial-intelligence-to-map-the-earths-forests/)

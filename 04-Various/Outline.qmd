@@ -1,6 +1,7 @@
 ---
 title: Outline
 format: html
+engine: knitr
 ---
 
 **Journal**: Current Landscape Ecology Reports
@@ -13,7 +14,7 @@ format: html
 
 **Due Date**: August 16, 2024
 
-Most recent update: `r format(Sys.time(), "%B %d, %Y // %H:%M:%S")`
+Most recent update: `r format(Sys.time(), "%B %d, %Y // %H:%M")`
 
 # General
 
@@ -49,4 +50,5 @@ Most recent update: `r format(Sys.time(), "%B %d, %Y // %H:%M:%S")`
 # Open Questions
 
 -	Remote sensing developments?
+- Focus on script-based software?
 

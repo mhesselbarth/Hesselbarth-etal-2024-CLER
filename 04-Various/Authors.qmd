@@ -3,7 +3,10 @@ title: Authors
 format: 
   html:
     page-layout: full
+engine: knitr
 ---
+
+Most recent update: `r format(Sys.time(), "%B %d, %Y // %H:%M")`
 
 Table with authors information (in random order)
 
