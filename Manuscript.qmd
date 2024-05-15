@@ -10,7 +10,6 @@ bibliography: CLER.bib
 format:
   pdf:
     keep-tex: true
-    number-sections: true
     template-partials: 
       - title.tex
     include-in-header: 
@@ -23,9 +22,15 @@ format:
         \renewcommand\Affilfont{\small}
 ---
 
-# Introduction
+<!-- FIXME: Add Authors -->
+<!-- FIXME: Add sections -->
 
-Landscape ecology is fun [@Turner1989].
-There are many things to explore [@With2019].
+{{< include Sections/introduction.qmd >}}
+{{< include Sections/spatial-planning.qmd >}}
 
 {{< pagebreak >}}
+
+### References
+
+::: {#refs}
+:::

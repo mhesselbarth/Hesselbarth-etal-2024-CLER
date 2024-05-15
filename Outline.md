@@ -1,17 +1,7 @@
----
-title: Outline
-format: html
-engine: knitr
----
-
 **Journal**: Current Landscape Ecology Reports
-
 **Section**: Methodological Developments in Landscape Ecology
-
 **Article Topic**: Computational methods in landscape ecology
-
 **Editors**: Dr. Dimitri Justeau-Allaire (Section Editor); Dr. Sara Gagné (Editor-in-Chief)
-
 **Due Date**: August 16, 2024
 
 Most recent update: `r format(Sys.time(), "%B %d, %Y // %H:%M")`
@@ -52,3 +42,7 @@ Most recent update: `r format(Sys.time(), "%B %d, %Y // %H:%M")`
 -	Remote sensing developments?
 - Focus on script-based software?
 
+# Literature to look at
+[10.1007/s10980-021-01366-9](www.doi.org/10.1007/s10980-021-01366-9)
+[https://doi.org/10.1111/2041-210X.14061](https://doi.org/10.1111/2041-210X.14061)
+[https://sustainability.fb.com/blog/2024/04/22/using-artificial-intelligence-to-map-the-earths-forests/](https://sustainability.fb.com/blog/2024/04/22/using-artificial-intelligence-to-map-the-earths-forests/)
