@@ -5,18 +5,27 @@ author:
     orcid: 0000-0003-1125-9918
     email: mhk.hesselbarth@gmail.com
     affiliations:
-      - name: International Institute for Applied Systems Analysis (IIASA) 
-        city: Laxenburg
+      - name: International Institute for Applied Systems Analysis, Biodiversity, Ecology, and Conservation Group, Laxenburg (Austria)
 bibliography: CLER.bib
 format:
   pdf:
-    documentclass: scrartcl
+    keep-tex: true
     number-sections: true
+    template-partials: 
+      - title.tex
     include-in-header: 
-      text: '\usepackage{lineno}\linenumbers'
+      text: | 
+        \usepackage{lineno}\linenumbers
+        \usepackage[noblocks]{authblk}
+        \renewcommand*{\Authsep}{, }
+        \renewcommand*{\Authand}{, }
+        \renewcommand*{\Authands}{, }
+        \renewcommand\Affilfont{\small}
 ---
 
 # Introduction
 
 Landscape ecology is fun [@Turner1989].
 There are many things to explore [@With2019].
+
+{{< pagebreak >}}
