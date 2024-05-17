@@ -22,7 +22,7 @@
   - Entropy (**Nowosad**, **Bosch**)
   - Landscape Mosaic (**Bosch**)
 - Connectivity / Movement / Dispersal
-- Sampling in landscape ecology (**Bosch**)
+- Sampling (and aggregation?) in landscape ecology (**Bosch**)
 - Simulations and models
   - Neutral landscape (**Hesselbarth**)
   - Process-based simulation (**Schouten**, **Hesselbarth**)
