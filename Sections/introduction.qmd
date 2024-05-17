@@ -6,5 +6,12 @@ bibliography: CLER.bib
 
 # Introduction
 
-Landscape ecology is fun [@Turner1989].
-There are many things to explore [@With2019].
+Landscapes are typically defined as mosaics of different land covers, habitats, ecosystems, or land use systems [@Forman1986,@Forman1995] - with empathize on existing heterogeneity in at least one factor of interest [@Turner2015].
+The link of spatial heterogeneity and abiotic as well as biotic processes is the fundamental concept of landscape ecology.
+This includes potential feedbacks between processes and heterogeneity, spatial and temporal flows across heterogenous landscapes, or the management of heterogeneity in landscapes [@Risser1984,@Turner1989].
+However, due to the spatial context of heterogeneity, the pattern-process link is scale dependent [@Levin1992,@Wiens1989,@Wu2013].
+<!-- MH: Add remote sensing data paper -->
+Because landscape ecology is a cross-disciplinary field including, e.g., social and political sciences, geography, or ecology and evolution [@Wiens1997,With2019] and the general increase of available data [@Jaric2020,@Nathan2022,@Wuest2020], there is the need for sophisticated computational methods.
+
+<!-- Computational methods refer to techniques and procedures used to solve problems and perform calculations using computers -->
+<!-- Computational methods in landscape ecology refer to the use of computer-based algorithms and models to analyze and understand the patterns and processes of landscapes. -->
