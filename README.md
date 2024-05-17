@@ -6,15 +6,17 @@ Please read the [`CONTRIBUTING.md`](CONTRIBUTING.md) file before pushing to this
 
 <br/>
 
-The repository contains the following files:
+The repository contains the following files (besides others):
 
-**/01-Manuscript**: Folder storing all files related to the manuscript
+**/R-Scripts**: All `R` scripts used to prepare manuscript (if needed).
 
-**/02-ReviewerComments**: Comments of anonymous reviewers and replies to raised issues
+**/Sections**: Folder storing all `quarto` files for sections.
 
-**/03-RScripts**: All R scripts used to prepare manuscript
+**`Manuscript.qmd`**: `quarto` file to render final manuscript.
 
-**/04-Various**: Folder containing various files
+**`Outline.md`**: Outline of manuscript including assignments to sections.
+
+**`CONTRIBUTING.md`**: Some general instructions on how to contribute.
 
 <br/>
 <br/>
