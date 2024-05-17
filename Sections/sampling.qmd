@@ -1,0 +1,9 @@
+---
+bibliography: CLER.bib
+---
+
+<!-- Person responsible: Bosch -->
+
+# Sampling in landscape ecology
+
+## Spatial patterns

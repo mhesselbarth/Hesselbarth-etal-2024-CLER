@@ -22,10 +22,11 @@ format:
         \renewcommand\Affilfont{\small}
 ---
 
-<!-- FIXME: Add Authors -->
+<!-- FIXME: Update Authors -->
 <!-- FIXME: Add sections -->
 
 {{< include Sections/introduction.qmd >}}
+{{< include Sections/spatial-pattern.qmd >}}
 {{< include Sections/spatial-planning.qmd >}}
 
 {{< pagebreak >}}

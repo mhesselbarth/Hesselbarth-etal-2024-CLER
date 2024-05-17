@@ -1,0 +1,25 @@
+---
+bibliography: CLER.bib
+---
+
+<!-- Person responsible: Nowosad, Bosch, Hesselbarth -->
+
+# Spatial patterns
+
+Landscape ecology is fun [@Turner1989].
+There are many things to explore [@With2019].
+
+## Landscape metrics
+<!-- Hesselbarth -->
+
+## Vector metrics
+<!-- Nowosad, Hesselbarth -->
+
+## Surface metrics
+<!-- Bosch, Hesselbarth -->
+
+## Entropy
+<!-- Nowosad, Bosch -->
+
+## Landscape Mosaic
+<!-- Bosch -->

@@ -1,0 +1,22 @@
+---
+bibliography: CLER.bib
+---
+
+<!-- Person responsible: Hesselbarth, Nowosad, Bosch, Jung, Schouten  -->
+
+# Software and programming languages
+
+## Open source vs. proprietary software
+
+## GUI vs. script-based software 
+
+## Programing languages
+
+### R
+<!-- Hesselbarth -->
+
+### Python
+<!-- Bosch -->
+
+### Julia
+<!-- Schouten -->
