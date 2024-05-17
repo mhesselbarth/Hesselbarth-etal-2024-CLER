@@ -21,7 +21,7 @@
   - Surface metrics (**Bosch**, **Hesselbarth?**)
   - Entropy (**Nowosad**, **Bosch**)
   - Landscape Mosaic (**Bosch**)
-- Connectivity / Movement / Dispersal
+- Connectivity / Movement / Dispersal (**Schouten**)
 - Sampling (and aggregation?) in landscape ecology (**Bosch**)
 - Simulations and models
   - Neutral landscape (**Hesselbarth**)
