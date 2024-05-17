@@ -3,46 +3,56 @@
 **Article Topic**: Computational methods in landscape ecology
 **Editors**: Dr. Dimitri Justeau-Allaire (Section Editor); Dr. Sara Gagné (Editor-in-Chief)
 **Due Date**: August 16, 2024
-
-Most recent update: `r format(Sys.time(), "%B %d, %Y // %H:%M")`
+**Word count**: 2,000 - 4,000 words
 
 # General
-
-1. Please feel free to add topics to the outline. This is just based on some brief brain storming and more a conversation starter
-2. Please feel free to add your name to a section as lead. Of course multiple people can work on one section
-3. Please feel free to add general comments, remarks, etc. (using your initals)
-4. Knit and push changes
+1. Please feel free to add or re-arrange topics to the outline. This is work-in-progress and not set in stone.
+2. Please feel free to add your name to a (sub-) section as lead. Of course multiple people can work on one section.
+3. Please feel free to add general comments, remarks, etc. (using your initials).
 
 # Outline
-
-- Introduction to landscape ecology (*Hesselbarth*)
-  - Brief definition of landscape ecology
+- Introduction (**Hesselbarth**)
+  - Brief introduction of landscape ecology
+  - Definition of computational methods
   - Computational aspects of landscape ecology
+- Spatial patterns
+  - Landscape metrics (**Hesselbarth**)
+  - Vector metrics (**Nowosad**, **Hesselbarth**)
+  - Surface metrics (**Bosch**, **Hesselbarth?**)
+  - Entropy (**Nowosad**, **Bosch**)
+  - Landscape Mosaic (**Bosch**)
+- Connectivity / Movement / Dispersal
+- Sampling in landscape ecology (**Bosch**)
+- Simulations and models
+  - Neutral landscape (**Hesselbarth**)
+  - Process-based simulation (**Schouten**, **Hesselbarth**)
+- Optimization 
+  - *MH: maybe rather include in several existing sections?*
+- Spatial planning (**Jung**)
+- Landscape genetics (**Breitbart?**)
 - Software and programming language for landscape ecology
-  - Open source vs. proprietary software
-  - GUI vs. script based software
+  - *?* Open source vs. proprietary software
+    - *MH: Only very brief, mention that both exists*
+  - *?* GUI vs. script based software
+    - *MH: Similar as above, only brief mention that both exit*
   - Programming language
-    - R (*Hesselbarth*, *Nowosad*)
-    - Python (*Bosch*)
-    - Julia (*Schouten*)
-- Computational methods
-  - Visualization (i.e., maps)
-  - Spatial patterns (*Nowosad*, *Hesselbarth?*)
-  - Connectivity
-  - Simulations (e.g., neutral landscapes) (*Hesselbarth*)
-  - Optimization
-  - Spatial planning perspective (*Jung*)
-  - Landscape genetics (*Breitbart?*)
+    - R (**Hesselbarth**, **Nowosad?**)
+    - Python (**Bosch**, **Jung?**)
+    - Julia (**Schouten**)
 - Discussion
-  - General spatial data developments
-  - AI impacts on landscape ecology
+  - Future needs
 
-# Open Questions
+## Currently missing but maybe interesting
+- Artificial intelligence impacts on landscape ecology
+- More processes focused section(s)
 
--	Remote sensing developments?
-- Focus on script-based software?
+# General comments
+- Include more general debates in the field if we can connect them to computational methods (e.g., habitat amount vs fragmentation)
+- Generally, structure to first show was currently available and used, followed by what could be missing
 
 # Literature to look at
-[10.1007/s10980-021-01366-9](www.doi.org/10.1007/s10980-021-01366-9)
-[https://doi.org/10.1111/2041-210X.14061](https://doi.org/10.1111/2041-210X.14061)
-[https://sustainability.fb.com/blog/2024/04/22/using-artificial-intelligence-to-map-the-earths-forests/](https://sustainability.fb.com/blog/2024/04/22/using-artificial-intelligence-to-map-the-earths-forests/)
+[Machine learning in landscape ecology](https://doi.org/10.1007/s10980-021-01366-9)
+[Machine learning review for ecology](https://doi.org/10.1111/2041-210X.14061)
+[Connectivity metrics for conservation planning](https://doi.org/10.1016/j.biocon.2021.109008)
+[Connectivity modelling in conservation science](https://doi.org/10.1038/s41598-022-20370-w)
+[Landscape ecological concepts in planning](https://doi.org/10.1007/s10980-021-01193-y)
