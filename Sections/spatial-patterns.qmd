@@ -4,16 +4,34 @@ bibliography: CLER.bib
 
 <!-- Person responsible: Nowosad, Bosch, Hesselbarth -->
 
-# Spatial patterns
-
 Landscape ecology is fun [@Turner1989].
 There are many things to explore [@With2019].
 
+# Spatial patterns
+
+spatial patterns definitions in the literature (general)
+?existance of spatial pattterns in many contexts, from geography, through biology and urban planning to medical studies
+?relation of spatial patterns to spatial processes
+
+spatial patterns in data (computational approach); its limitations and considerations
+raster data
+vector data: point, line, polygon
+point clouds 
+time series data
+
+one variable vs. multivariable spatial patterns
+categorical vs. continuous spatial patterns
+
+resolution, scale, and extent in spatial patterns
+
+short intro to the subsequent sections
+
+!to conclusions that relation of spatial patterns to spatial processes is a golden grail of landscape ecology
+!what with fractals?
+!ai and deep learning still seems to be underused in landscape ecology
+
 ## Landscape metrics
 <!-- Hesselbarth -->
-
-## Vector metrics
-<!-- Nowosad, Hesselbarth -->
 
 ## Surface metrics
 <!-- Bosch, Hesselbarth -->
@@ -21,5 +39,23 @@ There are many things to explore [@With2019].
 ## Entropy
 <!-- Nowosad, Bosch -->
 
-## Landscape Mosaic
+intro to entropy
+various concepts: thermodynamic (Boltzmann), information (Shannon), Kolmogorov, etc.
+how they are related to each other
+how they are related to spatial patterns and landscape ecology
+
+entropy measures are still related to the underlining data representation
+
+claims of relations between entropy and thermodynamics
+
+## Landscape mosaic
 <!-- Bosch -->
+
+## Vector metrics
+<!-- Nowosad, Hesselbarth -->
+
+an intro to the section
+what is similar to landscape metrics
+
+add an info about shape metrics
+
