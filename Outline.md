@@ -55,4 +55,6 @@
 [Machine learning review for ecology](https://doi.org/10.1111/2041-210X.14061)
 [Connectivity metrics for conservation planning](https://doi.org/10.1016/j.biocon.2021.109008)
 [Connectivity modelling in conservation science](https://doi.org/10.1038/s41598-022-20370-w)
+[Computational tools resistance surfaces](https://doi.org/10.1007/s10980-022-01469-x)
 [Landscape ecological concepts in planning](https://doi.org/10.1007/s10980-021-01193-y)
+[Remote Sensing and Landscape Ecology](https://doi.org/10.1007/s40823-020-00054-9)
