@@ -4,9 +4,12 @@
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
 %
 \documentclass[
+  12pt,
+  a4paperpaper,
 ]{article}
 
 \usepackage{amsmath,amssymb}
+\usepackage{setspace}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
@@ -27,17 +30,8 @@
   \usepackage[]{microtype}
   \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
-\makeatletter
-\@ifundefined{KOMAClassName}{% if non-KOMA class
-  \IfFileExists{parskip.sty}{%
-    \usepackage{parskip}
-  }{% else
-    \setlength{\parindent}{0pt}
-    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
-}{% if KOMA class
-  \KOMAoptions{parskip=half}}
-\makeatother
 \usepackage{xcolor}
+\usepackage[margin=25mm]{geometry}
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 % Make \paragraph and \subparagraph free-standing
@@ -166,6 +160,7 @@
 \hypersetup{
   pdftitle={Computational methods in landscape ecology},
   pdfauthor={Maximilian H.K. Hesselbarth},
+  pdfkeywords={keyword1, keyword2},
   colorlinks=true,
   linkcolor={blue},
   filecolor={Maroon},
@@ -187,10 +182,59 @@
 \begin{document}
 \maketitle
 
+\setstretch{1.75}
 \section{Introduction}\label{introduction}
+
+Landscapes are typically defined as mosaics of different land covers,
+habitats, ecosystems, or land use systems (Forman and Godron 1986;
+Forman 1995) - with empathize on existing heterogeneity in at least one
+factor of interest (Turner and Gardner 2015). Linking the spatial
+heterogeneity and abiotic as well as biotic processes is the fundamental
+concept of landscape ecology. This includes potential feedbacks between
+heterogeneity and processes, spatial and temporal flows across
+heterogenous landscapes, or the management of heterogeneity in
+landscapes (Risser et al. 1984; Turner 1989). However, due to the
+spatial context of heterogeneity, the pattern-process link is scale
+dependent (Wiens 1989; Levin 1992; Wu 2013).
+
+Computational science involves analyzing abstracted core mechanisms of
+research questions using data and algorithms. Thus, computational
+ecology can be defined if computational science is used to address
+ecological research questions with focus on complex adaptive systems and
+data-driven approaches (Poisot et al. 2019). Computational ecology in
+general and simulations specifically are important for ecology because
+ecological data is often context- and scale-dependent and infeasible to
+study in reproducible, replicable and controlled experimental settings
+(Petrovskii and Petrovskaya 2012).
+
+Because landscape ecology is a cross-disciplinary field including (e.g.,
+social sciences, geography, or ecology and evolution Wiens 1997; With
+2019), the general increase of available data (Chi et al. 2016; Jarić et
+al. 2020; Wüest et al. 2020; Nathan et al. 2022), or the complex systems
+characteristics of landscapes and processes (Newman et al. 2019), there
+is the need for sophisticated computational methods in order to link
+patterns and processes.
+
+This paper aims to introduce the latest developments of computation
+methods in landscape ecology. However, it is not a general introduction
+into (computational) landscape ecology. For a more comprehensive
+introductions to landscape ecology in general, please see e.g.~Turner
+and Gardner (2015) or Gergel and Turner (2017).
+
+\section{Spatial patterns}\label{spatial-patterns}
 
 Landscape ecology is fun (Turner 1989). There are many things to explore
 (With 2019).
+
+\subsection{Landscape metrics}\label{landscape-metrics}
+
+\subsection{Vector metrics}\label{vector-metrics}
+
+\subsection{Surface metrics}\label{surface-metrics}
+
+\subsection{Entropy}\label{entropy}
+
+\subsection{Landscape Mosaic}\label{landscape-mosaic}
 
 \section{Spatial planning}\label{spatial-planning}
 
@@ -202,15 +246,90 @@ Landscape ecology is fun (Turner 1989). There are many things to explore
 \subsubsection{References}\label{references}
 
 \phantomsection\label{refs}
-\begin{CSLReferences}{1}{0}
+\begin{CSLReferences}{1}{1}
+\bibitem[\citeproctext]{ref-Chi2016}
+Chi M, Plaza A, Benediktsson JA, et al (2016) Big data for remote
+sensing: Challenges and opportunities. Proceedings of the IEEE
+104:2207--2219. \url{https://doi.org/10.1109/JPROC.2016.2598228}
+
+\bibitem[\citeproctext]{ref-Forman1995}
+Forman RTT (1995) Land mosaics: The ecology of landscapes and regions.
+Cambridge University Press, Cambridge, UK
+
+\bibitem[\citeproctext]{ref-Forman1986}
+Forman RTT, Godron M (1986) Landscape ecology. Wiley \& Sons,
+Chichester, UK
+
+\bibitem[\citeproctext]{ref-Gergel2017}
+Gergel SE, Turner MG (eds) (2017)
+\href{https://doi.org/10.1007/978-1-4939-6374-4}{Learning landscape
+ecology}. Springer New York, New York, NY
+
+\bibitem[\citeproctext]{ref-Jaric2020}
+Jarić I, Correia RA, Brook BW, et al (2020) iEcology: Harnessing large
+online resources to generate ecological insights. Trends in Ecology \&
+Evolution 35:630--639. \url{https://doi.org/10.1016/j.tree.2020.03.003}
+
+\bibitem[\citeproctext]{ref-Levin1992}
+Levin SA (1992) The problem of pattern and scale in ecology. Ecology
+73:1943--1967. \url{https://doi.org/10.2307/1941447}
+
+\bibitem[\citeproctext]{ref-Nathan2022}
+Nathan R, Monk CT, Arlinghaus R, et al (2022) Big-data approaches lead
+to an increased understanding of the ecology of animal movement. Science
+375:eabg1780. \url{https://doi.org/10.1126/science.abg1780}
+
+\bibitem[\citeproctext]{ref-Newman2019}
+Newman EA, Kennedy MC, Falk DA, McKenzie D (2019) Scaling and complexity
+in landscape ecology. Frontiers in Ecology and Evolution 7:293.
+\url{https://doi.org/10.3389/fevo.2019.00293}
+
+\bibitem[\citeproctext]{ref-Petrovskii2012}
+Petrovskii S, Petrovskaya N (2012) Computational ecology as an emerging
+science. Interface Focus 2:241--254.
+\url{https://doi.org/10.1098/rsfs.2011.0083}
+
+\bibitem[\citeproctext]{ref-Poisot2019}
+Poisot T, LaBrie R, Larson E, et al (2019) Data-based, synthesis-driven:
+Setting the agenda for computational ecology. Ideas in Ecology and
+Evolution 12: \url{https://doi.org/10.24908/iee.2019.12.2.e}
+
+\bibitem[\citeproctext]{ref-Risser1984}
+Risser PG, Karr JR, Forman RTT (1984) Landscape ecology: Directions and
+approaches. Illinois Natural History Survery Special Publication 2:7--14
+
 \bibitem[\citeproctext]{ref-Turner1989}
-Turner, M. G. 1989. {``Landscape Ecology: The Effect of Pattern on
-Process.''} \emph{Annual Review of Ecology and Systematics} 20 (1):
-171--97. \url{https://doi.org/10.1146/annurev.es.20.110189.001131}.
+Turner MG (1989) Landscape ecology: The effect of pattern on process.
+Annual Review of Ecology and Systematics 20:171--197.
+\url{https://doi.org/10.1146/annurev.es.20.110189.001131}
+
+\bibitem[\citeproctext]{ref-Turner2015}
+Turner MG, Gardner RH (2015) Landscape ecology in theory and practice:
+Pattern and process, 2nd edition. Springer, New York
+
+\bibitem[\citeproctext]{ref-Wiens1989}
+Wiens JA (1989) Spatial scaling in ecology. Functional Ecology
+3:385--397. \url{https://doi.org/10.2307/2389612}
+
+\bibitem[\citeproctext]{ref-Wiens1997}
+Wiens JA (1997)
+\href{https://doi.org/10.1016/B978-012323445-2/50005-5}{Metapopulation
+dynamics and landscape ecology}. In: Metapopulation biology. Elsevier,
+pp 43--62
 
 \bibitem[\citeproctext]{ref-With2019}
-With, K. A. 2019. \emph{Essentials of Landscape Ecology}. 1st ed.
-Oxford, {UK}: Oxford University Press.
+With KA (2019) Essentials of landscape ecology, 1st edn. Oxford
+University Press, Oxford, UK
+
+\bibitem[\citeproctext]{ref-Wu2013}
+Wu J (2013) Key concepts and research topics in landscape ecology
+revisited: 30 years after the allerton park workshop. Landscape Ecology
+28:1--11. \url{https://doi.org/10.1007/s10980-012-9836-y}
+
+\bibitem[\citeproctext]{ref-Wuest2020}
+Wüest RO, Zimmermann NE, Zurell D, et al (2020) Macroecology in the age
+of big data -- where to go from here? Journal of Biogeography 47:1--12.
+\url{https://doi.org/10.1111/jbi.13633}
 
 \end{CSLReferences}
 

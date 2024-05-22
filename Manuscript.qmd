@@ -1,12 +1,12 @@
 ---
 title: "Computational methods in landscape ecology"
+keywords: keyword1, keyword2
 author:
   - name: Maximilian H.K. Hesselbarth
     orcid: 0000-0003-1125-9918
     email: mhk.hesselbarth@gmail.com
     affiliations:
       - name: International Institute for Applied Systems Analysis, Biodiversity, Ecology, and Conservation Group, Laxenburg (Austria)
-bibliography: CLER.bib
 format:
   pdf:
     keep-tex: true
@@ -20,13 +20,20 @@ format:
         \renewcommand*{\Authand}{, }
         \renewcommand*{\Authands}{, }
         \renewcommand\Affilfont{\small}
+papersize: a4paper
+fontsize: 12pt
+geometry: margin=25mm
+indent: 2m
+linestretch: 1.75
+bibliography: CLER.bib
+csl: springer-basic-author-date.csl
 ---
 
 <!-- FIXME: Update Authors -->
 <!-- FIXME: Add sections -->
 
 {{< include Sections/introduction.qmd >}}
-{{< include Sections/spatial-pattern.qmd >}}
+{{< include Sections/spatial-patterns.qmd >}}
 {{< include Sections/spatial-planning.qmd >}}
 
 {{< pagebreak >}}

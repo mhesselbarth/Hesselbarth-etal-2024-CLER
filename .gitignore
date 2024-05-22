@@ -5,6 +5,5 @@
 .DS_Store
 nul
 /.quarto/
-*.docx
-01-Manuscript/*_files
-04-Various/*_files
+*_files/
+Manuscript.pdf
