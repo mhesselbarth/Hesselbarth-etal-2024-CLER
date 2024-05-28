@@ -6,7 +6,29 @@ author:
     orcid: 0000-0003-1125-9918
     email: mhk.hesselbarth@gmail.com
     affiliations:
-      - name: International Institute for Applied Systems Analysis, Biodiversity, Ecology, and Conservation Group, Laxenburg (Austria)
+      - name: International Institute for Applied Systems Analysis, Biodiversity, Ecology, and Conservation Group, Laxenburg, Austria
+    attributes:
+      - corresponding: boolean
+  - name: Jakub Nowosad
+    orcid: 0000-0002-1057-3721
+    email: nowosad.jakub@gmail.com
+    affiliations:
+      - name: Adam Mickiewicz University, Poznan, Poland
+  - name: Marti Bosch
+    orcid: 0000-0001-8735-9144
+    email: marti.bosch@epfl.ch
+    affiliations:
+      - name: École polytechnique fédérale de Lausanne, Lausanne, Switzerland
+  - name: Martin Jung
+    orcid: 0000-0002-7569-1390
+    email: jung@iiasa.ac.at
+    affiliations:
+      - name: International Institute for Applied Systems Analysis, Biodiversity, Ecology, and Conservation Group, Laxenburg, Austria
+  - name: Rafael Schouten
+    orcid: 0000-0002-8380-0884
+    email: rafael.schouten@sund.ku.dk
+    affiliations:
+      - name: Globe Institute, University of Copenhagen, Copenhagen, Denmark
 format:
   pdf:
     keep-tex: true
@@ -29,12 +51,10 @@ bibliography: CLER.bib
 csl: springer-basic-author-date.csl
 ---
 
-<!-- FIXME: Update Authors -->
-<!-- FIXME: Add sections -->
+<!-- MH: Author order is not fixed yet. I just started to list everyone for now. -->
 
 {{< include Sections/introduction.qmd >}}
-{{< include Sections/spatial-patterns.qmd >}}
-{{< include Sections/spatial-planning.qmd >}}
+{{< include Sections/simulations.qmd >}}
 
 {{< pagebreak >}}
 

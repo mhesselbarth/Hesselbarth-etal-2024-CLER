@@ -159,7 +159,7 @@
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
   pdftitle={Computational methods in landscape ecology},
-  pdfauthor={Maximilian H.K. Hesselbarth},
+  pdfauthor={Maximilian H.K. Hesselbarth; Jakub Nowosad; Marti Bosch; Martin Jung; Rafael Schouten},
   pdfkeywords={keyword1, keyword2},
   colorlinks=true,
   linkcolor={blue},
@@ -175,7 +175,27 @@
             \affil{%
                   International Institute for Applied Systems Analysis,
                   Biodiversity, Ecology, and Conservation Group,
-                  Laxenburg (Austria)
+                  Laxenburg, Austria
+              }
+        \author{Jakub Nowosad}
+            \affil{%
+                  Adam Mickiewicz University, Poznan, Poland
+              }
+        \author{Marti Bosch}
+            \affil{%
+                  École polytechnique fédérale de Lausanne, Lausanne,
+                  Switzerland
+              }
+        \author{Martin Jung}
+            \affil{%
+                  International Institute for Applied Systems Analysis,
+                  Biodiversity, Ecology, and Conservation Group,
+                  Laxenburg, Austria
+              }
+        \author{Rafael Schouten}
+            \affil{%
+                  Globe Institute, University of Copenhagen, Copenhagen,
+                  Denmark
               }
       
 \date{}
@@ -188,17 +208,16 @@
 Landscapes are typically defined as mosaics of different land covers,
 habitats, ecosystems, or land use systems (Forman and Godron 1986;
 Forman 1995) - with empathize on heterogeneity of at least one factor of
-interest (Turner and Gardner 2015). Linking the spatial heterogeneity
-and ecological processes, including potential feedbacks, is the
-fundamental concept of landscape ecology (Risser et al. 1984; Turner
-1989, 2005). Typical research topics include ecological flows in
-landscape mosaics, drivers and consequences of land use and land cover
-change, nonlinear dynamics and landscape complexity, scale and scaling,
-spatial analysis and landscape modeling, linking landscape metrics to
-ecological processes, integrating humans and their activities into
-landscape ecology, landscape conservation and sustainability, or
-accuracy assessment and uncertainty analysis (Wu and Hobbs 2002; Wu
-2013).
+interest (Turner and Gardner 2015). Linking spatial heterogeneity and
+ecological processes, including potential feedbacks, is the fundamental
+concept of landscape ecology (Risser et al. 1984; Turner 1989, 2005).
+Typical research topics include ecological flows in landscape mosaics,
+drivers and consequences of land use and land cover change, nonlinear
+dynamics and landscape complexity, scale and scaling, spatial analysis
+and landscape modeling, linking landscape metrics to ecological
+processes, integrating humans and their activities into landscape
+ecology, landscape conservation and sustainability, or accuracy
+assessment and uncertainty analysis (Wu and Hobbs 2002; Wu 2013).
 
 Computational science involves analyzing abstracted core mechanisms of
 research questions using data and algorithms. Thus, computational
@@ -207,44 +226,100 @@ ecological research questions with focus on complex, adaptive systems
 and data-driven approaches (Poisot et al. 2019). Computational ecology
 in general and simulations specifically are of importance for ecology
 because ecological data is often context- and scale-dependent and
-unfeasible to study in reproducible, replicable, and controllable
+unfeasible to study in controllable, reproducible, and replicable
 experimental settings (Petrovskii and Petrovskaya 2012; but see Wiersma
 2022). Because landscape ecology is a cross-disciplinary field
 including, e.g., social sciences, geography, or ecology and evolution
 (Wiens 1997; With 2019), the general increase of available data (Chi et
 al. 2016; Jarić et al. 2020; Wüest et al. 2020; Nathan et al. 2022), or
 the complex landscape systems (Newman et al. 2019), there is the need
-for sophisticated computational methods in order to link patterns and
-processes. Thus, computational methods are one of the most important
-tools of modern scientific research (Prlić and Procter 2012; Wilson et
-al. 2014).
+for sophisticated computational methods in order to link heterogeneity
+patterns and ecological processes. Thus, computational methods are one
+of the most important tools of modern scientific research (Prlić and
+Procter 2012; Wilson et al. 2014).
 
-This paper aims to introduce the latest developments of computation
-methods in landscape ecology. However, it is neither a systematic review
-of the literature nor general introduction to (computational) landscape
-ecology. For a more comprehensive introductions to landscape ecology in
-general, please see Turner and Gardner (2015) or Gergel and Turner
-(2017).
+Here, we aim to introduce the latest developments of computational
+methods in landscape ecology. However, we do not provide a systematic
+literature review, or a general introduction to (computational)
+landscape ecology. For a more comprehensive, general introductions to
+landscape ecology, please see Turner and Gardner (2015), or Gergel and
+Turner (2017). First, we will introduce recent computational
+developments of the most important topics of landscape ecology. This
+includes, for example, spatial patterns quantification, connectivity and
+movement, or model simulations. Second, we will introduce common
+software tools that implement or are potentially capable of implementing
+these developments. However, due to its many advantages, we will focus
+on open-source software (von Krogh and von Hippel 2006), and
+specifically scripting languages, i.e., R, Python, and Julia. Last, we
+will discuss potential future needs developments of computational
+methods in landscape ecology..
 
-\section{Spatial patterns}\label{spatial-patterns}
+\section{Simulation models}\label{simulation-models}
 
-Landscape ecology is fun (Turner 1989). There are many things to explore
-(With 2019).
+Simulation models are a powerful tool to study complex adaptive
+ecological systems in controllable, reproducible, and replicable
+settings (Pascual 2005; Petrovskii and Petrovskaya 2012). Thus, they can
+be seen as experimental systems that allow, unlike to nature, all
+imaginable manipulations in order to advance theoretical developments or
+test hypotheses (Peck 2004). Due to the general temporal and spatial
+scales, complex interactions and feedbacks, or scale mismatches between
+patterns and processes, simulation models are one of the major
+approaches in landscape ecology (Schröder and Seppelt 2006; Synes et al.
+2016). In general, simulations models can be classified using two major
+divisions, namely as \emph{i)} predictive or exploratory models, and
+\emph{ii)} pattern- or process-based models (Peck 2004; Synes et al.
+2016). Here, we are going to focus mainly on exploratory models, but
+include both pattern- and process-based models.
 
-\subsection{Landscape metrics}\label{landscape-metrics}
+\subsection{Pattern based}\label{pattern-based}
 
-\subsection{Vector metrics}\label{vector-metrics}
+\subsubsection{Neutral landscapes
+models}\label{neutral-landscapes-models}
 
-\subsection{Surface metrics}\label{surface-metrics}
+Neutral landscapes models simulate landscape patterns without assuming
+any underlying abiotic or biotic processes. Thus, they are often used as
+null hypothesis or baselines for comparisons with real landscape
+patterns, while controlling certain aspects of the landscape (Li et al.
+2004; Wang and Malanson 2008). The first neutral models simply assigned
+land cover types randomly to cells in the landscape and were based on
+percolation theory. Further developments included hierarchical models
+that considered different spatial scales while assigning land cover
+types. While these first two classes can only simulate landscape with
+discrete land cover classes, fractal neutral models can also simulate
+continuous land cover maps by utilizing e.g., Brownian motion. Last,
+more complex neutral models were developed that are based on contagion,
+autocorrelation, or spatial aggregation concepts to simulate more
+realistic landscapes (Wang and Malanson 2008). In order to make multiple
+neutral landscape model algorithms available several software libraries
+are available in prominent programming languages including Python
+{[}NLMpy; Etherington et al. (2015){]} or R {[}NLMR; Sciaini et al.
+(2018){]}.
 
-\subsection{Entropy}\label{entropy}
+\subsubsection{Cellular Automata}\label{cellular-automata}
 
-\subsection{Landscape Mosaic}\label{landscape-mosaic}
+\subsection{Process based}\label{process-based}
 
-\section{Spatial planning}\label{spatial-planning}
+\href{https://doi.org/10.1111/ecog.05687}{RangeShifter}
 
-Landscape ecology is fun (Turner 1989). There are many things to explore
-(With 2019).
+\subsubsection{Landscape Generator}\label{landscape-generator}
+
+\href{https://doi.org/10.1371/journal.pone.0064968}{G-RaFFE}
+\href{https://doi.org/10.1002/ece3.2145}{LG}
+
+\subsubsection{Coupled lattice}\label{coupled-lattice}
+
+\subsubsection{IBMs/ABMs}\label{ibmsabms}
+
+\subsection{Misc}\label{misc}
+
+\href{https://doi.org/10.1016/j.ecolmodel.2019.108837}{Marine SDMS}
+\href{https://doi.org/10.1111/jbi.14617}{SDM past present future}
+
+\href{https://doi.org/10.1111/j.1365-294X.2010.04678.x}{Simulations in
+landscape genetics}
+\href{https://doi.org/10.1007/s10980-017-0605-9}{HexSim modeling
+environment} \href{https://doi.org/10.1016/j.tree.2023.04.010}{Digital
+twins?}
 
 \newpage{}
 
@@ -256,6 +331,12 @@ Landscape ecology is fun (Turner 1989). There are many things to explore
 Chi M, Plaza A, Benediktsson JA, et al (2016) Big data for remote
 sensing: Challenges and opportunities. Proceedings of the IEEE
 104:2207--2219. \url{https://doi.org/10.1109/JPROC.2016.2598228}
+
+\bibitem[\citeproctext]{ref-Etherington2015}
+Etherington TR, Holland EP, O'Sullivan D (2015) NLMpy: A python software
+package for the creation of neutral landscape models within a general
+numerical framework. Methods in Ecology and Evolution 6:164--168.
+\url{https://doi.org/10.1111/2041-210X.12308}
 
 \bibitem[\citeproctext]{ref-Forman1995}
 Forman RTT (1995) Land mosaics: The ecology of landscapes and regions.
@@ -275,6 +356,12 @@ Jarić I, Correia RA, Brook BW, et al (2020) iEcology: Harnessing large
 online resources to generate ecological insights. Trends in Ecology \&
 Evolution 35:630--639. \url{https://doi.org/10.1016/j.tree.2020.03.003}
 
+\bibitem[\citeproctext]{ref-Li2004}
+Li X, He HS, Wang X, et al (2004) Evaluating the effectiveness of
+neutral landscape models to represent a real landscape. Landscape and
+Urban Planning 69:137--148.
+\url{https://doi.org/10.1016/j.landurbplan.2003.10.037}
+
 \bibitem[\citeproctext]{ref-Nathan2022}
 Nathan R, Monk CT, Arlinghaus R, et al (2022) Big-data approaches lead
 to an increased understanding of the ecology of animal movement. Science
@@ -284,6 +371,16 @@ to an increased understanding of the ecology of animal movement. Science
 Newman EA, Kennedy MC, Falk DA, McKenzie D (2019) Scaling and complexity
 in landscape ecology. Frontiers in Ecology and Evolution 7:293.
 \url{https://doi.org/10.3389/fevo.2019.00293}
+
+\bibitem[\citeproctext]{ref-Pascual2005}
+Pascual M (2005) Computational ecology: From the complex to the simple
+and back. PLoS Computional Biology 1:e18.
+\url{https://doi.org/10.1371/journal.pcbi.0010018}
+
+\bibitem[\citeproctext]{ref-Peck2004}
+Peck SL (2004) Simulation as experiment: A philosophical reassessment
+for biological modeling. Trends in Ecology \& Evolution 19:530--534.
+\url{https://doi.org/10.1016/j.tree.2004.07.019}
 
 \bibitem[\citeproctext]{ref-Petrovskii2012}
 Petrovskii S, Petrovskaya N (2012) Computational ecology as an emerging
@@ -304,6 +401,23 @@ scientific software. PLoS Computational Biology 8:e1002802.
 Risser PG, Karr JR, Forman RTT (1984) Landscape ecology: Directions and
 approaches. Illinois Natural History Survery Special Publication 2:7--14
 
+\bibitem[\citeproctext]{ref-Schroder2006}
+Schröder B, Seppelt R (2006) Analysis of pattern--process interactions
+based on landscape models - overview, general concepts, and
+methodological issues. Ecological Modelling 199:505--516.
+\url{https://doi.org/10.1016/j.ecolmodel.2006.05.036}
+
+\bibitem[\citeproctext]{ref-Sciaini2018}
+Sciaini M, Fritsch M, Scherer C, Simpkins CE (2018) NLMR and
+landscapetools: An integrated environment for simulating and modifying
+neutral landscape models in r. Methods in Ecology and Evolution
+9:2240--2248. \url{https://doi.org/10.1111/2041-210X.13076}
+
+\bibitem[\citeproctext]{ref-Synes2016}
+Synes NW, Brown C, Watts K, et al (2016) Emerging opportunities for
+landscape ecological modelling. Current Landscape Ecology Reports
+1:146--167
+
 \bibitem[\citeproctext]{ref-Turner1989}
 Turner MG (1989) Landscape ecology: The effect of pattern on process.
 Annual Review of Ecology and Systematics 20:171--197.
@@ -317,6 +431,16 @@ Annual Review of Ecology, Evolution, and Systematics 36:319--344.
 \bibitem[\citeproctext]{ref-Turner2015}
 Turner MG, Gardner RH (2015) Landscape ecology in theory and practice:
 Pattern and process, 2nd edition. Springer, New York
+
+\bibitem[\citeproctext]{ref-vonKrogh2006}
+von Krogh G, von Hippel E (2006) The promise of research on open source
+software. Management Science 52:975--983.
+\url{https://doi.org/10.1287/mnsc.1060.0560}
+
+\bibitem[\citeproctext]{ref-Wang2008}
+Wang Q, Malanson GP (2008) Neutral landscapes: Bases for exploration in
+landscape ecology. Geography Compass 2:319--339.
+\url{https://doi.org/10.1111/j.1749-8198.2008.00090.x}
 
 \bibitem[\citeproctext]{ref-Wiens1997}
 Wiens JA (1997)
