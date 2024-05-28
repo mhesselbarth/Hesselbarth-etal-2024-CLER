@@ -57,15 +57,15 @@
 [Machine learning in landscape ecology](https://doi.org/10.1007/s10980-021-01366-9)
 [Machine learning review for ecology](https://doi.org/10.1111/2041-210X.14061)
 
-## Patterns
-[Methods for landscape characterisation](https://doi.org/10.1016/j.landusepol.2018.04.022)
-
 ## Connectivity
 [Connectivity metrics for conservation planning](https://doi.org/10.1016/j.biocon.2021.109008)
 [Connectivity modelling in conservation science](https://doi.org/10.1038/s41598-022-20370-w)
 [Computational tools resistance surfaces](https://doi.org/10.1007/s10980-022-01469-x)
 
 ## Misc
-[Landscape ecological concepts in planning](https://doi.org/10.1007/s10980-021-01193-y)
 [Remote Sensing and Landscape Ecology](https://doi.org/10.1007/s40823-020-00054-9)
+[Landscape ecological concepts in planning](https://doi.org/10.1007/s10980-021-01193-y)
 [Geospatial tech and landscape ecology](https://doi.org/10.1016/j.ecoinf.2019.03.006)
+[Scaling](https://doi.org/10.3389/fevo.2019.00293)
+[Sampling overlap](https://doi.org/10.1007/s40823-020-00059-4)
+[Quantum computing](https://doi.org/10.1016/j.tree.2023.04.001)

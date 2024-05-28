@@ -5,9 +5,48 @@ bibliography: CLER.bib
 <!-- Person responsible: Hesselbarth, Schouten -->
 
 # Simulation models
-
-## Neutral landscapes
 <!-- Hesselbarth -->
 
-## Process-based simulation
+Simulation models are a powerful tool to study complex adaptive ecological systems in controllable, reproducible, and replicable settings [@Pascual2005; @Petrovskii2012].
+Thus, they can be seen as experimental systems that allow, unlike to nature, all imaginable manipulations in order to advance theoretical developments or test hypotheses [@Peck2004].
+Due to the general temporal and spatial scales, complex interactions and feedbacks, or scale mismatches between patterns and processes, simulation models are one of the major approaches in landscape ecology [@Schroder2006; @Synes2016].
+In general, simulations models can be classified using two major divisions, namely as *i)* predictive or exploratory models, and *ii)* pattern- or process-based models [@Peck2004;@Synes2016].
+Here, we are going to focus mainly on exploratory models, but include both pattern- and process-based models.
+
+## Pattern based
+<!-- Hesselbarth -->
+
+### Neutral landscapes models
+Neutral landscapes models simulate landscape patterns without assuming any underlying abiotic or biotic processes.
+Thus, they are often used as null hypothesis or baselines for comparisons with real landscape patterns, while controlling certain aspects of the landscape [@Li2004;@Wang2008].
+The first neutral models simply assigned land cover types randomly to cells in the landscape and were based on percolation theory.
+Further developments included hierarchical models that considered different spatial scales while assigning land cover types.
+While these first two classes can only simulate landscape with discrete land cover classes, fractal neutral models can also simulate continuous land cover maps by utilizing e.g., Brownian motion.
+Last, more complex neutral models were developed that are based on contagion, autocorrelation, or spatial aggregation concepts to simulate more realistic landscapes [@Wang2008].
+In order to make multiple neutral landscape model algorithms available several software libraries are available in prominent programming languages including Python [NLMpy; @Etherington2015] or R [NLMR; @Sciaini2018].
+
+### Cellular Automata
+
+## Process based
 <!-- Schouten, Hesselbarth -->
+
+[RangeShifter](https://doi.org/10.1111/ecog.05687)
+
+### Landscape Generator
+<!-- Hesselbarth -->
+
+[G-RaFFE](https://doi.org/10.1371/journal.pone.0064968)
+[LG](https://doi.org/10.1002/ece3.2145)
+
+### Coupled lattice
+
+### IBMs/ABMs
+
+## Misc
+[Marine SDMS](https://doi.org/10.1016/j.ecolmodel.2019.108837)
+[SDM past present future](https://doi.org/10.1111/jbi.14617)
+
+[Simulations in landscape genetics](https://doi.org/10.1111/j.1365-294X.2010.04678.x)
+[HexSim modeling environment](https://doi.org/10.1007/s10980-017-0605-9)
+[Digital twins?](https://doi.org/10.1016/j.tree.2023.04.010)
+
