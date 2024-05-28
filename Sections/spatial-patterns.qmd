@@ -4,16 +4,37 @@ bibliography: CLER.bib
 
 <!-- Person responsible: Nowosad, Bosch, Hesselbarth -->
 
-# Spatial patterns
-
 Landscape ecology is fun [@Turner1989].
 There are many things to explore [@With2019].
 
+# Spatial patterns
+
+@daleSpatialPatternAnalysis2000
+@wiegandUsingPatternOriented2003
+
+spatial patterns definitions in the literature (general)
+?existance of spatial pattterns in many contexts, from geography, through biology and urban planning to medical studies
+?relation of spatial patterns to spatial processes
+
+spatial patterns in data (computational approach); its limitations and considerations
+raster data
+vector data: point, line, polygon
+point clouds 
+time series data
+
+one variable vs. multivariable spatial patterns
+categorical vs. continuous spatial patterns
+
+resolution, scale, and extent in spatial patterns
+
+short intro to the subsequent sections
+
+!to conclusions that relation of spatial patterns to spatial processes is a golden grail of landscape ecology
+!what with fractals?
+!ai and deep learning still seems to be underused in landscape ecology
+
 ## Landscape metrics
 <!-- Hesselbarth -->
-
-## Vector metrics
-<!-- Nowosad, Hesselbarth -->
 
 ## Surface metrics
 <!-- Bosch, Hesselbarth -->
@@ -21,5 +42,57 @@ There are many things to explore [@With2019].
 ## Entropy
 <!-- Nowosad, Bosch -->
 
-## Landscape Mosaic
+intro to entropy
+various concepts:
+
+- information (Shannon)/Shannon diversity
+@Shannon1948
+@nowosadInformationTheoryConsistent2019a
+
+- thermodynamic (Boltzmann)
+
+@Cushman2016
+@cushmanGeneralizingBoltzmannConfigurational2021
+@gaoComputationBoltzmannEntropy2019
+@zhangCalculatingWassersteinMetricBased2020a
+@stepinskiCurbYourEnthusiasm2022
+
+- Kolmogorov, etc.; Juhász-Nagy’s information theory-based functions, Simpson index, Rao index, Pielou, Renyu, ...
+@konradAdaptingMultiscaleApproach2023; 
+@simpsonMeasurementDiversity1949
+
+
+how they are related to each other
+how they are related to spatial patterns and landscape ecology
+
+entropy measures are still related to the underlining data representation
+
+claims of relations between entropy and thermodynamics
+
+<!-- https://r-spatialecology.github.io/landscapemetrics/ -->
+<!-- https://jakubnowosad.com/bespatial/ -->
+<!-- https://cran.r-project.org/web/packages/LandComp/index.html -->
+
+## Landscape mosaic
 <!-- Bosch -->
+
+## Vector metrics
+<!-- Nowosad, Hesselbarth -->
+
+an intro to the section
+what is similar to landscape metrics
+
+add an info about shape metrics
+@basaranerPerformanceShapeIndices2017
+
+https://github.com/r-spatialecology/vectormetrics
+
+<!--misc-->
+<!-- the need for open-source software in landscape ecology -->
+<!-- every proposed method should be open-source and available to the community -->
+
+## Operations on spatial patterns
+
+@nowosadMotifOpensourceTool2021
+
+<!-- FOSS4G Europe pap? -->
