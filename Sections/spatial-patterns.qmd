@@ -11,6 +11,7 @@ bibliography: CLER.bib
 
 @daleSpatialPatternAnalysis2000
 @wiegandUsingPatternOriented2003
+[Pattern metrics](https://doi.org/10.1007/s10980-018-0755-4)
 
 - Spatial patterns definitions in the literature (general; Dale 2000)
 - Spatial patterns in many contexts (e.g. geography, biology, urban planning, medical studies) <!-- MH: I would at least cut the medical bit -->
