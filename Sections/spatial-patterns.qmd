@@ -11,6 +11,7 @@ There are many things to explore [@With2019].
 
 @daleSpatialPatternAnalysis2000
 @wiegandUsingPatternOriented2003
+[Pattern metrics](https://doi.org/10.1007/s10980-018-0755-4)
 
 spatial patterns definitions in the literature (general)
 ?existance of spatial pattterns in many contexts, from geography, through biology and urban planning to medical studies
