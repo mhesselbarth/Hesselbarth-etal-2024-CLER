@@ -4,44 +4,55 @@ bibliography: CLER.bib
 
 <!-- Person responsible: Nowosad, Bosch, Hesselbarth -->
 
-Landscape ecology is fun [@Turner1989].
-There are many things to explore [@With2019].
-
 # Spatial patterns
+
+[Methods for landscape characterization](https://doi.org/10.1016/j.landusepol.2018.04.022)
+[Where are we now, and where are we going?](https://doi.org/10.1007/s10980-019-00889-6)
 
 @daleSpatialPatternAnalysis2000
 @wiegandUsingPatternOriented2003
 
-spatial patterns definitions in the literature (general)
-?existance of spatial pattterns in many contexts, from geography, through biology and urban planning to medical studies
-?relation of spatial patterns to spatial processes
+- Spatial patterns definitions in the literature (general; Dale 2000)
+- Spatial patterns in many contexts (e.g. geography, biology, urban planning, medical studies) <!-- MH: I would at least cut the medical bit -->
+- Spatial patterns in landscape ecology
+  - Resolution, scale, and extent in spatial patterns
+- Relation of spatial patterns and spatial (ecological?) processes
+- Relation of spatial patterns to spatial processes is a golden grail of landscape ecology
 
-spatial patterns in data (computational approach); its limitations and considerations
-raster data
-vector data: point, line, polygon
-point clouds 
-time series data
+- Spatial patterns in data (computational approach)
+  - Limitations and considerations
+- Data types <!-- MH: Could be moved to the individual sub-sections? -->
+  - Raster data
+  - Vector data: point, line, polygon
+  - Point clouds 
+  - Time series data
+  - One variable vs. multivariable spatial patterns
+  - Categorical vs. continuous spatial patterns
 
-one variable vs. multivariable spatial patterns
-categorical vs. continuous spatial patterns
-
-resolution, scale, and extent in spatial patterns
-
-short intro to the subsequent sections
-
-!to conclusions that relation of spatial patterns to spatial processes is a golden grail of landscape ecology
 !what with fractals?
 !ai and deep learning still seems to be underused in landscape ecology
 
 ## Landscape metrics
 <!-- Hesselbarth -->
 
+- Traditional approach to describe patterns
+- Quantify categorical raster data (patch mosaic model)
+- Quantify composition and configuration
+- Widely applied since FRAGSTATS release
+- Several alternative tools available and still widely used
+
 ## Surface metrics
 <!-- Bosch, Hesselbarth -->
+[Surface metrics])(https://doi.org/10.1007/s10980-018-0685-1)
+
+- More recent development
+- Quantify continuous raster data (gradient surface models)
+- More realistic representation of landscapes
+- Based on molecular physics/medicine
+- Not widely adopted yet (due to missing tools?)
 
 ## Entropy
 <!-- Nowosad, Bosch -->
-
 intro to entropy
 various concepts:
 
