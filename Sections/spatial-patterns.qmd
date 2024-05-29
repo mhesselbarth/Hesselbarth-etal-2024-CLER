@@ -1,37 +1,61 @@
 ---
-bibliography: CLER.bib
+bibliography: ../CLER.bib
 ---
 
 <!-- Person responsible: Nowosad, Bosch, Hesselbarth -->
 
 # Spatial patterns
 
-[Methods for landscape characterization](https://doi.org/10.1016/j.landusepol.2018.04.022)
+Spatial patterns are a fundamental concept not only in landscape ecology, but also in many other fields, such as geography, biology, urban planning, and even medical studies. 
+@daleSpatialPatternAnalysis2000 defined them as the scale-dependent predictability of the physical arrangement of observations, while a more general definition by @grimmPatternOrientedModellingPopulation1996 describes them as a characteristic, clearly identifiable structure in nature itself or in the data extracted from nature, indicating an underlying process that generates this pattern.
+Both definitions highlight several important aspects of spatial patterns: they are related to processes, depending on the scale of observation, and can be found in data.  
+
+The relation of spatial patterns to spatial processes is a golden grail of landscape ecology.
+Patterns observed in nature contain information about the memory of the system, including its demographic processes, dispersal characteristics, and constraining factors[@wiegandUsingPatternOriented2003].
+Moreover, spatial patterns are not only a result of processes but could also be a driver of them.
+Thus, untangling the complex history of a landscape from its spatial patterns is a hard challenge.
+
+The scale dependency of spatial patterns may relate to either the temporal or spatial scale.
+Different scales of the processes could lead to different patterns.
+<!-- ... -->
+
+Here, our focus is on the computational approaches to spatial patterns.
+Thus, we will discuss the spatial patterns that could be found in data, the metrics that could be used to quantify them, and the operations that could be performed on them.
+
+Computational approaches to spatial patterns open many new possibilities (as compared to traditional methods). 
+They allow not only to quantify the patterns but also to model them, simulate them, and predict them.
+Moreover, they allow us to analyze large datasets and apply complex algorithms.
+At the same time, the computational approaches have considerations and limitations that should be taken into account.
+
+Every data type is a simplified model of the real world, and the spatial patterns found in the data are a simplified representation of the real spatial patterns.
+Thus, the choice of the data type, the scale of the data, and the scale of the analysis are crucial for the results of the analysis.
+
+Traditionally and still the most prominent, computational approaches to spatial patterns in landscape ecology revolve around "patch mosaic" model, where the landscape is represented as a raster data with different categories of land cover [@costanzaDescribingAnalyzingLandscape2019].
+Another approach is the "surface model," where the landscape is represented as continuous raster data with different values of some variable, such as elevation or temperature <!--@costanzaDescribingAnalyzingLandscape2019 for more refs-->.
+Importantly, both these models are based on raster data.
+
+However, the raster data is not the only data type that could be used to represent spatial patterns.
+Another important data type is vector data, which is used to represent point, line, and polygon features.
+Here, the spatial patterns could be related to densities of points, ..., or shapes of polygons.
+Moreover, the vector data could be used to represent the point clouds, which are the data type that is becoming more and more popular with the development of remote sensing technologies (i.e., LiDAR).
+Spatial patterns in point clouds could be related to the shapes of the point clouds or the distances between points.<!--ref-->
+
+<!-- - Resolution, scale, and extent in spatial patterns -->
+  
+  
+<!-- The scale dependency of spatial patterns may relate to the scale of the processes, the scale of the data, or the scale of the analysis. -->
+<!-- All of the above aspects could also relate to either the temporal or spatial scale. -->
+
+<!-- [Methods for landscape characterization](https://doi.org/10.1016/j.landusepol.2018.04.022)
 [Where are we now, and where are we going?](https://doi.org/10.1007/s10980-019-00889-6)
+[Pattern metrics](https://doi.org/10.1007/s10980-018-0755-4) -->
 
-@daleSpatialPatternAnalysis2000
-@wiegandUsingPatternOriented2003
-[Pattern metrics](https://doi.org/10.1007/s10980-018-0755-4)
-
-- Spatial patterns definitions in the literature (general; Dale 2000)
-- Spatial patterns in many contexts (e.g. geography, biology, urban planning, medical studies) <!-- MH: I would at least cut the medical bit -->
-- Spatial patterns in landscape ecology
-  - Resolution, scale, and extent in spatial patterns
-- Relation of spatial patterns and spatial (ecological?) processes
-- Relation of spatial patterns to spatial processes is a golden grail of landscape ecology
-
-- Spatial patterns in data (computational approach)
-  - Limitations and considerations
-- Data types <!-- MH: Could be moved to the individual sub-sections? -->
-  - Raster data
-  - Vector data: point, line, polygon
-  - Point clouds 
-  - Time series data
+  <!-- - Time series data
   - One variable vs. multivariable spatial patterns
-  - Categorical vs. continuous spatial patterns
+  - Categorical vs. continuous spatial patterns -->
 
-!what with fractals?
-!ai and deep learning still seems to be underused in landscape ecology
+<!-- !what with fractals?
+!ai and deep learning still seems to be underused in landscape ecology -->
 
 ## Landscape metrics
 <!-- Hesselbarth -->
