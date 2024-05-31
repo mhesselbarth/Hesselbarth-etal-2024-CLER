@@ -1,10 +1,15 @@
 ---
 bibliography: ../CLER.bib
+format: pdf
 ---
 
 <!-- Person responsible: Nowosad, Bosch, Hesselbarth -->
 
 # Spatial patterns
+
+<!-- [Methods for landscape characterization](https://doi.org/10.1016/j.landusepol.2018.04.022)
+[Where are we now, and where are we going?](https://doi.org/10.1007/s10980-019-00889-6)
+[Pattern metrics](https://doi.org/10.1007/s10980-018-0755-4) -->
 
 Spatial patterns are a fundamental concept not only in landscape ecology, but also in many other fields, such as geography, biology, urban planning, and even medical studies. 
 @daleSpatialPatternAnalysis2000 defined them as the scale-dependent predictability of the physical arrangement of observations, while a more general definition by @grimmPatternOrientedModellingPopulation1996 describes them as a characteristic, clearly identifiable structure in nature itself or in the data extracted from nature, indicating an underlying process that generates this pattern.
@@ -15,14 +20,10 @@ Patterns observed in nature contain information about the memory of the system, 
 Moreover, spatial patterns are not only a result of processes but could also be a driver of them.
 Thus, untangling the complex history of a landscape from its spatial patterns is a hard challenge.
 
-The scale dependency of spatial patterns may relate to either the temporal or spatial scale.
-Different scales of the processes could lead to different patterns.
-<!-- ... -->
-
 Here, our focus is on the computational approaches to spatial patterns.
 Thus, we will discuss the spatial patterns that could be found in data, the metrics that could be used to quantify them, and the operations that could be performed on them.
 
-Computational approaches to spatial patterns open many new possibilities (as compared to traditional methods). 
+Computational approaches to spatial patterns open many new possibilities as compared to traditional methods. 
 They allow not only to quantify the patterns but also to model them, simulate them, and predict them.
 Moreover, they allow us to analyze large datasets and apply complex algorithms.
 At the same time, the computational approaches have considerations and limitations that should be taken into account.
@@ -30,6 +31,7 @@ At the same time, the computational approaches have considerations and limitatio
 Every data type is a simplified model of the real world, and the spatial patterns found in the data are a simplified representation of the real spatial patterns.
 Thus, the choice of the data type, the scale of the data, and the scale of the analysis are crucial for the results of the analysis.
 
+<!-- datatype -->
 Traditionally and still the most prominent, computational approaches to spatial patterns in landscape ecology revolve around "patch mosaic" model, where the landscape is represented as a raster data with different categories of land cover [@costanzaDescribingAnalyzingLandscape2019].
 Another approach is the "surface model," where the landscape is represented as continuous raster data with different values of some variable, such as elevation or temperature <!--@costanzaDescribingAnalyzingLandscape2019 for more refs-->.
 Importantly, both these models are based on raster data.
@@ -40,19 +42,48 @@ Here, the spatial patterns could be related to densities of points, ..., or shap
 Moreover, the vector data could be used to represent the point clouds, which are the data type that is becoming more and more popular with the development of remote sensing technologies (i.e., LiDAR).
 Spatial patterns in point clouds could be related to the shapes of the point clouds or the distances between points.<!--ref-->
 
-<!-- - Resolution, scale, and extent in spatial patterns -->
-  
-  
-<!-- The scale dependency of spatial patterns may relate to the scale of the processes, the scale of the data, or the scale of the analysis. -->
-<!-- All of the above aspects could also relate to either the temporal or spatial scale. -->
+<!-- data sources??+SAR -->
+Currently, the most common data sources in landscape ecology are remote sensing data, either in a direct form (satellite images) or in an indirect form (spectral indices, land cover maps).
+The number of available spatial data products is still increasing, with new sensors, new satellites, and new data processing techniques.
+This trend is seen, for example, with the frequent release of new global land cover maps, such as the ESA WorldCover, Dynamic World, or the Esri LULC.
+<!-- refs -->
+Other examples are the increasing availability of high-resolution data and the growing popularity of LiDAR and SAR data.
 
-<!-- [Methods for landscape characterization](https://doi.org/10.1016/j.landusepol.2018.04.022)
-[Where are we now, and where are we going?](https://doi.org/10.1007/s10980-019-00889-6)
-[Pattern metrics](https://doi.org/10.1007/s10980-018-0755-4) -->
+<!-- scale of data -->
+In computational approaches, the issue of scale is closely related to the used data. 
+Here, an important distinction should be made between the scale of the data and the data resolution.
+The data scale refers to the degree of generalization of the data, while the data resolution refers to the smallest unit of the data.
+Thus, it is possible to have data with a high resolution but a small scale, or data with a low resolution but a large scale.
 
-  <!-- - Time series data
-  - One variable vs. multivariable spatial patterns
-  - Categorical vs. continuous spatial patterns -->
+<!-- data cats -->
+Similary, it is crucial to understand the thematic resolution of the data, which in landscape ecology often refers to the number and definition of the categories in the data.
+<!-- ... -->
+
+<!-- scale of analysis -->
+Related to the scale of the data is the scale of the analysis.
+It specifies the extent of the study area and the way the data is analyzed.
+Given that the categorical rasters consist of patches, the analysis could be performed at the patch, class, or landscape level. 
+However, it is possible to analyze these levels for a fixed area, using moving windows or buffers around the sampling points.
+
+<!-- time -->
+Early approaches to spatial patterns in landscape ecology were mostly static, focusing on the spatial patterns at a single point in time.
+However, the development of remote sensing technologies and the availability of time series data have allowed for the analysis of spatial patterns over time.
+This opportunity further highlights the importance of understanding of the used data: is it a snapshot of a single moment, a composite of multiple moments, or a temporal generalization?
+The properties of the used data should be in line with the research question and the scale of the analysis.
+
+<!-- data quality -->
+It should be noted that the quality of the data is not constant and the data products are not perfect: they could contain errors and biases.
+For example, the global land cover products usually have an overall accuracy of 70-80%, which means that 20-30% of the pixels are misclassified.
+Moreover, the misclassification is not random, but it is often related to the land cover type, the region, and the time of the year.
+<!-- refs -->
+However, most landscape ecology studies treat the data as a given, without considering its accuracy or uncertainty.
+
+<!-- data projection -->
+Less discussed but often crucial is the spatial reference system of the data.
+Most methods in landscape ecology assume that the data is in a Cartesian coordinate reference system, where the distance between two points is the Euclidean distance.
+This assumption has an impact on measures related to distances and areas.
+However, the data could be in a geographic coordinate reference system, where the distance between two points is the great-circle distance, which would render the results of the analysis incorrect.
+On the other hand, many projected coordinate reference systems exist, each with its own properties -- some distort areas, some distances, some angles, and some distort all of them.
 
 <!-- !what with fractals?
 !ai and deep learning still seems to be underused in landscape ecology -->
@@ -68,11 +99,11 @@ Spatial patterns in point clouds could be related to the shapes of the point clo
 
 ## Surface metrics
 <!-- Bosch, Hesselbarth -->
-[Surface metrics])(https://doi.org/10.1007/s10980-018-0685-1)
+[Surface metrics](https://doi.org/10.1007/s10980-018-0685-1)
 
 - More recent development
 - Quantify continuous raster data (gradient surface models)
-- More realistic representation of landscapes
+- More realistic representation of landscapes (?)
 - Based on molecular physics/medicine
 - Not widely adopted yet (due to missing tools?)
 
