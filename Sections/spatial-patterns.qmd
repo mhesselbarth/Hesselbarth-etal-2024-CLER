@@ -1,9 +1,12 @@
 ---
-bibliography: ../CLER.bib
+bibliography: 
+    - ../CLER.bib
+    - ../2024-cler.bib
 format: pdf
 ---
 
 <!-- Person responsible: Nowosad, Bosch, Hesselbarth -->
+<!-- jn: should we reference software packages here (or in Software) when they implement the methods we discuss? -->
 
 # Spatial patterns
 
@@ -109,36 +112,54 @@ On the other hand, many projected coordinate reference systems exist, each with 
 
 ## Entropy
 <!-- Nowosad, Bosch -->
-intro to entropy
-various concepts:
+<!-- jn: should we use equations here? -->
 
-- information (Shannon)/Shannon diversity
-@Shannon1948
-@nowosadInformationTheoryConsistent2019a
+<!-- information (Shannon)/Shannon diversity -->
+One of the most commonly used metrics in landscape ecology is the Shannon index of diversity (SHDI, @Shannon1948).
+It quantifies the richness and evenness of the categories in the landscape, with higher values indicating higher diversity (more different classes and more even distribution of them).
+SHDI comes from the information theory.
+It is an adaptation of the Shannon entropy, which measures of the uncertainty in a random variable.
 
-- thermodynamic (Boltzmann)
+The SHDI metric is based on the composition of the landscape only, omitting the spatial configuration of the categories.
+<!--composition is the most important -- Ritters-->
+Thus, other measures from the information theory were adapted to landscape ecology to quantify the spatial configuration and the total complexity of the landscape.
+@nowosadInformationTheoryConsistent2019a proposed to treat a categorical raster as a bivariate random variable $(x,y)$ where $x$ is the category of the focal cell and $y$ is the category of the neighboring cell.
+This approach allows to compress the information about the composition and the configuration of the landscape into a co-occurrence matrix, which could be used to calculate various entropy measures.
+It includes the conditional entropy (representing configurational complexity), the joint entropy (representing overall spatio-thematic complexity), the mutual information , and the relative mutual information (representing the degree of spatial autocorrelation).
+<!-- https://r-spatialecology.github.io/landscapemetrics/ -->
 
-@Cushman2016
-@cushmanGeneralizingBoltzmannConfigurational2021
-@gaoComputationBoltzmannEntropy2019
-@zhangCalculatingWassersteinMetricBased2020a
+<!-- thermodynamic (Boltzmann) -->
+The last few years have seen a surge in the development of entropy-based metrics for landscape ecology based on the notions from thermodynamics initatied by the work of @vrankenReviewUseEntropy2015a and @cushmanThermodynamicsLandscapeEcology2015a.
+The overreaching goal of such studies is to link landscape ecology concepts to the thermodynamic principles, such as the second law of thermodynamics.
+They often use the Boltzmann entropy, which is a measure of the disorder in a system, to quantify the complexity of the landscape.
+In late 1800s, Boltzmann formulated a probabilistic interpretation of the second law of thermodynamics, using the concepts of macrostate (general state of a system) and microstate (configuration of the system elements).
+
+@Cushman2016 proposed to relate the edge lenght to the microstate of the landscape, and use the proportion of microstates to compute the relative Boltzmann entropy of a landscape mosaic in raster data.
+Simoultaneously, @Gao2017 proposed to use the Boltzmann entropy to quantify the complexity of a landscape surface in raster data by transforming the input grid into a series of landscape sufraces with different levels of detail and calculating the Boltzmann entropy based on the total number of microstates that are able to generate the observed macrostate.
+@zhaoCalculatingSpatialConfigurational2019 extended the original definition of Boltzmann entropy to incorporate the information about the adjancency of the same categories in the landscape mosaic.
+It is also worth noting that later, Cushman refined and generalized this approach for calculations based on raster's surface model (based on mean slope) and point patterns (based on the average distance between points) [@cushmanGeneralizingBoltzmannConfigurational2021].
+<!-- https://jakubnowosad.com/bespatial/ -->
+
+
+claims of relations between entropy and thermodynamics
 @stepinskiCurbYourEnthusiasm2022
+entropy measures are still related to the underlining data representation (!)
+@zhaoCalculatingSpatialConfigurational2019
+
+<!-- "nstead of Shannon entropy, what should be used is argued to be Boltzmann (1872) entropy, and calls have recently been made to revisit it" @gaoComputationBoltzmannEntropy2019 -->
+
+how they are related to each other
+how they are related to spatial patterns and landscape ecology
 
 - Kolmogorov, etc.; Juhász-Nagy’s information theory-based functions, Simpson index, Rao index, Pielou, Renyu, ...
 @konradAdaptingMultiscaleApproach2023; 
 @simpsonMeasurementDiversity1949
 
+<!-- "Fractal dimension seems directly related to entropy." @cushmanThermodynamicsLandscapeEcology2015a -->
 
-how they are related to each other
-how they are related to spatial patterns and landscape ecology
-
-entropy measures are still related to the underlining data representation
-
-claims of relations between entropy and thermodynamics
-
-<!-- https://r-spatialecology.github.io/landscapemetrics/ -->
-<!-- https://jakubnowosad.com/bespatial/ -->
 <!-- https://cran.r-project.org/web/packages/LandComp/index.html -->
+
+<!-- unification for various data types, e.g., Cushman, vectormetrics -->
 
 ## Landscape mosaic
 <!-- Bosch -->
