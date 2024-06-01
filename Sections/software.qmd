@@ -20,6 +20,7 @@ landscapemetrics
 geodiv
 vectormetrics
 bespatial
+LandComp
 motif
 ?GLCMTextures
 ?rasterdiv
