@@ -4,6 +4,8 @@ bibliography: CLER.bib
 
 <!-- Person responsible: Hesselbarth, Nowosad, Bosch, Jung, Schouten  -->
 
+<!-- "The future applications of landscape pattern metrics will almost certainly depend on the software and analysis tools available" -- @costanzaDescribingAnalyzingLandscape2019 -->
+
 # Software and programming languages
 
 ## Open source vs. proprietary software
@@ -14,9 +16,24 @@ bibliography: CLER.bib
 
 ### R
 <!-- Hesselbarth -->
+landscapemetrics
+geodiv
+vectormetrics
+bespatial
+motif
+?GLCMTextures
+?rasterdiv
+?terra
 
 ### Python
 <!-- Bosch -->
 
 ### Julia
 <!-- Schouten -->
+
+## Other open source software
+
+GuidosToolbox
+?GRASS GIS
+?QGIS: LecoS plugin
+
