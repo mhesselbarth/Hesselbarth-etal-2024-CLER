@@ -166,18 +166,39 @@ how they are related to spatial patterns and landscape ecology
 
 ## Vector metrics
 <!-- Nowosad, Hesselbarth -->
+<!-- jn: ask T. Matuszek for review of this section later -->
 
-an intro to the section
-what is similar to landscape metrics
+As already mentioned, the initial computaional approaches in landscape ecology were based on raster data.
+However, the decision on the used data model was not theorethical, but rather practical as at the time the most comonnly used software was raster-based, such as GRASS GIS.
+In fact, early studies were based on polygonal vector data that was later converted to raster data for the analysis [@costanzaDescribingAnalyzingLandscape2019]<!--jn: we could also cite actual examples from that paper, but the list of the references would be long-->
+<!-- jn: maybe we could also mention that it is still the case -->
 
-add an info about shape metrics
-@basaranerPerformanceShapeIndices2017
+The spatial vector data model is based on the representation of the Earth's surface as a set of points, lines, and polygons, where each feature is defined by its geometry and attributes.
+Here, we will focus on the polygonal vector data, which is the most common in landscape ecology.
+The polygons are discrete areas, with well-defined boundaries.
+Thus, converting the polygons to raster data (*rasterization*) is a lossy process, where the information about the intricates of the polygon shapes is lost.
+Moreover, the rasterization process largely depends on the decided resolution of the raster outcome.
 
-https://github.com/r-spatialecology/vectormetrics
+Most landscape ecology studies are still based on raster data, due to the familarity with the techiniques, the availability of the data, and the availability of the software.
+For example, most land cover maps (as LULC products are often related to undelining remote sensing products), and all on the global scale, are provided as rasters. 
+At the same time, nowadays, vector data of land cover on regional or local scales is also available and most geospatial software support also vector data.
 
-<!--misc-->
-<!-- the need for open-source software in landscape ecology -->
-<!-- every proposed method should be open-source and available to the community -->
+As hundreds of metrics have been already developed for raster data, the most straightforward approach is to reimplement the same metrics for vector data.
+@yaoVecLIFrameworkCalculating2022 showed that this is possible for most of the metrics, with only several exceptions of metrics (of the shape and aggregation group), which parameters are related to the raster-format structure.
+Their results highlighted that about 80% of the raster and vector-based metrics are highly correlated (for their study area), and the higher the raster resolution, the stronger the correlation is. 
+
+
+<!-- metrics from other fields -->
+<!-- add an info about shape metrics -->
+<!-- @basaranerPerformanceShapeIndices2017 -->
+
+<!-- https://github.com/r-spatialecology/vectormetrics -->
+
+<!-- vectormetrics limitations?? 
+surely, large data performance is one of them
+(e.g., could we do landscapemetrics vs vectormetrics benchmarking?) -->
+
+<!-- polygon vs multipolygon technical distinction -->
 
 ## Operations on spatial patterns
 
