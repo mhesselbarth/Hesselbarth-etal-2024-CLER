@@ -6,6 +6,10 @@ bibliography: CLER.bib
 
 <!-- "The future applications of landscape pattern metrics will almost certainly depend on the software and analysis tools available" -- @costanzaDescribingAnalyzingLandscape2019 -->
 
+<!--jn: misc-->
+<!-- the need for open-source software in landscape ecology -->
+<!-- every proposed method should be open-source and available to the community -->
+
 # Software and programming languages
 
 ## Open source vs. proprietary software
@@ -18,7 +22,7 @@ bibliography: CLER.bib
 <!-- Hesselbarth -->
 landscapemetrics
 geodiv
-vectormetrics
+vectormetrics (also: VecLI -- they mention open source in their paper a few times, but the software seems to be closed source -- https://urbancomp.net/archives/vecliv3beta)
 bespatial
 LandComp
 motif
