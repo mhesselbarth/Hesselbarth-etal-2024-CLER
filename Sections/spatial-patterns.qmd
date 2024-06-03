@@ -203,6 +203,22 @@ surely, large data performance is one of them
 
 ## Operations on spatial patterns
 
-@nowosadMotifOpensourceTool2021
+Various metrics are often used to describe spatial patterns in landscape ecology.
+<!-- limits, correlations?? -->
+At the same time, the spatial patterns could be analyzed using various operations, such as comparing, searching, or grouping [@turnerSpatialTemporalAnalysis1990;@wickhamMappingAnalyzingLandscape1994; @jasiewiczGeoPATToolboxPatternbased2015; @remmelDistributionsHyperLocalConfiguration2020b;@nowosadMotifOpensourceTool2021].
+The above operations are based on two main ideas: the spatial signatures and the dissimilarity measures.
+A spatial signature is a multi-numerical representation of a landscape pattern for a given area.
+It may be created based on a set of (preferably uncorrelated) landscape metrics, or be derived from the data itself, e.g., by using the co-occurrence matrix [@nowosadPatternbasedIdentificationMapping2021].
+The dissimilarity measure is a function that quantifies the difference between two spatial signatures, with low values indicating similar patterns.
+
+The most basic operation, the comparison of spatial patterns, could be performed for just a pair of areas or the same area in two different moments.
+It can be also extended in a straightforward way by dividing the landscape into multiple smaller areas and comparing them for two moments in time.
+The comparison of spatial patterns is often used to analyze the landscape dynamics, e.g., to detect the changes in the landscape structure over time [@duncanMonitoringSpatialPatterns2023].
+The pattern-based search is a one to many operation, in which spatial signature of a query area is compared to the spatial signatures of all other areas.
+This allows us to find areas with similar patterns to the query area, which could be used to identify areas with similar environmental conditions [@jasiewiczLandscapeSimilarityRetrieval2014].
+Finally, the grouping of spatial patterns is a many to many operation, in which spatial signatures are calculated for all areas and then these areas are clustered based on their similarity [@nowosadPatternbasedIdentificationMapping2021].
+
+<!-- motif -->
+<!-- spquery -->
 
 <!-- FOSS4G Europe pap? -->

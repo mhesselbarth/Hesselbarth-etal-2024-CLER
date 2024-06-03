@@ -130,6 +130,19 @@
   publisher = {Cambridge university press}
 }
 
+@article{duncanMonitoringSpatialPatterns2023,
+  title = {Monitoring Spatial Patterns of Urban Vegetation: {{A}} Comparison of Contemporary High-Resolution Datasets},
+  author = {Duncan, John M.A. and Boruff, Bryan},
+  year = {2023},
+  journal = {Landscape and Urban Planning},
+  volume = {233},
+  pages = {104671},
+  issn = {0169-2046},
+  doi = {10.1016/j.landurbplan.2022.104671},
+  abstract = {Fine spatial resolution urban vegetation datasets are crucial for monitoring change in green space and guiding planning and policy initiatives to promote liveable and sustainable cities. Previous studies have demonstrated that finer spatial resolution products are more suited to monitoring urban vegetation than coarse spatial resolution datasets. However, there are differences in the generation of fine spatial resolution datasets that could affect how urban vegetation is represented. To explore how sensitive monitoring and analysis tasks are to the choice of vegetation dataset, a series of comparative analyses were undertaken using three fine spatial resolution datasets in Perth, Western Australia. A technique for quantitative comparison of spatial pattens was used to compare vegetation datasets. There were large areas of Perth where spatial patterns of vegetation were substantially different across datasets. The level of differences in spatial patterns between datasets varied with geographic context such as land use. Elements of a spatial pattern related to grass and tree composition were similar across datasets but there were differences in how shrubs and the configuration of vegetation features were captured. There were differences in the temporal change detection of vegetation patterns across datasets. Spatial patterns of vegetation and land cover generated using the three datasets were used as predictor variables of surface temperatures in machine learning workflows. In some cases, the models learned dataset specific relationships between elements of a vegetation pattern and surface temperature outcomes. In a final modelling analysis, spatial patterns of vegetation were considered as an outcome responding to a disturbance event, a change in dwelling density. The size of the effect of dwelling density change on vegetation patterns varied across vegetation datasets.},
+  keywords = {Image analysis,Remote sensing,Urban forests,Urban green space,Urban vegetation}
+}
+
 @article{Gao2017,
   title = {A Hierarchy-Based Solution to Calculate the Configurational Entropy of Landscape Gradients},
   author = {Gao, Peichao and Zhang, Hong and Li, Zhilin},
@@ -167,6 +180,38 @@
   doi = {10.1016/0048-9697(95)04966-5},
   abstract = {Ecological modelling should take its orientation more from real patterns observed in nature, than has been the case up to now, to overcome the deficiencies of the present strategies. Firstly, the orientation towards patterns provides guidelines about the manner and extent of the aggregation of biological information in the model. Modelling thereby loses much of its arbitrariness; secondly, pattern-oriented models are not `scale-free', i.e. they relate explicitly to spatial and temporal scales; and finally, they produce comparative predictions which are better suited for testing than the predictions achieved by models, which are only either complex or generalizing. To demonstrate the strategy of pattern-oriented modelling and its advantages, three examples from population ecology are presented: (1) In a model concerning density dependence and individual variability, the orientation towards a pattern in weight distributions requires explicit inclusion of the within-generation time scale in the model. (2) Orientation towards a pattern in the dispersal capabilities of small organisms leads to a metapopulation model, where environmental correlations about certain distances are taken into account. The survival of the metapopulation depends mainly on the ratio of the correlation distance to the range of dispersal of the organisms. (3) The wave-like pattern of the spread of rabies is reproduced by an extremely simple one-dimensional model, which is based on an extended cellular automaton approach. From this basic model, a description on finer spatial and temporal scales can be developed with the aim of constructing a model which allows for the investigation of spatial barriers against the spread of rabies. A comparison of the three example models shows that the main features of pattern-oriented models are generic. In producing comparative predictions which are related explicitly to scales, pattern-oriented modelling seems to be a strategy well suited to the `scaling up' from population ecology to community and ecosystem ecology.},
   file = {/home/jn/Zotero/storage/6SM47WPF/Grimm et al. - 1996 - Pattern-Oriented Modelling in Population Ecology.pdf}
+}
+
+@article{jasiewiczGeoPATToolboxPatternbased2015,
+  title = {{{GeoPAT}}: {{A}} Toolbox for Pattern-Based Information Retrieval from Large Geospatial Databases},
+  shorttitle = {{{GeoPAT}}},
+  author = {Jasiewicz, Jaros{\l}aw and Netzel, Pawe{\l} and Stepinski, Tomasz},
+  year = {2015},
+  journal = {Computers \& Geosciences},
+  volume = {80},
+  pages = {62--73},
+  issn = {00983004},
+  doi = {10/f7fz7r},
+  urldate = {2020-05-25},
+  abstract = {Geospatial Pattern Analysis Toolbox (GeoPAT) is a collection of GRASS GIS modules for carrying out pattern-based geospatial analysis of images and other spatial datasets. The need for pattern-based analysis arises when images/rasters contain rich spatial information either because of their very high resolution or their very large spatial extent. Elementary units of pattern-based analysis are scenes --patches of surface consisting of a complex arrangement of individual pixels (patterns). GeoPAT modules implement popular GIS algorithms, such as query, overlay, and segmentation, to operate on the grid of scenes. To achieve these capabilities GeoPAT includes a library of scene signatures -- compact numerical descriptors of patterns, and a library of distance functions -- providing numerical means of assessing dissimilarity between scenes. Ancillary GeoPAT modules use these functions to construct a grid of scenes or to assign signatures to individual scenes having regular or irregular geometries. Thus GeoPAT combines knowledge retrieval from patterns with mapping tasks within a single integrated GIS environment. GeoPAT is designed to identify and analyze complex, highly generalized classes in spatial datasets. Examples include distinguishing between different styles of urban settlements using VHR images, delineating different landscape types in land cover maps, and mapping physiographic units from DEM. The concept of pattern-based spatial analysis is explained and the roles of all modules and functions are described. A case study example pertaining to delineation of landscape types in a subregion of NLCD is given. Performance evaluation is included to highlight GeoPAT's applicability to very large datasets. The GeoPAT toolbox is available for download from http://sil.uc.edu/.},
+  langid = {english},
+  file = {/home/jn/Zotero/storage/AXXHFS7X/Jasiewicz et al. - 2015 - GeoPAT A toolbox for pattern-based information re.pdf}
+}
+
+@article{jasiewiczLandscapeSimilarityRetrieval2014,
+  title = {Landscape Similarity, Retrieval, and Machine Mapping of Physiographic Units},
+  author = {Jasiewicz, Jaroslaw and Netzel, Pawel and Stepinski, Tomasz F.},
+  year = {2014},
+  month = sep,
+  journal = {Geomorphology},
+  volume = {221},
+  pages = {104--112},
+  issn = {0169555X},
+  doi = {10/f6dmnb},
+  urldate = {2020-05-25},
+  abstract = {We introduce landscape similarity --- a numerical measure that assesses affinity between two landscapes on the basis of similarity between the patterns of their constituent landform elements. Such a similarity function provides core technology for a landscape search engine --- an algorithm that parses the topography of a study area and finds all places with landscapes broadly similar to a landscape template. A landscape search can yield answers to a query in real time, enabling a highly effective means to explore large topographic datasets. In turn, a landscape search facilitates auto-mapping of physiographic units within a study area. The country of Poland serves as a test bed for these novel concepts. The topography of Poland is given by a 30 m resolution DEM. The geomorphons method is applied to this DEM to classify the topography into ten common types of landform elements. A local landscape is represented by a square tile cut out of a map of landform elements. A histogram of cell-pair features is used to succinctly encode the composition and texture of a pattern within a local landscape. The affinity between two local landscapes is assessed using the Wave-Hedges similarity function applied to the two corresponding histograms. For a landscape search the study area is organized into a lattice of local landscapes. During the search the algorithm calculates the similarity between each local landscape and a given query. Our landscape search for Poland is implemented as a GeoWeb application called TerraEx-Pl and is available at http://sil.uc.edu/. Given a sample, or a number of samples, from a target physiographic unit the landscape search delineates this unit using the principles of supervised machine learning. Repeating this procedure for all units yields a complete physiographic map. The application of this methodology to topographic data of Poland results in the delineation of nine physiographic units. The resultant map bears a close resemblance to a conventional physiographic map of Poland; differences can be attributed to geological and paleogeographical input used in drawing the conventional map but not utilized by the mapping algorithm.},
+  langid = {english},
+  file = {/home/jn/Zotero/storage/24E7YJ6Y/Jasiewicz et al. - 2014 - Landscape similarity, retrieval, and machine mappi.pdf}
 }
 
 @article{jiaoCharacterizingLanduseClasses2012,
@@ -284,6 +329,42 @@
   file = {/home/jn/Zotero/storage/IH7C695K/Nowosad - 2021 - Motif an open-source R tool for pattern-based spa.pdf}
 }
 
+@article{nowosadPatternbasedIdentificationMapping2021,
+  title = {Pattern-Based Identification and Mapping of Landscape Types Using Multi-Thematic Data},
+  author = {Nowosad, Jakub and Stepinski, Tomasz F.},
+  year = {2021},
+  month = aug,
+  journal = {International Journal of Geographical Information Science},
+  volume = {35},
+  number = {8},
+  pages = {1634--1649},
+  issn = {1365-8816, 1362-3087},
+  doi = {10/gk437s},
+  urldate = {2021-07-07},
+  abstract = {Categorical maps of landscape types (LTs) are useful abstractions that simplify spatial and thematic complexity of natural landscapes, thus facilitating land resources management. A local landscape arises from a fusion of patterns of natural themes (such as land cover, landforms, etc.), which makes an unsupervised identification and mapping of LTs difficult. This paper introduces the integrated co-occurrence matrix (INCOMA) -- a signature for numerical representation of multi-thematic categorical patterns. INCOMA enables an unsupervised identification and mapping of LTs. The region is tessellated into a large number of local landscapes -- patterns of themes over small square-shaped neigh\- borhoods. With local landscapes represented by INCOMA signatures and with dissimilarities between local landscapes calculated using the Jensen-Shannon Divergence (JSD), LTs can be identified and mapped using standard clustering or segmentation techniques. Resultant LTs are typically heterogeneous with respect to categories of contributing themes reflecting the human perception of a landscape. LTs calculated by INCOMA are more faithful abstractions of actual landscapes than LTs obtained by the current method of choice -- the map overlay. The concept of INCOMA is described, and its application is demonstrated by an unsupervised mapping of LT zones in Europe based on com\- bined patterns of land cover and landforms.},
+  copyright = {All rights reserved},
+  langid = {english},
+  file = {/home/jn/Zotero/storage/HSFGFJ69/Nowosad and Stepinski - 2021 - Pattern-based identification and mapping of landsc.pdf}
+}
+
+@article{remmelDistributionsHyperLocalConfiguration2020b,
+  title = {Distributions of {{Hyper-Local Configuration Elements}} to {{Characterize}}, {{Compare}}, and {{Assess Landscape-Level Spatial Patterns}}},
+  author = {Remmel, Tarmo K.},
+  year = {2020},
+  month = apr,
+  journal = {Entropy},
+  volume = {22},
+  number = {4},
+  pages = {420},
+  issn = {1099-4300},
+  doi = {10.3390/e22040420},
+  urldate = {2024-06-03},
+  abstract = {Even with considerable attention in recent decades, measuring and working with patterns remains a complex task due to the underlying dynamic processes that form these patterns, the influence of scales, and the many further implications stemming from their representation. This work scrutinizes binary classes mapped onto regular grids and counts the relative frequencies of all first-order configuration components and then converts these measurements into empirical probabilities of occurrence for either of the two landscape classes. The approach takes into consideration configuration explicitly and composition implicitly (in a common framework), while the construction of a frequency distribution provides a generic model of landscape structure that can be used to simulate structurally similar landscapes or to compare divergence from other landscapes. The technique is first tested on simulated data to characterize a continuum of landscapes across a range of spatial autocorrelations and relative compositions. Subsequent assessments of boundary prominence are explored, where outcomes are known a priori, to demonstrate the utility of this novel method. For a binary map on a regular grid, there are 32 possible configurations of first-order orthogonal neighbours. The goal is to develop a workflow that permits patterns to be characterized in this way and to offer an approach that identifies how relatively divergent observed patterns are, using the well-known Kullback--Leibler divergence.},
+  copyright = {https://creativecommons.org/licenses/by/4.0/},
+  langid = {english},
+  file = {/home/jn/Zotero/storage/BIMR5ULV/Remmel - 2020 - Distributions of Hyper-Local Configuration Element.pdf}
+}
+
 @article{riittersPatternMetricsTransdisciplinary2019a,
   title = {Pattern Metrics for a Transdisciplinary Landscape Ecology},
   author = {Riitters, Kurt},
@@ -373,6 +454,42 @@
   file = {/home/jn/Zotero/storage/N885M3AE/Stepinski - 2022 - Curb your enthusiasm for explaining the complexity.pdf}
 }
 
+@article{thomasExploringSwitzerlandLand2023,
+  title = {Exploring {{Switzerland}}'s {{Land Cover Change Dynamics Using}} a {{National Statistical Survey}}},
+  author = {Thomas, Isabel Nicholson and Giuliani, Gregory},
+  year = {2023},
+  month = jul,
+  journal = {Land},
+  volume = {12},
+  number = {7},
+  pages = {1386},
+  issn = {2073-445X},
+  doi = {10.3390/land12071386},
+  urldate = {2024-06-03},
+  abstract = {Timely and reliable Land Use and Cover change information is crucial to efficiently mitigate the negative impact of environmental changes. Switzerland has the ambitious objective of being a sustainable country while remaining an attractive business location with a high level of well-being. However, this aspiration is hampered by increasing pressures that are significantly impacting the environment and putting serious demands on land. In the present study, we used the national Land Cover (LC) dataset, named ArealStatistik, produced by the Federal Statistical Office, to explore the spatiotemporal patterns of Land Cover in Switzerland, providing a comprehensive assessment of land cover change at the national scale. Results indicate that, in general, Switzerland has undergone small, spatially dispersed, dynamic, and gradual change trends, with high rates of transition between low growing Brush Vegetation and forest LC classes in recent years. These pixel-level trends are more important in the lower altitude plateau and Jura regions, while greater changes in the spatial configuration of LC are observed in the alpine regions. However, findings also suggest that identifying drivers and understanding the rate of change are limited by the spatial resolution and temporal update frequency of the ArealStatistik. The ability to understand these drivers would benefit from a high-resolution annual LC dataset. Such a data product can be produced using the ArealStatistik together with dense satellite data time-series and Machine/Deep Learning techniques.},
+  copyright = {https://creativecommons.org/licenses/by/4.0/},
+  langid = {english},
+  file = {/home/jn/Zotero/storage/VMDSLXMA/Thomas and Giuliani - 2023 - Exploring Switzerland’s Land Cover Change Dynamics.pdf}
+}
+
+@article{turnerSpatialTemporalAnalysis1990,
+  title = {Spatial and Temporal Analysis of Landscape Patterns},
+  author = {Turner, Monica G.},
+  year = {1990},
+  month = mar,
+  journal = {Landscape Ecology},
+  volume = {4},
+  number = {1},
+  pages = {21--30},
+  issn = {0921-2973, 1572-9761},
+  doi = {10.1007/BF02573948},
+  urldate = {2024-06-03},
+  abstract = {A variety of ecological questions now require the study of large regions and the understanding of spatial heterogeneity. Methods for spatial-temporal analyses are becoming increasingly important for ecological studies. A grid cell based spatial analysis program (SPAN) is described and results of landscape pattern analysis using SPAN are presentedd. Several ecological topics in which geographic in.formation systems (GIS) can play an important role (landscape pattern analysis, neutral models of pattern and process, and extrapolation across spatial scales) are reviewed. To study the relationship between observed landscape patterns and ecological processes, a neutral model approach is recommended. For example, the expected pattern (i.e., neutral model) of the spread of disturbance across a landscape can be generated and then tested using actual landscape data that are stored in a GIS. Observed spatial or temporal patterns in ecological data may also be influenced by scale. Creating a spatial data base frequently requires integrating data at different scales. Spatial scale is shown to influence landscape pattern analyses, but extrapolation of data across spatial scales may be possible if the grain and extent of the data are specified. The continued development and testing of new methods for spatial-temporal analysis will contribute to a general understanding of landscape dynamics.},
+  copyright = {http://www.springer.com/tdm},
+  langid = {english},
+  file = {/home/jn/Zotero/storage/Z68TT6UX/Turner - 1990 - Spatial and temporal analysis of landscape pattern.pdf}
+}
+
 @article{vrankenReviewUseEntropy2015a,
   title = {A Review on the Use of Entropy in Landscape Ecology: Heterogeneity, Unpredictability, Scale Dependence and Their Links with Thermodynamics},
   shorttitle = {A Review on the Use of Entropy in Landscape Ecology},
@@ -388,6 +505,23 @@
   urldate = {2024-06-01},
   langid = {english},
   file = {/home/jn/Zotero/storage/IHYF2JGB/Vranken et al. - 2015 - A review on the use of entropy in landscape ecolog.pdf}
+}
+
+@article{wickhamMappingAnalyzingLandscape1994,
+  title = {Mapping and Analyzing Landscape Patterns},
+  author = {Wickham, James D. and Norton, Douglas J.},
+  year = {1994},
+  month = mar,
+  journal = {Landscape Ecology},
+  volume = {9},
+  number = {1},
+  pages = {7--23},
+  issn = {0921-2973, 1572-9761},
+  doi = {10/fwz5bm},
+  urldate = {2020-09-18},
+  abstract = {Landscapes were mapped as clusters of 2 or 3 land cover** types, based on their pattern within the clusters and tendency for a single type to dominate. These landscapes, called Landscape Pattern Types (LPTs), were combined with other earth surface feature data in a Geographic Information System (GIS) to test their utility as analysis units. Road segment density increased significantly as residential and urbanized land cover components increased from absent, to present as patch, to present as matrix (i.e., the dominant land cover type). Stream segment density was significantly lower in LPTs with an urbanized or residential matrix than in LPTs with either a forest or agriculture matrix, suggesting an inverse relationship between stream network density and the prevalence of human development other than agriculture in the landscape. The ratio of average forest patch size to total forest in the LPT unit decreased as agriculture replaced forest, then increased as residential and urban components dominated. Wetland fractal dimension increased as agriculture and residential land cover components of LPTs increased. Comparison of LPT and LUDA land cover area statistics in ecoregions suggested that land cover data alone does not provide information as to its spatial arrangement.},
+  langid = {english},
+  file = {/home/jn/Zotero/storage/ZVC483I2/Wickham and Norton - 1994 - Mapping and analyzing landscape patterns.pdf}
 }
 
 @article{wiegandUsingPatternOriented2003,
