@@ -168,7 +168,7 @@ how they are related to spatial patterns and landscape ecology
 <!-- Nowosad, Hesselbarth -->
 <!-- jn: ask T. Matuszek for review of this section later -->
 
-As already mentioned, the initial computaional approaches in landscape ecology were based on raster data.
+As already mentioned, the initial computational approaches in landscape ecology were based on raster data.
 However, the decision on the used data model was not theorethical, but rather practical as at the time the most comonnly used software was raster-based, such as GRASS GIS.
 In fact, early studies were based on polygonal vector data that was later converted to raster data for the analysis [@costanzaDescribingAnalyzingLandscape2019]<!--jn: we could also cite actual examples from that paper, but the list of the references would be long-->
 <!-- jn: maybe we could also mention that it is still the case -->
@@ -187,10 +187,11 @@ As hundreds of metrics have been already developed for raster data, the most str
 @yaoVecLIFrameworkCalculating2022 showed that this is possible for most of the metrics, with only several exceptions of metrics (of the shape and aggregation group), which parameters are related to the raster-format structure.
 Their results highlighted that about 80% of the raster and vector-based metrics are highly correlated (for their study area), and the higher the raster resolution, the stronger the correlation is. 
 
-
-<!-- metrics from other fields -->
-<!-- add an info about shape metrics -->
-<!-- @basaranerPerformanceShapeIndices2017 -->
+While landscape ecology studies have focussed on using raster data, the vector data model has been widely used in other fields.
+@maceachrenCompactnessGeographicShape1985 presented four categories of compactness measures for vector data: perimeter-area, single parameters of related circles, dispersion of elements of the area around a centroid, and direct comparison to standard shapes, 
+@angelTenCompactnessProperties2010 introduced a unified theoretical foundation for measuring shape compactness.
+They observed that the circle is the most compact of shapes, proposed a set of ten distinct properties of the circle, and then defined metrics associated with each of these properties.
+Vector-based metrics are now popular in urban planning, as they allow to quantify the shapes of urban areas, e.g., @basaranerPerformanceShapeIndices2017a used 18 existing metrics and two new ones to characterize the complexity of building footprints.
 
 <!-- https://github.com/r-spatialecology/vectormetrics -->
 
