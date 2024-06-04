@@ -171,23 +171,23 @@ The same entropy equation could provide different insights when applied just to 
 <!-- Nowosad, Hesselbarth -->
 <!-- jn: ask T. Matuszek for review of this section later -->
 
-As already mentioned, the initial computational approaches in landscape ecology were based on raster data.
-However, the decision on the used data model was not theorethical, but rather practical as at the time the most comonnly used software was raster-based, such as GRASS GIS.
+As mentioned, the initial computational approaches in landscape ecology were based on raster data.
+However, the decision on the data model used was not theoretical but rather practical, as at the time, the most commonly used software was raster-based, such as GRASS GIS.
 In fact, early studies were based on polygonal vector data that was later converted to raster data for the analysis [@costanzaDescribingAnalyzingLandscape2019]<!--jn: we could also cite actual examples from that paper, but the list of the references would be long-->
 <!-- jn: maybe we could also mention that it is still the case -->
 
 The spatial vector data model is based on the representation of the Earth's surface as a set of points, lines, and polygons, where each feature is defined by its geometry and attributes.
 Here, we will focus on the polygonal vector data, which is the most common in landscape ecology.
 The polygons are discrete areas, with well-defined boundaries.
-Thus, converting the polygons to raster data (*rasterization*) is a lossy process, where the information about the intricates of the polygon shapes is lost.
+Thus, converting the polygons to raster data (*rasterization*) is a lossy process, in which information about the intricate details of the polygon shapes is lost.
 Moreover, the rasterization process largely depends on the decided resolution of the raster outcome.
 
 Most landscape ecology studies are still based on raster data, due to the familarity with the techiniques, the availability of the data, and the availability of the software.
-For example, most land cover maps (as LULC products are often related to undelining remote sensing products), and all on the global scale, are provided as rasters. 
-At the same time, nowadays, vector data of land cover on regional or local scales is also available and most geospatial software support also vector data.
+For example, most land cover maps (as LULC products are often related to underlying remote sensing products), and all on the global scale, are provided as rasters. 
+At the same time, nowadays, vector data of land cover on regional or local scales is also available, and most geospatial software supports vector data.
 
-As hundreds of metrics have been already developed for raster data, the most straightforward approach is to reimplement the same metrics for vector data.
-@yaoVecLIFrameworkCalculating2022 showed that this is possible for most of the metrics, with only several exceptions of metrics (of the shape and aggregation group), which parameters are related to the raster-format structure.
+Hundreds of metrics have already been developed for raster data, so the most straightforward approach is to reimplement the same metrics for vector data.
+@yaoVecLIFrameworkCalculating2022 showed that this is possible for most of the metrics, with only several exceptions of metrics (of the shape and aggregation group), whose parameters are related to the raster-format structure.
 Their results highlighted that about 80% of the raster and vector-based metrics are highly correlated (for their study area), and the higher the raster resolution, the stronger the correlation is. 
 
 While landscape ecology studies have focussed on using raster data, the vector data model has been widely used in other fields.
@@ -215,11 +215,11 @@ It may be created based on a set of (preferably uncorrelated) landscape metrics,
 The dissimilarity measure is a function that quantifies the difference between two spatial signatures, with low values indicating similar patterns.
 
 The most basic operation, the comparison of spatial patterns, could be performed for just a pair of areas or the same area in two different moments.
-It can be also extended in a straightforward way by dividing the landscape into multiple smaller areas and comparing them for two moments in time.
-The comparison of spatial patterns is often used to analyze the landscape dynamics, e.g., to detect the changes in the landscape structure over time [@duncanMonitoringSpatialPatterns2023].
-The pattern-based search is a one to many operation, in which spatial signature of a query area is compared to the spatial signatures of all other areas.
+It can also be extended straightforwardly by dividing the landscape into multiple smaller areas and comparing them at two moments in time.
+Comparing spatial patterns is often used to analyze landscape dynamics, e.g., to detect changes in landscape structure over time [@duncanMonitoringSpatialPatterns2023].
+Pattern-based search is a one-to-many operation in which the spatial signature of a query area is compared to the spatial signatures of all other areas.
 This allows us to find areas with similar patterns to the query area, which could be used to identify areas with similar environmental conditions [@jasiewiczLandscapeSimilarityRetrieval2014].
-Finally, the grouping of spatial patterns is a many to many operation, in which spatial signatures are calculated for all areas and then these areas are clustered based on their similarity [@nowosadPatternbasedIdentificationMapping2021].
+Finally, the grouping of spatial patterns is a many-to-many operation, in which spatial signatures are calculated for all areas, and then these areas are clustered based on their similarity [@nowosadPatternbasedIdentificationMapping2021].
 
 <!-- motif -->
 <!-- spquery -->
