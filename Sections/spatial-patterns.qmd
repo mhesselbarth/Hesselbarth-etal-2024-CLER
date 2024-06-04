@@ -15,39 +15,39 @@ format: pdf
 [Pattern metrics](https://doi.org/10.1007/s10980-018-0755-4) -->
 
 Spatial patterns are a fundamental concept not only in landscape ecology, but also in many other fields, such as geography, biology, urban planning, and even medical studies. 
-@daleSpatialPatternAnalysis2000 defined them as the scale-dependent predictability of the physical arrangement of observations, while a more general definition by @grimmPatternOrientedModellingPopulation1996 describes them as a characteristic, clearly identifiable structure in nature itself or in the data extracted from nature, indicating an underlying process that generates this pattern.
+@daleSpatialPatternAnalysis2000 defined them as the scale-dependent predictability of the physical arrangement of observations, while a more general definition by @grimmPatternOrientedModellingPopulation1996 describes them as a characteristic, clearly identifiable structure in nature itself or the data extracted from nature, indicating an underlying process that generates this pattern.
 Both definitions highlight several important aspects of spatial patterns: they are related to processes, depending on the scale of observation, and can be found in data.  
 
 The relation of spatial patterns to spatial processes is a golden grail of landscape ecology.
-Patterns observed in nature contain information about the memory of the system, including its demographic processes, dispersal characteristics, and constraining factors[@wiegandUsingPatternOriented2003].
+Patterns observed in nature contain information about a system's memory, including its demographic processes, dispersal characteristics, and constraining factors[@wiegandUsingPatternOriented2003].
 Moreover, spatial patterns are not only a result of processes but could also be a driver of them.
-Thus, untangling the complex history of a landscape from its spatial patterns is a hard challenge.
+Thus, untangling the complex history of a landscape from its spatial patterns is a complex challenge.
 
 Here, our focus is on the computational approaches to spatial patterns.
-Thus, we will discuss the spatial patterns that could be found in data, the metrics that could be used to quantify them, and the operations that could be performed on them.
+Thus, we will discuss the spatial patterns found in data, the metrics that could be used to quantify them, and the operations that could be performed on them.
 
-Computational approaches to spatial patterns open many new possibilities as compared to traditional methods. 
-They allow not only to quantify the patterns but also to model them, simulate them, and predict them.
+Computational approaches to spatial patterns open many new possibilities compared to traditional methods. 
+They allow not only quantifying the patterns but also modeling, simulating, and predicting them.
 Moreover, they allow us to analyze large datasets and apply complex algorithms.
 At the same time, the computational approaches have considerations and limitations that should be taken into account.
 
-Every data type is a simplified model of the real world, and the spatial patterns found in the data are a simplified representation of the real spatial patterns.
-Thus, the choice of the data type, the scale of the data, and the scale of the analysis are crucial for the results of the analysis.
+Every data type is a simplified model of the natural world, and the spatial patterns found in the data are a simplified representation of the actual spatial patterns.
+Thus, the choice of the data type, the scale of the data, and the scale of the analysis are crucial for the analysis's results.
 
 <!-- datatype -->
 Traditionally and still the most prominent, computational approaches to spatial patterns in landscape ecology revolve around "patch mosaic" model, where the landscape is represented as a raster data with different categories of land cover [@costanzaDescribingAnalyzingLandscape2019].
 Another approach is the "surface model," where the landscape is represented as continuous raster data with different values of some variable, such as elevation or temperature <!--@costanzaDescribingAnalyzingLandscape2019 for more refs-->.
-Importantly, both these models are based on raster data.
+Notably, both these models are based on raster data.
 
 However, the raster data is not the only data type that could be used to represent spatial patterns.
-Another important data type is vector data, which is used to represent point, line, and polygon features.
+Another important data type is vector data, representing point, line, and polygon features.
 Here, the spatial patterns could be related to densities of points, ..., or shapes of polygons.
-Moreover, the vector data could be used to represent the point clouds, which are the data type that is becoming more and more popular with the development of remote sensing technologies (i.e., LiDAR).
+Moreover, vector data could be used to represent point clouds, which are data types that are becoming increasingly popular with the development of remote sensing technologies (i.e., LiDAR).
 Spatial patterns in point clouds could be related to the shapes of the point clouds or the distances between points.<!--ref-->
 
 <!-- data sources??+SAR -->
 Currently, the most common data sources in landscape ecology are remote sensing data, either in a direct form (satellite images) or in an indirect form (spectral indices, land cover maps).
-The number of available spatial data products is still increasing, with new sensors, new satellites, and new data processing techniques.
+The number of available spatial data products is still increasing, with new sensors, satellites, and data processing techniques.
 This trend is seen, for example, with the frequent release of new global land cover maps, such as the ESA WorldCover, Dynamic World, or the Esri LULC.
 <!-- refs -->
 Other examples are the increasing availability of high-resolution data and the growing popularity of LiDAR and SAR data.
@@ -55,27 +55,27 @@ Other examples are the increasing availability of high-resolution data and the g
 <!-- scale of data -->
 In computational approaches, the issue of scale is closely related to the used data. 
 Here, an important distinction should be made between the scale of the data and the data resolution.
-The data scale refers to the degree of generalization of the data, while the data resolution refers to the smallest unit of the data.
+The data scale refers to the degree of data generalization, while the data resolution refers to the smallest data unit.
 Thus, it is possible to have data with a high resolution but a small scale, or data with a low resolution but a large scale.
 
 <!-- data cats -->
-Similary, it is crucial to understand the thematic resolution of the data, which in landscape ecology often refers to the number and definition of the categories in the data.
+Similarly, it is crucial to understand the data's thematic resolution, which in landscape ecology often refers to the number and definition of the categories in the data.
 <!-- ... -->
 
 <!-- scale of analysis -->
-Related to the scale of the data is the scale of the analysis.
+The scale of the data is related to the scale of the analysis.
 It specifies the extent of the study area and the way the data is analyzed.
 Given that the categorical rasters consist of patches, the analysis could be performed at the patch, class, or landscape level. 
 However, it is possible to analyze these levels for a fixed area, using moving windows or buffers around the sampling points.
 
 <!-- time -->
-Early approaches to spatial patterns in landscape ecology were mostly static, focusing on the spatial patterns at a single point in time.
+Early approaches to spatial patterns in landscape ecology were primarily static, focusing on the spatial patterns at a single point in time.
 However, the development of remote sensing technologies and the availability of time series data have allowed for the analysis of spatial patterns over time.
 This opportunity further highlights the importance of understanding of the used data: is it a snapshot of a single moment, a composite of multiple moments, or a temporal generalization?
-The properties of the used data should be in line with the research question and the scale of the analysis.
+The properties of the used data should align with the research question and the scale of the analysis.
 
 <!-- data quality -->
-It should be noted that the quality of the data is not constant and the data products are not perfect: they could contain errors and biases.
+It should be noted that the quality of the data is not constant, and the data products are not perfect: they could contain errors and biases.
 For example, the global land cover products usually have an overall accuracy of 70-80%, which means that 20-30% of the pixels are misclassified.
 Moreover, the misclassification is not random, but it is often related to the land cover type, the region, and the time of the year.
 <!-- refs -->
@@ -113,53 +113,56 @@ On the other hand, many projected coordinate reference systems exist, each with 
 ## Entropy
 <!-- Nowosad, Bosch -->
 <!-- jn: should we use equations here? -->
+<!-- jn: ask T. Stepinski for review of this section later -->
+
+Entropy in landscape ecology is mainly used to quantify the complexity of the landscape (spatial heterogeneity) and less often unpredictability (temporal heterogeneity) and scale dependence (@vrankenReviewUseEntropy2015a).
+It is derived using various methods, mainly from the information theory and thermodynamics, including Shannon entropy (and its analogous forms, such as Simpson index<!-- Simpson index @simpsonMeasurementDiversity1949 -->
+), Boltzmann entropy, Renyi entropy, and more.
 
 <!-- information (Shannon)/Shannon diversity -->
-One of the most commonly used metrics in landscape ecology is the Shannon index of diversity (SHDI, @Shannon1948).
+One of the most commonly used metrics in landscape ecology is the Shannon diversity index (SHDI, @Shannon1948).
 It quantifies the richness and evenness of the categories in the landscape, with higher values indicating higher diversity (more different classes and more even distribution of them).
 SHDI comes from the information theory.
 It is an adaptation of the Shannon entropy, which measures of the uncertainty in a random variable.
 
-The SHDI metric is based on the composition of the landscape only, omitting the spatial configuration of the categories.
+The SHDI metric is based on the composition of the landscape only, omitting the categories' spatial configuration.
 <!--composition is the most important -- Ritters-->
 Thus, other measures from the information theory were adapted to landscape ecology to quantify the spatial configuration and the total complexity of the landscape.
 @nowosadInformationTheoryConsistent2019a proposed to treat a categorical raster as a bivariate random variable $(x,y)$ where $x$ is the category of the focal cell and $y$ is the category of the neighboring cell.
-This approach allows to compress the information about the composition and the configuration of the landscape into a co-occurrence matrix, which could be used to calculate various entropy measures.
-It includes the conditional entropy (representing configurational complexity), the joint entropy (representing overall spatio-thematic complexity), the mutual information , and the relative mutual information (representing the degree of spatial autocorrelation).
+This approach allows us to compress information about the landscape's composition and configuration into a co-occurrence matrix, which could be used to calculate various entropy measures.
+It includes conditional entropy (representing configurational complexity), joint entropy (representing overall spatial-thematic complexity), mutual information, and relative mutual information (representing the degree of spatial autocorrelation).
+Shannon's entropy formula can also be modified to include the landscape's spatial configuration, e.g., by weights calculated from intra- and inter-class distances, as shown by @claramuntSpatiotemporalFormEntropy2012.
 <!-- https://r-spatialecology.github.io/landscapemetrics/ -->
 
 <!-- thermodynamic (Boltzmann) -->
-The last few years have seen a surge in the development of entropy-based metrics for landscape ecology based on the notions from thermodynamics initatied by the work of @vrankenReviewUseEntropy2015a and @cushmanThermodynamicsLandscapeEcology2015a.
-The overreaching goal of such studies is to link landscape ecology concepts to the thermodynamic principles, such as the second law of thermodynamics.
-They often use the Boltzmann entropy, which is a measure of the disorder in a system, to quantify the complexity of the landscape.
-In late 1800s, Boltzmann formulated a probabilistic interpretation of the second law of thermodynamics, using the concepts of macrostate (general state of a system) and microstate (configuration of the system elements).
+<!-- "instead of Shannon entropy, what should be used is argued to be Boltzmann (1872) entropy, and calls have recently been made to revisit it" @gaoComputationBoltzmannEntropy2019 -->
+The last few years have seen a surge in the development of entropy-based metrics for landscape ecology based on the notions from thermodynamics initiated by the work of @vrankenReviewUseEntropy2015a and @cushmanThermodynamicsLandscapeEcology2015a.
+The overreaching goal of such studies is to link landscape ecology concepts to thermodynamic principles, such as the second law of thermodynamics.
+In the late 1800s, Boltzmann formulated a probabilistic interpretation of the second law of thermodynamics, using the concepts of macrostate (the general state of a system) and microstate (the configuration of the system elements).
+These studies often use Boltzmann entropy, a measure of a system's disorder, to quantify the landscape's complexity.
 
-@Cushman2016 proposed to relate the edge lenght to the microstate of the landscape, and use the proportion of microstates to compute the relative Boltzmann entropy of a landscape mosaic in raster data.
-Simoultaneously, @Gao2017 proposed to use the Boltzmann entropy to quantify the complexity of a landscape surface in raster data by transforming the input grid into a series of landscape sufraces with different levels of detail and calculating the Boltzmann entropy based on the total number of microstates that are able to generate the observed macrostate.
-@zhaoCalculatingSpatialConfigurational2019 extended the original definition of Boltzmann entropy to incorporate the information about the adjancency of the same categories in the landscape mosaic.
+@Cushman2016 proposed to relate the edge length to the microstate of the landscape and use the proportion of microstates to compute the relative Boltzmann entropy of a landscape mosaic in raster data.
 It is also worth noting that later, Cushman refined and generalized this approach for calculations based on raster's surface model (based on mean slope) and point patterns (based on the average distance between points) [@cushmanGeneralizingBoltzmannConfigurational2021].
+Simoultaneously, @Gao2017 proposed to use the Boltzmann entropy to quantify the complexity of a landscape surface in raster data by transforming the input grid into a series of landscape sufraces with different levels of detail and calculating the Boltzmann entropy based on the total number of microstates that are able to generate the observed macrostate.
+@zhaoCalculatingSpatialConfigurational2019 extended the original definition of Boltzmann entropy to incorporate the information about the adjacency of the same categories in the landscape mosaic by using the number of contiguous patches of the same category.
 <!-- https://jakubnowosad.com/bespatial/ -->
 
+The relations between the Shannon entropy and the Boltzmann entropy and their interpretations in landscape ecology are the subject of an open discussion.
+@stepinskiCurbYourEnthusiasm2022 showed that the Shannon entropy is a general form of entropy, and other entropies, including the Boltzmann entropy, could be derived as specific applications of the Shannon entropy.
+He also argues that the newly proposed entropy measures inspired by the Boltzmann equation have no connotation to statistical mechanics and thermodynamics.
+Thus, more research is needed to understand the relations between the entropy measures and how they relate to the environmental processes.
 
-claims of relations between entropy and thermodynamics
-@stepinskiCurbYourEnthusiasm2022
-entropy measures are still related to the underlining data representation (!)
-@zhaoCalculatingSpatialConfigurational2019
+Moreover, many other entropy-based metrics have been proposed for use in landscape ecology.
+The Renyi [@renyiMeasuresEntropyInformation1961] and Gibbs entropies, which are both generalizations of the Shannon entropy, are applied to quantify the complexity of the landscape.
+Rao quadratic entropy [@raoDiversityDissimilarityCoefficients1982a] has also been used more in recent years, as it measures not only the relative abundances of elements but also the pairwise dissimilarities or distances between them.<!--https://doi.org/10.1016/j.ecolind.2016.07.039-->
+Thus, it can be useful in cases, for example, when the dissimilarities between land cover types, and not only their categories, are relevant.
 
-<!-- "nstead of Shannon entropy, what should be used is argued to be Boltzmann (1872) entropy, and calls have recently been made to revisit it" @gaoComputationBoltzmannEntropy2019 -->
+Importantly, the exisiting studies on entropy-based measures clearly show that the outcomes do not only relay on the various formulations of the entropy, but also on the underlining data representation [@zhaoCalculatingSpatialConfigurational2019].
+The same entropy equation could provide different insights when applied just to the composition of the categories, co-occurrence matrix, or on the landscape with multiple spatial scales.
 
-how they are related to each other
-how they are related to spatial patterns and landscape ecology
-
-- Kolmogorov, etc.; Juhász-Nagy’s information theory-based functions, Simpson index, Rao index, Pielou, Renyu, ...
-@konradAdaptingMultiscaleApproach2023; 
-@simpsonMeasurementDiversity1949
-
+<!-- Kolmogorov, etc. -->
+<!--@konradAdaptingMultiscaleApproach2023; Juhász-Nagy’s information theory-based functions;  https://cran.r-project.org/web/packages/LandComp/index.html -->
 <!-- "Fractal dimension seems directly related to entropy." @cushmanThermodynamicsLandscapeEcology2015a -->
-
-<!-- https://cran.r-project.org/web/packages/LandComp/index.html -->
-
-<!-- unification for various data types, e.g., Cushman, vectormetrics -->
 
 ## Landscape mosaic
 <!-- Bosch -->
