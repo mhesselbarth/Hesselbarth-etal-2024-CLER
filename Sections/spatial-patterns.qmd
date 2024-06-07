@@ -155,7 +155,7 @@ Moreover, many other entropy-based metrics have been proposed for use in landsca
 The Renyi [@renyiMeasuresEntropyInformation1961] and Gibbs entropies, which are both generalizations of the Shannon entropy, are applied to quantify the complexity of the landscape.
 Rao quadratic entropy [@raoDiversityDissimilarityCoefficients1982a] has also been used more in recent years, as it measures not only the relative abundances of elements but also the pairwise dissimilarities or distances between them.<!--https://doi.org/10.1016/j.ecolind.2016.07.039-->
 Thus, it can be useful in cases, for example, when the dissimilarities between land cover types, and not only their categories, are relevant.
-<!-- more -->
+Another recent developement is the use of Kullback-Leibler divergence (also known as relative entropy), which is a measure of the difference between two probability distributions, to describe patterns across scales [@huckebaMultiscaleSpatialEcology2023].
 
 Importantly, the exisiting studies on entropy-based measures clearly show that the outcomes do not only depend on the various formulations of the entropy, but also on the underlining data representation [@zhaoCalculatingSpatialConfigurational2019].
 The same entropy equation could provide different insights when applied just to the composition of the categories, co-occurrence matrix, or on the landscape transformed into a series of data with different levels of detail.
@@ -225,6 +225,7 @@ This allows us to find areas with similar patterns to the query area, which coul
 Finally, the grouping of spatial patterns is a many-to-many operation, in which spatial signatures are calculated for all areas, and then these areas are clustered based on their similarity [@nowosadPatternbasedIdentificationMapping2021].
 
 <!-- one/two par about other approaches -->
+<!-- e.g., modeling, simulation, prediction, etc. -->
 
 <!-- motif -->
 <!-- spquery -->

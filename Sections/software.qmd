@@ -20,7 +20,7 @@ bibliography: CLER.bib
 
 ### R
 <!-- Hesselbarth -->
-landscapemetrics
+<!-- landscapemetrics
 geodiv
 vectormetrics (also: VecLI -- they mention open source in their paper a few times, but the software seems to be closed source -- https://urbancomp.net/archives/vecliv3beta)
 bespatial
@@ -28,7 +28,7 @@ LandComp
 motif
 ?GLCMTextures
 ?rasterdiv
-?terra
+?terra -->
 
 ### Python
 <!-- Bosch -->
@@ -38,7 +38,7 @@ motif
 
 ## Other open source software
 
-GuidosToolbox
+<!-- GuidosToolbox
 ?GRASS GIS
-?QGIS: LecoS plugin
+?QGIS: LecoS plugin -->
 
