@@ -2,7 +2,7 @@
 bibliography: 
     - ../CLER.bib
     - ../2024-cler.bib
-format: pdf
+format: docx
 ---
 
 <!-- Person responsible: Nowosad, Bosch, Hesselbarth -->
@@ -147,7 +147,7 @@ In later attempt, @zhaoCalculatingSpatialConfigurational2019 extended the origin
 <!-- https://jakubnowosad.com/bespatial/ -->
 
 The relations between the Shannon entropy and the Boltzmann entropy and their interpretations in landscape ecology are the subject of ongoing discussion.
-@stepinskiCurbYourEnthusiasm2022 showed that the Shannon entropy is a general form of entropy, and other entropies, including the Boltzmann entropy, could be derived as specific applications of the Shannon entropy.
+@stepinskiCurbYourEnthusiasm2022 and @huckebaMultiscaleSpatialEcology2023 showed that the Shannon entropy is a general form of entropy, and other entropies, including the Boltzmann entropy, could be derived as specific applications of the Shannon entropy.
 He also argues that the newly proposed entropy measures inspired by the Boltzmann equation have no connotation to statistical mechanics and thermodynamics.
 Thus, more research is needed to understand the relations between the entropy measures and how they relate to the environmental processes.
 
