@@ -54,6 +54,7 @@ csl: springer-basic-author-date.csl
 <!-- MH: Author order is not fixed yet. I just started to list everyone for now. -->
 
 {{< include Sections/introduction.qmd >}}
+{{< include Sections/spatial-patterns.qmd >}}
 {{< include Sections/simulations.qmd >}}
 
 {{< pagebreak >}}

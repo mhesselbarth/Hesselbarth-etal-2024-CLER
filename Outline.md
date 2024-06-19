@@ -69,3 +69,5 @@
 [Scaling](https://doi.org/10.3389/fevo.2019.00293)
 [Sampling overlap](https://doi.org/10.1007/s40823-020-00059-4)
 [Quantum computing](https://doi.org/10.1016/j.tree.2023.04.001)
+
+[Emerging trajectories for spatial pattern analysis in landscape ecology](https://doi.org/10.1007/s10980-019-00880-1)
