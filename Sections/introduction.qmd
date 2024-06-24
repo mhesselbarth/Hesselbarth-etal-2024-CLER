@@ -6,26 +6,26 @@ bibliography: CLER.bib
 
 # Introduction
 
-Landscapes are typically defined as mosaics of different land covers, habitats, ecosystems, or land use systems [@Forman1986;@Forman1995] - with empathize on heterogeneity of at least one factor of interest [@Turner2015].
-Linking spatial heterogeneity and ecological processes, including potential feedbacks, is the fundamental concept of landscape ecology [@Risser1984;@Turner1989;@Turner2005].
-Typical research topics include ecological flows in landscape mosaics, drivers and consequences of land use and land cover change, nonlinear dynamics and landscape complexity, scale and scaling, spatial analysis and landscape modeling, linking landscape metrics to ecological processes, integrating humans and their activities into landscape ecology, landscape conservation and sustainability, or accuracy assessment and uncertainty analysis [@Wu2002;@Wu2013].
+Landscapes are typically defined as mosaics of different land covers, habitats, ecosystems, or land use systems [@Forman1986; @Forman1995] - with empathize on heterogeneity of at least one factor of interest [@Turner2015].
+Linking spatial heterogeneity and ecological processes, including potential feedbacks, is the fundamental concept of landscape ecology [@Risser1984; @Turner1989; @Turner2005].
+Typical research topics include ecological flows in landscape mosaics, drivers and consequences of land use and land cover (LULC) change, nonlinear dynamics and landscape complexity, scale and scaling, spatial analysis and landscape modeling, linking landscape metrics to ecological processes, integrating humans and their activities into landscape ecology, landscape conservation and sustainability, or accuracy assessment and uncertainty analysis [@Wu2002; @Wu2013].
 
 Computational science involves analyzing abstracted core mechanisms of research questions using data and algorithms.
 Thus, computational ecology can be defined as computational science that is used to address ecological research questions with focus on complex, adaptive systems and data-driven approaches [@Poisot2019].
-Computational ecology in general and simulations specifically are of importance for ecology because ecological data is often context- and scale-dependent and unfeasible to study in controllable, reproducible, and replicable experimental settings [@Petrovskii2012;but see @Wiersma2022].
-Because landscape ecology is a cross-disciplinary field including, e.g., social sciences, geography, or ecology and evolution [@Wiens1997;@With2019], the general increase of available data [@Chi2016;@Jaric2020;@Nathan2022;@Wuest2020], or the complex landscape systems [@Newman2019], there is the need for sophisticated computational methods in order to link heterogeneity patterns and ecological processes.
-Thus, computational methods are one of the most important tools of modern scientific research [@Prlic2012;@Wilson2014].
+Computational ecology in general and simulations specifically are of importance for ecology because ecological data is often context- and scale-dependent and unfeasible to study in controllable, reproducible, and replicable experimental settings [@Petrovskii2012; but see @Wiersma2022].
+Because landscape ecology is a cross-disciplinary field including [e.g., social sciences, geography, or ecology and evolution\; @Wiens1997; @With2019], the general increase of data availability [@Chi2016; @Jaric2020; @Wuest2020; @Nathan2022], or the studied complex landscape systems [@Newman2019], there is the need for sophisticated computational methods in order to link heterogeneity patterns and ecological processes.
+Thus, computational methods are one of the most important tools of modern scientific research [@Prlic2012; @Wilson2014].
 
-For all computational methods in landscape ecology the natural world must translated into a data model.
-The spatial vector data model is based on the representation of the natural world as a set of points, lines, and polygons, where each feature is defined by its geometry and attributes.
-Contrastingly, the raster data model is based on grid cells representing features of the natural worlds.
-<!-- MH: Flesh out a bit also using PPM and gradient model -->
+For all computational methods the natural world must be translated into representative data models.
+The spatial vector data model is based on points, lines, and polygons features that are defined by their geometry and additional attributes related to them.
+Contrastingly, the raster data model is based on evenly-spaced grid cells and discrete or continuous values related to each cell [@Lovelace2019; @With2019].
+The choice of the data models, spatial and temporal scales, or the thematic resolution are crucial for the analysis [@Wade2003; @Lechner2016; @Nedd2021].
 
 Here, we aim to introduce the latest developments of computational methods in landscape ecology.
 However, we do not provide a systematic literature review, or a general introduction to (computational) landscape ecology.
-For a more comprehensive, general introductions to landscape ecology, please see Turner and Gardner [-@Turner2015], or Gergel and Turner [-@Gergel2017].
+For a more comprehensive, general introductions to landscape ecology, please see @Turner2015, @Gergel2017, or @With2019.
 First, we will introduce recent computational developments of the most important topics of landscape ecology.
 This includes, for example, spatial patterns quantification, connectivity and movement, or model simulations.
 Second, we will introduce common software tools that implement or are potentially capable of implementing these developments.
-However, due to its many advantages, we will focus on open-source software [@vonKrogh2006], and specifically scripting languages, i.e., R, Python, and Julia.
+However, due to its many advantages [@Powers2019], we will focus on open-source software , and specifically scripting languages, i.e., R, Python, and Julia.
 Last, we will discuss potential future needs developments of computational methods in landscape ecology.
