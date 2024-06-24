@@ -7,53 +7,42 @@ bibliography: CLER.bib
 # Simulation models
 
 Simulation models are a powerful tool to study complex adaptive ecological systems in controllable, reproducible, and replicable settings [@Pascual2005; @Petrovskii2012].
-Thus, they can be seen as experimental systems that allow, unlike to nature, all imaginable manipulations in order to advance theoretical developments or test hypotheses [@Peck2004].
+Thus, they can be seen as experimental systems that allow, unlike to the natural world, all imaginable manipulations in order to advance theoretical developments or test hypotheses [@Peck2004].
 Due to the usual temporal and spatial scales, complex interactions and feedbacks, or scale mismatches between patterns and processes, simulation models are one of the major approaches in landscape ecology [@Schroder2006; @Synes2016].
 In general, simulations models can be classified using two major divisions, namely as *i)* predictive or exploratory models, and *ii)* pattern- or process-based models [@Peck2004;@Synes2016].
 Here, we are going to focus mainly on exploratory models, but include both pattern- and process-based models.
 
-## Pattern based
-<!-- Hesselbarth -->
-
-### Neutral landscapes models
-
+## Neutral landscapes models
 Neutral landscapes models simulate landscape patterns without assuming any underlying abiotic or biotic processes.
-Thus, they are often used as null hypothesis or baselines for comparisons with real landscape patterns, while controlling certain aspects of the landscape [@Li2004;@Wang2008].
-The first neutral models simply assigned land cover types randomly to cells in the landscape and were based on percolation theory.
-Further developments included hierarchical models that considered different spatial scales while assigning land cover types.
-While these first two classes can only simulate landscape with discrete land cover classes, fractal neutral models can also simulate continuous land cover maps by utilizing e.g., Brownian motion.
-Last, more complex neutral models were developed that are based on contagion, autocorrelation, or spatial aggregation concepts to simulate more realistic landscapes [@Wang2008].
+Thus, they are often used as null hypothesis, baselines, or scenarios for comparisons with real landscape patterns, while controlling certain aspects of the landscape [@Li2004; @Wang2008].
+The first neutral models simply assigned land cover types randomly to cells in the landscape and were based on percolation theory [@Gardner1987].
+Further developments included hierarchical models that considered different spatial scales while assigning land cover types [@ONeill1992].
+While these first two classes can only simulate landscape with discrete land cover classes, fractal neutral models can also simulate continuous land cover maps by utilizing e.g., Brownian motion [@Palmer1992].
+Borrowing from computer graphics, more recent neutral landscape models make use of spectral synthesis [e.g., Perlin noise\; @Etherington2022] or Binary space partitioning [@Etherington2022a] hierarchical neutral landscapes.
+In order to simulate landscapes dominated by human activities approaches based on least-cost network movement exist [@Etherington2024].
+Neutral landscapes models can also be used to simulated landscapes similar to real landscapes [@Inkoom2017], or based on target values of landscape metrics [@VanStrien2016; @Justeau-Allaire2022].
+<!-- In order to make multiple neutral landscape model algorithms accessible, several software libraries are available in prominent programming languages including Python [NLMpy\; @Etherington2015], R [NLMR\; @Sciaini2018], or Julia (https://github.com/EcoJulia/NeutralLandscapes.jl). -->
 
-doi:10.12942/lrlr-2014-2
-Perlin noise [@Etherington2022]
-Binary space partitioning [Etherington2022a]
-Generating in comparison to real landscapes https://doi.org/10.1016/j.ecoinf.2017.08.003
-https://doi.org/10.1016/j.ecolmodel.2018.12.010
+## Landscape Generator
+Processes-based landscape generators are related to neutral landscapes models because they can simulate virtual landscapes.
+However, in contrast to neutral landscape models, processes-based landscape generators are able to simulate structurally more realistic landscapes by including pattern creating processes [@Langhammer2019; @Salecker2019].
 
-In order to make multiple neutral landscape model algorithms accessible, several software libraries are available in prominent programming languages including Python [NLMpy; @Etherington2015], R [NLMR; @Sciaini2018], or Julia (https://github.com/EcoJulia/NeutralLandscapes.jl).
-
-### Cellular Automata
-
-## Process based
-<!-- Schouten, Hesselbarth -->
-
-[RangeShifter](https://doi.org/10.1111/ecog.05687)
-
-### Landscape Generator
-<!-- Hesselbarth -->
-
+<!--
+Cellular automaton
 [G-RaFFE](https://doi.org/10.1371/journal.pone.0064968)
-[LG](https://doi.org/10.1002/ece3.2145)
-https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0222949&type=printable
+[GradientLand Software](https://doi.org/10.1016/j.ecoinf.2014.12.001)
+[PioLaG](https://doi.org/10.1007/s10980-020-01066-w)
+-->
 
-### Coupled lattice
+## IBMs /Coupled lattice
 
-### IBMs/ABMs
+## Digital twins
 
-## Misc
+<!-- 
+[RangeShifter](https://doi.org/10.1111/ecog.05687)
 [Marine SDMS](https://doi.org/10.1016/j.ecolmodel.2019.108837)
 [SDM past present future](https://doi.org/10.1111/jbi.14617)
-
 [Simulations in landscape genetics](https://doi.org/10.1111/j.1365-294X.2010.04678.x)
 [HexSim modeling environment](https://doi.org/10.1007/s10980-017-0605-9)
 [Digital twins?](https://doi.org/10.1016/j.tree.2023.04.010)
+-->
