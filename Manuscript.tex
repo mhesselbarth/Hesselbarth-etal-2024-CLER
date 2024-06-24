@@ -23,6 +23,7 @@
 \usepackage{lmodern}
 \ifPDFTeX\else  
     % xetex/luatex font selection
+  \setmainfont[]{Garamond}
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -212,9 +213,9 @@ interest (Turner and Gardner 2015). Linking spatial heterogeneity and
 ecological processes, including potential feedbacks, is the fundamental
 concept of landscape ecology (Risser et al. 1984; Turner 1989, 2005).
 Typical research topics include ecological flows in landscape mosaics,
-drivers and consequences of land use and land cover change, nonlinear
-dynamics and landscape complexity, scale and scaling, spatial analysis
-and landscape modeling, linking landscape metrics to ecological
+drivers and consequences of land use and land cover (LULC) change,
+nonlinear dynamics and landscape complexity, scale and scaling, spatial
+analysis and landscape modeling, linking landscape metrics to ecological
 processes, integrating humans and their activities into landscape
 ecology, landscape conservation and sustainability, or accuracy
 assessment and uncertainty analysis (Wu and Hobbs 2002; Wu 2013).
@@ -228,31 +229,41 @@ in general and simulations specifically are of importance for ecology
 because ecological data is often context- and scale-dependent and
 unfeasible to study in controllable, reproducible, and replicable
 experimental settings (Petrovskii and Petrovskaya 2012; but see Wiersma
-2022). Because landscape ecology is a cross-disciplinary field
-including, e.g., social sciences, geography, or ecology and evolution
-(Wiens 1997; With 2019), the general increase of available data (Chi et
-al. 2016; Jarić et al. 2020; Wüest et al. 2020; Nathan et al. 2022), or
-the complex landscape systems (Newman et al. 2019), there is the need
-for sophisticated computational methods in order to link heterogeneity
-patterns and ecological processes. Thus, computational methods are one
-of the most important tools of modern scientific research (Prlić and
-Procter 2012; Wilson et al. 2014).
+2022). Because landscape ecology is a cross-disciplinary field including
+(e.g., social sciences, geography, or ecology and evolution; Wiens 1997;
+With 2019), the general increase of data availability (Chi et al. 2016;
+Jarić et al. 2020; Wüest et al. 2020; Nathan et al. 2022), or the
+studied complex landscape systems (Newman et al. 2019), there is the
+need for sophisticated computational methods in order to link
+heterogeneity patterns and ecological processes. Thus, computational
+methods are one of the most important tools of modern scientific
+research (Prlić and Procter 2012; Wilson et al. 2014).
+
+For all computational methods the natural world must be translated into
+representative data models. The spatial vector data model is based on
+points, lines, and polygons features that are defined by their geometry
+and additional attributes related to them. Contrastingly, the raster
+data model is based on evenly-spaced grid cells and discrete or
+continuous values related to each cell (Lovelace et al. 2019; With
+2019). The choice of the data models, spatial and temporal scales, or
+the thematic resolution are crucial for the analysis (Wade et al. 2003;
+Lechner and Rhodes 2016; Nedd et al. 2021).
 
 Here, we aim to introduce the latest developments of computational
 methods in landscape ecology. However, we do not provide a systematic
 literature review, or a general introduction to (computational)
 landscape ecology. For a more comprehensive, general introductions to
-landscape ecology, please see Turner and Gardner (2015), or Gergel and
-Turner (2017). First, we will introduce recent computational
-developments of the most important topics of landscape ecology. This
-includes, for example, spatial patterns quantification, connectivity and
-movement, or model simulations. Second, we will introduce common
-software tools that implement or are potentially capable of implementing
-these developments. However, due to its many advantages, we will focus
-on open-source software (von Krogh and von Hippel 2006), and
-specifically scripting languages, i.e., R, Python, and Julia. Last, we
-will discuss potential future needs developments of computational
-methods in landscape ecology.
+landscape ecology, please see Turner and Gardner (2015), Gergel and
+Turner (2017), or With (2019). First, we will introduce recent
+computational developments of the most important topics of landscape
+ecology. This includes, for example, spatial patterns quantification,
+connectivity and movement, or model simulations. Second, we will
+introduce common software tools that implement or are potentially
+capable of implementing these developments. However, due to its many
+advantages (Powers and Hampton 2019), we will focus on open-source
+software , and specifically scripting languages, i.e., R, Python, and
+Julia. Last, we will discuss potential future needs developments of
+computational methods in landscape ecology.
 
 \section{Spatial patterns}\label{spatial-patterns}
 
@@ -264,156 +275,146 @@ information about the history of the system, such as demographic
 processes, dispersal characteristics, or climatic patterns (Wiegand et
 al. 2003). However, spatial patterns are not only a result of processes,
 but could also be a driver of them. Thus, untangling the history of a
-landscape from its spatial patterns is one of the core concepts of
-landscape ecology.
-
-In order to analyze spatial patterns they must be translated into
-simplified and quantifiable representations of the natural world. Thus,
-the choice of the data types, spatial and temporal scales, or the
-thematic resolution are crucial for the analysis. Potential data types
-include raster or vector data to represent landscape characteristics
-using grid cells or points, lines and polygons, respectively. For the
-spatial scale the most important features are the resolution and extent.
-The increasing availability of temporal time series data allows analysis
-of spatial patterns over time, introducing an additional temporal scale.
-For the thematic resolution, which often refers to the number or
-definitions of the categories (e.g, LULC classes), many classification
-systems exists, such as the NLCD, the CORINE, or the FAO systems (Nedd
-et al. 2021).
+landscape and linking its spatial patterns to ecological processes is
+one of the core concepts of landscape ecology (Turner 1989).
 
 \subsection{Landscape metrics}\label{landscape-metrics}
 
-Traditionally and still the most prominent, computational approaches to
-spatial patterns in landscape ecology revolve around the patch mosaic
-model, where the landscape is represented as raster data using
-categorical raster data (Costanza et al. 2019).
-
-\begin{itemize}
-\tightlist
-\item
-  Quantify composition and configuration
-\item
-  Widely applied since FRAGSTATS release
-\item
-  Several alternative tools available and still widely used
-\end{itemize}
+Traditionally and still the most prominent approaches to quantify
+spatial patterns revolve around raster data using categorical categories
+based on the patch mosaic model (Frazier and Kedron 2017; Costanza et
+al. 2019). The strength of landscape metrics is that they are comparable
+easy to apply and communicate (Lausch et al. 2015), however, they are
+also critiqued for not being able to realistically represent continuous
+features of the natural word (Frazier and Kedron 2017). Metrics can be
+calculated on patch-level (describing each patch), class-level
+(describing all patches of the same class), or landscape level
+(describing the entire landscape) and are able to quantify
+characteristics related to e.g., patch areas and edge lengths, patch
+shapes, or class aggregation and diversity (Hesselbarth et al. 2019).
+Recently also several metrics describing landscape complexity were
+introduced, e.g., several entropy measures (see following sections).
 
 \subsection{Surface metrics}\label{surface-metrics}
 
-\href{https://doi.org/10.1007/s10980-018-0685-1}{Surface metrics}
-
-\begin{itemize}
-\tightlist
-\item
-  More recent development
-\item
-  Quantify continuous raster data (gradient surface models)
-\item
-  More realistic representation of landscapes (?)
-\item
-  Based on molecular physics/medicine
-\item
-  Not widely adopted yet (due to missing tools?)
-\end{itemize}
+Surface metrics are based on the gradient surface model using raster
+data and continuous values (McGarigal et al. 2009; Cushman et al. 2010)
+and were adapted from microscopy and molecular physics (McGarigal et al.
+2009; Kedron et al. 2018). The gradient surface model can increase the
+resemblance of the data model and the natural world because it allows to
+include more heterogeneity within each grid cell (Cushman et al. 2010;
+Kedron et al. 2018). Surface metrics are able to quantify various
+characteristics, such as roughness, skewness and kurtosis, total and
+relative amplitudes, curvatures of local peaks, or surface bearing area
+ratios (Cushman et al. 2010). Many surface metrics have analogous
+landscape metrics (Cushman et al. 2010), however, using surface metrics
+allows to reveal different or additional patterns and potentially
+pattern-process links (McGarigal et al. 2009; Borthwick et al. 2020).
+Yet, software to calculate these metrics is still rare and further
+research is needed into the specific pattern-process links and
+ecological meaningful interpretations (Kedron et al. 2018; Frazier
+2019).
 
 \subsection{Entropy}\label{entropy}
 
-Entropy in landscape ecology is mainly used to quantify the complexity
-of the landscape (spatial heterogeneity), and less often
+It is mainly derived from information theory and thermodynamics, such as
+Shannon entropy (and its analogous forms), Boltzmann entropy, or Renyi
+entropy. Entropy in landscape ecology is mainly used to quantify the
+complexity of the landscape (spatial heterogeneity), and less often
 unpredictability (temporal heterogeneity) and scale dependence
-(spatio-temporal heterogeneity; (Vranken et al. 2015)). It is mainly
-derived from information theory and thermodynamics, including besides
-others Shannon entropy (and its analogous forms), Boltzmann entropy, or
-Renyi entropy. However, existing studies show that insights do not only
-depend on the formulation of the used entropy, but also on the
-underlining data representation, for example the composition of
-categories or the co-occurrence matrix (Zhao and Zhang 2019).
+(spatio-temporal heterogeneity; Vranken et al. 2015). However, studies
+show that insights do not only depend on the formulation of the used
+entropy, but also on the underlining data model, for example the
+composition of categories or the co-occurrence matrix (Zhao and Zhang
+2019).
 
 The Shannon diversity index (Shannon 1948) quantifies the richness and
-evenness of categories in the landscape. Shannon's entropy formula can
-also be modified to include the landscape's spatial configuration, e.g.,
-by weights calculated from intra- and inter-class distances (Claramunt
-2012). However, to quantify the spatial configuration and the total
-complexity of the landscape, other measures from information theory can
-be adapted. Nowosad and Stepinski (2019) proposed to treat categorical
-raster as a bivariate random variable \((x,y)\) where \(x\) is the
-category of the focal cell and \(y\) is the category of the neighboring
-cell. This approach allows us to compress information about the
-landscape's composition and configuration into a co-occurrence matrix,
-which could be used to calculate various entropy measures. This includes
-conditional entropy (representing configurational complexity), joint
-entropy (representing overall spatial-thematic complexity), mutual
-information, and relative mutual information (representing the degree of
-spatial autocorrelation).
+evenness of categories in the landscape omitting spatial configuration.
+The index is based on information theory and is an adaptation of the
+Shannon entropy which measures uncertainty of a random variable.
+Shannon's entropy formula can also be modified to include the
+landscape's spatial configuration, e.g., by weights calculated from
+intra- and inter-class distances (Claramunt 2012). However, to quantify
+the spatial configuration and the total complexity of the landscape,
+other measures from information theory can be adapted. Nowosad and
+Stepinski (2019) proposed to treat categorical raster as a bivariate
+random variable \((x,y)\) where \(x\) is the category of the focal cell
+and \(y\) is the category of the neighboring cell. This approach allows
+us to compress information about the landscape's composition and
+configuration into a co-occurrence matrix, which could be used to
+calculate various entropy measures. This includes conditional entropy
+(representing configurational complexity), joint entropy (representing
+overall spatial-thematic complexity), mutual information, and relative
+mutual information (representing the degree of spatial autocorrelation).
 
-The last few years have seen a surge in the development of entropy-based
-metrics for landscape ecology based on notions from thermodynamics
-initiated by the work of Vranken et al. (2015) and Cushman (2015). In
+Based on notions from thermodynamics initiated by the work of Cushman
+(2015) or Vranken et al. (2015), there was a surge in the development of
+entropy-based metrics for landscape ecology in the last few years. In
 the late 1800s, Boltzmann formulated a probabilistic interpretation of
-the second law of thermodynamics, using the concepts of macrostate (the
+the second law of thermodynamics using the concepts of macrostate (the
 general state of a system) and microstate (the configuration of the
-system elements). Cushman (2016) proposed to relate the edge length to
-the microstate of the landscape, and use the proportion of microstates
-to compute the relative Boltzmann entropy of a landscape mosaic. This
-approach was generalized for calculations based on raster's surface
-model and point patterns (Cushman 2021). Subsequently, Gao et al. (2017)
-proposed to use the Boltzmann entropy to quantify the complexity of a
-landscape surface by transforming the input raster into a series of
-landscape surfaces with different levels of detail (microstate) and
-calculating the Boltzmann entropy based on the total number of
-microstates that are able to generate the observed macrostate. Recently,
-Zhang et al. (2020) extended the original definition of Boltzmann
-entropy to incorporate the information about the adjacency of the same
-categories in the landscape mosaic by using the number of contiguous
-patches of the same category.
+system elements; Gao and Li 2019). Cushman (2016) proposed to relate the
+edge length to the microstate of the landscape, and use the proportion
+of microstates to compute the relative Boltzmann entropy of a landscape
+mosaic. This approach was generalized for calculations based on raster's
+surface model and point patterns (Cushman 2021). Subsequently, Gao et
+al. (2017) proposed to use the Boltzmann entropy to quantify the
+complexity of a landscape surface by transforming the input raster into
+a series of landscape surfaces with different levels of detail
+(microstate) and calculating the Boltzmann entropy based on the total
+number of microstates that are able to generate the observed macrostate.
+Recently, Zhang et al. (2020) extended the original definition of
+Boltzmann entropy to incorporate information about the adjacency of the
+same categories in the landscape mosaic by using the number of
+contiguous patches of the same category.
 
 Moreover, many other entropy-based metrics have been proposed for use in
-landscape ecology. The Renyi (Rényi 1961) and Gibbs entropies, which are
-both generalizations of the Shannon entropy, are applied to quantify the
-complexity of the landscape. The Rao quadratic entropy (Rao 1982) has
-also been applied recently (Rocchini et al. 2017), as it measures not
-only the relative abundances of elements, but also the pairwise
+landscape ecology. The Renyi (Rényi 1961) and Gibbs entropies , which
+are both generalizations of the Shannon entropy, are applied to quantify
+the complexity of the landscape. The Rao quadratic entropy (Rao 1982)
+has also been applied recently (Rocchini et al. 2017), as it measures
+not only the relative abundances of elements, but also the pairwise
 dissimilarities or distances between them. Thus, it can be useful in
-cases, for example, when the dissimilarities between land cover types,
-and not only their categories, are relevant. Another recent development
-is the use of Kullback-Leibler divergence (also known as relative
-entropy), which is a measure of differences between two probability
-distributions to describe patterns across scales (Huckeba et al. 2023).
+cases, when the dissimilarities between LULC types, and not only their
+categories, are relevant. Another recent development is the use of
+Kullback-Leibler divergence (also known as relative entropy), which is a
+measure of differences between two probability distributions to describe
+patterns across scales (Huckeba et al. 2023).
 
 \subsection{Landscape mosaic}\label{landscape-mosaic}
 
 \subsection{Vector metrics}\label{vector-metrics}
 
-Many landscape ecology studies are based on raster data. However, the
-decision on the data model is often driven by the availability of the
-data and software, or the familiarity with the approach (Costanza et al.
-2019). For example, several early landscape ecology studies were based
-on polygonal vector data that was converted to raster data . Yet,
+Many landscape ecology studies are based on the raster data model.
+However, the decision on the data model is often driven by data and
+software availability, or the familiarity with the approach (Costanza et
+al. 2019). For example, several early landscape ecology studies were
+based on polygonal vector data that was converted to raster data. Yet,
 nowadays, vector data is increasingly available, and most geospatial
 software supports it.
 
 Hundreds of metrics have already been developed for raster data, so the
-most straightforward approach is to reimplement them for vector data.
-This is possible for most of the metrics, with only several exceptions
-of metrics that are specifically related to raster data (Yao et al.
-2022). Yet, the vector data model has been widely used in other fields,
-such as geography or urban studies. For example, in urban planning,
-vector metrics are applied to quantify the shapes of urban areas and
-characterize the complexity of building footprints (Basaraner and
-Cetinkaya 2017). Earlier approaches included four categories of
-compactness measures for vector data, namely perimeter-area, single
-parameters of related circles, dispersion of elements of the area around
-a centroid, and direct comparison to standard shapes (Maceachren 1985).
-More recently, a unified theoretical foundation for measuring shape
-compactness was introduced using a set of ten distinct properties of a
-circle and metrics associated with each of these properties (Angel et
-al. 2010)
+most straightforward approach is to reimplement the same metrics for
+vector data. This is possible for most of the metrics, with only several
+exceptions of metrics that are specifically related to the raster data
+model (Yao et al. 2022). Yet, the vector data model has been widely used
+in other fields, such as geography or urban studies. For example, in
+urban planning vector metrics are applied to quantify the shapes of
+urban areas and characterize the complexity of building footprints
+(Basaraner and Cetinkaya 2017). Earlier approaches included four
+categories of compactness measures for vector data, namely
+perimeter-area, single parameters of related circles, dispersion of
+elements of the area around a centroid, and direct comparison to
+standard shapes (Maceachren 1985). More recently, a unified theoretical
+foundation for measuring shape compactness was introduced using a set of
+ten distinct properties of a circle and metrics associated with each of
+these properties (Angel et al. 2010)
 
 Vector-based metrics also have their limitations. The most important is
-the computational complexity, which makes the calculation of vector
-metrics slower than their raster equivalents. Another technical issue is
-the need for the data to be topologically correct, which is not always
-the case, especially for data from different sources. Last, the
+computational complexity, which makes calculations of vector metrics
+slower than their raster equivalents. Another technical issue is the
+need for the data to be topologically correct, which is often
+problematic especially for data from different sources. Last, the
 pattern-process link is still less explored for vector-based metrics
 compared to raster-based metrics.
 
@@ -446,75 +447,54 @@ all areas and clustered based on their similarity (Nowosad and Stepinski
 Simulation models are a powerful tool to study complex adaptive
 ecological systems in controllable, reproducible, and replicable
 settings (Pascual 2005; Petrovskii and Petrovskaya 2012). Thus, they can
-be seen as experimental systems that allow, unlike to nature, all
-imaginable manipulations in order to advance theoretical developments or
-test hypotheses (Peck 2004). Due to the usual temporal and spatial
-scales, complex interactions and feedbacks, or scale mismatches between
-patterns and processes, simulation models are one of the major
-approaches in landscape ecology (Schröder and Seppelt 2006; Synes et al.
-2016). In general, simulations models can be classified using two major
-divisions, namely as \emph{i)} predictive or exploratory models, and
-\emph{ii)} pattern- or process-based models (Peck 2004; Synes et al.
-2016). Here, we are going to focus mainly on exploratory models, but
-include both pattern- and process-based models.
+be seen as experimental systems that allow, unlike to the natural world,
+all imaginable manipulations in order to advance theoretical
+developments or test hypotheses (Peck 2004). Due to the usual temporal
+and spatial scales, complex interactions and feedbacks, or scale
+mismatches between patterns and processes, simulation models are one of
+the major approaches in landscape ecology (Schröder and Seppelt 2006;
+Synes et al. 2016). In general, simulations models can be classified
+using two major divisions, namely as \emph{i)} predictive or exploratory
+models, and \emph{ii)} pattern- or process-based models (Peck 2004;
+Synes et al. 2016). Here, we are going to focus mainly on exploratory
+models, but include both pattern- and process-based models.
 
-\subsection{Pattern based}\label{pattern-based}
-
-\subsubsection{Neutral landscapes
-models}\label{neutral-landscapes-models}
+\subsection{Neutral landscapes models}\label{neutral-landscapes-models}
 
 Neutral landscapes models simulate landscape patterns without assuming
 any underlying abiotic or biotic processes. Thus, they are often used as
-null hypothesis or baselines for comparisons with real landscape
-patterns, while controlling certain aspects of the landscape (Li et al.
-2004; Wang and Malanson 2008). The first neutral models simply assigned
-land cover types randomly to cells in the landscape and were based on
-percolation theory. Further developments included hierarchical models
-that considered different spatial scales while assigning land cover
-types. While these first two classes can only simulate landscape with
-discrete land cover classes, fractal neutral models can also simulate
-continuous land cover maps by utilizing e.g., Brownian motion. Last,
-more complex neutral models were developed that are based on contagion,
-autocorrelation, or spatial aggregation concepts to simulate more
-realistic landscapes (Wang and Malanson 2008).
+null hypothesis, baselines, or scenarios for comparisons with real
+landscape patterns, while controlling certain aspects of the landscape
+(Li et al. 2004; Wang and Malanson 2008). The first neutral models
+simply assigned land cover types randomly to cells in the landscape and
+were based on percolation theory (Gardner et al. 1987). Further
+developments included hierarchical models that considered different
+spatial scales while assigning land cover types (O'Neill et al. 1992).
+While these first two classes can only simulate landscape with discrete
+land cover classes, fractal neutral models can also simulate continuous
+land cover maps by utilizing e.g., Brownian motion (Palmer 1992).
+Borrowing from computer graphics, more recent neutral landscape models
+make use of spectral synthesis (e.g., Perlin noise; Etherington 2022) or
+Binary space partitioning (Etherington et al. 2022) hierarchical neutral
+landscapes. In order to simulate landscapes dominated by human
+activities approaches based on least-cost network movement exist
+(Etherington et al. 2024). Neutral landscapes models can also be used to
+simulated landscapes similar to real landscapes (Inkoom et al. 2017), or
+based on target values of landscape metrics (Van Strien et al. 2016;
+Justeau-Allaire et al. 2022).
 
-doi:10.12942/lrlr-2014-2 Perlin noise (Etherington 2022) Binary space
-partitioning {[}Etherington2022a{]} Generating in comparison to real
-landscapes https://doi.org/10.1016/j.ecoinf.2017.08.003
-https://doi.org/10.1016/j.ecolmodel.2018.12.010
+\subsection{Landscape Generator}\label{landscape-generator}
 
-In order to make multiple neutral landscape model algorithms accessible,
-several software libraries are available in prominent programming
-languages including Python {[}NLMpy; Etherington et al. (2015){]}, R
-{[}NLMR; Sciaini et al. (2018){]}, or Julia
-(https://github.com/EcoJulia/NeutralLandscapes.jl).
+Processes-based landscape generators are related to neutral landscapes
+models because they can simulate virtual landscapes. However, in
+contrast to neutral landscape models, processes-based landscape
+generators are able to simulate structurally more realistic landscapes
+by including pattern creating processes (Langhammer et al. 2019;
+Salecker et al. 2019).
 
-\subsubsection{Cellular Automata}\label{cellular-automata}
+\subsection{IBMs /Coupled lattice}\label{ibms-coupled-lattice}
 
-\subsection{Process based}\label{process-based}
-
-\href{https://doi.org/10.1111/ecog.05687}{RangeShifter}
-
-\subsubsection{Landscape Generator}\label{landscape-generator}
-
-\href{https://doi.org/10.1371/journal.pone.0064968}{G-RaFFE}
-\href{https://doi.org/10.1002/ece3.2145}{LG}
-https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0222949\&type=printable
-
-\subsubsection{Coupled lattice}\label{coupled-lattice}
-
-\subsubsection{IBMs/ABMs}\label{ibmsabms}
-
-\subsection{Misc}\label{misc}
-
-\href{https://doi.org/10.1016/j.ecolmodel.2019.108837}{Marine SDMS}
-\href{https://doi.org/10.1111/jbi.14617}{SDM past present future}
-
-\href{https://doi.org/10.1111/j.1365-294X.2010.04678.x}{Simulations in
-landscape genetics}
-\href{https://doi.org/10.1007/s10980-017-0605-9}{HexSim modeling
-environment} \href{https://doi.org/10.1016/j.tree.2023.04.010}{Digital
-twins?}
+\subsection{Digital twins}\label{digital-twins}
 
 \newpage{}
 
@@ -534,6 +514,13 @@ classification schemes for characterising perceptual shape complexity of
 building footprints in GIS. International Journal of Geographical
 Information Science 31:1952--1977.
 \url{https://doi.org/10.1080/13658816.2017.1346257}
+
+\bibitem[\citeproctext]{ref-Borthwick2020}
+Borthwick R, de Flamingh A, Hesselbarth MHK, et al (2020) Alternative
+quantifications of landscape complementation to model gene flow in
+banded longhorn beetles {[}typocerus v. Velutinus (olivier){]}.
+Frontiers in Genetics 11:307.
+\url{https://doi.org/10.3389/fgene.2020.00307}
 
 \bibitem[\citeproctext]{ref-Chi2016}
 Chi M, Plaza A, Benediktsson JA, et al (2016) Big data for remote
@@ -567,6 +554,13 @@ Cushman SA (2021) Generalizing boltzmann configurational entropy to
 surfaces, point patterns and landscape mosaics. Entropy 23:1616.
 \url{https://doi.org/10.3390/e23121616}
 
+\bibitem[\citeproctext]{ref-Cushman2010}
+Cushman SA, Gutzweiler K, Evans JS, McGarigal K (2010) The gradient
+paradigm: A conceptual and analytical framework for landscape ecology.
+In: Cushman SA, Huettmann F (eds) Spatial complexity informatics and
+wildlife conservation. Springer International Publishing, Basel, CH, pp
+83--108
+
 \bibitem[\citeproctext]{ref-Dale1999}
 Dale MRT (1999) \href{https://doi.org/10.1017/CBO9780511612589}{Spatial
 pattern analysis in plant ecology}, 1st edn. Cambridge University Press
@@ -581,11 +575,16 @@ Landscape and Urban Planning 233:104671.
 Etherington TR (2022) Perlin noise as a hierarchical neutral landscape
 model. Web Ecology 22:1--6. \url{https://doi.org/10.5194/we-22-1-2022}
 
-\bibitem[\citeproctext]{ref-Etherington2015}
-Etherington TR, Holland EP, O'Sullivan D (2015) NLMpy: A python software
-package for the creation of neutral landscape models within a general
-numerical framework. Methods in Ecology and Evolution 6:164--168.
-\url{https://doi.org/10.1111/2041-210X.12308}
+\bibitem[\citeproctext]{ref-Etherington2022a}
+Etherington TR, Morgan FJ, O'Sullivan D (2022) Binary space partitioning
+generates hierarchical and rectilinear neutral landscape models suitable
+for human-dominated landscapes. Landscape Ecology 37:1761--1769.
+\url{https://doi.org/10.1007/s10980-022-01452-6}
+
+\bibitem[\citeproctext]{ref-Etherington2024}
+Etherington TR, O'Sullivan D, Perry GLW, et al (2024) A least-cost
+network neutral landscape model of human sites and routes. Landscape
+Ecology 39:52. \url{https://doi.org/10.1007/s10980-024-01836-w}
 
 \bibitem[\citeproctext]{ref-Forman1995}
 Forman RTT (1995) Land mosaics: The ecology of landscapes and regions.
@@ -595,10 +594,30 @@ Cambridge University Press, Cambridge, UK
 Forman RTT, Godron M (1986) Landscape ecology. Wiley \& Sons,
 Chichester, UK
 
+\bibitem[\citeproctext]{ref-Frazier2019}
+Frazier AE (2019) Emerging trajectories for spatial pattern analysis in
+landscape ecology. Landscape Ecology 34:2073--2082.
+\url{https://doi.org/10.1007/s10980-019-00880-1}
+
+\bibitem[\citeproctext]{ref-Frazier2017}
+Frazier AE, Kedron P (2017) Landscape metrics: Past progress and future
+directions. Current Landscape Ecology Reports 63--72.
+\url{https://doi.org/10.1007/s40823-017-0026-0}
+
+\bibitem[\citeproctext]{ref-Gao2019}
+Gao P, Li Z (2019) Computation of the boltzmann entropy of a landscape:
+A review and a generalization. Landscape Ecology 34:2183--2196.
+\url{https://doi.org/10.1007/s10980-019-00814-x}
+
 \bibitem[\citeproctext]{ref-Gao2017}
 Gao P, Zhang H, Li Z (2017) A hierarchy-based solution to calculate the
 configurational entropy of landscape gradients. Landscape Ecology.
 \url{https://doi.org/10.1007/s10980-017-0515-x}
+
+\bibitem[\citeproctext]{ref-Gardner1987}
+Gardner RH, Milne BT, Turnei MG, O'Neill RV (1987) Neutral models for
+the analysis of broad-scale landscape pattern. Landscape Ecology
+1:19--28. \url{https://doi.org/10.1007/BF02275262}
 
 \bibitem[\citeproctext]{ref-Gergel2017}
 Gergel SE, Turner MG (eds) (2017)
@@ -610,10 +629,20 @@ Grimm V, Frank K, Jeltsch F, et al (1996) Pattern-oriented modelling in
 population ecology. The Science of the Total Environment 183:151--166.
 \url{https://doi.org/10.1016/0048-9697(95)04966-5}
 
+\bibitem[\citeproctext]{ref-Hesselbarth2019}
+Hesselbarth MHK, Sciaini M, With KA, et al (2019) Landscapemetrics: An
+open-source r tool to calculate landscape metrics. Ecography
+42:1648--1657. \url{https://doi.org/10.1111/ecog.04617}
+
 \bibitem[\citeproctext]{ref-Huckeba2023}
 Huckeba G, Andresen B, Roach TNF (2023) Multi-scale spatial ecology
 analyses: A kullback information approach. Landscape Ecology
 38:645--657. \url{https://doi.org/10.1007/s10980-022-01514-9}
+
+\bibitem[\citeproctext]{ref-Inkoom2017}
+Inkoom JN, Frank S, Greve K, Fürst C (2017) Designing neutral landscapes
+for data scarce regions in west africa. Ecological Informatics 42:1--13.
+\url{https://doi.org/10.1016/j.ecoinf.2017.08.003}
 
 \bibitem[\citeproctext]{ref-Jaric2020}
 Jarić I, Correia RA, Brook BW, et al (2020) iEcology: Harnessing large
@@ -631,16 +660,55 @@ Jasiewicz J, Netzel P, Stepinski TF (2014) Landscape similarity,
 retrieval, and machine mapping of physiographic units. Geomorphology
 221:104--112. \url{https://doi.org/10.1016/j.geomorph.2014.06.011}
 
+\bibitem[\citeproctext]{ref-Justeau-Allaire2022}
+Justeau-Allaire D, Blanchard G, Ibanez T, et al (2022) Fragmented
+landscape generator (flsgen): A neutral landscape generator with control
+of landscape structure and fragmentation indices. Methods in Ecology and
+Evolution 13:1412--1420. \url{https://doi.org/10.1111/2041-210X.13859}
+
+\bibitem[\citeproctext]{ref-Kedron2018}
+Kedron PJ, Frazier AE, Ovando-Montejo GA, Wang J (2018) Surface metrics
+for landscape ecology: A comparison of landscape models across
+ecoregions and scales. Landscape Ecology 33:1489--1504.
+\url{https://doi.org/10.1007/s10980-018-0685-1}
+
+\bibitem[\citeproctext]{ref-Langhammer2019}
+Langhammer M, Thober J, Lange M, et al (2019) Agricultural landscape
+generators for simulation models: A review of existing solutions and an
+outline of future directions. Ecological Modelling 393:135--151.
+\url{https://doi.org/10.1016/j.ecolmodel.2018.12.010}
+
+\bibitem[\citeproctext]{ref-Lausch2015}
+Lausch A, Blaschke T, Haase D, et al (2015) Understanding and
+quantifying landscape structure - a review on relevant process
+characteristics, data models and landscape metrics. Ecological Modelling
+295:31--41. \url{https://doi.org/10.1016/j.ecolmodel.2014.08.018}
+
+\bibitem[\citeproctext]{ref-Lechner2016}
+Lechner AM, Rhodes JR (2016) Recent progress on spatial and thematic
+resolution in landscape ecology. Current Landscape Ecology Reports
+1:98--105. \url{https://doi.org/10.1007/s40823-016-0011-z}
+
 \bibitem[\citeproctext]{ref-Li2004}
 Li X, He HS, Wang X, et al (2004) Evaluating the effectiveness of
 neutral landscape models to represent a real landscape. Landscape and
 Urban Planning 69:137--148.
 \url{https://doi.org/10.1016/j.landurbplan.2003.10.037}
 
+\bibitem[\citeproctext]{ref-Lovelace2019}
+Lovelace R, Nowosad J, Münchow J (2019) Geocomputation with r, 1st edn.
+Chapman \& Hall/CRC, Boca Raton, USA
+
 \bibitem[\citeproctext]{ref-Maceachren1985}
 Maceachren AM (1985) Compactness of geographic shape: Comparison and
 evaluation of measures. Geografiska Annaler: Series B, Human Geography
 67:53--67. \url{https://doi.org/10.1080/04353684.1985.11879515}
+
+\bibitem[\citeproctext]{ref-McGarigal2009}
+McGarigal K, Tagil S, Cushman SA (2009) Surface metrics: An alternative
+to patch metrics for the quantification of landscape structure.
+Landscape Ecology 24:433--450.
+\url{https://doi.org/10.1007/s10980-009-9327-y}
 
 \bibitem[\citeproctext]{ref-Nathan2022}
 Nathan R, Monk CT, Arlinghaus R, et al (2022) Big-data approaches lead
@@ -675,6 +743,15 @@ of landscape types using multi-thematic data. International Journal of
 Geographical Information Science 35:1634--1649.
 \url{https://doi.org/10.1080/13658816.2021.1893324}
 
+\bibitem[\citeproctext]{ref-ONeill1992}
+O'Neill RV, Gardner RH, Turner MG (1992) A hierarchical neutral model
+for landscape analysis. Landscape Ecology 7:55--61.
+\url{https://doi.org/10.1007/BF02573957}
+
+\bibitem[\citeproctext]{ref-Palmer1992}
+Palmer MW (1992) The coexistence of species in fractal landscapes. The
+American Naturalist 139:375--397. \url{https://doi.org/10.1086/285332}
+
 \bibitem[\citeproctext]{ref-Pascual2005}
 Pascual M (2005) Computational ecology: From the complex to the simple
 and back. PLoS Computional Biology 1:e18.
@@ -694,6 +771,11 @@ science. Interface Focus 2:241--254.
 Poisot T, LaBrie R, Larson E, et al (2019) Data-based, synthesis-driven:
 Setting the agenda for computational ecology. Ideas in Ecology and
 Evolution 12: \url{https://doi.org/10.24908/iee.2019.12.2.e}
+
+\bibitem[\citeproctext]{ref-Powers2019}
+Powers SM, Hampton SE (2019) Open science, reproducibility, and
+transparency in ecology. Ecological Applications 29:e01822.
+\url{https://doi.org/10.1002/eap.1822}
 
 \bibitem[\citeproctext]{ref-Prlic2012}
 Prlić A, Procter JB (2012) Ten simple rules for the open development of
@@ -726,17 +808,16 @@ index from remote sensing: An open source solution. Ecological
 Indicators 72:234--238.
 \url{https://doi.org/10.1016/j.ecolind.2016.07.039}
 
+\bibitem[\citeproctext]{ref-Salecker2019}
+Salecker J, Dislich C, Wiegand K, et al (2019) EFForTS-LGraf: A
+landscape generator for creating smallholder-driven land-use mosaics.
+PLOS ONE 14:e0222949. \url{https://doi.org/10.1371/journal.pone.0222949}
+
 \bibitem[\citeproctext]{ref-Schroder2006}
 Schröder B, Seppelt R (2006) Analysis of pattern--process interactions
 based on landscape models - overview, general concepts, and
 methodological issues. Ecological Modelling 199:505--516.
 \url{https://doi.org/10.1016/j.ecolmodel.2006.05.036}
-
-\bibitem[\citeproctext]{ref-Sciaini2018}
-Sciaini M, Fritsch M, Scherer C, Simpkins CE (2018) NLMR and
-landscapetools: An integrated environment for simulating and modifying
-neutral landscape models in r. Methods in Ecology and Evolution
-9:2240--2248. \url{https://doi.org/10.1111/2041-210X.13076}
 
 \bibitem[\citeproctext]{ref-Shannon1948}
 Shannon CE (1948) A mathematical theory of communication. Bell System
@@ -766,16 +847,23 @@ Annual Review of Ecology, Evolution, and Systematics 36:319--344.
 Turner MG, Gardner RH (2015) Landscape ecology in theory and practice:
 Pattern and process, 2nd edition. Springer, New York
 
-\bibitem[\citeproctext]{ref-vonKrogh2006}
-von Krogh G, von Hippel E (2006) The promise of research on open source
-software. Management Science 52:975--983.
-\url{https://doi.org/10.1287/mnsc.1060.0560}
+\bibitem[\citeproctext]{ref-VanStrien2016}
+Van Strien MJ, Slager CTJ, De Vries B, Grêt-Regamey A (2016) An improved
+neutral landscape model for recreating real landscapes and generating
+landscape series for spatial ecological simulations. Ecology and
+Evolution 6:3808--3821. \url{https://doi.org/10.1002/ece3.2145}
 
 \bibitem[\citeproctext]{ref-Vranken2015}
 Vranken I, Baudry J, Aubinet M, et al (2015) A review on the use of
 entropy in landscape ecology: Heterogeneity, unpredictability, scale
 dependence and their links with thermodynamics. Landscape Ecology
 30:51--65. \url{https://doi.org/10.1007/s10980-014-0105-0}
+
+\bibitem[\citeproctext]{ref-Wade2003}
+Wade TG, Wickham JD, Nash MS, et al (2003) A comparison of vector and
+raster GIS methods for calculating landscape metrics used in
+environmental assessments. Photogrammetric Engineering \& Remote Sensing
+69:1399--1405. \url{https://doi.org/10.14358/PERS.69.12.1399}
 
 \bibitem[\citeproctext]{ref-Wang2008}
 Wang Q, Malanson GP (2008) Neutral landscapes: Bases for exploration in

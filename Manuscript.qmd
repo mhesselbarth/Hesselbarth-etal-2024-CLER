@@ -44,6 +44,7 @@ format:
         \renewcommand\Affilfont{\small}
 papersize: a4paper
 fontsize: 12pt
+mainfont: "Garamond"
 geometry: margin=25mm
 indent: 2m
 linestretch: 1.5
