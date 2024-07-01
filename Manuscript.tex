@@ -295,26 +295,6 @@ shapes, or class aggregation and diversity (Hesselbarth et al. 2019).
 Recently also several metrics describing landscape complexity were
 introduced, e.g., several entropy measures (see following sections).
 
-\subsection{Surface metrics}\label{surface-metrics}
-
-Surface metrics are based on the gradient surface model using raster
-data and continuous values (McGarigal et al. 2009; Cushman et al. 2010)
-and were adapted from microscopy and molecular physics (McGarigal et al.
-2009; Kedron et al. 2018). The gradient surface model can increase the
-resemblance of the data model and the natural world because it allows to
-include more heterogeneity within each grid cell (Cushman et al. 2010;
-Kedron et al. 2018). Surface metrics are able to quantify various
-characteristics, such as roughness, skewness and kurtosis, total and
-relative amplitudes, curvatures of local peaks, or surface bearing area
-ratios (Cushman et al. 2010). Many surface metrics have analogous
-landscape metrics (Cushman et al. 2010), however, using surface metrics
-allows to reveal different or additional patterns and potentially
-pattern-process links (McGarigal et al. 2009; Borthwick et al. 2020).
-Yet, software to calculate these metrics is still rare and further
-research is needed into the specific pattern-process links and
-ecological meaningful interpretations (Kedron et al. 2018; Frazier
-2019).
-
 \subsection{Entropy}\label{entropy}
 
 It is mainly derived from information theory and thermodynamics, such as
@@ -381,7 +361,51 @@ Kullback-Leibler divergence (also known as relative entropy), which is a
 measure of differences between two probability distributions to describe
 patterns across scales (Huckeba et al. 2023).
 
+\subsection{Operations on spatial
+patterns}\label{operations-on-spatial-patterns}
+
+Spatial patterns can be analyzed through a range of computational
+operations, such as comparing, searching, or grouping (Turner 1990;
+Wickham and Norton 1994; Jasiewicz et al. 2015; Remmel 2020; Nowosad
+2021). These operations are based on spatial signatures which are
+multi-numerical representations of landscape pattern, and dissimilarity
+measures which are functions that quantify differences between the
+signatures.
+
+Spatial patterns can be compared between different areas, or for the
+same area at two different moments in time. Comparing spatial patterns
+is often used to analyze landscape dynamics, e.g., to detect changes in
+landscape structure over time (Duncan and Boruff 2023). Furthermore,
+pattern-based search is a one-to-many operation in which the spatial
+signature of a query area is compared to the signatures of all other
+areas. This allows to find areas with similar patterns compared to the
+query area, e.g., areas with similar environmental conditions (Jasiewicz
+et al. 2014). Finally, the grouping of spatial patterns is a
+many-to-many operation in which spatial signatures are calculated for
+all areas and clustered based on their similarity (Nowosad and Stepinski
+2021).
+
 \subsection{Landscape mosaic}\label{landscape-mosaic}
+
+\subsection{Surface metrics}\label{surface-metrics}
+
+Surface metrics are based on the gradient surface model using raster
+data and continuous values (McGarigal et al. 2009; Cushman et al. 2010)
+and were adapted from microscopy and molecular physics (McGarigal et al.
+2009; Kedron et al. 2018). The gradient surface model can increase the
+resemblance of the data model and the natural world because it allows to
+include more heterogeneity within each grid cell (Cushman et al. 2010;
+Kedron et al. 2018). Surface metrics are able to quantify various
+characteristics, such as roughness, skewness and kurtosis, total and
+relative amplitudes, curvatures of local peaks, or surface bearing area
+ratios (Cushman et al. 2010). Many surface metrics have analogous
+landscape metrics (Cushman et al. 2010), however, using surface metrics
+allows to reveal different or additional patterns and potentially
+pattern-process links (McGarigal et al. 2009; Borthwick et al. 2020).
+Yet, software to calculate these metrics is still rare and further
+research is needed into the specific pattern-process links and
+ecological meaningful interpretations (Kedron et al. 2018; Frazier
+2019).
 
 \subsection{Vector metrics}\label{vector-metrics}
 
@@ -418,30 +442,6 @@ problematic especially for data from different sources. Last, the
 pattern-process link is still less explored for vector-based metrics
 compared to raster-based metrics.
 
-\subsection{Operations on spatial
-patterns}\label{operations-on-spatial-patterns}
-
-Spatial patterns can be analyzed through a range of computational
-operations, such as comparing, searching, or grouping (Turner 1990;
-Wickham and Norton 1994; Jasiewicz et al. 2015; Remmel 2020; Nowosad
-2021). These operations are based on spatial signatures which are
-multi-numerical representations of landscape pattern, and dissimilarity
-measures which are functions that quantify differences between the
-signatures.
-
-Spatial patterns can be compared between different areas, or for the
-same area at two different moments in time. Comparing spatial patterns
-is often used to analyze landscape dynamics, e.g., to detect changes in
-landscape structure over time (Duncan and Boruff 2023). Furthermore,
-pattern-based search is a one-to-many operation in which the spatial
-signature of a query area is compared to the signatures of all other
-areas. This allows to find areas with similar patterns compared to the
-query area, e.g., areas with similar environmental conditions (Jasiewicz
-et al. 2014). Finally, the grouping of spatial patterns is a
-many-to-many operation in which spatial signatures are calculated for
-all areas and clustered based on their similarity (Nowosad and Stepinski
-2021).
-
 \section{Simulation models}\label{simulation-models}
 
 Simulation models are a powerful tool to study complex adaptive
@@ -459,37 +459,37 @@ models, and \emph{ii)} pattern- or process-based models (Peck 2004;
 Synes et al. 2016). Here, we are going to focus mainly on exploratory
 models, but include both pattern- and process-based models.
 
-\subsection{Neutral landscapes models}\label{neutral-landscapes-models}
+\subsection{Landscapes generators}\label{landscapes-generators}
 
-Neutral landscapes models simulate landscape patterns without assuming
-any underlying abiotic or biotic processes. Thus, they are often used as
-null hypothesis, baselines, or scenarios for comparisons with real
-landscape patterns, while controlling certain aspects of the landscape
-(Li et al. 2004; Wang and Malanson 2008). The first neutral models
-simply assigned land cover types randomly to cells in the landscape and
-were based on percolation theory (Gardner et al. 1987). Further
-developments included hierarchical models that considered different
-spatial scales while assigning land cover types (O'Neill et al. 1992).
-While these first two classes can only simulate landscape with discrete
-land cover classes, fractal neutral models can also simulate continuous
-land cover maps by utilizing e.g., Brownian motion (Palmer 1992).
-Borrowing from computer graphics, more recent neutral landscape models
-make use of spectral synthesis (e.g., Perlin noise; Etherington 2022) or
-Binary space partitioning (Etherington et al. 2022) hierarchical neutral
-landscapes. In order to simulate landscapes dominated by human
-activities approaches based on least-cost network movement exist
-(Etherington et al. 2024). Neutral landscapes models can also be used to
-simulated landscapes similar to real landscapes (Inkoom et al. 2017), or
-based on target values of landscape metrics (Van Strien et al. 2016;
-Justeau-Allaire et al. 2022).
+Landscape generators are typically used as null hypotheses, baselines,
+or scenarios in landscape ecology analyses because they allow to control
+certain aspects of the landscape (Li et al. 2004; Wang and Malanson
+2008) and are generally simpler as ecological simulations models (Hess
+et al. 2020). Landscape generators can be classified into two major
+categories, namely pattern-based and process-based approaches (Pe'er et
+al. 2013).
 
-\subsection{Landscape Generator}\label{landscape-generator}
+Pattern-based landscape generators simulate landscape patterns without
+assuming any underlying abiotic or biotic processes (i.e., neutral
+landscape model; Gardner et al. 1987). The earliest neutral models are
+based on percolation theory and assign LULC types randomly to cells in
+the landscape(Gardner et al. 1987) or include hierarchical models that
+consider different spatial scales while assigning cell values (O'Neill
+et al. 1992). Landscapes characterized by continuous values can be
+simulated by fractal models, such as Brownian motion (Palmer 1992).
+Borrowing from computer graphics and being able to simulate hierarchical
+landscapes, more recent neutral landscape models make use of spectral
+synthesis (e.g., Perlin noise; Etherington 2022) or Binary space
+partitioning (Etherington et al. 2022). Neutral landscape models are
+also able to simulate landscapes dominated by anthropogenic activities,
+e.g., based on least-cost networks (Etherington et al. 2024). In order
+to ensure realistic landscapes, several approaches exist that use real
+landscapes (Inkoom et al. 2017) or are based on target values
+optimization (Van Strien et al. 2016; Justeau-Allaire et al. 2022) to
+simulate neutral landscapes.
 
-Processes-based landscape generators are related to neutral landscapes
-models because they can simulate virtual landscapes. However, in
-contrast to neutral landscape models, processes-based landscape
-generators are able to simulate structurally more realistic landscapes
-by including pattern creating processes (Langhammer et al. 2019;
+Contrastingly, processes-based landscape generators explicitly include
+hypothesized pattern creating processes (Langhammer et al. 2019;
 Salecker et al. 2019).
 
 \subsection{IBMs /Coupled lattice}\label{ibms-coupled-lattice}
@@ -629,6 +629,11 @@ Grimm V, Frank K, Jeltsch F, et al (1996) Pattern-oriented modelling in
 population ecology. The Science of the Total Environment 183:151--166.
 \url{https://doi.org/10.1016/0048-9697(95)04966-5}
 
+\bibitem[\citeproctext]{ref-Hess2020}
+Hess B, Dreber N, Liu Y, et al (2020) PioLaG: A piosphere landscape
+generator for savanna rangeland modelling. Landscape Ecology
+35:2061--2082. \url{https://doi.org/10.1007/s10980-020-01066-w}
+
 \bibitem[\citeproctext]{ref-Hesselbarth2019}
 Hesselbarth MHK, Sciaini M, With KA, et al (2019) Landscapemetrics: An
 open-source r tool to calculate landscape metrics. Ecography
@@ -756,6 +761,12 @@ American Naturalist 139:375--397. \url{https://doi.org/10.1086/285332}
 Pascual M (2005) Computational ecology: From the complex to the simple
 and back. PLoS Computional Biology 1:e18.
 \url{https://doi.org/10.1371/journal.pcbi.0010018}
+
+\bibitem[\citeproctext]{ref-Peer2013}
+Pe'er G, Zurita GA, Schober L, et al (2013) Simple process-based
+simulators for generating spatial patterns of habitat loss and
+fragmentation: A review and introduction to the g-RaFFe model. PLoS ONE
+8:e64968. \url{https://doi.org/10.1371/journal.pone.0064968}
 
 \bibitem[\citeproctext]{ref-Peck2004}
 Peck SL (2004) Simulation as experiment: A philosophical reassessment

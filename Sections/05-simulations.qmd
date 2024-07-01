@@ -12,25 +12,26 @@ Due to the usual temporal and spatial scales, complex interactions and feedbacks
 In general, simulations models can be classified using two major divisions, namely as *i)* predictive or exploratory models, and *ii)* pattern- or process-based models [@Peck2004;@Synes2016].
 Here, we are going to focus mainly on exploratory models, but include both pattern- and process-based models.
 
-## Neutral landscapes models
-Neutral landscapes models simulate landscape patterns without assuming any underlying abiotic or biotic processes.
-Thus, they are often used as null hypothesis, baselines, or scenarios for comparisons with real landscape patterns, while controlling certain aspects of the landscape [@Li2004; @Wang2008].
-The first neutral models simply assigned land cover types randomly to cells in the landscape and were based on percolation theory [@Gardner1987].
-Further developments included hierarchical models that considered different spatial scales while assigning land cover types [@ONeill1992].
-While these first two classes can only simulate landscape with discrete land cover classes, fractal neutral models can also simulate continuous land cover maps by utilizing e.g., Brownian motion [@Palmer1992].
-Borrowing from computer graphics, more recent neutral landscape models make use of spectral synthesis [e.g., Perlin noise\; @Etherington2022] or Binary space partitioning [@Etherington2022a] hierarchical neutral landscapes.
-In order to simulate landscapes dominated by human activities approaches based on least-cost network movement exist [@Etherington2024].
-Neutral landscapes models can also be used to simulated landscapes similar to real landscapes [@Inkoom2017], or based on target values of landscape metrics [@VanStrien2016; @Justeau-Allaire2022].
-<!-- In order to make multiple neutral landscape model algorithms accessible, several software libraries are available in prominent programming languages including Python [NLMpy\; @Etherington2015], R [NLMR\; @Sciaini2018], or Julia (https://github.com/EcoJulia/NeutralLandscapes.jl). -->
+## Landscapes generators
 
-## Landscape Generator
-Processes-based landscape generators are related to neutral landscapes models because they can simulate virtual landscapes.
-However, in contrast to neutral landscape models, processes-based landscape generators are able to simulate structurally more realistic landscapes by including pattern creating processes [@Langhammer2019; @Salecker2019].
+Landscape generators are typically used as null hypotheses, baselines, or scenarios in landscape ecology analyses because they allow to control certain aspects of the landscape [@Li2004; @Wang2008] and are generally simpler as ecological simulations models [@Hess2020].
+Landscape generators can be classified into two major categories, namely pattern-based and process-based approaches [@Peer2013].
+
+Pattern-based landscape generators simulate landscape patterns without assuming any underlying abiotic or biotic processes [i.e., neutral landscape model\; @Gardner1987].
+The earliest neutral models are based on percolation theory and assign LULC types randomly to cells in the landscape[@Gardner1987] or include hierarchical models that consider different spatial scales while assigning cell values [@ONeill1992].
+Landscapes characterized by continuous values can be simulated by fractal models, such as Brownian motion [@Palmer1992].
+Borrowing from computer graphics and being able to simulate hierarchical landscapes, more recent neutral landscape models make use of spectral synthesis [e.g., Perlin noise\; @Etherington2022] or Binary space partitioning [@Etherington2022a].
+Neutral landscape models are also able to simulate landscapes dominated by anthropogenic activities, e.g., based on least-cost networks [@Etherington2024].
+In order to ensure realistic landscapes, several approaches exist that use real landscapes [@Inkoom2017] or are based on target values optimization [@VanStrien2016; @Justeau-Allaire2022] to simulate neutral landscapes.
+<!-- In order to make multiple neutral landscape model algorithms accessible, several software libraries are available in prominent programming languages including Python [NLMpy\; @Etherington2015], R [NLMR\; @Sciaini2018], or Julia (https://github.com/EcoJulia/NeutralLandscapes.jl). -->
+<!-- QRULE -->
+
+Contrastingly, processes-based landscape generators explicitly include hypothesized pattern creating processes [@Langhammer2019; @Salecker2019].
+<!-- are able to simulate structurally more realistic landscapes by including -->
 
 <!--
-Cellular automaton
+Cellular automata
 [G-RaFFE](https://doi.org/10.1371/journal.pone.0064968)
-[GradientLand Software](https://doi.org/10.1016/j.ecoinf.2014.12.001)
 [PioLaG](https://doi.org/10.1007/s10980-020-01066-w)
 -->
 

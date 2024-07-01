@@ -1,0 +1,5 @@
+---
+bibliography: CLER.bib
+---
+
+<!-- Person responsible: tbd -->

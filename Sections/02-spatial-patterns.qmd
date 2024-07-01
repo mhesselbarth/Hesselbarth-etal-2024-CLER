@@ -26,19 +26,6 @@ Recently also several metrics describing landscape complexity were introduced, e
 <!-- https://github.com/r-spatialecology/landcapemetrics -->
 <!-- https://fragstats.org/ -->
 
-## Surface metrics
-<!-- Bosch, Hesselbarth -->
-
-Surface metrics are based on the gradient surface model using raster data and continuous values [@McGarigal2009; @Cushman2010] and were adapted from microscopy and molecular physics [@McGarigal2009; @Kedron2018].
-The gradient surface model can increase the resemblance of the data model and the natural world because it allows to include more heterogeneity within each grid cell [@Cushman2010; @Kedron2018].
-Surface metrics are able to quantify various characteristics, such as roughness, skewness and kurtosis, total and relative amplitudes, curvatures of local peaks, or surface bearing area ratios [@Cushman2010].
-Many surface metrics have analogous landscape metrics [@Cushman2010], however, using surface metrics allows to reveal different or additional patterns and potentially pattern-process links [@McGarigal2009; @Borthwick2020].
-Yet, software to calculate these metrics is still rare and further research is needed into the specific pattern-process links and ecological meaningful interpretations [@Kedron2018; @Frazier2019].
-<!-- MH: What about Spectral and Wavelet Analysis?
-
-<!-- https://www.digitalsurf.com/free-trial/ -->
-<!-- https://github.com/bioXgeo/geodiv -->
-
 ## Entropy
 <!-- Nowosad, Bosch -->
 
@@ -87,8 +74,38 @@ Another recent development is the use of Kullback-Leibler divergence (also known
 <!--@Konrad2023; Juhász-Nagy’s information theory-based functions;  https://cran.r-project.org/web/packages/LandComp/index.html -->
 <!-- "Fractal dimension seems directly related to entropy." @cushmanThermodynamicsLandscapeEcology2015a -->
 
+## Operations on spatial patterns
+
+Spatial patterns can be analyzed through a range of computational operations, such as comparing, searching, or grouping [@Turner1990; @Wickham1994; @Jasiewicz2015; @Remmel2020; @Nowosad2021a].
+These operations are based on spatial signatures which are multi-numerical representations of landscape pattern, and dissimilarity measures which are functions that quantify differences between the signatures.
+
+Spatial patterns can be compared between different areas, or for the same area at two different moments in time.
+Comparing spatial patterns is often used to analyze landscape dynamics, e.g., to detect changes in landscape structure over time [@Duncan2023].
+Furthermore, pattern-based search is a one-to-many operation in which the spatial signature of a query area is compared to the signatures of all other areas.
+This allows to find areas with similar patterns compared to the query area, e.g., areas with similar environmental conditions [@Jasiewicz2014].
+Finally, the grouping of spatial patterns is a many-to-many operation in which spatial signatures are calculated for all areas and clustered based on their similarity [@Nowosad2021b].
+
+<!-- https://github.com/Nowosad/motif/ -->
+<!-- https://jakubnowosad.com/spquery/ -->
+<!-- FOSS4G Europe pap? -->
+
 ## Landscape mosaic
 <!-- Bosch -->
+
+<!-- https://doi.org/10.1371/journal.pone.0304215 -->
+
+## Surface metrics
+<!-- Bosch, Hesselbarth -->
+
+Surface metrics are based on the gradient surface model using raster data and continuous values [@McGarigal2009; @Cushman2010] and were adapted from microscopy and molecular physics [@McGarigal2009; @Kedron2018].
+The gradient surface model can increase the resemblance of the data model and the natural world because it allows to include more heterogeneity within each grid cell [@Cushman2010; @Kedron2018].
+Surface metrics are able to quantify various characteristics, such as roughness, skewness and kurtosis, total and relative amplitudes, curvatures of local peaks, or surface bearing area ratios [@Cushman2010].
+Many surface metrics have analogous landscape metrics [@Cushman2010], however, using surface metrics allows to reveal different or additional patterns and potentially pattern-process links [@McGarigal2009; @Borthwick2020].
+Yet, software to calculate these metrics is still rare and further research is needed into the specific pattern-process links and ecological meaningful interpretations [@Kedron2018; @Frazier2019].
+<!-- MH: What about Spectral and Wavelet Analysis?
+
+<!-- https://www.digitalsurf.com/free-trial/ -->
+<!-- https://github.com/bioXgeo/geodiv -->
 
 ## Vector metrics
 <!-- Nowosad, Hesselbarth -->
@@ -115,18 +132,3 @@ Another technical issue is the need for the data to be topologically correct, wh
 Last, the pattern-process link is still less explored for vector-based metrics compared to raster-based metrics.
 
 <!-- https://github.com/r-spatialecology/vectormetrics -->
-
-## Operations on spatial patterns
-
-Spatial patterns can be analyzed through a range of computational operations, such as comparing, searching, or grouping [@Turner1990; @Wickham1994; @Jasiewicz2015; @Remmel2020; @Nowosad2021a].
-These operations are based on spatial signatures which are multi-numerical representations of landscape pattern, and dissimilarity measures which are functions that quantify differences between the signatures.
-
-Spatial patterns can be compared between different areas, or for the same area at two different moments in time.
-Comparing spatial patterns is often used to analyze landscape dynamics, e.g., to detect changes in landscape structure over time [@Duncan2023].
-Furthermore, pattern-based search is a one-to-many operation in which the spatial signature of a query area is compared to the signatures of all other areas.
-This allows to find areas with similar patterns compared to the query area, e.g., areas with similar environmental conditions [@Jasiewicz2014].
-Finally, the grouping of spatial patterns is a many-to-many operation in which spatial signatures are calculated for all areas and clustered based on their similarity [@Nowosad2021b].
-
-<!-- https://github.com/Nowosad/motif/ -->
-<!-- https://jakubnowosad.com/spquery/ -->
-<!-- FOSS4G Europe pap? -->
