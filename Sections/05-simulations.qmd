@@ -12,38 +12,43 @@ Due to the usual temporal and spatial scales, complex interactions and feedbacks
 In general, simulations models can be classified using two major divisions, namely as *i)* predictive or exploratory models, and *ii)* pattern- or process-based models [@Peck2004;@Synes2016].
 Here, we are going to focus mainly on exploratory models, but include both pattern- and process-based models.
 
-## Landscapes generators
+## Landscapes simulators
 
-Landscape generators are typically used as null hypotheses, baselines, or scenarios in landscape ecology analyses because they allow to control certain aspects of the landscape [@Li2004; @Wang2008] and are generally simpler as ecological simulations models [@Hess2020].
-Landscape generators can be classified into two major categories, namely pattern-based and process-based approaches [@Peer2013].
+Landscape simulators are typically used as null hypotheses, baselines, or scenarios because they allow to control certain aspects of the landscape [@Li2004; @Wang2008] and are generally simpler than ecological simulations models [@Hess2020].
+Landscape simulators can be classified into two major categories, namely pattern-based and process-based approaches [@Peer2013; Langhammer2019].
 
-Pattern-based landscape generators simulate landscape patterns without assuming any underlying abiotic or biotic processes [i.e., neutral landscape model\; @Gardner1987].
-The earliest neutral models are based on percolation theory and assign LULC types randomly to cells in the landscape[@Gardner1987] or include hierarchical models that consider different spatial scales while assigning cell values [@ONeill1992].
+Pattern-based approaches simulate landscapes without assuming any underlying abiotic or biotic processes [i.e., neutral landscape model\; @Gardner1987].
+The earliest neutral models are based on percolation theory and assign LULC types randomly to cells in the landscape[@Gardner1987] or hierarchical models that consider different spatial scales while assigning cell values [@ONeill1992].
 Landscapes characterized by continuous values can be simulated by fractal models, such as Brownian motion [@Palmer1992].
-Borrowing from computer graphics and being able to simulate hierarchical landscapes, more recent neutral landscape models make use of spectral synthesis [e.g., Perlin noise\; @Etherington2022] or Binary space partitioning [@Etherington2022a].
-Neutral landscape models are also able to simulate landscapes dominated by anthropogenic activities, e.g., based on least-cost networks [@Etherington2024].
-In order to ensure realistic landscapes, several approaches exist that use real landscapes [@Inkoom2017] or are based on target values optimization [@VanStrien2016; @Justeau-Allaire2022] to simulate neutral landscapes.
-<!-- In order to make multiple neutral landscape model algorithms accessible, several software libraries are available in prominent programming languages including Python [NLMpy\; @Etherington2015], R [NLMR\; @Sciaini2018], or Julia (https://github.com/EcoJulia/NeutralLandscapes.jl). -->
-<!-- QRULE -->
+Borrowing from computer graphics, more recent neutral landscape models make use of spectral synthesis [e.g., Perlin noise\; @Etherington2022] or binary space partitioning [@Etherington2022a].
+Neutral landscape models are also able to simulate landscapes dominated by anthropogenic activities using based on least-cost networks [@Etherington2024].
+In order to ensure realistic neutral landscapes several approaches exist that use comparisons with real landscapes [@Inkoom2017] or are based on target values optimization [@VanStrien2016; @Justeau-Allaire2022].
+<!-- In order to make multiple neutral landscape model algorithms accessible, several software libraries are available in prominent programming languages including Python [NLMpy\; @Etherington2015], R [NLMR\; @Sciaini2018], Julia (https://github.com/EcoJulia/NeutralLandscapes.jl), or GUI software (GradientLand, QRULE) -->
 
-Contrastingly, processes-based landscape generators explicitly include hypothesized pattern creating processes [@Langhammer2019; @Salecker2019].
-<!-- are able to simulate structurally more realistic landscapes by including -->
+Contrastingly, processes-based approaches explicitly include abiotic or biotic pattern-forming processes [i.e., landscape generators\; @Langhammer2019; @Salecker2019].
+Several earlier landscape generators are based on cellular automata models and are able to simulate urban growth [@Clarke1998] or deforestation [@Soares-Filho2002].
+More recent landscape generators allow to simulate patchy landscapes based on Gibbs processes [@Gaucherel2006], deforestation based on road and agricultural fields access [@Peer2013], agricultural areas dominated by smallholders [@Salecker2019], or vegetation surround watering points in semi-arid savanna rangelands [combining pattern- and process-bases approaches\; @Hess2020].
 
-<!--
-Cellular automata
-[G-RaFFE](https://doi.org/10.1371/journal.pone.0064968)
-[PioLaG](https://doi.org/10.1007/s10980-020-01066-w)
--->
+## Individual-based models
 
-## IBMs /Coupled lattice
+Individual-based models (or agent-based models) simulate discrete entities that are described by attributes and behaviors and patterns emerge from bottom-up interactions of individuals with each other and their environment [@DeAngelis2014].
+In landscape ecology individual-based models are increasingly used to model especially social-ecological systems [e.g, @Carauta2018; @Dislich2018; @Gonzalez-Redin2019], but also disturbances [e.g., @Seidl2017a; @Spies2017; @Kamimura2019] or connectivity [e.g., @Day2020].
+In order to facilitate future model developments, recent progress includes adaptable modeling frameworks [@Schumaker2018] or reusable building block [@Berger2024].
+Furthermore, hybrid approaches that couple or even integrated different model types with individual-based models could benefit from rich development history or facilitate corresponding strengths [@OSullivan2016], e.g., linking an individual-based and ecosystem model [@Polhill2011].
 
 ## Digital twins
 
-<!-- 
-[RangeShifter](https://doi.org/10.1111/ecog.05687)
+<!--
+[Digital twins](https://doi.org/10.1016/j.tree.2023.04.010) 
+[Rural ecological landscape control](https://doi.org/10.1186/s12302-024-00888-8)
+[Urban Expansion and Vegetation Coverage](https://doi.org/10.3389/fpls.2022.840471)
+[Digital Twins in agriculture](https://doi.org/10.1016/j.cosust.2022.101252)
+[Future landscape visualization](https://doi.org/10.1093/jcde/qwac032)
+[Digital Twin of the Agricultural Landscape](https://doi.org/10.14627/537690019)
+-->
+
+<!--
 [Marine SDMS](https://doi.org/10.1016/j.ecolmodel.2019.108837)
 [SDM past present future](https://doi.org/10.1111/jbi.14617)
 [Simulations in landscape genetics](https://doi.org/10.1111/j.1365-294X.2010.04678.x)
-[HexSim modeling environment](https://doi.org/10.1007/s10980-017-0605-9)
-[Digital twins?](https://doi.org/10.1016/j.tree.2023.04.010)
 -->
