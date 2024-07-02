@@ -4,7 +4,7 @@
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
 %
 \documentclass[
-  12pt,
+  11pt,
   a4paperpaper,
 ]{article}
 
@@ -459,46 +459,75 @@ models, and \emph{ii)} pattern- or process-based models (Peck 2004;
 Synes et al. 2016). Here, we are going to focus mainly on exploratory
 models, but include both pattern- and process-based models.
 
-\subsection{Landscapes generators}\label{landscapes-generators}
+\subsection{Landscapes simulators}\label{landscapes-simulators}
 
-Landscape generators are typically used as null hypotheses, baselines,
-or scenarios in landscape ecology analyses because they allow to control
-certain aspects of the landscape (Li et al. 2004; Wang and Malanson
-2008) and are generally simpler as ecological simulations models (Hess
-et al. 2020). Landscape generators can be classified into two major
-categories, namely pattern-based and process-based approaches (Pe'er et
-al. 2013).
+Landscape simulators are typically used as null hypotheses, baselines,
+or scenarios because they allow to control certain aspects of the
+landscape (Li et al. 2004; Wang and Malanson 2008) and are generally
+simpler than ecological simulations models (Hess et al. 2020). Landscape
+simulators can be classified into two major categories, namely
+pattern-based and process-based approaches {[}Pe'er et al. (2013);
+Langhammer2019{]}.
 
-Pattern-based landscape generators simulate landscape patterns without
-assuming any underlying abiotic or biotic processes (i.e., neutral
-landscape model; Gardner et al. 1987). The earliest neutral models are
-based on percolation theory and assign LULC types randomly to cells in
-the landscape(Gardner et al. 1987) or include hierarchical models that
-consider different spatial scales while assigning cell values (O'Neill
-et al. 1992). Landscapes characterized by continuous values can be
-simulated by fractal models, such as Brownian motion (Palmer 1992).
-Borrowing from computer graphics and being able to simulate hierarchical
-landscapes, more recent neutral landscape models make use of spectral
-synthesis (e.g., Perlin noise; Etherington 2022) or Binary space
-partitioning (Etherington et al. 2022). Neutral landscape models are
-also able to simulate landscapes dominated by anthropogenic activities,
-e.g., based on least-cost networks (Etherington et al. 2024). In order
-to ensure realistic landscapes, several approaches exist that use real
-landscapes (Inkoom et al. 2017) or are based on target values
-optimization (Van Strien et al. 2016; Justeau-Allaire et al. 2022) to
-simulate neutral landscapes.
+Pattern-based approaches simulate landscapes without assuming any
+underlying abiotic or biotic processes (i.e., neutral landscape model;
+Gardner et al. 1987). The earliest neutral models are based on
+percolation theory and assign LULC types randomly to cells in the
+landscape(Gardner et al. 1987) or hierarchical models that consider
+different spatial scales while assigning cell values (O'Neill et al.
+1992). Landscapes characterized by continuous values can be simulated by
+fractal models, such as Brownian motion (Palmer 1992). Borrowing from
+computer graphics, more recent neutral landscape models make use of
+spectral synthesis (e.g., Perlin noise; Etherington 2022) or binary
+space partitioning (Etherington et al. 2022). Neutral landscape models
+are also able to simulate landscapes dominated by anthropogenic
+activities using based on least-cost networks (Etherington et al. 2024).
+In order to ensure realistic neutral landscapes several approaches exist
+that use comparisons with real landscapes (Inkoom et al. 2017) or are
+based on target values optimization (Van Strien et al. 2016;
+Justeau-Allaire et al. 2022).
 
-Contrastingly, processes-based landscape generators explicitly include
-hypothesized pattern creating processes (Langhammer et al. 2019;
-Salecker et al. 2019).
+Contrastingly, processes-based approaches explicitly include abiotic or
+biotic pattern-forming processes (i.e., landscape generators; Langhammer
+et al. 2019; Salecker et al. 2019). Several earlier landscape generators
+are based on cellular automata models and are able to simulate urban
+growth (Clarke and Gaydos 1998) or deforestation (Soares-Filho et al.
+2002). More recent landscape generators allow to simulate patchy
+landscapes based on Gibbs processes (Gaucherel et al. 2006),
+deforestation based on road and agricultural fields access (Pe'er et al.
+2013), agricultural areas dominated by smallholders (Salecker et al.
+2019), or vegetation surround watering points in semi-arid savanna
+rangelands (combining pattern- and process-bases approaches; Hess et al.
+2020).
 
-\subsection{IBMs /Coupled lattice}\label{ibms-coupled-lattice}
+\subsection{Individual-based models}\label{individual-based-models}
+
+Individual-based models (or agent-based models) simulate discrete
+entities that are described by attributes and behaviors and patterns
+emerge from bottom-up interactions of individuals with each other and
+their environment (DeAngelis and Grimm 2014). In landscape ecology
+individual-based models are increasingly used to model especially
+social-ecological systems (e.g, Carauta et al. 2018; Dislich et al.
+2018; Gonzalez-Redin et al. 2019), but also disturbances (e.g., Seidl
+and Rammer 2017; Spies et al. 2017; Kamimura et al. 2019) or
+connectivity (e.g., Day et al. 2020). In order to facilitate future
+model developments, recent progress includes adaptable modeling
+frameworks (Schumaker and Brookes 2018) or reusable building block
+(Berger et al. 2024). Furthermore, hybrid approaches that couple or even
+integrated different model types with individual-based models could
+benefit from rich development history or facilitate corresponding
+strengths (O'Sullivan et al. 2016), e.g., linking an individual-based
+and ecosystem model (Polhill et al. 2011).
 
 \subsection{Digital twins}\label{digital-twins}
 
 \newpage{}
 
-\subsubsection{References}\label{references}
+\subsubsection*{References}\label{references}
+\addcontentsline{toc}{subsubsection}{References}
+
+\begingroup
+\raggedright
 
 \phantomsection\label{refs}
 \begin{CSLReferences}{1}{1}
@@ -515,12 +544,25 @@ building footprints in GIS. International Journal of Geographical
 Information Science 31:1952--1977.
 \url{https://doi.org/10.1080/13658816.2017.1346257}
 
+\bibitem[\citeproctext]{ref-Berger2024}
+Berger U, Bell A, Barton CM, et al (2024) Towards reusable building
+blocks for agent-based modelling and theory development. Environmental
+Modelling \& Software 175:106003.
+\url{https://doi.org/10.1016/j.envsoft.2024.106003}
+
 \bibitem[\citeproctext]{ref-Borthwick2020}
 Borthwick R, de Flamingh A, Hesselbarth MHK, et al (2020) Alternative
 quantifications of landscape complementation to model gene flow in
 banded longhorn beetles {[}typocerus v. Velutinus (olivier){]}.
 Frontiers in Genetics 11:307.
 \url{https://doi.org/10.3389/fgene.2020.00307}
+
+\bibitem[\citeproctext]{ref-Carauta2018}
+Carauta M, Latynskiy E, Mössinger J, et al (2018) Can preferential
+credit programs speed up the adoption of low-carbon agricultural systems
+in mato grosso, brazil? Results from bioeconomic microsimulation.
+Regional Environmental Change 18:117--128.
+\url{https://doi.org/10.1007/s10113-017-1104-x}
 
 \bibitem[\citeproctext]{ref-Chi2016}
 Chi M, Plaza A, Benediktsson JA, et al (2016) Big data for remote
@@ -532,6 +574,12 @@ Claramunt C (2012)
 \href{https://doi.org/10.1007/978-3-642-33999-8_28}{Towards a
 spatio-temporal form of entropy}. In: Advances in conceptual modeling.
 Springer Berlin Heidelberg, Berlin, Heidelberg, pp 221--230
+
+\bibitem[\citeproctext]{ref-Clarke1998}
+Clarke KC, Gaydos LJ (1998) Loose-coupling a cellular automaton model
+and GIS: Long-term urban growth prediction for san francisco and
+washington/baltimore. International Journal of Geographical Information
+Science 12:699--714. \url{https://doi.org/10.1080/136588198241617}
 
 \bibitem[\citeproctext]{ref-Costanza2019}
 Costanza JK, Riitters K, Vogt P, Wickham J (2019) Describing and
@@ -564,6 +612,23 @@ wildlife conservation. Springer International Publishing, Basel, CH, pp
 \bibitem[\citeproctext]{ref-Dale1999}
 Dale MRT (1999) \href{https://doi.org/10.1017/CBO9780511612589}{Spatial
 pattern analysis in plant ecology}, 1st edn. Cambridge University Press
+
+\bibitem[\citeproctext]{ref-Day2020}
+Day CC, Zollner PA, Gilbert JH, McCann NP (2020) Individual-based
+modeling highlights the importance of mortality and landscape structure
+in measures of functional connectivity. Landscape Ecology 35:2191--2208.
+\url{https://doi.org/10.1007/s10980-020-01095-5}
+
+\bibitem[\citeproctext]{ref-DeAngelis2014}
+DeAngelis DL, Grimm V (2014) Individual-based models in ecology after
+four decades. F1000Prime Reports 6:1--6.
+\url{https://doi.org/10.12703/P6-39}
+
+\bibitem[\citeproctext]{ref-Dislich2018}
+Dislich C, Hettig E, Salecker J, et al (2018) Land-use change in oil
+palm dominated tropical landscapes - an agent-based model to explore
+ecological and socio-economic trade-offs. PLoS ONE 13:e0190506.
+\url{https://doi.org/10.1371/journal.pone.0190506}
 
 \bibitem[\citeproctext]{ref-Duncan2023}
 Duncan JMA, Boruff B (2023) Monitoring spatial patterns of urban
@@ -619,10 +684,21 @@ Gardner RH, Milne BT, Turnei MG, O'Neill RV (1987) Neutral models for
 the analysis of broad-scale landscape pattern. Landscape Ecology
 1:19--28. \url{https://doi.org/10.1007/BF02275262}
 
+\bibitem[\citeproctext]{ref-Gaucherel2006}
+Gaucherel C, Fleury D, Auclair D, Dreyfus P (2006) Neutral models for
+patchy landscapes. Ecological Modelling 197:159--170.
+\url{https://doi.org/10.1016/j.ecolmodel.2006.02.044}
+
 \bibitem[\citeproctext]{ref-Gergel2017}
 Gergel SE, Turner MG (eds) (2017)
 \href{https://doi.org/10.1007/978-1-4939-6374-4}{Learning landscape
 ecology}. Springer New York, New York, NY
+
+\bibitem[\citeproctext]{ref-Gonzalez-Redin2019}
+Gonzalez-Redin J, Gordon IJ, Hill R, et al (2019) Exploring sustainable
+land use in forested tropical social-ecological systems: A case-study in
+the wet tropics. Journal of Environmental Management 231:940--952.
+\url{https://doi.org/10.1016/j.jenvman.2018.10.079}
 
 \bibitem[\citeproctext]{ref-Grimm1996}
 Grimm V, Frank K, Jeltsch F, et al (1996) Pattern-oriented modelling in
@@ -670,6 +746,12 @@ Justeau-Allaire D, Blanchard G, Ibanez T, et al (2022) Fragmented
 landscape generator (flsgen): A neutral landscape generator with control
 of landscape structure and fragmentation indices. Methods in Ecology and
 Evolution 13:1412--1420. \url{https://doi.org/10.1111/2041-210X.13859}
+
+\bibitem[\citeproctext]{ref-Kamimura2019}
+Kamimura K, Gardiner B, Dupont S, Finnigan J (2019) Agent-based
+modelling of wind damage processes and patterns in forests. Agricultural
+and Forest Meteorology 268:279--288.
+\url{https://doi.org/10.1016/j.agrformet.2019.01.020}
 
 \bibitem[\citeproctext]{ref-Kedron2018}
 Kedron PJ, Frazier AE, Ovando-Montejo GA, Wang J (2018) Surface metrics
@@ -753,6 +835,11 @@ O'Neill RV, Gardner RH, Turner MG (1992) A hierarchical neutral model
 for landscape analysis. Landscape Ecology 7:55--61.
 \url{https://doi.org/10.1007/BF02573957}
 
+\bibitem[\citeproctext]{ref-OSullivan2016}
+O'Sullivan D, Evans T, Manson S, et al (2016) Strategic directions for
+agent-based modeling: Avoiding the YAAWN syndrome. Journal of Land Use
+Science 11:177--187. \url{https://doi.org/10.1080/1747423X.2015.1030463}
+
 \bibitem[\citeproctext]{ref-Palmer1992}
 Palmer MW (1992) The coexistence of species in fractal landscapes. The
 American Naturalist 139:375--397. \url{https://doi.org/10.1086/285332}
@@ -782,6 +869,11 @@ science. Interface Focus 2:241--254.
 Poisot T, LaBrie R, Larson E, et al (2019) Data-based, synthesis-driven:
 Setting the agenda for computational ecology. Ideas in Ecology and
 Evolution 12: \url{https://doi.org/10.24908/iee.2019.12.2.e}
+
+\bibitem[\citeproctext]{ref-Polhill2011}
+Polhill JG, Gimona A, Aspinall RJ (2011) Agent-based modelling of land
+use effects on ecosystem processes and services. Journal of Land Use
+Science 6:75--81. \url{https://doi.org/10.1080/1747423X.2011.558603}
 
 \bibitem[\citeproctext]{ref-Powers2019}
 Powers SM, Hampton SE (2019) Open science, reproducibility, and
@@ -830,10 +922,34 @@ based on landscape models - overview, general concepts, and
 methodological issues. Ecological Modelling 199:505--516.
 \url{https://doi.org/10.1016/j.ecolmodel.2006.05.036}
 
+\bibitem[\citeproctext]{ref-Schumaker2018}
+Schumaker NH, Brookes A (2018) HexSim: A modeling environment for
+ecology and conservation. Landscape Ecology 33:197--211.
+\url{https://doi.org/10.1007/s10980-017-0605-9}
+
+\bibitem[\citeproctext]{ref-Seidl2017a}
+Seidl R, Rammer W (2017) Climate change amplifies the interactions
+between wind and bark beetle disturbances in forest landscapes.
+Landscape Ecology 32:1485--1498.
+\url{https://doi.org/10.1007/s10980-016-0396-4}
+
 \bibitem[\citeproctext]{ref-Shannon1948}
 Shannon CE (1948) A mathematical theory of communication. Bell System
 Technical Journal 27:379--423.
 \url{https://doi.org/10.1002/j.1538-7305.1948.tb01338.x}
+
+\bibitem[\citeproctext]{ref-Soares-Filho2002}
+Soares-Filho BS, Coutinho Cerqueira G, Lopes Pennachin C (2002)
+Dinamica---a stochastic cellular automata model designed to simulate the
+landscape dynamics in an amazonian colonization frontier. Ecological
+Modelling 154:217--235.
+\url{https://doi.org/10.1016/S0304-3800(02)00059-5}
+
+\bibitem[\citeproctext]{ref-Spies2017}
+Spies TA, White E, Ager A, et al (2017) Using an agent-based model to
+examine forest management outcomes in a fire-prone landscape in oregon,
+USA. Ecology and Society 22:art25.
+\url{https://doi.org/10.5751/ES-08841-220125}
 
 \bibitem[\citeproctext]{ref-Synes2016}
 Synes NW, Brown C, Watts K, et al (2016) Emerging opportunities for
@@ -943,6 +1059,8 @@ landscape mosaic based on the wasserstein metric. Landscape Ecology
 34:1849--1858. \url{https://doi.org/10.1007/s10980-019-00876-x}
 
 \end{CSLReferences}
+
+\endgroup
 
 
 
