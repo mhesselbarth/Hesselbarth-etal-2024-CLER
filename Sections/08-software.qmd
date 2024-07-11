@@ -4,23 +4,22 @@ bibliography: CLER.bib
 
 <!-- Person responsible: Hesselbarth, Nowosad, Bosch, Jung, Schouten  -->
 
-<!-- "The future applications of landscape pattern metrics will almost certainly depend on the software and analysis tools available" -- @costanzaDescribingAnalyzingLandscape2019 -->
-
-<!--jn: misc-->
-<!-- the need for open-source software in landscape ecology -->
-<!-- every proposed method should be open-source and available to the community -->
-
 # Software and programming languages
 
-## Open source vs. proprietary software
+<!-- "The future applications of landscape pattern metrics will almost certainly depend on the software and analysis tools available" -- @costanzaDescribingAnalyzingLandscape2019 -->
 
-## GUI vs. script-based software 
+"Open science" involves full transparency and data access at all stages of the research processes and the integrative and multi-disciplinary field of ecology can massively benefit from this concept [@Hampton2015].
+One key aspect of achieving open science is to use open source software, which ensures transparency and consequently increasing the (public) trust into the analyses [@Powers2019].
+Related to this, script-based workflows have the advantage over workflows involving graphical user interfaces that the former are shareable and reproducible [@Hampton2015; @Powers2019].
+Thus, we will focus the following section on script-based open-source software suitable for landscape ecology.
+Given the increasing availability of data and complexity of methods, future progress within the field of landscape ecology will depend on the software and analysis tools available [@Costanza2019]
 
-## Programing languages
+<!-- R: Hesselbarth -->
+The open-source and script-based R programming languages [@RCoreTeam2024] was first released in 1995 [@Smith2016] with a focus on statistical computing and data visualization.
+However, due to its extensions (also called packages), the language is popular in many academic fields including ecology [@Lai2019] and it is suitable for spatial data analysis or landscape ecology [e.g., @Bivand2020; @Hesselbarth2021]. 
 
-### R
-<!-- Hesselbarth -->
-<!-- landscapemetrics
+<!-- 
+landscapemetrics
 geodiv
 vectormetrics (also: VecLI -- they mention open source in their paper a few times, but the software seems to be closed source -- https://urbancomp.net/archives/vecliv3beta)
 bespatial
@@ -28,17 +27,18 @@ LandComp
 motif
 ?GLCMTextures
 ?rasterdiv
-?terra -->
+?terra 
+-->
 
-### Python
-<!-- Bosch -->
+<!-- Python: Bosch -->
 
-### Julia
-<!-- Schouten -->
+<!--Julia: Schouten -->
 
-## Other open source software
+<!--Others: -->
 
-<!-- GuidosToolbox
+<!-- 
+GuidosToolbox
 ?GRASS GIS
-?QGIS: LecoS plugin -->
+?QGIS: LecoS plugin 
+-->
 

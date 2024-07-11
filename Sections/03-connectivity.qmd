@@ -5,3 +5,11 @@ bibliography: CLER.bib
 <!-- Person responsible: -->
 
 # Connectivity / Movement / Dispersal
+
+
+<!-- 
+https://link.springer.com/article/10.1007/s10980-023-01741-8
+https://link.springer.com/article/10.1007/s10980-022-01504-x?fromPaywallRec=false
+https://link.springer.com/article/10.1007/s10980-019-00935-3?fromPaywallRec=false
+https://link.springer.com/article/10.1038/s41598-022-20370-w?fromPaywallRec=true
+-->

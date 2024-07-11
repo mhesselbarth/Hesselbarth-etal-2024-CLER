@@ -4,7 +4,7 @@
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
 %
 \documentclass[
-  11pt,
+  10pt,
   a4paperpaper,
 ]{article}
 
@@ -23,7 +23,7 @@
 \usepackage{lmodern}
 \ifPDFTeX\else  
     % xetex/luatex font selection
-  \setmainfont[]{Garamond}
+    \setmainfont[]{Verdana}
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -36,14 +36,28 @@
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 % Make \paragraph and \subparagraph free-standing
+\makeatletter
 \ifx\paragraph\undefined\else
   \let\oldparagraph\paragraph
-  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
 \fi
 \ifx\subparagraph\undefined\else
   \let\oldsubparagraph\subparagraph
-  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
+\makeatother
 
 
 \providecommand{\tightlist}{%
@@ -151,6 +165,7 @@
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
+
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
@@ -168,6 +183,7 @@
   citecolor={Blue},
   urlcolor={Blue},
   pdfcreator={LaTeX via pandoc}}
+
 
 \title{Computational methods in landscape ecology}
 
@@ -202,6 +218,7 @@
 \date{}
 \begin{document}
 \maketitle
+
 
 \setstretch{1.5}
 \section{Introduction}\label{introduction}
@@ -521,6 +538,32 @@ and ecosystem model (Polhill et al. 2011).
 
 \subsection{Digital twins}\label{digital-twins}
 
+\section{Software and programming
+languages}\label{software-and-programming-languages}
+
+``Open science'' involves full transparency and data access at all
+stages of the research processes and the integrative and
+multi-disciplinary field of ecology can massively benefit from this
+concept (Hampton et al. 2015). One key aspect of achieving open science
+is to use open source software, which ensures transparency and
+consequently increasing the (public) trust into the analyses (Powers and
+Hampton 2019). Related to this, script-based workflows have the
+advantage over workflows involving graphical user interfaces that the
+former are shareable and reproducible (Hampton et al. 2015; Powers and
+Hampton 2019). Thus, we will focus the following section on script-based
+open-source software suitable for landscape ecology. Given the
+increasing availability of data and complexity of methods, future
+progress within the field of landscape ecology will depend on the
+software and analysis tools available (Costanza et al. 2019)
+
+The open-source and script-based R programming languages (R Core Team
+2024) was first released in 1995 (Smith 2016) with a focus on
+statistical computing and data visualization. However, due to its
+extensions (also called packages), the language is popular in many
+academic fields including ecology (Lai et al. 2019) and it is suitable
+for spatial data analysis or landscape ecology (e.g., Bivand 2020;
+Hesselbarth et al. 2021).
+
 \newpage{}
 
 \subsubsection*{References}\label{references}
@@ -549,6 +592,11 @@ Berger U, Bell A, Barton CM, et al (2024) Towards reusable building
 blocks for agent-based modelling and theory development. Environmental
 Modelling \& Software 175:106003.
 \url{https://doi.org/10.1016/j.envsoft.2024.106003}
+
+\bibitem[\citeproctext]{ref-Bivand2020}
+Bivand RS (2020) Progress in the r ecosystem for representing and
+handling spatial data. Journal of Geographical Systems.
+\url{https://doi.org/10.1007/s10109-020-00336-0}
 
 \bibitem[\citeproctext]{ref-Borthwick2020}
 Borthwick R, de Flamingh A, Hesselbarth MHK, et al (2020) Alternative
@@ -705,10 +753,20 @@ Grimm V, Frank K, Jeltsch F, et al (1996) Pattern-oriented modelling in
 population ecology. The Science of the Total Environment 183:151--166.
 \url{https://doi.org/10.1016/0048-9697(95)04966-5}
 
+\bibitem[\citeproctext]{ref-Hampton2015}
+Hampton SE, Anderson SS, Bagby SC, et al (2015) The tao of open science
+for ecology. Ecosphere 6:1--13.
+\url{https://doi.org/10.1890/ES14-00402.1}
+
 \bibitem[\citeproctext]{ref-Hess2020}
 Hess B, Dreber N, Liu Y, et al (2020) PioLaG: A piosphere landscape
 generator for savanna rangeland modelling. Landscape Ecology
 35:2061--2082. \url{https://doi.org/10.1007/s10980-020-01066-w}
+
+\bibitem[\citeproctext]{ref-Hesselbarth2021}
+Hesselbarth MHK, Nowosad J, Signer J, Graham LJ (2021) Open-source tools
+in r for landscape ecology. Current Landscape Ecology Reports 6:97--111.
+\url{https://doi.org/10.1007/s40823-021-00067-y}
 
 \bibitem[\citeproctext]{ref-Hesselbarth2019}
 Hesselbarth MHK, Sciaini M, With KA, et al (2019) Landscapemetrics: An
@@ -758,6 +816,10 @@ Kedron PJ, Frazier AE, Ovando-Montejo GA, Wang J (2018) Surface metrics
 for landscape ecology: A comparison of landscape models across
 ecoregions and scales. Landscape Ecology 33:1489--1504.
 \url{https://doi.org/10.1007/s10980-018-0685-1}
+
+\bibitem[\citeproctext]{ref-Lai2019}
+Lai J, Lortie CJ, Muenchen RA, et al (2019) Evaluating the popularity of
+r in ecology. Ecosphere 10: \url{https://doi.org/10.1002/ecs2.2567}
 
 \bibitem[\citeproctext]{ref-Langhammer2019}
 Langhammer M, Thober J, Lange M, et al (2019) Agricultural landscape
@@ -885,6 +947,11 @@ Prlić A, Procter JB (2012) Ten simple rules for the open development of
 scientific software. PLoS Computational Biology 8:e1002802.
 \url{https://doi.org/10.1371/journal.pcbi.1002802}
 
+\bibitem[\citeproctext]{ref-RCoreTeam2024}
+R Core Team (2024) \href{https://www.R-project.org/}{R: A language and
+environment for statistical computing}. R Foundation for Statistical
+Computing, Vienna, Austria
+
 \bibitem[\citeproctext]{ref-Rao1982}
 Rao CR (1982) Diversity and dissimilarity coefficients: A unified
 approach. Theoretical Population Biology 21:24--43.
@@ -937,6 +1004,9 @@ Landscape Ecology 32:1485--1498.
 Shannon CE (1948) A mathematical theory of communication. Bell System
 Technical Journal 27:379--423.
 \url{https://doi.org/10.1002/j.1538-7305.1948.tb01338.x}
+
+\bibitem[\citeproctext]{ref-Smith2016}
+Smith D (2016) Over 16 years of r project history
 
 \bibitem[\citeproctext]{ref-Soares-Filho2002}
 Soares-Filho BS, Coutinho Cerqueira G, Lopes Pennachin C (2002)
@@ -1061,6 +1131,7 @@ landscape mosaic based on the wasserstein metric. Landscape Ecology
 \end{CSLReferences}
 
 \endgroup
+
 
 
 

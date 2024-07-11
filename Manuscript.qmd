@@ -43,8 +43,8 @@ format:
         \renewcommand*{\Authands}{, }
         \renewcommand\Affilfont{\small}
 papersize: a4paper
-mainfont: "Garamond"
-fontsize: 11pt
+mainfont: "Verdana"
+fontsize: 10pt
 geometry: margin=25mm
 indent: 2m
 linestretch: 1.5
@@ -57,6 +57,7 @@ csl: springer-basic-author-date.csl
 {{< include Sections/01-introduction.qmd >}}
 {{< include Sections/02-spatial-patterns.qmd >}}
 {{< include Sections/05-simulations.qmd >}}
+{{< include Sections/08-software.qmd >}}
 
 {{< pagebreak >}}
 

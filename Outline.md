@@ -3,7 +3,7 @@
 **Article Topic**: Computational methods in landscape ecology
 **Editors**: Dr. Dimitri Justeau-Allaire (Section Editor); Dr. Sara Gagné (Editor-in-Chief)
 **Due Date**: August 16, 2024
-**Word count**: 2,000 - 4,000 words
+**Word count**: 4,000 - 6,000 words
 
 # General
 1. Please feel free to add or re-arrange topics to the outline. This is work-in-progress and not set in stone.
@@ -69,7 +69,9 @@
 
 ## Scaling etc.
 [Scaling and Complexity in Landscape Ecology](https://doi.org/10.3389/fevo.2019.00293)
+[Scope](https://doi.org/10.1007/s10980-022-01403-1)
 
 ## Misc
 [Landscape ecological concepts in planning](https://doi.org/10.1007/s10980-021-01193-y)
 [Sampling overlap](https://doi.org/10.1007/s40823-020-00059-4)
+https://link.springer.com/journal/10980/updates/18953456

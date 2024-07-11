@@ -5,3 +5,6 @@ bibliography: CLER.bib
 <!-- Person responsible:  -->
 
 # Optimization
+
+Landscape ecology is fun [@Turner1989].
+There are many things to explore [@With2019].
