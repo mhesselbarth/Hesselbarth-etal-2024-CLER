@@ -43,7 +43,6 @@ format:
         \renewcommand*{\Authands}{, }
         \renewcommand\Affilfont{\small}
 papersize: a4paper
-mainfont: "Verdana"
 fontsize: 10pt
 geometry: margin=25mm
 indent: 2m

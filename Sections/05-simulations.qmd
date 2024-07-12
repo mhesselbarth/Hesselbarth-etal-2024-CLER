@@ -37,3 +37,10 @@ In order to facilitate future model developments, recent progress includes adapt
 Furthermore, hybrid approaches that couple or even integrated different model types with individual-based models could benefit from rich development history or facilitate corresponding strengths [@OSullivan2016], e.g., linking an individual-based and ecosystem model [@Polhill2011].
 
 ## Digital twins
+
+Digital Twins include three connected elements, namely a physical object or system, its digital representation, and a data exchange between the former two [@Jones2020; @DeKoning2023] and there is an increasing interest and use of them in both the industry and academia [@Jones2020].
+The need for timely and evidence-based decision making in combination with increasing data availability makes them a powerful tool for ecology [@DeKoning2023].
+Digital twins are increasingly applied in agricultural landscapes research, including topics such as crop and land cultivation, livestock farming, controlled environment farming, or fertilization management [@Cesco2023; @Purcell2023].
+Further applications include planning of rural ecological landscapes [@Tan2024], or exploration of relationships between urban expansion and vegetation coverage [@Zhao2022].
+The use of general data processing, statistical and mechanistic models, or artificial intelligence allows them to constantly update the digital representation and analyze, visualize, or predict the physical counterpart.
+Thus, Digital Twins can provide real-time state of nature measurements, early detection of conservation trends, relationships of ecosystem trends and environmental conditions, impact assessments of interventions, or identify uncertainties and information gaps [@DeKoning2023].
