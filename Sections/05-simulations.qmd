@@ -37,18 +37,3 @@ In order to facilitate future model developments, recent progress includes adapt
 Furthermore, hybrid approaches that couple or even integrated different model types with individual-based models could benefit from rich development history or facilitate corresponding strengths [@OSullivan2016], e.g., linking an individual-based and ecosystem model [@Polhill2011].
 
 ## Digital twins
-
-<!--
-[Digital twins](https://doi.org/10.1016/j.tree.2023.04.010) 
-[Rural ecological landscape control](https://doi.org/10.1186/s12302-024-00888-8)
-[Urban Expansion and Vegetation Coverage](https://doi.org/10.3389/fpls.2022.840471)
-[Digital Twins in agriculture](https://doi.org/10.1016/j.cosust.2022.101252)
-[Future landscape visualization](https://doi.org/10.1093/jcde/qwac032)
-[Digital Twin of the Agricultural Landscape](https://doi.org/10.14627/537690019)
--->
-
-<!--
-[Marine SDMS](https://doi.org/10.1016/j.ecolmodel.2019.108837)
-[SDM past present future](https://doi.org/10.1111/jbi.14617)
-[Simulations in landscape genetics](https://doi.org/10.1111/j.1365-294X.2010.04678.x)
--->

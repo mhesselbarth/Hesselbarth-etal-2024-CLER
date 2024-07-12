@@ -5,7 +5,8 @@ bibliography: CLER.bib
 <!-- Person responsible: Nowosad, Bosch, Hesselbarth -->
 
 <!-- jn: should we reference software packages here (or in Software) when they implement the methods we discuss? -->
-<!-- MH: I think we decided to not reference software here but in a seperate section -->
+<!-- MH: I think we decided to not reference software here but in a separate section -->
+<!-- MH: Alternatively, if we move the software section to the beginning, we could reference software here -->
 
 # Spatial patterns
 
