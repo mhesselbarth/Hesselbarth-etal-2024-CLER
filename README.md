@@ -1,6 +1,6 @@
-# Computational methods in landscape ecology
+[![DOI](https://img.shields.io/badge/DOI-in_preperation-blue.svg)]() 
 
-Repository to store manuscript and R scripts for *Hesselbarth et al. Computational methods in landscape ecology. Current Landscape Ecology Reports*
+Repository to store manuscript and R scripts for Hesselbarth et al. **Computational methods in landscape ecology**. Current Landscape Ecology Reports
 
 Please read the [`CONTRIBUTING.md`](CONTRIBUTING.md) file before pushing to this repository.
 
