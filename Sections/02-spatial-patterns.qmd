@@ -14,7 +14,7 @@ bibliography: CLER.bib
 Spatial patterns can be defined as the scale-dependent predictability of the physical arrangement of observations [@Dale1999], or as clearly identifiable structures in nature itself or data extracted from nature [@Grimm1996].
 Importantly, patterns observed in nature contain information about the history of the system, such as demographic processes, dispersal characteristics, or climatic patterns [@Wiegand2003].
 However, spatial patterns are not only a result of processes, but could also be a driver of them.
-Thus, untangling the history of a landscape and linking its spatial patterns to ecological processes is one of the core concepts of landscape ecology [@Turner1989].
+Thus, untangling the history of a landscape and linking its spatial patterns to ecological processes is one of the core concepts of landscape ecology [@Turner1989Landscape].
 
 ## Landscape metrics
 <!-- Hesselbarth -->
@@ -90,10 +90,97 @@ Finally, the grouping of spatial patterns is a many-to-many operation in which s
 <!-- https://jakubnowosad.com/spquery/ -->
 <!-- FOSS4G Europe pap? -->
 
+
+
 ## Landscape mosaic
 <!-- Bosch -->
 
 <!-- https://doi.org/10.1371/journal.pone.0304215 -->
+Despite the extensive use of the landscape mosaic model and the landscape metrics based on it, major limitations have been identified regarding both its ability to quantify the spatial structure of landscapes and their relationship to ecological processes [@Gustafson1998; @Li2004Use; @Dramstad2009; @Kupfer2012; @Lausch2015; @Frazier2017].
+<!-- two key considerations to select metrics: (i) ability to consistently identify structural landscape components and (ii) ability to explain relationships with ecological processes (ecological relevance), e.g., biodiversity, often referred to as functional metrics - the challenge of matching the scales of observation to the ecological scales affecting organisms or processes of interest, i.e., the characteristic scales (from "Spatial dependence of predictions from image segmentation: a variogram-based method to determine appropriate scales for producing land-management information") -->
+<!-- Here we focus on the first issue, namely the ability of landscape metrics to consistently capture the spatial structure of landscapes. -->
+<!-- Key issues of structural metrics [@Dramstad2009]: sensitivity to scale, i.e., resolution and extent, sensitivity to the choice of LULC scheme, redundancy and interpretation. Let us go through them in a different order: -->
+In line with Dramstad [@Dramstad2009], we review four major issues of landscape metrics, namely their sensitivity to both spatial scale and thematic resolution, redundancy and interpretation.
+
+### Sensitivity to spatial scale and thematic resolution
+
+<!-- (i) scale: https://doi.org/10.1007/s10980-014-0066-3 "Behavior of class-level landscape metrics across gradients of class aggregation and area"-->
+<!-- "identifying the characteristic scales of relevant patterns and processes is a critical first step in designing a successful research project" [@Wu2007, pp. 119]. -->
+Identifying the characteristic scale at which the organisms or processes of interest operate is a critical first step towards establishing sound relationships between pattern and process [@Levin1992; @Wu2007; @Cushman2008Landscape].
+To that end, a key requirement it to understand the sensitivity of landscape metrics to spatial scale in terms of both resolution (grain) and extent.
+
+A key concept to consider regarding grain size is the minimum mapping unit (MMU), namely the smallest area entity that can be mapped and analyzed as a discrete patch.
+<!-- Accordingly, a grain size several times smaller than the smallest patch in order to grasp (even schematically) its shape. -->
+Since the input maps should represent not only the location of patches but also their shape, a grain size several times smaller than the smallest patch (i.e., the MMU) in order to grasp (even schematically) its shape.
+Even though the MMU is often assumed as a natural characteristic of the dataset, it has an unsurprising impact on the computed landscape metrics, especially in terms of the number of patches and their size distribution [@Saura2002].
+<!-- On the other hand, landscape metrics such as the landscape division index, largest patch index and area-weighted mean shape indices show more predictable responses to changing the MMU. -->
+
+<!-- Since the applications of landscape metrics are manifold, the choices of grain and especially extent vary largely depending on the context of the study. -->
+<!-- The growing availability of global remote sensing products at homogenized resolution has resulted in a myriad of studies sharing the same resolution, e.g., based on Landsat scenes at 30 m. At the same time, the choice of spatial extent varies largely depending on the phenomenon of interest, e.g., from large transects of forests in natural parks to small buffers along the urban-rural gradient. -->
+While the choice of grain is often constrained by the available data, e.g., Landsat scenes at 30 m resolution, the selection of spatial extent and the way that it is sampled varies largely depending on the phenomenon of interest, e.g., from large transects of forests in natural parks to small buffers along the urban-rural gradient.
+At the same time, the choice of spatial extent and sampling strategy is often subject to many arbitrary criteria that can largely influence the ultimate results. Such an issue has long been recognized in physical geography as the modifiable areal unit problem (MAUP) [@Openshaw1979; @Openshaw1984].
+<!-- The MAUP has two interrelated components, namely the scale problem and the zoning problem -->
+<!-- A first approach to dealing with the MAUP is to identify individual entities that are ecologically meaninful and not modifiable [@Jelinski1996]. In the landscape matrix model, such entities could be target patches of interest. However, it is not always possible to identify basic entities, especially since ecological processes of interest typically involve the integration of spatially distributed data. -->
+Approaches to dealing with the MAUP in the context of landscape metrics include the identification of individual entities that are ecologically meaningful and not modifiable, the evaluation of "optimal" zoning systems that maximize interzonal variations and minimize intrazonal variation and the analysis of the sensitivity of the zoning configuration [@Jelinski1996; @Duque2018; @Fletcher2023].
+<!-- TODO: use a moving window measurement device to "postpone" the MAUP [@Riitters2019] -->
+
+TODO: section about approaches to sample landscapes to compute metrics and available software tools, e.g., zonal analysis with polygons (e.g., administrative limits), grids, transects or buffers along a landscape gradient, moving windows [@Bosch2019; @Hesselbarth2019; @Huais2024]?
+
+<!-- While selecting the adequate scale should be based on the phenomenon of interest, researchers are often constrained by the availability of data. -->
+<!-- Therefore, a thorough understanding of these relationships is essential in order to compare spatial patterns measured at different scales. -->
+<!-- Several types of responses of landscape metrics to changing scale have been identified in computational experiments by changing both the spatial resolution (grain) and extent. -->
+The scale effects of landscape metrics can be assessed by computing scalograms, i.e., the response curves of metrics to changing scales. For instance, some metrics related to the number and density of patches and edges show consistent linear and power-law scaling relationships to changing grain across a wide diversity of simulated and real landscapes, whereas other metrics exhibit less predictable responses [@Turner1989Effects; @Saura2001; @Wu2002Empirical; @Wu2004; @Saura2007; @Simova2012; @Arganaraz2014; @Frazier2021].
+<!-- Advancing the science of scaling in landscape ecology is key to "permit the prediction and inference of quantities measured at one scale to another" [@Frazier2023] -->
+<!-- also multi-scale is key to habitat assessment, see "Multi-scale habitat selection modeling: a review and outlook" -->
+<!-- Predictable scaling relationships can be exploited to estimate spatial patterns at higher resolutions -->
+Nonetheless, the effects of changing the sampling extent can be less predictable than those of changing grain size [@Wu2004].
+For instance, in landscapes with small extent to grain ratio, boundary effects are likely to dominate and truncate patches, resulting in unreliable landscape metric computations.
+In order to address scale issues and advance the science of scaling in landscape ecology, studies should explicitly consider the concept of scope, namely the ratio of extent to resolution [@Schneider2001].
+As suggested by Frazier [@Frazier2023], this can be done following three key steps, namely by considering scope guidelines when designing experiments, explicitly reporting grain and extent so that scope can be calculated allowing quantitative comparability with other studes and undertaking comparisons and replications based on scope.
+The latter is showcased in a proof of concept example experiment, where landscapes from the same ecoregion are sampled using different grain and extent and then the distributions of the computed landscape metrics are visualized through ridgeline plots colored by scope [@Frazier2023].
+
+TODO: section about landscape metric rescaling [@Saura2007; @Arganaraz2014; @Frazier2014; @Frazier2016; @Frazier2021]? 
+
+<!-- Overall, robust metrics seem more desirable because (i) they improve comparability between studies and (ii) the relationships between pattern and process occur at multiple scales -->
+<!-- which highlights the importance of considering multiple scales when attempting to measure landscape patterns. -->
+
+TODO: mention hierarchichal patch dynamics [@Wu1999]?
+
+<!-- (ii) choice of LULC scheme/thematic resolution and image processing/classification procedure: https://doi.org/10.1016/j.foreco.2009.12.016 https://doi.org/10.1016/j.isprsjprs.2007.03.004 https://doi.org/10.1007/s10021-005-0119-1 https://doi.org/10.1007/s10980-006-9035-9 https://doi.org/10.1007/s10980-022-01546-1 -->
+<!-- Scale and heterogeneity are inherently linked (Wu 2007), so it is not surprising that the results indicate downscaling accuracy varies with heterogeneity. -->
+TODO: sensitivity to thematic resolution [@Huang2006; @Bailey2007; @Buyantuyev2007; @Castilla2009].
+
+### Redundancy
+<!-- (iii) selecting metrics -->
+
+TODO
+
+- Factor analysis of Riitters et al. [@Riitters1995] found six main components: average patch compaction, image texture, average patch shape, patch perimeter-area scaling, number of attribute classes and large-patch density-area scaling.
+
+- Cushman et al. [@Cushman2008Parsimony] not only isolate the components but also assess their strength (proportion of variance explained), universality (how present they are accross landscapes) and consistency (how stable they are accross landscapes). At the class level, they find seven "highly universal and consistent structure components" (page 700), namely edge contrast, patch shape complexity, aggregation, nearest neighbor distance, patch dispersion, large patch dominance and neighborhood similarity. At the landscape level, five components are identified, namely contagion/diversity (similar to image texture in Riitters et al. [@Riitters1995], large patch dominance, interspersion/juxtaposition, edge contrast, patch shape variability, proximity and nearest neighbor distance. Overall, components are more consistent and universal at the landscape level than at the class level.
+
+- Uuemaa et al. [@Uuemaa2011] find four main components: dominance (also identified by Riitters et al. [@Riitters1995] and Cushman et al. [@Cushman2008Parsimony]), contrast, shape complexity and composition.
+
+- Amount (composition) and adjacency (configuration) are the fundamental elements of pattern [@Riitters2019]
+
+- Entropy [@Nowosad2019a]
+
+- Spatial signatures [@Nowosad2021a]
+
+### Interpretability
+<!-- (iv) interpretatability -->
+
+TODO
+- do landscape metrics measure fragmentation?
+- normalized metrics [@Wang2011]
+- [@Frazier2021]
+
+<!-- CLOSING THOUGHTS AND BRIDGING WITH THE NEXT SECTION -->
+Responses:
+- incorporating aspects of ecological function into landscape metrics (e.g., core area, least-cost distances) and moving towards graph-based and circuit theory approaches [@Kupfer2012].
+- point-data analysis [@Gustafson1998] and gradient surface model [@Lausch2015] require fewer assumptions regarding LULC categorization schemes or spatial scale
+
+<!-- Note that all approaches (landscape metrics, graph and surface - TODO: what about point?) suffer from correlation and redundancy issues, scale dependency and target problem [@Frazier2017]. -->
 
 ## Surface metrics
 <!-- Bosch, Hesselbarth -->
