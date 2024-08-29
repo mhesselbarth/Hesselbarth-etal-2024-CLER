@@ -7,8 +7,8 @@ bibliography: CLER.bib
 # Introduction
 
 Landscapes are typically defined as mosaics of different land covers, habitats, ecosystems, or land use systems [@Forman1986; @Forman1995] - with empathize on heterogeneity of at least one factor of interest [@Turner2015].
-Linking spatial heterogeneity and ecological processes, including potential feedbacks, is the fundamental concept of landscape ecology [@Risser1984; @Turner1989Landscape; @Turner2005].
-Typical research topics include ecological flows in landscape mosaics, drivers and consequences of land use and land cover (LULC) change, nonlinear dynamics and landscape complexity, scale and scaling, spatial analysis and landscape modeling, linking landscape metrics to ecological processes, integrating humans and their activities into landscape ecology, landscape conservation and sustainability, or accuracy assessment and uncertainty analysis [@Wu2002Key; @Wu2013].
+Linking spatial heterogeneity and ecological processes, including potential feedbacks, is the fundamental concept of landscape ecology [@Risser1984; @Turner1989a; @Turner2005].
+Typical research topics include ecological flows in landscape mosaics, drivers and consequences of land use and land cover (LULC) change, nonlinear dynamics and landscape complexity, scale and scaling, spatial analysis and landscape modeling, linking landscape metrics to ecological processes, integrating humans and their activities into landscape ecology, landscape conservation and sustainability, or accuracy assessment and uncertainty analysis [@Wu2002b; @Wu2013].
 
 Computational science involves analyzing abstracted core mechanisms of research questions using data and algorithms.
 Thus, computational ecology can be defined as computational science that is used to address ecological research questions with focus on complex, adaptive systems and data-driven approaches [@Poisot2019].

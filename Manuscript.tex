@@ -35,14 +35,28 @@
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 % Make \paragraph and \subparagraph free-standing
+\makeatletter
 \ifx\paragraph\undefined\else
   \let\oldparagraph\paragraph
-  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
 \fi
 \ifx\subparagraph\undefined\else
   \let\oldsubparagraph\subparagraph
-  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
+\makeatother
 
 
 \providecommand{\tightlist}{%
@@ -150,6 +164,7 @@
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
+
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
@@ -167,6 +182,7 @@
   citecolor={Blue},
   urlcolor={Blue},
   pdfcreator={LaTeX via pandoc}}
+
 
 \title{Computational methods in landscape ecology}
 
@@ -204,6 +220,7 @@
 \date{}
 \begin{document}
 \maketitle
+
 
 \setstretch{1.5}
 \section{Introduction}\label{introduction}
@@ -605,8 +622,8 @@ or scenarios because they allow to control certain aspects of the
 landscape (Li et al. 2004; Wang and Malanson 2008) and are generally
 simpler than ecological simulations models (Hess et al. 2020). Landscape
 simulators can be classified into two major categories, namely
-pattern-based and process-based approaches {[}Pe'er et al. (2013);
-Langhammer2019{]}.
+pattern-based and process-based approaches (Pe'er et al. 2013;
+Langhammer et al. 2019).
 
 Pattern-based approaches simulate landscapes without assuming any
 underlying abiotic or biotic processes (i.e., neutral landscape model;
@@ -686,27 +703,47 @@ gaps (De Koning et al. 2023).
 languages}\label{software-and-programming-languages}
 
 ``Open science'' involves full transparency and data access at all
-stages of the research processes and the integrative and
-multi-disciplinary field of ecology can massively benefit from this
-concept (Hampton et al. 2015). One key aspect of achieving open science
-is to use open source software, which ensures transparency and
-consequently increasing the (public) trust into the analyses (Powers and
-Hampton 2019). Related to this, script-based workflows have the
-advantage over workflows involving graphical user interfaces that the
-former are shareable and reproducible (Hampton et al. 2015; Powers and
-Hampton 2019). Thus, we will focus the following section on script-based
-open-source software suitable for landscape ecology. Given the
-increasing availability of data and complexity of methods, future
-progress within the field of landscape ecology will depend on the
-software and analysis tools available (Costanza et al. 2019)
+stages of the research processes and integrative and multi-disciplinary
+fields such as ecology can massively benefit from this concept (Hampton
+et al. 2015). Using open source software is one key aspect of open
+science because it ensures transparency and consequently increases trust
+in the analyses (Powers and Hampton 2019). Given the increasing data
+availability and method complexity, future progress within the research
+field will highly depend on available software and analysis tools
+(Costanza et al. 2019). In this context, script-based workflows have an
+advantage over workflows involving graphical user interfaces because the
+former are more shareable and reproducible (Hampton et al. 2015; Powers
+and Hampton 2019). Thus, we will focus the following section on
+script-based open-source software suitable for landscape ecology.
 
-The open-source and script-based R programming languages (R Core Team
-2024) was first released in 1995 (Smith 2016) with a focus on
-statistical computing and data visualization. However, due to its
-extensions (also called packages), the language is popular in many
-academic fields including ecology (Lai et al. 2019) and it is suitable
-for spatial data analysis or landscape ecology (e.g., Bivand 2020;
-Hesselbarth et al. 2021).
+The open-source, script-based R programming languages (R Core Team 2024)
+was first released in 1995 (Smith 2016) with a focus on statistical
+computing and data visualization. However, due to its extensions (also
+called packages), the language is popular in many academic fields,
+including ecology (Lai et al. 2019; Lortie et al. 2020), and it is
+suitable for spatial data analysis and landscape ecology (e.g., Bivand
+2020; Hesselbarth et al. 2021). Fundamental packages for spatial data
+analysis include \emph{sf} for simple-features vector data (Pebesma
+2018), \emph{terra} for raster data (Hijmans 2024), \emph{stars} for
+spatiotemporal arrays, raster, and vector data cubes (Pebesma and Bivand
+2023), and \emph{spatstat} for point pattern data (Baddeley et al.
+2015). Several packages allow to create maps, such as \emph{tmap}
+(Tennekes 2018) or \emph{ggplot2} (Wickham 2016). For a comprehensive
+overview of packages related to geographical spatial data, please see
+the CRAN Task View (Bivand and Nowosad 2024).
+
+R packages developed specifically for spatial pattern analysis include,
+besides others, \emph{landscapemetrics} (Hesselbarth et al. 2019),
+\emph{vectormetrics} {[}still being developed; Matuszek et al.
+(2024){]}, \emph{motif} (Nowosad 2021), \emph{rasterdiv} (Rocchini et
+al. 2021), or \emph{geodiv} (Smith et al. 2021). Packages with a focus
+on scale include e.g., \emph{multilandr} (Huais 2024) or
+\emph{grainchanger} (Graham 2024). Connectivity analysis can be
+conducted using packages including \emph{lconnect} (Mestre and Silva
+2023), or \emph{grainscape} (Chubaty et al. 2020). Furthermore, neutral
+landscapes can be simulated using \emph{NLMR} (Sciaini et al. 2018), and
+the \emph{graph4lg} (Savary et al. 2021) provides functions for
+landscape genetics.
 
 \newpage{}
 
@@ -728,6 +765,10 @@ G{é}ographies canadiennes 54:441--461.
 Argañaraz JP, Entraigas I (2014) Scaling functions evaluation for
 estimation of landscape metrics at higher resolutions. Ecological
 informatics 22:1--12
+
+\bibitem[\citeproctext]{ref-Baddeley2015}
+Baddeley A, Rubak E, Turner R (2015) Spatial point patterns: Methodology
+and applications with r. Chapman \& Hall/CRC, London, UK
 
 \bibitem[\citeproctext]{ref-Bailey2007}
 Bailey D, Billeter R, Aviron S, et al (2007) The influence of thematic
@@ -751,6 +792,10 @@ Modelling \& Software 175:106003.
 Bivand RS (2020) Progress in the r ecosystem for representing and
 handling spatial data. Journal of Geographical Systems.
 \url{https://doi.org/10.1007/s10109-020-00336-0}
+
+\bibitem[\citeproctext]{ref-Bivand2024}
+Bivand RS, Nowosad J (2024) CRAN task view: Analysis of spatial data.
+{https://CRAN.R-project.org/view=Spatial}
 
 \bibitem[\citeproctext]{ref-Borthwick2020}
 Borthwick R, de Flamingh A, Hesselbarth MHK, et al (2020) Alternative
@@ -789,6 +834,12 @@ European Journal of Agronomy 146:126809.
 Chi M, Plaza A, Benediktsson JA, et al (2016) Big data for remote
 sensing: Challenges and opportunities. Proceedings of the IEEE
 104:2207--2219. \url{https://doi.org/10.1109/JPROC.2016.2598228}
+
+\bibitem[\citeproctext]{ref-Chubaty2020a}
+Chubaty AM, Galpern P, Doctolero SC (2020) The r toolbox grainscape for
+modelling and visualizing landscape connectivity using spatially
+explicit networks. Methods in Ecology and Evolution 11:591--595.
+\url{https://doi.org/10.1111/2041-210X.13350}
 
 \bibitem[\citeproctext]{ref-Claramunt2012}
 Claramunt C (2012)
@@ -967,6 +1018,10 @@ land use in forested tropical social-ecological systems: A case-study in
 the wet tropics. Journal of Environmental Management 231:940--952.
 \url{https://doi.org/10.1016/j.jenvman.2018.10.079}
 
+\bibitem[\citeproctext]{ref-Graham2024}
+Graham L (2024) Grainchanger: Moving-window and direct data aggregation.
+{https://ropensci.github.io/grainchanger/}
+
 \bibitem[\citeproctext]{ref-Grimm1996}
 Grimm V, Frank K, Jeltsch F, et al (1996) Pattern-oriented modelling in
 population ecology. The Science of the Total Environment 183:151--166.
@@ -995,6 +1050,10 @@ in r for landscape ecology. Current Landscape Ecology Reports 6:97--111.
 Hesselbarth MHK, Sciaini M, With KA, et al (2019) Landscapemetrics: An
 open-source r tool to calculate landscape metrics. Ecography
 42:1648--1657. \url{https://doi.org/10.1111/ecog.04617}
+
+\bibitem[\citeproctext]{ref-Hijmans2024}
+Hijmans RJ (2024) Terra: Spatial data analysis. R package version
+1.7-78. {\(<\)}{https://CRAN.R-project.org/package=terra\(>\)}
 
 \bibitem[\citeproctext]{ref-Huais2024}
 Huais PY (2024) Multilandr: An r package for multi-scale landscape
@@ -1089,15 +1148,20 @@ resolution in landscape ecology. Current Landscape Ecology Reports
 Levin SA (1992) The problem of pattern and scale in ecology: The robert
 h. MacArthur award lecture. Ecology 73:1943--1967
 
-\bibitem[\citeproctext]{ref-Li2004Use}
+\bibitem[\citeproctext]{ref-Li2004b}
 Li H, Wu J (2004) Use and misuse of landscape indices. Landscape ecology
 19:389--399
 
-\bibitem[\citeproctext]{ref-Li2004}
+\bibitem[\citeproctext]{ref-Li2004a}
 Li X, He HS, Wang X, et al (2004) Evaluating the effectiveness of
 neutral landscape models to represent a real landscape. Landscape and
 Urban Planning 69:137--148.
 \url{https://doi.org/10.1016/j.landurbplan.2003.10.037}
+
+\bibitem[\citeproctext]{ref-Lortie2020}
+Lortie CJ, Braun J, Filazzola A, Miguel F (2020) A checklist for
+choosing between r packages in ecology and evolution. Ecology and
+Evolution 10:1098--1105. \url{https://doi.org/10.1002/ece3.5970}
 
 \bibitem[\citeproctext]{ref-Lovelace2019}
 Lovelace R, Nowosad J, Münchow J (2019) Geocomputation with r, 1st edn.
@@ -1108,11 +1172,22 @@ Maceachren AM (1985) Compactness of geographic shape: Comparison and
 evaluation of measures. Geografiska Annaler: Series B, Human Geography
 67:53--67. \url{https://doi.org/10.1080/04353684.1985.11879515}
 
+\bibitem[\citeproctext]{ref-Matuszek2024}
+Matuszek T, Nowosad J, Sciaini M, et al (2024) Vectormetrics: Landscape
+metrics for categorical map patterns in vector data.
+{https://github.com/r-spatialecology/vectormetrics}
+
 \bibitem[\citeproctext]{ref-McGarigal2009}
 McGarigal K, Tagil S, Cushman SA (2009) Surface metrics: An alternative
 to patch metrics for the quantification of landscape structure.
 Landscape Ecology 24:433--450.
 \url{https://doi.org/10.1007/s10980-009-9327-y}
+
+\bibitem[\citeproctext]{ref-Mestre2023}
+Mestre F, Silva B (2023) Lconnect r package: A versatile tool for
+evaluating landscape connectivity and prioritizing habitat patches in
+conservation research. Ecological Modelling 484:110489.
+\url{https://doi.org/10.1016/j.ecolmodel.2023.110489}
 
 \bibitem[\citeproctext]{ref-Nathan2022}
 Nathan R, Monk CT, Arlinghaus R, et al (2022) Big-data approaches lead
@@ -1180,6 +1255,16 @@ Pe'er G, Zurita GA, Schober L, et al (2013) Simple process-based
 simulators for generating spatial patterns of habitat loss and
 fragmentation: A review and introduction to the g-RaFFe model. PLoS ONE
 8:e64968. \url{https://doi.org/10.1371/journal.pone.0064968}
+
+\bibitem[\citeproctext]{ref-Pebesma2018}
+Pebesma E (2018) Simple features for r: Standardized support for spatial
+vector data. The R Journal 10:439.
+\url{https://doi.org/10.32614/RJ-2018-009}
+
+\bibitem[\citeproctext]{ref-Pebesma2023}
+Pebesma E, Bivand R (2023)
+\href{https://doi.org/10.1201/9780429459016}{Spatial data science: With
+applications in r}, 1st edn. {Chapman and Hall/CRC}, New York
 
 \bibitem[\citeproctext]{ref-Peck2004}
 Peck SL (2004) Simulation as experiment: A philosophical reassessment
@@ -1256,6 +1341,12 @@ index from remote sensing: An open source solution. Ecological
 Indicators 72:234--238.
 \url{https://doi.org/10.1016/j.ecolind.2016.07.039}
 
+\bibitem[\citeproctext]{ref-Rocchini2021}
+Rocchini D, Thouverai E, Marcantonio M, et al (2021) Rasterdiv---an
+information theory tailored r package for measuring ecosystem
+heterogeneity from space: To the origin and back. Methods in Ecology and
+Evolution 12:1093--1102. \url{https://doi.org/10.1111/2041-210X.13583}
+
 \bibitem[\citeproctext]{ref-Salecker2019}
 Salecker J, Dislich C, Wiegand K, et al (2019) EFForTS-LGraf: A
 landscape generator for creating smallholder-driven land-use mosaics.
@@ -1276,6 +1367,12 @@ Saura S, Martínez-Millán J (2001) Sensitivity of landscape pattern
 metrics to map spatial extent. Photogrammetric Engineering \& Remote
 Sensing 67:1027--1036
 
+\bibitem[\citeproctext]{ref-Savary2021}
+Savary P, Foltête J-C, Moal H, et al (2021) graph4lg: A package for
+constructing and analysing graphs for landscape genetics in r. Methods
+in Ecology and Evolution 12:539--547.
+\url{https://doi.org/10.1111/2041-210X.13530}
+
 \bibitem[\citeproctext]{ref-Schneider2001}
 Schneider DC (2001) The rise of the concept of scale in ecology: The
 concept of scale is evolving from verbal expression to quantitative
@@ -1292,6 +1389,12 @@ Schumaker NH, Brookes A (2018) HexSim: A modeling environment for
 ecology and conservation. Landscape Ecology 33:197--211.
 \url{https://doi.org/10.1007/s10980-017-0605-9}
 
+\bibitem[\citeproctext]{ref-Sciaini2018}
+Sciaini M, Fritsch M, Scherer C, Simpkins CE (2018) NLMR and
+landscapetools: An integrated environment for simulating and modifying
+neutral landscape models in r. Methods in Ecology and Evolution
+9:2240--2248. \url{https://doi.org/10.1111/2041-210X.13076}
+
 \bibitem[\citeproctext]{ref-Seidl2017a}
 Seidl R, Rammer W (2017) Climate change amplifies the interactions
 between wind and bark beetle disturbances in forest landscapes.
@@ -1306,6 +1409,12 @@ Technical Journal 27:379--423.
 \bibitem[\citeproctext]{ref-Simova2012}
 Šı́mová P, Gdulová K (2012) Landscape indices behavior: A review of scale
 effects. Applied geography 34:385--394
+
+\bibitem[\citeproctext]{ref-Smith2021b}
+Smith AC, Dahlin KM, Record S, et al (2021) The {\textsc{geodiv r}}
+package: Tools for calculating gradient surface metrics. Methods in
+Ecology and Evolution 12:2094--2100.
+\url{https://doi.org/10.1111/2041-210X.13677}
 
 \bibitem[\citeproctext]{ref-Smith2016}
 Smith D (2016) Over 16 years of r project history
@@ -1333,7 +1442,11 @@ Tan F, Cheng Y (2024) A digital twin framework for innovating rural
 ecological landscape control. Environmental Sciences Europe 36:59.
 \url{https://doi.org/10.1186/s12302-024-00888-8}
 
-\bibitem[\citeproctext]{ref-Turner1989Landscape}
+\bibitem[\citeproctext]{ref-Tennekes2018}
+Tennekes M (2018) Tmap: Thematic maps in r. Journal of Statistical
+Software 84: \url{https://doi.org/10.18637/jss.v084.i06}
+
+\bibitem[\citeproctext]{ref-Turner1989a}
 Turner MG (1989) Landscape ecology: The effect of pattern on process.
 Annual Review of Ecology and Systematics 20:171--197.
 \url{https://doi.org/10.1146/annurev.es.20.110189.001131}
@@ -1351,7 +1464,7 @@ Annual Review of Ecology, Evolution, and Systematics 36:319--344.
 Turner MG, Gardner RH (2015) Landscape ecology in theory and practice:
 Pattern and process, 2nd edition. Springer, New York
 
-\bibitem[\citeproctext]{ref-Turner1989Effects}
+\bibitem[\citeproctext]{ref-Turner1989b}
 Turner MG, O'Neill RV, Gardner RH, Milne BT (1989) Effects of changing
 spatial scale on the analysis of landscape pattern. Landscape ecology
 3:153--162
@@ -1388,6 +1501,10 @@ landscape ecology. Geography Compass 2:319--339.
 \bibitem[\citeproctext]{ref-Wang2011}
 Wang X, Cumming SG (2011) Measuring landscape configuration with
 normalized metrics. Landscape Ecology 26:723--736
+
+\bibitem[\citeproctext]{ref-Wickham2016}
+Wickham H (2016) ggplot2: Elegant graphics for data analysis. Springer
+New York, New York, USA
 
 \bibitem[\citeproctext]{ref-Wickham1994}
 Wickham JD, Norton DJ (1994) Mapping and analyzing landscape patterns.
@@ -1436,12 +1553,12 @@ Scaling relations. Landscape ecology 19:125--138
 Wu J (2007) Scale and scaling: A cross-disciplinary perspective. In: Key
 topics in landscape ecology. Cambridge University Press, pp 115--142
 
-\bibitem[\citeproctext]{ref-Wu2002Key}
+\bibitem[\citeproctext]{ref-Wu2002b}
 Wu J, Hobbs R (2002) Key issues and research priorities in landscape
 ecology: An idiosyncratic synthesis. Landscape Ecology 17:355--365.
 \url{https://doi.org/10.1023/A:1020561630963}
 
-\bibitem[\citeproctext]{ref-Wu2002Empirical}
+\bibitem[\citeproctext]{ref-Wu2002a}
 Wu J, Shen W, Sun W, Tueller PT (2002) Empirical patterns of the effects
 of changing scale on landscape metrics. Landscape ecology 17:761--782
 
@@ -1475,6 +1592,7 @@ landscape mosaic based on the wasserstein metric. Landscape Ecology
 \end{CSLReferences}
 
 \endgroup
+
 
 
 

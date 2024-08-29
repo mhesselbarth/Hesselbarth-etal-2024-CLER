@@ -14,8 +14,8 @@ Here, we are going to focus mainly on exploratory models, but include both patte
 
 ## Landscapes simulators
 
-Landscape simulators are typically used as null hypotheses, baselines, or scenarios because they allow to control certain aspects of the landscape [@Li2004; @Wang2008] and are generally simpler than ecological simulations models [@Hess2020].
-Landscape simulators can be classified into two major categories, namely pattern-based and process-based approaches [@Peer2013; Langhammer2019].
+Landscape simulators are typically used as null hypotheses, baselines, or scenarios because they allow to control certain aspects of the landscape [@Li2004a; @Wang2008] and are generally simpler than ecological simulations models [@Hess2020].
+Landscape simulators can be classified into two major categories, namely pattern-based and process-based approaches [@Peer2013; @Langhammer2019].
 
 Pattern-based approaches simulate landscapes without assuming any underlying abiotic or biotic processes [i.e., neutral landscape model\; @Gardner1987].
 The earliest neutral models are based on percolation theory and assign LULC types randomly to cells in the landscape[@Gardner1987] or hierarchical models that consider different spatial scales while assigning cell values [@ONeill1992].

@@ -10,11 +10,10 @@ bibliography: CLER.bib
 
 # Spatial patterns
 
-<!-- Spatial patterns are a fundamental concept not only in landscape ecology, but also in many other fields, such as geography, biology, urban planning, and even medical studies. -->
 Spatial patterns can be defined as the scale-dependent predictability of the physical arrangement of observations [@Dale1999], or as clearly identifiable structures in nature itself or data extracted from nature [@Grimm1996].
 Importantly, patterns observed in nature contain information about the history of the system, such as demographic processes, dispersal characteristics, or climatic patterns [@Wiegand2003].
 However, spatial patterns are not only a result of processes, but could also be a driver of them.
-Thus, untangling the history of a landscape and linking its spatial patterns to ecological processes is one of the core concepts of landscape ecology [@Turner1989Landscape].
+Thus, untangling the history of a landscape and linking its spatial patterns to ecological processes is one of the core concepts of landscape ecology [@Turner1989a].
 
 ## Landscape metrics
 <!-- Hesselbarth -->
@@ -90,13 +89,11 @@ Finally, the grouping of spatial patterns is a many-to-many operation in which s
 <!-- https://jakubnowosad.com/spquery/ -->
 <!-- FOSS4G Europe pap? -->
 
-
-
 ## Landscape mosaic
 <!-- Bosch -->
 
 <!-- https://doi.org/10.1371/journal.pone.0304215 -->
-Despite the extensive use of the landscape mosaic model and the landscape metrics based on it, major limitations have been identified regarding both its ability to quantify the spatial structure of landscapes and their relationship to ecological processes [@Gustafson1998; @Li2004Use; @Dramstad2009; @Kupfer2012; @Lausch2015; @Frazier2017].
+Despite the extensive use of the landscape mosaic model and the landscape metrics based on it, major limitations have been identified regarding both its ability to quantify the spatial structure of landscapes and their relationship to ecological processes [@Gustafson1998; @Li2004b; @Dramstad2009; @Kupfer2012; @Lausch2015; @Frazier2017].
 <!-- two key considerations to select metrics: (i) ability to consistently identify structural landscape components and (ii) ability to explain relationships with ecological processes (ecological relevance), e.g., biodiversity, often referred to as functional metrics - the challenge of matching the scales of observation to the ecological scales affecting organisms or processes of interest, i.e., the characteristic scales (from "Spatial dependence of predictions from image segmentation: a variogram-based method to determine appropriate scales for producing land-management information") -->
 <!-- Here we focus on the first issue, namely the ability of landscape metrics to consistently capture the spatial structure of landscapes. -->
 <!-- Key issues of structural metrics [@Dramstad2009]: sensitivity to scale, i.e., resolution and extent, sensitivity to the choice of LULC scheme, redundancy and interpretation. Let us go through them in a different order: -->
@@ -129,7 +126,7 @@ TODO: section about approaches to sample landscapes to compute metrics and avail
 <!-- While selecting the adequate scale should be based on the phenomenon of interest, researchers are often constrained by the availability of data. -->
 <!-- Therefore, a thorough understanding of these relationships is essential in order to compare spatial patterns measured at different scales. -->
 <!-- Several types of responses of landscape metrics to changing scale have been identified in computational experiments by changing both the spatial resolution (grain) and extent. -->
-The scale effects of landscape metrics can be assessed by computing scalograms, i.e., the response curves of metrics to changing scales. For instance, some metrics related to the number and density of patches and edges show consistent linear and power-law scaling relationships to changing grain across a wide diversity of simulated and real landscapes, whereas other metrics exhibit less predictable responses [@Turner1989Effects; @Saura2001; @Wu2002Empirical; @Wu2004; @Saura2007; @Simova2012; @Arganaraz2014; @Frazier2021].
+The scale effects of landscape metrics can be assessed by computing scalograms, i.e., the response curves of metrics to changing scales. For instance, some metrics related to the number and density of patches and edges show consistent linear and power-law scaling relationships to changing grain across a wide diversity of simulated and real landscapes, whereas other metrics exhibit less predictable responses [@Turner1989b; @Saura2001; @Wu2002a; @Wu2004; @Saura2007; @Simova2012; @Arganaraz2014; @Frazier2021].
 <!-- Advancing the science of scaling in landscape ecology is key to "permit the prediction and inference of quantities measured at one scale to another" [@Frazier2023] -->
 <!-- also multi-scale is key to habitat assessment, see "Multi-scale habitat selection modeling: a review and outlook" -->
 <!-- Predictable scaling relationships can be exploited to estimate spatial patterns at higher resolutions -->

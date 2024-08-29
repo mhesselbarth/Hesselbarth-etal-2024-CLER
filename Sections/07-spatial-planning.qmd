@@ -5,6 +5,3 @@ bibliography: CLER.bib
 <!-- Person responsible: Jung -->
 
 # Spatial planning
-
-Landscape ecology is fun [@Turner1989].
-There are many things to explore [@With2019].

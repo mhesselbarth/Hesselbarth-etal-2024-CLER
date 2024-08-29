@@ -6,39 +6,25 @@ bibliography: CLER.bib
 
 # Software and programming languages
 
-<!-- "The future applications of landscape pattern metrics will almost certainly depend on the software and analysis tools available" -- @costanzaDescribingAnalyzingLandscape2019 -->
-
-"Open science" involves full transparency and data access at all stages of the research processes and the integrative and multi-disciplinary field of ecology can massively benefit from this concept [@Hampton2015].
-One key aspect of achieving open science is to use open source software, which ensures transparency and consequently increasing the (public) trust into the analyses [@Powers2019].
-Related to this, script-based workflows have the advantage over workflows involving graphical user interfaces that the former are shareable and reproducible [@Hampton2015; @Powers2019].
+"Open science" involves full transparency and data access at all stages of the research processes and integrative and multi-disciplinary fields such as ecology can massively benefit from this concept [@Hampton2015].
+Using open source software is one key aspect of open science because it ensures transparency and consequently increases trust in the analyses [@Powers2019].
+Given the increasing data availability and method complexity, future progress within the research field will highly depend on available software and analysis tools [@Costanza2019].
+In this context, script-based workflows have an advantage over workflows involving graphical user interfaces because the former are more shareable and reproducible [@Hampton2015; @Powers2019].
 Thus, we will focus the following section on script-based open-source software suitable for landscape ecology.
-Given the increasing availability of data and complexity of methods, future progress within the field of landscape ecology will depend on the software and analysis tools available [@Costanza2019]
 
 <!-- R: Hesselbarth -->
-The open-source and script-based R programming languages [@RCoreTeam2024] was first released in 1995 [@Smith2016] with a focus on statistical computing and data visualization.
-However, due to its extensions (also called packages), the language is popular in many academic fields including ecology [@Lai2019] and it is suitable for spatial data analysis or landscape ecology [e.g., @Bivand2020; @Hesselbarth2021]. 
+The open-source, script-based R programming languages [@RCoreTeam2024] was first released in 1995 [@Smith2016] with a focus on statistical computing and data visualization.
+However, due to its extensions (also called packages), the language is popular in many academic fields, including ecology [@Lai2019; @Lortie2020], and it is suitable for spatial data analysis and landscape ecology [e.g., @Bivand2020; @Hesselbarth2021].
+Fundamental packages for spatial data analysis include *sf* for simple-features vector data [@Pebesma2018], *terra* for raster data [@Hijmans2024], *stars* for spatiotemporal arrays, raster, and vector data cubes [@Pebesma2023], and *spatstat* for point pattern data [@Baddeley2015].
+Several packages allow to create maps, such as *tmap* [@Tennekes2018] or *ggplot2* [@Wickham2016]. 
+For a comprehensive overview of packages related to geographical spatial data, please see the CRAN Task View [@Bivand2024].
 
-<!-- 
-landscapemetrics
-geodiv
-vectormetrics (also: VecLI -- they mention open source in their paper a few times, but the software seems to be closed source -- https://urbancomp.net/archives/vecliv3beta)
-bespatial
-LandComp
-motif
-?GLCMTextures
-?rasterdiv
-?terra 
--->
+R packages developed specifically for spatial pattern analysis include, besides others, *landscapemetrics* [@Hesselbarth2019], *vectormetrics* [still being developed; @Matuszek2024], *motif* [@Nowosad2021a], *rasterdiv* [@Rocchini2021], or *geodiv* [@Smith2021b]. 
+<!-- BESSpatial: https://github.com/Nowosad/bespatial/ -->
+Packages with a focus on scale include e.g., *multilandr* [@Huais2024] or *grainchanger* [@Graham2024].
+Connectivity analysis can be conducted using packages including *lconnect* [@Mestre2023], or *grainscape* [@Chubaty2020a].
+Furthermore, neutral landscapes can be simulated using *NLMR* [@Sciaini2018], and the *graph4lg* [@Savary2021] provides functions for landscape genetics.
 
 <!-- Python: Bosch -->
 
 <!--Julia: Schouten -->
-
-<!--Others: -->
-
-<!-- 
-GuidosToolbox
-?GRASS GIS
-?QGIS: LecoS plugin 
--->
-
