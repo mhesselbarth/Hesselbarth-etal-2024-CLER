@@ -18,7 +18,6 @@ However, due to its extensions (also called packages), the language is popular i
 Fundamental packages for spatial data analysis include *sf* for simple-features vector data [@Pebesma2018], *terra* for raster data [@Hijmans2024], *stars* for spatiotemporal arrays, raster, and vector data cubes [@Pebesma2023], and *spatstat* for point pattern data [@Baddeley2015].
 Several packages allow to create maps, such as *tmap* [@Tennekes2018] or *ggplot2* [@Wickham2016]. 
 For a comprehensive overview of packages related to geographical spatial data, please see the CRAN Task View [@Bivand2024].
-
 R packages developed specifically for spatial pattern analysis include, besides others, *landscapemetrics* [@Hesselbarth2019], *vectormetrics* [still being developed; @Matuszek2024], *motif* [@Nowosad2021a], *rasterdiv* [@Rocchini2021], or *geodiv* [@Smith2021b]. 
 <!-- BESSpatial: https://github.com/Nowosad/bespatial/ -->
 Packages with a focus on scale include e.g., *multilandr* [@Huais2024] or *grainchanger* [@Graham2024].
