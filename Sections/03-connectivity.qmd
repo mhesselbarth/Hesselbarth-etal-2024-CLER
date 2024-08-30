@@ -12,7 +12,7 @@ Connectivity underpins ecosystem functionality and maintains biodiversity and po
 Thus, in the past multiple approaches how to measure connectivity were developed [@Simpkins2018; @Keeley2021].
 
 <!-- 
-Connectivity modelling in conservation science: https://doi.org/10.1038/s41598-022-20370-w
+Connectivity modelling in conservation science https://doi.org/10.1038/s41598-022-20370-w
 -->
 
 ## Landscape metrics
@@ -30,27 +30,27 @@ The approach uses environmental layers and biodiversity data or expert opinions 
 The latest developments of resistance surfaces have recently been reviewed [@Dutta2022].
 The resistance surface can be used to model movement based on different approaches such as leas-cost paths [@Adriaensen2003; @Etherington2016] or circuit theory [@McRae2008].
 However, resistance surfaces are not free of critique including missing spatial-temporal variability or context dependency [@UnnithanKumar2022; @UnnithanKumar2022a].
-Thus, recent developments include the combination with more processes-based modelling approaches [@Schumaker2018; @Bocedi2021; @UnnithanKumar2022b], and modelling of dynamic landscape connectivity [@Zeller2020]. <!-- MH: Not complete yet -->
+Thus, recent developments include the combination with more processes-based modelling approaches [@Schumaker2018; @Bocedi2021; @UnnithanKumar2022b], modelling of dynamic landscape connectivity [@Zeller2020], inclusion of stochasticity and spatial context [@Ribeiro2017], using genetic optimization algorithms [@Peterman2018], or computational improvements [@Leonard2017].
 
-<!--
-lscorridors: https://doi.org/10.1111/2041-210X.12750
-Complementary landscape genetics and habitat modelling approaches: https://doi.org/10.1007/s10980-019-00789-9
-https://doi.org/10.1111/2041-210X.12689
-https://doi.org/10.1016/j.ecolind.2016.03.032
--->
+<!-- What about multi-species approaches? -->
 
 ## Graph theory 
 
+Graph theory describes a landscape as a set of nodes representing habitat patches and edges as potential links between the nodes.
+Thus, graph theory is a powerful tool to model landscape connectivity, especially in a metapopulation context [@Urban2001].
+
 <!--
-https://doi.org/10.1007/s10980-020-00998-7
-https://doi.org/10.1007/s10980-020-01164-9
+Coupling landscape graph modeling and biological data https://doi.org/10.1007/s10980-020-00998-7
+Temporal dynamics of landscape connectivity in ever-changing landscapes: a literature review https://doi.org/10.1007/s10980-021-01277-9
+Some methodological considerations to improve landscape planning https://doi.org/10.1016/j.ecolind.2017.05.052
+Comparison of landscape graph modelling methods https://doi.org/10.1007/s10980-020-01164-9
+
 -->
 
-## Various
+## Other approaches
 
 <!--
-https://doi.org/10.1890/14-1690.1
-https://doi.org/10.1016/j.ecolind.2016.03.032
-https://doi.org/10.1007/s10980-019-00935-3
-https://doi.org/10.1126/science.abg1780
+A stochastic movement simulator improves estimates of landscape connectivity https://doi.org/10.1890/14-1690.1
+Landscape connectivity modeling from the perspective of animal dispersal  https://doi.org/10.1007/s10980-019-00935-3
+Big-data approaches https://doi.org/10.1126/science.abg1780
 -->
