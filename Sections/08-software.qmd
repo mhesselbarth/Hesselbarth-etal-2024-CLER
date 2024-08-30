@@ -2,7 +2,7 @@
 bibliography: CLER.bib
 ---
 
-<!-- Person responsible: Hesselbarth, Nowosad, Bosch, Jung, Schouten  -->
+<!-- Person responsible: Hesselbarth, Nowosad, Bosch, Jung  -->
 
 # Software and programming languages
 
@@ -24,6 +24,4 @@ Packages with a focus on scale include e.g., *multilandr* [@Huais2024] or *grain
 Connectivity analysis can be conducted using packages including *lconnect* [@Mestre2023], or *grainscape* [@Chubaty2020a].
 Furthermore, neutral landscapes can be simulated using *NLMR* [@Sciaini2018], and the *graph4lg* [@Savary2021] provides functions for landscape genetics.
 
-<!-- Python: Bosch -->
-
-<!--Julia: Schouten -->
+<!-- Python: Bosch, Jung? -->

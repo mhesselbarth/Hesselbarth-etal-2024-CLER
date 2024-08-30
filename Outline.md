@@ -22,11 +22,11 @@
   - Surface metrics (**Bosch**, **Hesselbarth?**)
   - Entropy (**Nowosad**, **Bosch**)
   - Landscape Mosaic (**Bosch**)
-- Connectivity / Movement / Dispersal (**Schouten**)
+- Connectivity / Movement / Dispersal (**Hesselbarth**)
 - Sampling (and aggregation?) in landscape ecology (**Bosch**)
 - Simulations and models
   - Neutral landscape (**Hesselbarth**)
-  - Process-based simulation (**Schouten**, **Hesselbarth**)
+  - Process-based simulation (**Hesselbarth**)
 - Optimization 
   - *MH: maybe rather include in several existing sections?*
 - Spatial planning (**Jung**)
@@ -39,7 +39,7 @@
   - Programming language
     - R (**Hesselbarth**, **Nowosad?**)
     - Python (**Bosch**, **Jung?**)
-    - Julia (**Schouten**)
+    - Julia
 - Discussion
   - Future needs
   

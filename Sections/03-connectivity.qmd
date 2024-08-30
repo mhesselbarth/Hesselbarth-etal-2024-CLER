@@ -8,40 +8,49 @@ bibliography: CLER.bib
 
 Connectivity describes how movement among resources patches is facilitated or hindered by landscape features such as types, amounts, and arrangement of LULC [@Taylor1993; @Taylor2006].
 While structural connectivity focuses on physical and spatial relationships among resource patches, functional connectivity also includes the movement or flow of individuals and populations through the landscape [@Taylor2006].
-Connectivity underpins ecosystem functionality and maintains biodiversity, and plays a large role in many conservation actions [@CorreaAyram2016; @Hilty2020].
+Connectivity underpins ecosystem functionality and maintains biodiversity and populations, and plays a large role in many conservation actions [@CorreaAyram2016; @Hilty2020].
 Thus, in the past multiple approaches how to measure connectivity were developed [@Simpkins2018; @Keeley2021].
+
+<!-- 
+Connectivity modelling in conservation science: https://doi.org/10.1038/s41598-022-20370-w
+-->
 
 ## Landscape metrics
 
-- Many traditional lsm measure connectivity, e.g, ENN
-- Recently, also focus in within-patch connectivity (https://doi.org/10.1007/s10980-019-00881-0)
+There are several landscape metrics that are traditionally used to measure landscape connectivity.
+For example, the habitat amount within a buffer zone of focal patches, the nearest-neighbor distance, or the connectance index [@Moilanen2002; @Prugh2009; @Spanowicz2019].
+However, these metrics are frequently criticised for being to simple and especially the link to functional connectivity is often ambiguous. 
+Thus, more functionality needs to be included using additional ecological meaningful metrics, such as the core area [e.g., @Kupfer2012].
+More recently there is also an increasing focus in within-patch connectivity using metrics such as the effective mesh size in addition to the usual measure between-patch connectivity [@Spanowicz2019].
 
 ## Resistance surfaces
 
-https://doi.org/10.1111/2041-210X.12750
-https://doi.org/10.1007/s10980-019-00789-9
-https://doi.org/10.1007/s10980-022-01504-x
-https://doi.org/10.1007/s10980-022-01469-x
+Resistance surfaces are one of the most popular approaches to model connectivity and developed from simple isolation-by-distance approaches. 
+The approach uses environmental layers and biodiversity data or expert opinions to estimate the cost and of movement through landscapes [@Zeller2012].
+The latest developments of resistance surfaces have recently been reviewed [@Dutta2022].
+The resistance surface can be used to model movement based on different approaches such as leas-cost paths [@Adriaensen2003; @Etherington2016] or circuit theory [@McRae2008].
+However, resistance surfaces are not free of critique including missing spatial-temporal variability or context dependency [@UnnithanKumar2022; @UnnithanKumar2022a].
+Thus, recent developments include the combination with more processes-based modelling approaches [@Schumaker2018; @Bocedi2021; @UnnithanKumar2022b], and modelling of dynamic landscape connectivity [@Zeller2020]. <!-- MH: Not complete yet -->
 
-## Circuit theory-based
-
-https://circuitscape.org
+<!--
+lscorridors: https://doi.org/10.1111/2041-210X.12750
+Complementary landscape genetics and habitat modelling approaches: https://doi.org/10.1007/s10980-019-00789-9
 https://doi.org/10.1111/2041-210X.12689
 https://doi.org/10.1016/j.ecolind.2016.03.032
-
-##  Least-cost paths (LCPs)
-
-https://doi.org/10.1016/S0169-2046(02)00242-6
-https://doi.org/10.1007/s40823-016-0006-9
+-->
 
 ## Graph theory 
 
+<!--
 https://doi.org/10.1007/s10980-020-00998-7
 https://doi.org/10.1007/s10980-020-01164-9
+-->
 
 ## Various
 
+<!--
 https://doi.org/10.1890/14-1690.1
 https://doi.org/10.1016/j.ecolind.2016.03.032
 https://doi.org/10.1007/s10980-019-00935-3
 https://doi.org/10.1126/science.abg1780
+-->

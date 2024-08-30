@@ -174,7 +174,7 @@
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
   pdftitle={Computational methods in landscape ecology},
-  pdfauthor={Maximilian H.K. Hesselbarth; Jakub Nowosad; Marti Bosch; Martin Jung; Rafael Schouten},
+  pdfauthor={Maximilian H.K. Hesselbarth; Jakub Nowosad; Marti Bosch; Martin Jung},
   pdfkeywords={keyword1, keyword2},
   colorlinks=true,
   linkcolor={blue},
@@ -210,11 +210,6 @@
                   International Institute for Applied Systems Analysis,
                   Biodiversity, Ecology, and Conservation Group,
                   Laxenburg, Austria
-              }
-        \author{Rafael Schouten}
-            \affil{%
-                  Globe Institute, University of Copenhagen, Copenhagen,
-                  Denmark
               }
       
 \date{}
@@ -584,50 +579,47 @@ connectivity focuses on physical and spatial relationships among
 resource patches, functional connectivity also includes the movement or
 flow of individuals and populations through the landscape (Taylor et al.
 2006). Connectivity underpins ecosystem functionality and maintains
-biodiversity, and plays a large role in many conservation actions
-(Correa Ayram et al. 2016; Hilty et al. 2020). Thus, in the past
-multiple approaches how to measure connectivity were developed (Simpkins
-et al. 2018; Keeley et al. 2021).
+biodiversity and populations, and plays a large role in many
+conservation actions (Correa Ayram et al. 2016; Hilty et al. 2020).
+Thus, in the past multiple approaches how to measure connectivity were
+developed (Simpkins et al. 2018; Keeley et al. 2021).
 
 \subsection{Landscape metrics}\label{landscape-metrics-1}
 
-\begin{itemize}
-\tightlist
-\item
-  Many traditional lsm measure connectivity, e.g, ENN
-\item
-  Recently, also focus in within-patch connectivity
-  (https://doi.org/10.1007/s10980-019-00881-0)
-\end{itemize}
+There are several landscape metrics that are traditionally used to
+measure landscape connectivity. For example, the habitat amount within a
+buffer zone of focal patches, the nearest-neighbor distance, or the
+connectance index (Moilanen and Nieminen 2002; Prugh 2009; Spanowicz and
+Jaeger 2019). However, these metrics are frequently criticised for being
+to simple and especially the link to functional connectivity is often
+ambiguous. Thus, more functionality needs to be included using
+additional ecological meaningful metrics, such as the core area (e.g.,
+Kupfer 2012). More recently there is also an increasing focus in
+within-patch connectivity using metrics such as the effective mesh size
+in addition to the usual measure between-patch connectivity (Spanowicz
+and Jaeger 2019).
 
 \subsection{Resistance surfaces}\label{resistance-surfaces}
 
-https://doi.org/10.1111/2041-210X.12750
-https://doi.org/10.1007/s10980-019-00789-9
-https://doi.org/10.1007/s10980-022-01504-x
-https://doi.org/10.1007/s10980-022-01469-x
-
-\subsection{Circuit theory-based}\label{circuit-theory-based}
-
-https://circuitscape.org https://doi.org/10.1111/2041-210X.12689
-https://doi.org/10.1016/j.ecolind.2016.03.032
-
-\subsection{Least-cost paths (LCPs)}\label{least-cost-paths-lcps}
-
-https://doi.org/10.1016/S0169-2046(02)00242-6
-https://doi.org/10.1007/s40823-016-0006-9
+Resistance surfaces are one of the most popular approaches to model
+connectivity and developed from simple isolation-by-distance approaches.
+The approach uses environmental layers and biodiversity data or expert
+opinions to estimate the cost and of movement through landscapes (Zeller
+et al. 2012). The latest developments of resistance surfaces have
+recently been reviewed (Dutta et al. 2022). The resistance surface can
+be used to model movement based on different approaches such as
+leas-cost paths (Adriaensen et al. 2003; Etherington 2016) or circuit
+theory (McRae et al. 2008). However, resistance surfaces are not free of
+critique including missing spatial-temporal variability or context
+dependency (Unnithan Kumar et al. 2022b; Unnithan Kumar and Cushman
+2022). Thus, recent developments include the combination with more
+processes-based modelling approaches (Schumaker and Brookes 2018; Bocedi
+et al. 2021; Unnithan Kumar et al. 2022a), and modelling of dynamic
+landscape connectivity (Zeller et al. 2020).
 
 \subsection{Graph theory}\label{graph-theory}
 
-https://doi.org/10.1007/s10980-020-00998-7
-https://doi.org/10.1007/s10980-020-01164-9
-
 \subsection{Various}\label{various}
-
-https://doi.org/10.1890/14-1690.1
-https://doi.org/10.1016/j.ecolind.2016.03.032
-https://doi.org/10.1007/s10980-019-00935-3
-https://doi.org/10.1126/science.abg1780
 
 \section{Simulation models}\label{simulation-models}
 
@@ -784,6 +776,12 @@ et al. 2021) provides functions for landscape genetics.
 
 \phantomsection\label{refs}
 \begin{CSLReferences}{1}{1}
+\bibitem[\citeproctext]{ref-Adriaensen2003}
+Adriaensen F, Chardon JP, De Blust G, et al (2003) The application of
+{``least-cost''} modelling as a functional landscape model. Landscape
+and Urban Planning 64:233--247.
+\url{https://doi.org/10.1016/S0169-2046(02)00242-6}
+
 \bibitem[\citeproctext]{ref-Angel2010}
 Angel S, Parent J, Civco DL (2010) Ten compactness properties of
 circles: Measuring shape in geography. Canadian Geographies /
@@ -820,6 +818,12 @@ handling spatial data. Journal of Geographical Systems.
 \bibitem[\citeproctext]{ref-Bivand2024}
 Bivand RS, Nowosad J (2024) CRAN task view: Analysis of spatial data.
 {https://CRAN.R-project.org/view=Spatial}
+
+\bibitem[\citeproctext]{ref-Bocedi2021}
+Bocedi G, Palmer SCF, Malchow A-K, et al (2021) RangeShifter 2.0: An
+extended and enhanced platform for modelling spatial eco-evolutionary
+dynamics and species' responses to environmental changes. Ecography
+44:1453--1462. \url{https://doi.org/10.1111/ecog.05687}
 
 \bibitem[\citeproctext]{ref-Borthwick2020}
 Borthwick R, de Flamingh A, Hesselbarth MHK, et al (2020) Alternative
@@ -948,6 +952,17 @@ Landscape and Urban Planning 233:104671.
 Duque JC, Laniado H, Polo A (2018) S-maup: Statistical test to measure
 the sensitivity to the modifiable areal unit problem. PloS one
 13:e0207377
+
+\bibitem[\citeproctext]{ref-Dutta2022}
+Dutta T, Sharma S, Meyer NFV, et al (2022) An overview of computational
+tools for preparing, constructing and using resistance surfaces in
+connectivity research. Landscape Ecology 37:2195--2224.
+\url{https://doi.org/10.1007/s10980-022-01469-x}
+
+\bibitem[\citeproctext]{ref-Etherington2016}
+Etherington TR (2016) Least-cost modelling and landscape ecology:
+Concepts, applications, and opportunities. Current Landscape Ecology
+Reports 1:40--53. \url{https://doi.org/10.1007/s40823-016-0006-9}
 
 \bibitem[\citeproctext]{ref-Etherington2022}
 Etherington TR (2022) Perlin noise as a hierarchical neutral landscape
@@ -1198,11 +1213,21 @@ to patch metrics for the quantification of landscape structure.
 Landscape Ecology 24:433--450.
 \url{https://doi.org/10.1007/s10980-009-9327-y}
 
+\bibitem[\citeproctext]{ref-McRae2008}
+McRae B, Dickson BG, Keitt TH, Shah VB (2008) Using circuit theory to
+model connectivity in ecology, evolution, and conservation. Ecology
+89:2712--2724. \url{https://doi.org/10.1890/07-1861.1}
+
 \bibitem[\citeproctext]{ref-Mestre2023}
 Mestre F, Silva B (2023) Lconnect r package: A versatile tool for
 evaluating landscape connectivity and prioritizing habitat patches in
 conservation research. Ecological Modelling 484:110489.
 \url{https://doi.org/10.1016/j.ecolmodel.2023.110489}
+
+\bibitem[\citeproctext]{ref-Moilanen2002}
+Moilanen A, Nieminen M (2002) Simple connectivity measures in spatial
+ecology. Ecology 83:1131--1145.
+\url{https://doi.org/10.1890/0012-9658(2002)083\%5B1131:SCMISE\%5D2.0.CO;2}
 
 \bibitem[\citeproctext]{ref-Nathan2022}
 Nathan R, Monk CT, Arlinghaus R, et al (2022) Big-data approaches lead
@@ -1310,6 +1335,10 @@ transparency in ecology. Ecological Applications 29:e01822.
 Prlić A, Procter JB (2012) Ten simple rules for the open development of
 scientific software. PLoS Computational Biology 8:e1002802.
 \url{https://doi.org/10.1371/journal.pcbi.1002802}
+
+\bibitem[\citeproctext]{ref-Prugh2009}
+Prugh LR (2009) An evaluation of patch connectivity measures. Ecological
+Applications 19:1300--1310. \url{https://doi.org/10.1890/08-1524.1}
 
 \bibitem[\citeproctext]{ref-Purcell2023}
 Purcell W, Neubauer T, Mallinger K (2023) Digital twins in agriculture:
@@ -1447,6 +1476,11 @@ landscape dynamics in an amazonian colonization frontier. Ecological
 Modelling 154:217--235.
 \url{https://doi.org/10.1016/S0304-3800(02)00059-5}
 
+\bibitem[\citeproctext]{ref-Spanowicz2019}
+Spanowicz AG, Jaeger JAG (2019) Measuring landscape connectivity: On the
+importance of within-patch connectivity. Landscape Ecology
+34:2261--2278. \url{https://doi.org/10.1007/s10980-019-00881-0}
+
 \bibitem[\citeproctext]{ref-Spies2017}
 Spies TA, White E, Ager A, et al (2017) Using an agent-based model to
 examine forest management outcomes in a fire-prone landscape in oregon,
@@ -1500,6 +1534,23 @@ Pattern and process, 2nd edition. Springer, New York
 Turner MG, O'Neill RV, Gardner RH, Milne BT (1989) Effects of changing
 spatial scale on the analysis of landscape pattern. Landscape ecology
 3:153--162
+
+\bibitem[\citeproctext]{ref-UnnithanKumar2022a}
+Unnithan Kumar S, Cushman SA (2022) Connectivity modelling in
+conservation science: A comparative evaluation. Scientific Reports
+12:16680. \url{https://doi.org/10.1038/s41598-022-20370-w}
+
+\bibitem[\citeproctext]{ref-UnnithanKumar2022b}
+Unnithan Kumar S, Kaszta Z, Cushman SA (2022a) Pathwalker: A new
+individual-based movement model for conservation science and
+connectivity modelling. ISPRS International Journal of Geo-Information
+11:329. \url{https://doi.org/10.3390/ijgi11060329}
+
+\bibitem[\citeproctext]{ref-UnnithanKumar2022}
+Unnithan Kumar S, Turnbull J, Hartman Davies O, et al (2022b) Moving
+beyond landscape resistance: Considerations for the future of
+connectivity modelling and conservation science. Landscape Ecology
+37:2465--2480. \url{https://doi.org/10.1007/s10980-022-01504-x}
 
 \bibitem[\citeproctext]{ref-Uuemaa2011}
 Uuemaa E, Roosaare J, Oja T, Mander Ü (2011) Analysing the spatial
@@ -1600,6 +1651,16 @@ Yao Y, Cheng T, Sun Z, et al (2022) VecLI: A framework for calculating
 vector landscape indices considering landscape fragmentation.
 Environmental Modelling and Software 149:105325.
 \url{https://doi.org/10.1016/j.envsoft.2022.105325}
+
+\bibitem[\citeproctext]{ref-Zeller2012}
+Zeller KA, McGarigal K, Whiteley AR (2012) Estimating landscape
+resistance to movement: A review. Landscape Ecology 27:777--797.
+\url{https://doi.org/10.1007/s10980-012-9737-0}
+
+\bibitem[\citeproctext]{ref-Zeller2020}
+Zeller K, Lewison R, Fletcher R, et al (2020) Understanding the
+importance of dynamic landscape connectivity. Land 9:303.
+\url{https://doi.org/10.3390/land9090303}
 
 \bibitem[\citeproctext]{ref-Zhang2020}
 Zhang H, Wu Z, Lan T, et al (2020) Calculating the wasserstein

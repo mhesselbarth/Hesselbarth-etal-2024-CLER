@@ -25,11 +25,6 @@ author:
     email: jung@iiasa.ac.at
     affiliations:
       - name: International Institute for Applied Systems Analysis, Biodiversity, Ecology, and Conservation Group, Laxenburg, Austria
-  - name: Rafael Schouten
-    orcid: 0000-0002-8380-0884
-    email: rafael.schouten@sund.ku.dk
-    affiliations:
-      - name: Globe Institute, University of Copenhagen, Copenhagen, Denmark
 format:
   pdf:
     keep-tex: true
