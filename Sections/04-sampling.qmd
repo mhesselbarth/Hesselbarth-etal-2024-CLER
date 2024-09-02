@@ -6,4 +6,4 @@ bibliography: CLER.bib
 
 # Sampling in landscape ecology
 
-https://doi.org/10.1007/s40823-020-00059-4
+<!-- https://doi.org/10.1007/s40823-020-00059-4 -->

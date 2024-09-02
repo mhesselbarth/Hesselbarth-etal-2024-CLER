@@ -1,7 +1,0 @@
----
-bibliography: CLER.bib
----
-
-<!-- Person responsible: -->
-
-# Optimization

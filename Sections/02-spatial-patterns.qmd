@@ -10,17 +10,17 @@ bibliography: CLER.bib
 
 # Spatial patterns {#sec-spatialpattern}
 
-Spatial patterns can be defined as the scale-dependent predictability of the physical arrangement of observations [@Dale1999], or as clearly identifiable structures in nature itself or data extracted from nature [@Grimm1996].
-Importantly, patterns observed in nature contain information about the history of the system, such as demographic processes, dispersal characteristics, or climatic patterns [@Wiegand2003].
+Spatial patterns can be defined as the scale-dependent predictability of the physical arrangement of observations [@Dale1999SpatialPattern], or as clearly identifiable structures in nature itself or data extracted from nature [@Grimm1996PatternorientedModelling].
+Importantly, patterns observed in nature contain information about the history of the system, such as demographic processes, dispersal characteristics, or climatic patterns [@Wiegand2003UsingPatternoriented].
 However, spatial patterns are not only a result of processes, but could also be a driver of them.
-Thus, untangling the history of a landscape and linking its spatial patterns to ecological processes is one of the core concepts of landscape ecology [@Turner1989a].
+Thus, untangling the history of a landscape and linking its spatial patterns to ecological processes is one of the core concepts of landscape ecology [@Turner1989LandscapeEcology].
 
 ## Landscape metrics
 <!-- Hesselbarth -->
 
-Traditionally and still the most prominent approaches to quantify spatial patterns revolve around raster data using categorical categories based on the patch mosaic model [@Frazier2017; @Costanza2019].
-The strength of landscape metrics is that they are comparable easy to apply and communicate [@Lausch2015], however, they are also critiqued for not being able to realistically represent continuous features of the natural word [@Frazier2017].
-Metrics can be calculated on patch-level (describing each patch), class-level (describing all patches of the same class), or landscape level (describing the entire landscape) and are able to quantify characteristics related to e.g., patch areas and edge lengths, patch shapes, or class aggregation and diversity [@Hesselbarth2019].
+Traditionally and still the most prominent approaches to quantify spatial patterns revolve around raster data using categorical categories based on the patch mosaic model [@Frazier2017LandscapeMetrics; @Costanza2019DescribingAnalyzing].
+The strength of landscape metrics is that they are comparable easy to apply and communicate [@Lausch2015UnderstandingQuantifying], however, they are also critiqued for not being able to realistically represent continuous features of the natural word [@Frazier2017LandscapeMetrics].
+Metrics can be calculated on patch-level (describing each patch), class-level (describing all patches of the same class), or landscape level (describing the entire landscape) and are able to quantify characteristics related to e.g., patch areas and edge lengths, patch shapes, or class aggregation and diversity [@Hesselbarth2019LandscapemetricsOpen].
 Recently also several metrics describing landscape complexity were introduced, e.g., several entropy measures (see following sections).
 
 <!-- https://github.com/r-spatialecology/landcapemetrics -->
@@ -35,25 +35,25 @@ Recently also several metrics describing landscape complexity were introduced, e
 <!-- jn: ask T. Stepinski for review of this section later -->
 
 It is mainly derived from information theory and thermodynamics, such as Shannon entropy (and its analogous forms), Boltzmann entropy, or Renyi entropy.
-Entropy in landscape ecology is mainly used to quantify the complexity of the landscape (spatial heterogeneity), and less often unpredictability (temporal heterogeneity) and scale dependence [spatio-temporal heterogeneity\; @Vranken2015].
-However, studies show that insights do not only depend on the formulation of the used entropy, but also on the underlining data model, for example the composition of categories or the co-occurrence matrix [@Zhao2019].
+Entropy in landscape ecology is mainly used to quantify the complexity of the landscape (spatial heterogeneity), and less often unpredictability (temporal heterogeneity) and scale dependence [spatio-temporal heterogeneity\; @Vranken2015ReviewUse].
+However, studies show that insights do not only depend on the formulation of the used entropy, but also on the underlining data model, for example the composition of categories or the co-occurrence matrix [@Zhao2019CalculatingSpatial].
 
-The Shannon diversity index [@Shannon1948] quantifies the richness and evenness of categories in the landscape omitting spatial configuration.
+The Shannon diversity index [@Shannon1948MathematicalTheory] quantifies the richness and evenness of categories in the landscape omitting spatial configuration.
 The index is based on information theory and is an adaptation of the Shannon entropy which measures uncertainty of a random variable.
-Shannon's entropy formula can also be modified to include the landscape's spatial configuration, e.g., by weights calculated from intra- and inter-class distances [@Claramunt2012].
+Shannon's entropy formula can also be modified to include the landscape's spatial configuration, e.g., by weights calculated from intra- and inter-class distances [@Claramunt2012SpatiotemporalForm].
 However, to quantify the spatial configuration and the total complexity of the landscape, other measures from information theory can be adapted.
-@Nowosad2019a proposed to treat categorical raster as a bivariate random variable $(x,y)$ where $x$ is the category of the focal cell and $y$ is the category of the neighboring cell.
+@Nowosad2019InformationTheory proposed to treat categorical raster as a bivariate random variable $(x,y)$ where $x$ is the category of the focal cell and $y$ is the category of the neighboring cell.
 This approach allows us to compress information about the landscape's composition and configuration into a co-occurrence matrix, which could be used to calculate various entropy measures.
 This includes conditional entropy (representing configurational complexity), joint entropy (representing overall spatial-thematic complexity), mutual information, and relative mutual information (representing the degree of spatial autocorrelation).
 
 <!-- https://github.com/r-spatialecology/landcapemetrics -->
 
-Based on notions from thermodynamics initiated by the work of @Cushman2015 or @Vranken2015, there was a surge in the development of entropy-based metrics for landscape ecology in the last few years.
-In the late 1800s, Boltzmann formulated a probabilistic interpretation of the second law of thermodynamics using the concepts of macrostate (the general state of a system) and microstate [the configuration of the system elements\; @Gao2019]. <!-- REF -->
-@Cushman2016 proposed to relate the edge length to the microstate of the landscape, and use the proportion of microstates to compute the relative Boltzmann entropy of a landscape mosaic.
-This approach was generalized for calculations based on raster's surface model and point patterns [@Cushman2021a].
-Subsequently, @Gao2017 proposed to use the Boltzmann entropy to quantify the complexity of a landscape surface by transforming the input raster into a series of landscape surfaces with different levels of detail (microstate) and calculating the Boltzmann entropy based on the total number of microstates that are able to generate the observed macrostate.
-Recently, @Zhang2020 extended the original definition of Boltzmann entropy to incorporate information about the adjacency of the same categories in the landscape mosaic by using the number of contiguous patches of the same category.
+Based on notions from thermodynamics initiated by the work of @Cushman2015ThermodynamicsLandscape or @Vranken2015ReviewUse, there was a surge in the development of entropy-based metrics for landscape ecology in the last few years.
+In the late 1800s, Boltzmann formulated a probabilistic interpretation of the second law of thermodynamics using the concepts of macrostate (the general state of a system) and microstate [the configuration of the system elements\; @Gao2019ComputationBoltzmann]. <!-- REF -->
+@Cushman2016CalculatingConfigurational proposed to relate the edge length to the microstate of the landscape, and use the proportion of microstates to compute the relative Boltzmann entropy of a landscape mosaic.
+This approach was generalized for calculations based on raster's surface model and point patterns [@Cushman2021EntropyLandscape].
+Subsequently, @Gao2017HierarchybasedSolution proposed to use the Boltzmann entropy to quantify the complexity of a landscape surface by transforming the input raster into a series of landscape surfaces with different levels of detail (microstate) and calculating the Boltzmann entropy based on the total number of microstates that are able to generate the observed macrostate.
+Recently, @Zhang2020CalculatingWasserstein extended the original definition of Boltzmann entropy to incorporate information about the adjacency of the same categories in the landscape mosaic by using the number of contiguous patches of the same category.
 
 <!-- https://jakubnowosad.com/bespatial/ -->
 
@@ -65,10 +65,10 @@ Thus, more research is needed to understand the relations between the entropy me
 -->
 
 Moreover, many other entropy-based metrics have been proposed for use in landscape ecology.
-The Renyi [@Renyi1961] and Gibbs entropies <!--[REF]-->, which are both generalizations of the Shannon entropy, are applied to quantify the complexity of the landscape.
-The Rao quadratic entropy [@Rao1982] has also been applied recently [@Rocchini2017], as it measures not only the relative abundances of elements, but also the pairwise dissimilarities or distances between them.
+The Renyi [@Renyi1961MeasuresEntropy] and Gibbs entropies <!--[REF]-->, which are both generalizations of the Shannon entropy, are applied to quantify the complexity of the landscape.
+The Rao quadratic entropy [@Rao1982DiversityDissimilarity] has also been applied recently [@Rocchini2017MeasuringRao], as it measures not only the relative abundances of elements, but also the pairwise dissimilarities or distances between them.
 Thus, it can be useful in cases, when the dissimilarities between LULC types, and not only their categories, are relevant.
-Another recent development is the use of Kullback-Leibler divergence (also known as relative entropy), which is a measure of differences between two probability distributions to describe patterns across scales [@Huckeba2023].
+Another recent development is the use of Kullback-Leibler divergence (also known as relative entropy), which is a measure of differences between two probability distributions to describe patterns across scales [@Huckeba2023MultiscaleSpatial].
 
 <!-- Kolmogorov, etc. -->
 <!--@Konrad2023; Juhász-Nagy’s information theory-based functions;  https://cran.r-project.org/web/packages/LandComp/index.html -->
@@ -76,14 +76,14 @@ Another recent development is the use of Kullback-Leibler divergence (also known
 
 ## Operations on spatial patterns
 
-Spatial patterns can be analyzed through a range of computational operations, such as comparing, searching, or grouping [@Turner1990; @Wickham1994; @Jasiewicz2015; @Remmel2020; @Nowosad2021a].
+Spatial patterns can be analyzed through a range of computational operations, such as comparing, searching, or grouping [@Turner1990SpatialTemporal; @Wickham1994MappingAnalyzing; @Jasiewicz2015GeoPATToolbox; @Remmel2020DistributionsHyperlocal; @Nowosad2021MotifOpensource].
 These operations are based on spatial signatures which are multi-numerical representations of landscape pattern, and dissimilarity measures which are functions that quantify differences between the signatures.
 
 Spatial patterns can be compared between different areas, or for the same area at two different moments in time.
-Comparing spatial patterns is often used to analyze landscape dynamics, e.g., to detect changes in landscape structure over time [@Duncan2023].
+Comparing spatial patterns is often used to analyze landscape dynamics, e.g., to detect changes in landscape structure over time [@Duncan2023MonitoringSpatial].
 Furthermore, pattern-based search is a one-to-many operation in which the spatial signature of a query area is compared to the signatures of all other areas.
-This allows to find areas with similar patterns compared to the query area, e.g., areas with similar environmental conditions [@Jasiewicz2014].
-Finally, the grouping of spatial patterns is a many-to-many operation in which spatial signatures are calculated for all areas and clustered based on their similarity [@Nowosad2021b].
+This allows to find areas with similar patterns compared to the query area, e.g., areas with similar environmental conditions [@Jasiewicz2014LandscapeSimilarity].
+Finally, the grouping of spatial patterns is a many-to-many operation in which spatial signatures are calculated for all areas and clustered based on their similarity [@Nowosad2021PatternbasedIdentification].
 
 <!-- https://github.com/Nowosad/motif/ -->
 <!-- https://jakubnowosad.com/spquery/ -->
@@ -95,11 +95,11 @@ Finally, the grouping of spatial patterns is a many-to-many operation in which s
 <!-- MH: Is the landscape mosaic after e.g., Vogt et al. 10.1371/journal.pone.0304215 the same as the patch mosaic model and landscape metrics? I think there is some confusion here. We already discuss metrics above. I think it would be more valuable to discuss the LLM and the most recent additions after Vogt et al. here? -->
 
 <!-- https://doi.org/10.1371/journal.pone.0304215 -->
-Despite the extensive use of the landscape mosaic model and metrics based on it, major limitations have been identified regarding both its ability to quantify the spatial structure of landscapes and their relationship to ecological processes [@Gustafson1998; @Li2004b; @Dramstad2009; @Kupfer2012; @Lausch2015; @Frazier2017].
+Despite the extensive use of the landscape mosaic model and metrics based on it, major limitations have been identified regarding both its ability to quantify the spatial structure of landscapes and their relationship to ecological processes [@Gustafson1998QuantifyingLandscape; @Li2004UseMisuse; @Dramstad2009SpatialMetrics; @Kupfer2012LandscapeEcology; @Lausch2015UnderstandingQuantifying; @Frazier2017LandscapeMetrics].
 <!-- two key considerations to select metrics: (i) ability to consistently identify structural landscape components and (ii) ability to explain relationships with ecological processes (ecological relevance), e.g., biodiversity, often referred to as functional metrics - the challenge of matching the scales of observation to the ecological scales affecting organisms or processes of interest, i.e., the characteristic scales (from "Spatial dependence of predictions from image segmentation: a variogram-based method to determine appropriate scales for producing land-management information") -->
 <!-- Here we focus on the first issue, namely the ability of landscape metrics to consistently capture the spatial structure of landscapes. -->
 <!-- Key issues of structural metrics [@Dramstad2009]: sensitivity to scale, i.e., resolution and extent, sensitivity to the choice of LULC scheme, redundancy and interpretation. Let us go through them in a different order: -->
-Here, we review four major issues of landscape metrics, namely their sensitivity to both spatial scale and thematic resolution, redundancy and interpretation [@Dramstad2009].
+Here, we review four major issues of landscape metrics, namely their sensitivity to both spatial scale and thematic resolution, redundancy and interpretation [@Dramstad2009SpatialMetrics].
 
 ### Sensitivity to spatial scale and thematic resolution
 
@@ -107,22 +107,22 @@ Here, we review four major issues of landscape metrics, namely their sensitivity
 
 <!-- (i) scale: https://doi.org/10.1007/s10980-014-0066-3 "Behavior of class-level landscape metrics across gradients of class aggregation and area"-->
 <!-- "identifying the characteristic scales of relevant patterns and processes is a critical first step in designing a successful research project" [@Wu2007, pp. 119]. -->
-Identifying scales at which the ecological processes of interest operate is a critical first step towards establishing relationships between pattern and process [@Levin1992; @Wu2007; @Cushman2008Landscape].
+Identifying scales at which the ecological processes of interest operate is a critical first step towards establishing relationships between pattern and process [@Levin1992ProblemPattern; @Wu2007ScaleScaling; @Cushman2008LandscapeMetrics].
 To that end, a key requirement is to understand the sensitivity of landscape metrics to spatial scale in terms of both grain and extent.
 
 A key concept to consider regarding grain size is the minimum mapping unit (MMU), namely the smallest area entity that can be mapped and analyzed as a discrete patch.
 <!-- Accordingly, a grain size several times smaller than the smallest patch in order to grasp (even schematically) its shape. -->
 Since the input maps should represent not only the location of patches but also their shape, the grain size should be several times smaller than the smallest patch (i.e., the MMU) in order to quantify shapes.
-Even though the MMU is often assumed as a natural characteristic of the dataset, it has an impact on the computed landscape metrics, especially on the number of patches and their size distribution [@Saura2002].
+Even though the MMU is often assumed as a natural characteristic of the dataset, it has an impact on the computed landscape metrics, especially on the number of patches and their size distribution [@Saura2002EffectsMinimum].
 <!-- On the other hand, landscape metrics such as the landscape division index, largest patch index and area-weighted mean shape indices show more predictable responses to changing the MMU. -->
 
 <!-- Since the applications of landscape metrics are manifold, the choices of grain and especially extent vary largely depending on the context of the study. -->
 <!-- The growing availability of global remote sensing products at homogenized resolution has resulted in a myriad of studies sharing the same resolution, e.g., based on Landsat scenes at 30 m. At the same time, the choice of spatial extent varies largely depending on the phenomenon of interest, e.g., from large transects of forests in natural parks to small buffers along the urban-rural gradient. -->
 While the choice of grain is often constrained by the available data, e.g., Landsat scenes at 30 m resolution, the selection of spatial extent varies largely depending on the phenomenon of interest, e.g., from large transects of forests in natural parks to small buffers along the urban-rural gradient. <!-- REF -->
-The spatial extent and sampling strategy is often subject to many arbitrary criteria that can largely influence results. This issue has long been recognized in physical geography as the modifiable areal unit problem [MAUP; @Openshaw1979; @Openshaw1984].
+The spatial extent and sampling strategy is often subject to many arbitrary criteria that can largely influence results. This issue has long been recognized in physical geography as the modifiable areal unit problem [MAUP; @Openshaw1979MillionCorrelated; @Openshaw1984EcologicalFallacies].
 <!-- The MAUP has two interrelated components, namely the scale problem and the zoning problem -->
 <!-- A first approach to dealing with the MAUP is to identify individual entities that are ecologically meaninful and not modifiable [@Jelinski1996]. In the landscape matrix model, such entities could be target patches of interest. However, it is not always possible to identify basic entities, especially since ecological processes of interest typically involve the integration of spatially distributed data. -->
-Dealing with the MAUP in the context of landscape metrics include the identification of individual entities that are ecologically meaningful and not modifiable, the evaluation of "optimal" zoning systems that maximize interzonal variations and minimize intrazonal variation, and the analysis of the sensitivity of the zoning configuration [@Jelinski1996; @Duque2018; @Fletcher2023].
+Dealing with the MAUP in the context of landscape metrics include the identification of individual entities that are ecologically meaningful and not modifiable, the evaluation of "optimal" zoning systems that maximize interzonal variations and minimize intrazonal variation, and the analysis of the sensitivity of the zoning configuration [@Jelinski1996ModifiableAreal; @Duque2018SmaupStatistical; @Fletcher2023AddressingProblem].
 <!-- TODO: use a moving window measurement device to "postpone" the MAUP [@Riitters2019] -->
 
 <!-- MH: Can we move this to the sampling section maybe? -->
@@ -132,14 +132,14 @@ Dealing with the MAUP in the context of landscape metrics include the identifica
 <!-- Therefore, a thorough understanding of these relationships is essential in order to compare spatial patterns measured at different scales. -->
 <!-- Several types of responses of landscape metrics to changing scale have been identified in computational experiments by changing both the spatial resolution (grain) and extent. -->
 The scale effects of landscape metrics can be assessed by computing scalograms, i.e., the response curves of metrics to changing scales. 
-Some metrics related to the number of patches, edges show consistent linear and power-law scaling relationships to changing grain, while other metrics exhibit less predictable responses [@Turner1989b; @Saura2001; @Wu2002a; @Wu2004; @Saura2007; @Simova2012; @Arganaraz2014; @Frazier2021].
-<!-- Advancing the science of scaling in landscape ecology is key to "permit the prediction and inference of quantities measured at one scale to another" [@Frazier2023] -->
+Some metrics related to the number of patches, edges show consistent linear and power-law scaling relationships to changing grain, while other metrics exhibit less predictable responses [@Turner1989EffectsChanging; @Saura2001SensitivityLandscape; @Wu2002EmpiricalPatterns; @Wu2004EffectsChanging; @Saura2007ScalingFunctions; @Simova2012LandscapeIndices; @Arganaraz2014ScalingFunctions; @Frazier2023ScalingSpatial].
+<!-- Advancing the science of scaling in landscape ecology is key to "permit the prediction and inference of quantities measured at one scale to another" [@Frazier2023ScalingSpatial] -->
 <!-- also multi-scale is key to habitat assessment, see "Multi-scale habitat selection modeling: a review and outlook" -->
 <!-- Predictable scaling relationships can be exploited to estimate spatial patterns at higher resolutions -->
-Nonetheless, the effects of changing the sampling extent can be less predictable than those of changing grain size [@Wu2004].
+Nonetheless, the effects of changing the sampling extent can be less predictable than those of changing grain size [@Wu2004EffectsChanging].
 For instance, in landscapes with small extent to grain ratio, boundary effects are likely to dominate and truncate patches resulting in unreliable metric computations.
-In order to address scale issues, studies should explicitly consider the concept of scope, namely the ratio of extent to resolution [@Schneider2001].
-This involves three fundamental steps, i) considering scope guidelines when designing experiments, ii) explicitly reporting grain and extent allowing quantitative scope comparisons with other studies, iii) and comparisons and replications based on scope [@Frazier2023].
+In order to address scale issues, studies should explicitly consider the concept of scope, namely the ratio of extent to resolution [@Schneider2001RiseConcept].
+This involves three fundamental steps, i) considering scope guidelines when designing experiments, ii) explicitly reporting grain and extent allowing quantitative scope comparisons with other studies, iii) and comparisons and replications based on scope [@Frazier2023ScalingSpatial].
 
 <!-- TODO: section about landscape metric rescaling [@Saura2007; @Arganaraz2014; @Frazier2014; @Frazier2016; @Frazier2021]? -->
 
@@ -155,9 +155,9 @@ This involves three fundamental steps, i) considering scope guidelines when desi
 ### Redundancy
 <!-- (iii) selecting metrics -->
 
-TODO
-
 <!-- MH: I think most of this is either not relevant here because not computational focused or already covered above -->
+
+<!-- TODO
 
 - Factor analysis of Riitters et al. [@Riitters1995] found six main components: average patch compaction, image texture, average patch shape, patch perimeter-area scaling, number of attribute classes and large-patch density-area scaling.
 
@@ -171,29 +171,32 @@ TODO
 
 - Spatial signatures [@Nowosad2021a]
 
+-->
+
 ### Interpretability
 <!-- (iv) interpretatability -->
 
-TODO
+<!-- TODO
 - do landscape metrics measure fragmentation?
 - normalized metrics [@Wang2011]
 - [@Frazier2021]
 
-<!-- CLOSING THOUGHTS AND BRIDGING WITH THE NEXT SECTION -->
+CLOSING THOUGHTS AND BRIDGING WITH THE NEXT SECTION 
 Responses:
 - incorporating aspects of ecological function into landscape metrics (e.g., core area, least-cost distances) and moving towards graph-based and circuit theory approaches [@Kupfer2012].
 - point-data analysis [@Gustafson1998] and gradient surface model [@Lausch2015] require fewer assumptions regarding LULC categorization schemes or spatial scale
 
-<!-- Note that all approaches (landscape metrics, graph and surface - TODO: what about point?) suffer from correlation and redundancy issues, scale dependency and target problem [@Frazier2017]. -->
+Note that all approaches (landscape metrics, graph and surface - TODO: what about point?) suffer from correlation and redundancy issues, scale dependency and target problem [@Frazier2017].
+-->
 
 ## Surface metrics
 <!-- Bosch, Hesselbarth -->
 
-Surface metrics are based on the gradient surface model using raster data and continuous values [@McGarigal2009; @Cushman2010] and were adapted from microscopy and molecular physics [@McGarigal2009; @Kedron2018].
-The gradient surface model can increase the resemblance of the data model and the natural world because it allows to include more heterogeneity within each grid cell [@Cushman2010; @Kedron2018].
-Surface metrics are able to quantify various characteristics, such as roughness, skewness and kurtosis, total and relative amplitudes, curvatures of local peaks, or surface bearing area ratios [@Cushman2010].
-Many surface metrics have analogous landscape metrics [@Cushman2010], however, using surface metrics allows to reveal different or additional patterns and potentially pattern-process links [@McGarigal2009; @Borthwick2020].
-Yet, software to calculate these metrics is still rare and further research is needed into the specific pattern-process links and ecological meaningful interpretations [@Kedron2018; @Frazier2019].
+Surface metrics are based on the gradient surface model using raster data and continuous values [@McGarigal2009SurfaceMetrics; @Cushman2010GradientParadigm] and were adapted from microscopy and molecular physics [@McGarigal2009SurfaceMetrics; @Kedron2018SurfaceMetrics].
+The gradient surface model can increase the resemblance of the data model and the natural world because it allows to include more heterogeneity within each grid cell [@Cushman2010GradientParadigm; @Kedron2018SurfaceMetrics].
+Surface metrics are able to quantify various characteristics, such as roughness, skewness and kurtosis, total and relative amplitudes, curvatures of local peaks, or surface bearing area ratios [@Cushman2010GradientParadigm].
+Many surface metrics have analogous landscape metrics [@Cushman2010GradientParadigm], however, using surface metrics allows to reveal different or additional patterns and potentially pattern-process links [@McGarigal2009SurfaceMetrics; @Borthwick2020AlternativeQuantifications].
+Yet, software to calculate these metrics is still rare and further research is needed into the specific pattern-process links and ecological meaningful interpretations [@Kedron2018SurfaceMetrics; @Frazier2019EmergingTrajectories].
 <!-- MH: What about Spectral and Wavelet Analysis?
 
 <!-- https://www.digitalsurf.com/free-trial/ -->
@@ -205,16 +208,16 @@ Yet, software to calculate these metrics is still rare and further research is n
 <!-- jn: ask T. Matuszek for review of this section later -->
 
 Many landscape ecology studies are based on the raster data model.
-However, the decision on the data model is often driven by data and software availability, or the familiarity with the approach [@Costanza2019].
+However, the decision on the data model is often driven by data and software availability, or the familiarity with the approach [@Costanza2019DescribingAnalyzing].
 For example, many LULC maps are provided as raster as they often related to underlying remote sensing products.
 Yet, nowadays, vector data is increasingly available, and most geospatial software supports it.
 
 Hundreds of metrics have already been developed for raster data, so the most straightforward approach is to reimplement the same metrics for vector data.
-This is possible for most of the metrics, with only several exceptions of metrics that are specifically related to the raster data model [@Yao2022].
+This is possible for most of the metrics, with only several exceptions of metrics that are specifically related to the raster data model [@Yao2022VecLIFramework].
 Yet, the vector data model has been widely used in other fields, such as geography or urban studies.
-For example, in urban planning vector metrics are applied to quantify the shapes of urban areas and characterize the complexity of building footprints [@Basaraner2017].
-Earlier approaches included four categories of compactness measures for vector data, namely perimeter-area, single parameters of related circles, dispersion of elements of the area around a centroid, and direct comparison to standard shapes [@Maceachren1985].
-More recently, a unified theoretical foundation for measuring shape compactness was introduced using a set of ten distinct properties of a circle and metrics associated with each of these properties [@Angel2010]
+For example, in urban planning vector metrics are applied to quantify the shapes of urban areas and characterize the complexity of building footprints [@Basaraner2017PerformanceShape].
+Earlier approaches included four categories of compactness measures for vector data, namely perimeter-area, single parameters of related circles, dispersion of elements of the area around a centroid, and direct comparison to standard shapes [@Maceachren1985CompactnessGeographic].
+More recently, a unified theoretical foundation for measuring shape compactness was introduced using a set of ten distinct properties of a circle and metrics associated with each of these properties [@Angel2010TenCompactness]
 
 Vector-based metrics also have their limitations.
 The most important is computational complexity, which makes calculations of vector metrics slower than their raster equivalents.
