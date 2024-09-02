@@ -2,7 +2,7 @@
 **Section**: Methodological Developments in Landscape Ecology
 **Article Topic**: Computational methods in landscape ecology
 **Editors**: Dr. Dimitri Justeau-Allaire (Section Editor); Dr. Sara Gagné (Editor-in-Chief)
-**Due Date**: August 16, 2024
+**Due Date**: September 20, 2024
 **Word count**: 4,000 - 6,000 words
 
 # General
@@ -11,35 +11,35 @@
 3. Please feel free to add general comments, remarks, etc. (using your initials).
 
 # Outline
-- Introduction (**Hesselbarth**)
-  - Brief introduction of landscape ecology
+- 1. Introduction (**Hesselbarth**)
+  - Introduction of landscape ecology
   - Definition of computational methods
-  - Computational aspects of landscape ecology
+  - Computational aspects of landscape ecology, data models <!-- MH: 08-software section could be shortened and moved here -->
   - Purpose of this paper
-- Spatial patterns
+- 2. Spatial patterns
+  - Patterns general (**Hesselbarth**)
   - Landscape metrics (**Hesselbarth**)
+  - Entropy (**Nowosad**)
+  - Operations on spatial patterns (**Nowosad**)
+  - Landscape Mosaic (**Bosch**) <!-- MH: This should be shortened -->
+  - Surface metrics (**Hesselbarth**, **Bosch?**)
   - Vector metrics (**Nowosad**, **Hesselbarth**)
-  - Surface metrics (**Bosch**, **Hesselbarth?**)
-  - Entropy (**Nowosad**, **Bosch**)
-  - Landscape Mosaic (**Bosch**)
-- Connectivity / Movement / Dispersal (**Hesselbarth**)
-- Sampling (and aggregation?) in landscape ecology (**Bosch**)
-- Simulations and models
-  - Neutral landscape (**Hesselbarth**)
-  - Process-based simulation (**Hesselbarth**)
-- Optimization 
-  - *MH: maybe rather include in several existing sections?*
-- Spatial planning (**Jung**)
-- *?* Landscape genetics (**Breitbart?**)
-- Software and programming language for landscape ecology
-  - *?* Open source vs. proprietary software
-    - *MH: Only very brief, mention that both exists*
-  - *?* GUI vs. script based software
-    - *MH: Similar as above, only brief mention that both exit*
+- 3. Connectivity / Movement / Dispersal (**Hesselbarth**, **Simpkins?**, **Gerber?**)
+  - Landscape metrics (**Hesselbarth**)
+  - Resistance surface (**Hesselbarth**, **Simpkins?**)
+  - Graph theory (**Gerber?**)
+- 4. Sampling (and aggregation?) in landscape ecology (**Bosch?**)
+- 5. Simulations and models (**Hesselbarth**)
+  - Neutral landscape 
+  - Process-based simulation
+  - Digital twins
+- 6. Spatial planning (**Jung**)
+- 7. Landscape genetics (**De Flamingh?**)
+- 8. Software and programming language for landscape ecology
+  - Open-source, script-based, etc. (**Hesselbarth**)
   - Programming language
     - R (**Hesselbarth**, **Nowosad?**)
     - Python (**Bosch**, **Jung?**)
-    - Julia
-- Discussion
+    - Julia (**?**)
+- 9. Discussion
   - Future needs
-  
