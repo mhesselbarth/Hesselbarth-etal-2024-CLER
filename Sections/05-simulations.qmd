@@ -4,7 +4,7 @@ bibliography: CLER.bib
 
 <!-- Person responsible: Hesselbarth -->
 
-# Simulation models
+# Simulation models {#sec-simulation}
 
 Simulation models are a powerful tool to study complex adaptive ecological systems in controllable, reproducible, and replicable settings [@Pascual2005; @Petrovskii2012].
 Thus, they can be seen as experimental systems that allow, unlike to the natural world, all imaginable manipulations in order to advance theoretical developments or test hypotheses [@Peck2004].

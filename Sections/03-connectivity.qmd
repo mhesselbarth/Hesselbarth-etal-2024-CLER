@@ -4,7 +4,7 @@ bibliography: CLER.bib
 
 <!-- Person responsible: Hesselbarth, ??? -->
 
-# Connectivity 
+# Connectivity {#sec-connectivity}
 
 Connectivity describes how movement among resources patches is facilitated or hindered by landscape features such as types, amounts, and arrangement of LULC [@Taylor1993; @Taylor2006].
 While structural connectivity focuses on physical and spatial relationships among resource patches, functional connectivity also includes the movement or flow of individuals and populations through the landscape [@Taylor2006].

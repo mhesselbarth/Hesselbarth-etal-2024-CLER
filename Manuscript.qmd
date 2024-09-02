@@ -43,6 +43,7 @@ fontsize: 10pt
 geometry: margin=25mm
 indent: 2m
 linestretch: 1.5
+number-sections: true
 bibliography: CLER.bib
 csl: springer-basic-author-date.csl
 ---
@@ -53,6 +54,7 @@ csl: springer-basic-author-date.csl
 {{< include Sections/02-spatial-patterns.qmd >}}
 {{< include Sections/03-connectivity.qmd >}}
 {{< include Sections/05-simulations.qmd >}}
+{{< include Sections/07-spatial-planning.qmd >}}
 {{< include Sections/08-software.qmd >}}
 
 {{< pagebreak >}}

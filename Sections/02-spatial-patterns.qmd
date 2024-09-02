@@ -8,7 +8,7 @@ bibliography: CLER.bib
 <!-- MH: I think we decided to not reference software here but in a separate section -->
 <!-- MH: Alternatively, if we move the software section to the beginning, we could reference software here -->
 
-# Spatial patterns
+# Spatial patterns {#sec-spatialpattern}
 
 Spatial patterns can be defined as the scale-dependent predictability of the physical arrangement of observations [@Dale1999], or as clearly identifiable structures in nature itself or data extracted from nature [@Grimm1996].
 Importantly, patterns observed in nature contain information about the history of the system, such as demographic processes, dispersal characteristics, or climatic patterns [@Wiegand2003].

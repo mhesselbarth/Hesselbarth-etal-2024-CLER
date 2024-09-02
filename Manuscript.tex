@@ -33,30 +33,16 @@
 \usepackage{xcolor}
 \usepackage[margin=25mm]{geometry}
 \setlength{\emergencystretch}{3em} % prevent overfull lines
-\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\setcounter{secnumdepth}{5}
 % Make \paragraph and \subparagraph free-standing
-\makeatletter
 \ifx\paragraph\undefined\else
   \let\oldparagraph\paragraph
-  \renewcommand{\paragraph}{
-    \@ifstar
-      \xxxParagraphStar
-      \xxxParagraphNoStar
-  }
-  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
-  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
 \fi
 \ifx\subparagraph\undefined\else
   \let\oldsubparagraph\subparagraph
-  \renewcommand{\subparagraph}{
-    \@ifstar
-      \xxxSubParagraphStar
-      \xxxSubParagraphNoStar
-  }
-  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
-  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
-\makeatother
 
 
 \providecommand{\tightlist}{%
@@ -164,7 +150,6 @@
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
-
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
@@ -182,7 +167,6 @@
   citecolor={Blue},
   urlcolor={Blue},
   pdfcreator={LaTeX via pandoc}}
-
 
 \title{Computational methods in landscape ecology}
 
@@ -215,7 +199,6 @@
 \date{}
 \begin{document}
 \maketitle
-
 
 \setstretch{1.5}
 \section{Introduction}\label{introduction}
@@ -279,7 +262,7 @@ software , and specifically scripting languages, i.e., R, Python, and
 Julia. Last, we will discuss potential future needs developments of
 computational methods in landscape ecology.
 
-\section{Spatial patterns}\label{spatial-patterns}
+\section{Spatial patterns}\label{sec-spatialpattern}
 
 Spatial patterns can be defined as the scale-dependent predictability of
 the physical arrangement of observations (Dale 1999), or as clearly
@@ -570,7 +553,7 @@ problematic especially for data from different sources. Last, the
 pattern-process link is still less explored for vector-based metrics
 compared to raster-based metrics.
 
-\section{Connectivity}\label{connectivity}
+\section{Connectivity}\label{sec-connectivity}
 
 Connectivity describes how movement among resources patches is
 facilitated or hindered by landscape features such as types, amounts,
@@ -629,7 +612,7 @@ especially in a metapopulation context (Urban and Keitt 2001).
 
 \subsection{Other approaches}\label{other-approaches}
 
-\section{Simulation models}\label{simulation-models}
+\section{Simulation models}\label{sec-simulation}
 
 Simulation models are a powerful tool to study complex adaptive
 ecological systems in controllable, reproducible, and replicable
@@ -730,6 +713,91 @@ relationships of ecosystem trends and environmental conditions, impact
 assessments of interventions, or identify uncertainties and information
 gaps (De Koning et al. 2023).
 
+\section{Spatial conservation planning}\label{sec-spatialplanning}
+
+Spatial planning broadly considers the use of decision theory to
+identify and allocate areas to specific purposes, such as reserve
+selection through spatial conservation prioritization approaches
+(Margules and Pressey 2000; Kukkala and Moilanen 2013; Jung et al.
+2024). In the context of landscape-ecology it provides the critical link
+between the measuring of patterns and processes (see section
+Section~\ref{sec-spatialpattern}), and outcomes related to actual
+decision making by distinguishing between structure, function and scales
+(Hersperger et al. 2021). Although - as integrative approach - most
+spatial planning approaches can benefit from other computational
+advances in landscape ecology, such as for example through using
+simulation model outputs (see section Section~\ref{sec-simulation}) as
+input features to the planning (see also Daigle et al. (2020)), there
+have also been several recent frontiers in directly considering
+landscape patterns directly in spatial planning.
+
+Spatial patterns in terms of shape and patterns have always been of
+interest to spatial planning. Generally, such patterns influence
+planning outcomes because of their spatial \emph{compactness},
+\emph{contiguity} and \emph{connectedness}. Aggregation can be important
+because of ecological reasoning or practical feasibility, for example by
+ensuring that any selected areas satisfy certain minimum patch size
+constraints (Smith et al. 2010; Justeau-Allaire et al. 2021). Novel
+computational approaches make use of graph theory to identify those
+areas in a landscape more likely to be of values as compact core habitat
+and reducing boundary exposure (Weerasena et al. 2023). Similarly
+contiguity and connectivity are often seen as important to ensure that
+landscapes and patches of specific characteristics are connected, such
+as for example river networks (Beger et al. 2010). In particular the
+direct consideration of connectivity in spatial conservation planning
+has received much recent attention and computational methods are
+increasingly developed (Hanson et al. 2019a, 2022; Daigle et al. 2020;
+Beger et al. 2022).
+
+Particular noteworthy here are two advances in incorporating landscape
+indices in spatial planning. One is the use of graph theory in linear
+programming to guide conservation and restoration efforts
+(Justeau-Allaire et al. 2021; Hamonic et al. 2023). For example, in a
+New Caledonia case study Justeau-Allaire et al. (2021) showed how theory
+and indicators from landscape ecology to determine where restoration
+efforts would best be located to maximize broader landscape connectivity
+(Justeau-Allaire et al. 2021).
+
+A second main advance is the increasing use of deep reinforcement
+learning (RL), a machine learning approach based not on patterns but
+agents and pathway, in spatial planning. RL can be used to identify
+cost-efficient solutions to area-based conservation planning (Silvestro
+et al. 2022) or typical connectivity problems (Equihua et al. 2024),
+where the objective is to identify best possible improvements to
+landscape connectivity indices such as the Integral Index of
+Connectivity. Advantages of RL are that they are able to easier
+incorporate linear and non-linear functions and spatial-temporal
+processes in the planning and are generally more readibly scalable to
+larger spatial extent (Equihua et al. 2024), which however comes with
+the downside of decreasing interpretability.
+
+\subsection{Open-source software in spatial conservation
+planning}\label{sec-spatialplanning-software}
+
+Multiple open-source software solutions have been developed to support
+further integration of landscape ecology theory and indicators into
+spatial planning. Most of these software are based on linear or
+constrained programming approaches, which however require a solver to
+create any outputs. Unfortunately there is still a gap between
+state-of-the art open-source and proprietary solvers in terms of
+computational efficiency (Hanson et al. 2019b). Noteworthy software is
+the \emph{prioritizr} R-package (Hanson et al. 2024) which supports a
+range of compactness and contiguity constraints and penalties, and
+generally allows for the flexibly creation of planning problems in
+multiple configurations. Similarly, the \emph{coco} package makes use of
+connectivity constraints to identify potential outcomes that minimize
+further fragmentation of landscapes (Mantgem et al. 2023). The new
+\emph{restoptr} R-package makes use of constrained programming for those
+areas to be restored in a region that would most effectively contribute
+to greater landscape connectivity (Justeau-Allaire et al. 2023).
+Innovatively, it uses landscape ecology indices not as constraints, but
+as specific targets (e.g.~where one could best maximize the effective
+mesh size in a region). The CAPTAIN software suite enables the
+application of reinforcement learning for area-based conservation
+efforts (Silvestro et al. 2022). Overall, most of these software however
+still require substantial prior knowledge on (spatial) optimization and
+statistics, which can be an entry barrier to more widespread uptake.
+
 \section{Software and programming
 languages}\label{software-and-programming-languages}
 
@@ -811,6 +879,16 @@ classification schemes for characterising perceptual shape complexity of
 building footprints in GIS. International Journal of Geographical
 Information Science 31:1952--1977.
 \url{https://doi.org/10.1080/13658816.2017.1346257}
+
+\bibitem[\citeproctext]{ref-beger2010incorporating}
+Beger M, Linke S, Watts M, et al (2010) Incorporating asymmetric
+connectivity into spatial decision making for conservation. Conservation
+Letters 3:359--368
+
+\bibitem[\citeproctext]{ref-beger2022demystifying}
+Beger M, Metaxas A, Balbar AC, et al (2022) Demystifying ecological
+connectivity for actionable spatial conservation planning. Trends in
+ecology \& evolution 37:1079--1091
 
 \bibitem[\citeproctext]{ref-Berger2024}
 Berger U, Bell A, Barton CM, et al (2024) Towards reusable building
@@ -919,6 +997,11 @@ Cushman SA, McGarigal K, Neel MC (2008) Parsimony in landscape metrics:
 Strength, universality, and consistency. Ecological indicators
 8:691--703
 
+\bibitem[\citeproctext]{ref-daigle2020operationalizing}
+Daigle RM, Metaxas A, Balbar AC, et al (2020) Operationalizing
+ecological connectivity in spatial conservation planning with marxan
+connect. Methods in Ecology and Evolution 11:570--579
+
 \bibitem[\citeproctext]{ref-Dale1999}
 Dale MRT (1999) \href{https://doi.org/10.1017/CBO9780511612589}{Spatial
 pattern analysis in plant ecology}, 1st edn. Cambridge University Press
@@ -966,6 +1049,11 @@ Dutta T, Sharma S, Meyer NFV, et al (2022) An overview of computational
 tools for preparing, constructing and using resistance surfaces in
 connectivity research. Landscape Ecology 37:2195--2224.
 \url{https://doi.org/10.1007/s10980-022-01469-x}
+
+\bibitem[\citeproctext]{ref-equihua2024connectivity}
+Equihua J, Beckmann M, Seppelt R (2024) Connectivity conservation
+planning through deep reinforcement learning. Methods in Ecology and
+Evolution 15:779--790
 
 \bibitem[\citeproctext]{ref-Etherington2016}
 Etherington TR (2016) Least-cost modelling and landscape ecology:
@@ -1063,10 +1151,40 @@ population ecology. The Science of the Total Environment 183:151--166.
 Gustafson EJ (1998) Quantifying landscape spatial pattern: What is the
 state of the art? Ecosystems 1:143--156
 
+\bibitem[\citeproctext]{ref-hamonic2023cumulative}
+Hamonic F, Couëtoux B, Vaxès Y, Albert CH (2023) Cumulative effects on
+habitat networks: How greedy should we be? Biological Conservation
+282:110066
+
 \bibitem[\citeproctext]{ref-Hampton2015}
 Hampton SE, Anderson SS, Bagby SC, et al (2015) The tao of open science
 for ecology. Ecosphere 6:1--13.
 \url{https://doi.org/10.1890/ES14-00402.1}
+
+\bibitem[\citeproctext]{ref-hanson2019conventional}
+Hanson JO, Fuller RA, Rhodes JR (2019a) Conventional methods for
+enhancing connectivity in conservation planning do not always maintain
+gene flow. Journal of Applied Ecology 56:913--922
+
+\bibitem[\citeproctext]{ref-hanson2024prioritizr}
+Hanson JO, Schuster R, Morrell N, et al (2024)
+\href{https://CRAN.R-project.org/package=prioritizr}{Prioritizr:
+Systematic conservation prioritization in r}
+
+\bibitem[\citeproctext]{ref-hanson2019optimality}
+Hanson JO, Schuster R, Strimas-Mackey M, Bennett JR (2019b) Optimality
+in prioritizing conservation projects. Methods in Ecology and Evolution
+10:1655--1663
+
+\bibitem[\citeproctext]{ref-hanson2022comparison}
+Hanson JO, Vincent J, Schuster R, et al (2022) A comparison of
+approaches for including connectivity in systematic conservation
+planning. Journal of Applied Ecology 59:2507--2519
+
+\bibitem[\citeproctext]{ref-hersperger2021landscape}
+Hersperger AM, Grădinaru SR, Pierri Daunt AB, et al (2021) Landscape
+ecological concepts in planning: Review of recent developments.
+Landscape ecology 1--17
 
 \bibitem[\citeproctext]{ref-Hess2020}
 Hess B, Dreber N, Liu Y, et al (2020) PioLaG: A piosphere landscape
@@ -1133,11 +1251,27 @@ twin: A systematic literature review. CIRP Journal of Manufacturing
 Science and Technology 29:36--52.
 \url{https://doi.org/10.1016/j.cirpj.2020.02.002}
 
+\bibitem[\citeproctext]{ref-jung2024assessment}
+Jung M, Alagador D, Chapman M, et al (2024) An assessment of the state
+of conservation planning in europe. Philosophical Transactions of the
+Royal Society B 379:20230015
+
 \bibitem[\citeproctext]{ref-Justeau-Allaire2022}
 Justeau-Allaire D, Blanchard G, Ibanez T, et al (2022) Fragmented
 landscape generator (flsgen): A neutral landscape generator with control
 of landscape structure and fragmentation indices. Methods in Ecology and
 Evolution 13:1412--1420. \url{https://doi.org/10.1111/2041-210X.13859}
+
+\bibitem[\citeproctext]{ref-justeau2023restoptr}
+Justeau-Allaire D, Hanson JO, Lannuzel G, et al (2023) Restoptr: An r
+package for ecological restoration planning. Restoration Ecology
+31:e13910
+
+\bibitem[\citeproctext]{ref-justeau2021constrained}
+Justeau-Allaire D, Vieilledent G, Rinck N, et al (2021) Constrained
+optimization of landscape indices in conservation planning to support
+ecological restoration in new caledonia. Journal of Applied Ecology
+58:744--754
 
 \bibitem[\citeproctext]{ref-Kamimura2019}
 Kamimura K, Gardiner B, Dupont S, Finnigan J (2019) Agent-based
@@ -1155,6 +1289,10 @@ ecoregions and scales. Landscape Ecology 33:1489--1504.
 Keeley ATH, Beier P, Jenness JS (2021) Connectivity metrics for
 conservation planning and monitoring. Biological Conservation
 255:109008. \url{https://doi.org/10.1016/j.biocon.2021.109008}
+
+\bibitem[\citeproctext]{ref-kukkala2013core}
+Kukkala AS, Moilanen A (2013) Core concepts of spatial prioritisation in
+systematic conservation planning. Biological Reviews 88:443--464
 
 \bibitem[\citeproctext]{ref-Kupfer2012}
 Kupfer JA (2012) Landscape ecology and biogeography: Rethinking
@@ -1215,6 +1353,15 @@ Chapman \& Hall/CRC, Boca Raton, USA
 Maceachren AM (1985) Compactness of geographic shape: Comparison and
 evaluation of measures. Geografiska Annaler: Series B, Human Geography
 67:53--67. \url{https://doi.org/10.1080/04353684.1985.11879515}
+
+\bibitem[\citeproctext]{ref-van2023coco}
+Mantgem ES van, Hillebrand J, Rose L, Klau GW (2023) Coco: Conservation
+design for optimal ecological connectivity. Frontiers in Ecology and
+Evolution 11:1149571
+
+\bibitem[\citeproctext]{ref-margules2000systematic}
+Margules CR, Pressey RL (2000) Systematic conservation planning. Nature
+405:243--253
 
 \bibitem[\citeproctext]{ref-Matuszek2024}
 Matuszek T, Nowosad J, Sciaini M, et al (2024) Vectormetrics: Landscape
@@ -1476,6 +1623,11 @@ Shannon CE (1948) A mathematical theory of communication. Bell System
 Technical Journal 27:379--423.
 \url{https://doi.org/10.1002/j.1538-7305.1948.tb01338.x}
 
+\bibitem[\citeproctext]{ref-silvestro2022improving}
+Silvestro D, Goria S, Sterner T, Antonelli A (2022) Improving
+biodiversity protection through artificial intelligence. Nature
+sustainability 5:415--424
+
 \bibitem[\citeproctext]{ref-Simpkins2018}
 Simpkins CE, Dennis TE, Etherington TR, Perry GLW (2018) Assessing the
 performance of common landscape connectivity metrics using a virtual
@@ -1494,6 +1646,11 @@ Ecology and Evolution 12:2094--2100.
 
 \bibitem[\citeproctext]{ref-Smith2016}
 Smith D (2016) Over 16 years of r project history
+
+\bibitem[\citeproctext]{ref-smith2010approach}
+Smith RJ, Di Minin E, Linke S, et al (2010) An approach for ensuring
+minimum protected area size in systematic conservation planning.
+Biological Conservation 143:2525--2531
 
 \bibitem[\citeproctext]{ref-Soares-Filho2002}
 Soares-Filho BS, Coutinho Cerqueira G, Lopes Pennachin C (2002)
@@ -1616,6 +1773,11 @@ landscape ecology. Geography Compass 2:319--339.
 Wang X, Cumming SG (2011) Measuring landscape configuration with
 normalized metrics. Landscape Ecology 26:723--736
 
+\bibitem[\citeproctext]{ref-weerasena2023sequential}
+Weerasena L, Shier D, Tonkyn D, et al (2023) A sequential approach to
+reserve design with compactness and contiguity considerations.
+Ecological Modelling 478:110281
+
 \bibitem[\citeproctext]{ref-Wickham2016}
 Wickham H (2016) ggplot2: Elegant graphics for data analysis. Springer
 New York, New York, USA
@@ -1712,7 +1874,6 @@ landscape mosaic based on the wasserstein metric. Landscape Ecology
 \end{CSLReferences}
 
 \endgroup
-
 
 
 
