@@ -4,6 +4,6 @@ bibliography: CLER.bib
 
 <!-- Person responsible: Bosch -->
 
-# Sampling in landscape ecology
+# Sampling in landscape ecology {#sec-sampling}
 
 <!-- https://doi.org/10.1007/s40823-020-00059-4 -->

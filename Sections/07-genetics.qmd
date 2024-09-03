@@ -4,4 +4,4 @@ bibliography: CLER.bib
 
 <!-- Person responsible: De Flamingh -->
 
-# Landscape genetics 
+# Landscape genetics {#sec-genetics}

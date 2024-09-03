@@ -42,6 +42,7 @@ format:
       text: | 
         \usepackage{lineno}\linenumbers
         \usepackage[noblocks]{authblk}
+        \usepackage{setspace}
         \renewcommand*{\Authsep}{, }
         \renewcommand*{\Authand}{, }
         \renewcommand*{\Authands}{, }
@@ -67,15 +68,13 @@ csl: springer-basic-author-date.csl
 {{< include Sections/05-simulations.qmd >}}
 {{< include Sections/06-spatial-planning.qmd >}}
 {{< include Sections/07-genetics.qmd >}}
-{{< include Sections/08-software.qmd >}}
-{{< include Sections/09-discussion.qmd >}}
+{{< include Sections/08-discussion.qmd >}}
 
 {{< pagebreak >}}
 
 ### References {.unnumbered}
 
-\begingroup
-\raggedright
+\footnotesize
+\setstretch{1.0}
 ::: {#refs}
 :::
-\endgroup

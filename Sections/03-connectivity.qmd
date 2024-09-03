@@ -2,7 +2,7 @@
 bibliography: CLER.bib
 ---
 
-<!-- Person responsible: Hesselbarth, ??? -->
+<!-- Person responsible: Hesselbarth, Gerber?, Simpkins? -->
 
 # Connectivity {#sec-connectivity}
 
@@ -31,6 +31,7 @@ The latest developments of resistance surfaces have recently been reviewed [@Dut
 The resistance surface can be used to model movement based on different approaches such as leas-cost paths [@Adriaensen2003ApplicationLeastcost; @Etherington2016LeastcostModelling] or circuit theory [@McRae2008UsingCircuit].
 However, resistance surfaces are not free of critique including missing spatial-temporal variability or context dependency [@UnnithanKumar2022ConnectivityModelling; @UnnithanKumar2022MovingLandscape].
 Thus, recent developments include the combination with more processes-based modelling approaches [@Schumaker2018HexSimModeling; @Bocedi2021RangeShifterExtended; @UnnithanKumar2022PathwalkerNew], modelling of dynamic landscape connectivity [@Zeller2020UnderstandingImportance], inclusion of stochasticity and spatial context [@Ribeiro2017LandScapeCorridors], using genetic optimization algorithms [@Peterman2018ResistanceGAPackage], or computational improvements [@Leonard2017GlowSoftware].
+Software to model connectivity based on resistance surfaces include *ConScape.jl* [@VanMoorter2023AcceleratingAdvances], *Omniscape.jl* [@Landau2021OmniscapeJl], *lconnect* [@Mestre2023LconnectPackage], *grainscape* [@Chubaty2020ToolboxGrainscape], or *Circuitscape* [@Anantharaman2019CircuitscapeJulia].
 
 <!-- What about multi-species approaches? -->
 

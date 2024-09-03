@@ -27,7 +27,7 @@ Additionally, it can be applied to identify best possible solutions to improve l
 Advantages of reinforcement learning include the ease of incorporating both linear and non-linear functions, as well as the scalability of spatial-temporal processes to larger spatial extents [@Equihua2024ConnectivityConservation].
 However, this comes with the drawback of reduced interpretability.
 
-## Open-source software in spatial conservation planning {#sec-spatialplanning-software}
+<!-- ## Open-source software in spatial conservation planning -->
 
 Multiple open-source software solutions have been developed to support integration of landscape ecology theory and indicators into spatial planning.
 Most software are based on linear or constrained programming approaches requiring a solver to create any outputs.
