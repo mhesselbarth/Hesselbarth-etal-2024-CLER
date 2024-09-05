@@ -10,11 +10,11 @@ The repository contains the following files (besides others):
 
 **/R-Scripts**: All `R` scripts used to prepare manuscript (if needed).
 
-**/Sections**: Folder storing all `quarto` files for sections.
+**/Sections**: Folder storing all `quarto` files for individual sections.
 
 **`Manuscript.qmd`**: `quarto` file to render final manuscript.
 
-**`CLER.bib`**: Bibliography file with all references in alphabetical order.
+**`CLER.bib`**: Bibliography file with all references in alphabetical order. (MH will try to keep this as tidy as possible)
 
 **`Outline.md`**: Outline of manuscript including assignments to sections.
 
