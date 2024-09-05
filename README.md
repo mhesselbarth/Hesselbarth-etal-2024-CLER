@@ -14,7 +14,7 @@ The repository contains the following files (besides others):
 
 **`Manuscript.qmd`**: `quarto` file to render final manuscript.
 
-**`CLER.bib`**: Bibliography file with all references in alphabetical order. (MH will try to keep this as tidy as possible)
+**`CLER.bib`**: Bibliography file with all references (MH will try to keep this as tidy as possible).
 
 **`Outline.md`**: Outline of manuscript including assignments to sections.
 
