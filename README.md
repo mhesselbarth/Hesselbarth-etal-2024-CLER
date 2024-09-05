@@ -23,7 +23,7 @@ The repository contains the following files (besides others):
 <br/>
 <br/>
 
+If you have any questions or remarks please open an issue at any time or contact MH directly via email.
+
 Correspondence:
 mhk.hesselbarth@gmail.com
-
-
