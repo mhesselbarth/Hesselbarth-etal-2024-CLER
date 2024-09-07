@@ -34,6 +34,6 @@
   - Process-based simulation
   - Digital twins
 - 6. Spatial planning (**Jung**)
-- 7. Landscape genetics (**De Flamingh?**)
+- 7. Landscape genetics (**de Flamingh**)
 - 9. Discussion
   - Future needs

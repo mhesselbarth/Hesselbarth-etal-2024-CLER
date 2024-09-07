@@ -22,7 +22,7 @@ The earliest neutral models are based on percolation theory and assign LULC type
 Landscapes characterized by continuous values can be simulated by fractal models, such as Brownian motion [@Palmer1992CoexistenceSpecies].
 Borrowing from computer graphics, more recent neutral landscape models make use of spectral synthesis [e.g., Perlin noise\; @Etherington2022PerlinNoise] or binary space partitioning [@Etherington2022BinarySpace].
 Neutral landscape models are also able to simulate landscapes dominated by anthropogenic activities using based on least-cost networks [@Etherington2024LeastcostNetwork].
-In order to ensure realistic neutral landscapes several approaches exist that use comparisons with real landscapes [@Inkoom2017DesigningNeutral] or are based on target values optimization [@VanStrien2016ImprovedNeutral; @Justeau-Allaire2022FragmentedLandscape].
+In order to ensure realistic neutral landscapes several approaches exist that use comparisons with real landscapes [@Inkoom2017DesigningNeutral] or are based on target values optimization [@vanStrien2016ImprovedNeutral; @Justeau-Allaire2022FragmentedLandscape].
 In order to make multiple neutral landscape model algorithms accessible, several software libraries are available in prominent programming languages including Python [NLMpy\; @Etherington2015NLMpyPython], R [NLMR; @Sciaini2018NLMRLandscapetools], Julia [NeutralLandscapes.jl; @Poisot2023NeutralLandscapesJulia], or stand-alone software [GradientLand; @Cambui2015GradientLandSoftware]
 
 Contrastingly, processes-based approaches explicitly include abiotic or biotic pattern-forming processes [i.e., landscape generators\; @Langhammer2019AgriculturalLandscape; @Salecker2019EFForTSLGrafLandscape].
@@ -38,9 +38,9 @@ Furthermore, hybrid approaches that couple or even integrated different model ty
 
 ## Digital twins
 
-Digital Twins include three connected elements, namely a physical object or system, its digital representation, and a data exchange between the former two [@Jones2020CharacterisingDigital; @DeKoning2023DigitalTwins] and there is an increasing interest and use of them in both the industry and academia [@Jones2020CharacterisingDigital].
-The need for timely and evidence-based decision making in combination with increasing data availability makes them a powerful tool for ecology [@DeKoning2023DigitalTwins].
+Digital Twins include three connected elements, namely a physical object or system, its digital representation, and a data exchange between the former two [@Jones2020CharacterisingDigital; @deKoning2023DigitalTwins] and there is an increasing interest and use of them in both the industry and academia [@Jones2020CharacterisingDigital].
+The need for timely and evidence-based decision making in combination with increasing data availability makes them a powerful tool for ecology [@deKoning2023DigitalTwins].
 Digital twins are increasingly applied in agricultural landscapes research, including topics such as crop and land cultivation, livestock farming, controlled environment farming, or fertilization management [@Cesco2023SmartAgriculture; @Purcell2023DigitalTwins].
 Further applications include planning of rural ecological landscapes [@Tan2024DigitalTwin], or exploration of relationships between urban expansion and vegetation coverage [@Zhao2022ApplyingDigital].
 The use of general data processing, statistical and mechanistic models, or artificial intelligence allows them to constantly update the digital representation and analyze, visualize, or predict the physical counterpart.
-Thus, Digital Twins can provide real-time state of nature measurements, early detection of conservation trends, relationships of ecosystem trends and environmental conditions, impact assessments of interventions, or identify uncertainties and information gaps [@DeKoning2023DigitalTwins].
+Thus, Digital Twins can provide real-time state of nature measurements, early detection of conservation trends, relationships of ecosystem trends and environmental conditions, impact assessments of interventions, or identify uncertainties and information gaps [@deKoning2023DigitalTwins].
