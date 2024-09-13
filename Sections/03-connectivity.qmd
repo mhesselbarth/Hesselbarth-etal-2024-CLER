@@ -9,28 +9,32 @@ bibliography: CLER.bib
 Connectivity describes how movement among resources patches is facilitated or hindered by landscape features such as types, amounts, and arrangement of LULC [@Taylor1993ConnectivityVital; @Taylor2006LandscapeConnectivity].
 While structural connectivity focuses on physical and spatial relationships among resource patches, functional connectivity also includes the movement or flow of individuals and populations through the landscape [@Taylor2006LandscapeConnectivity].
 Connectivity underpins ecosystem functionality and maintains biodiversity and populations, and plays a large role in many conservation actions [@CorreaAyram2016HabitatConnectivity; @Hilty2020GuidelinesConserving].
-Thus, in the past multiple approaches how to measure connectivity were developed [@Simpkins2018AssessingPerformance; @Keeley2021ConnectivityMetrics].
+Thus, in the past multiple approaches how to computationally measure connectivity were developed [@Simpkins2018AssessingPerformance; @Keeley2021ConnectivityMetrics].
 
 <!-- 
 Connectivity modelling in conservation science https://doi.org/10.1038/s41598-022-20370-w
 -->
 
-## Landscape metrics
+## Landscape metrics related to connectivity
 
 There are several landscape metrics that are traditionally used to measure landscape connectivity.
 For example, the habitat amount within a buffer zone of focal patches, the nearest-neighbor distance, or the connectance index [@Moilanen2002SimpleConnectivity; @Prugh2009EvaluationPatch; @Spanowicz2019MeasuringLandscape].
 However, these metrics are frequently criticized for being to simple and especially the link to functional connectivity is often ambiguous. 
 Thus, more functionality needs to be included using additional ecological meaningful metrics, such as the core area [e.g., @Kupfer2012LandscapeEcology].
 More recently there is also an increasing focus in within-patch connectivity using metrics such as the effective mesh size in addition to the usual measure between-patch connectivity [@Spanowicz2019MeasuringLandscape].
+<!--JN: software??-->
 
 ## Resistance surfaces
 
 Resistance surfaces are one of the most popular approaches to model connectivity and developed from simple isolation-by-distance approaches. 
-The approach uses environmental layers and biodiversity data or expert opinions to estimate the cost and of movement through landscapes [@Zeller2012EstimatingLandscape].
-The latest developments of resistance surfaces have recently been reviewed [@Dutta2022OverviewComputational].
+This concept uses environmental layers and biodiversity data or expert opinions to estimate the cost and of movement through landscapes [@Zeller2012EstimatingLandscape].
+The latest developments of resistance surfaces have recently been reviewed by @Dutta2022OverviewComputational.
+
 The resistance surface can be used to model movement based on different approaches such as leas-cost paths [@Adriaensen2003ApplicationLeastcost; @Etherington2016LeastcostModelling] or circuit theory [@McRae2008UsingCircuit].
 However, resistance surfaces are not free of critique including missing spatial-temporal variability or context dependency [@UnnithanKumar2022ConnectivityModelling; @UnnithanKumar2022MovingLandscape].
 Thus, recent developments include the combination with more processes-based modelling approaches [@Schumaker2018HexSimModeling; @Bocedi2021RangeShifterExtended; @UnnithanKumar2022PathwalkerNew], modelling of dynamic landscape connectivity [@Zeller2020UnderstandingImportance], inclusion of stochasticity and spatial context [@Ribeiro2017LandScapeCorridors], using genetic optimization algorithms [@Peterman2018ResistanceGAPackage], or computational improvements [@Leonard2017GlowSoftware].
+
+<!--maybe add "Julia's", "R's", "Python's" before the software names?-->
 Software to model connectivity based on resistance surfaces include *ConScape.jl* [@vanMoorter2023AcceleratingAdvances], *Omniscape.jl* [@Landau2021OmniscapeJl], *lconnect* [@Mestre2023LconnectPackage], *grainscape* [@Chubaty2020ToolboxGrainscape], or *Circuitscape* [@Anantharaman2019CircuitscapeJulia].
 
 <!-- What about multi-species approaches? -->

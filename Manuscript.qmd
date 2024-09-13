@@ -55,7 +55,7 @@ format:
         \renewcommand\Affilfont{\small}
 
 papersize: a4paper
-fontsize: 10pt
+fontsize: 12pt
 geometry: margin=25mm
 indent: 2m
 linestretch: 1.5
@@ -72,6 +72,7 @@ csl: springer-basic-author-date.csl
 {{< include Sections/03-connectivity.qmd >}}
 {{< include Sections/04-sampling.qmd >}}
 {{< include Sections/05-simulations.qmd >}}
+<!-- JN: I would suggest switching the order of spatial planning and genetics -->
 {{< include Sections/06-spatial-planning.qmd >}}
 {{< include Sections/07-genetics.qmd >}}
 {{< include Sections/08-discussion.qmd >}}
