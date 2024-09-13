@@ -21,9 +21,9 @@ Thus, untangling the history of a landscape and linking its spatial patterns to 
 Traditionally and still the most prominent approaches to quantify spatial patterns revolve around raster data using categorical categories based on the patch mosaic model [@Frazier2017LandscapeMetrics; @Costanza2019DescribingAnalyzing].
 The strength of landscape metrics is that they are comparable easy to apply and communicate [@Lausch2015UnderstandingQuantifying], however, they are also critiqued for not being able to realistically represent continuous features of the natural world [@Frazier2017LandscapeMetrics].
 
-Metrics can be calculated on patch-level (describing each patch), class-level (describing all patches of the same class), or landscape level (describing the entire landscape) and are able to quantify characteristics related to e.g., patch areas and edge lengths, patch shapes, or class aggregation and diversity [@Hesselbarth2019LandscapemetricsOpen].
+Metrics can be calculated on patch-level (describing each patch), class-level (describing all patches of the same class), or landscape level (describing the entire landscape) and are able to quantify characteristics related to e.g., patch areas and edge lengths, patch shapes, or class aggregation and diversity [@Hesselbarth2019LandscapemetricsOpensource].
 
-Software to calculate landscape metrics include the *landscapemetrics* R package [@Hesselbarth2019LandscapemetricsOpen], the *PyLandStats* Python library [@Bosch2019PyLandStatsOpensource], or the stand-alone software *FRAGSTATS* [@McGarigal2023FRAGSTATSV4].
+Software to calculate landscape metrics include the *landscapemetrics* R package [@Hesselbarth2019LandscapemetricsOpensource], the *PyLandStats* Python library [@Bosch2019PyLandStatsOpensource], or the stand-alone software *FRAGSTATS* [@McGarigal2023FRAGSTATSV4].
 
 ## Entropy
 <!-- Nowosad, Bosch -->
@@ -51,13 +51,13 @@ Recently, @Zhang2020CalculatingWasserstein extended the original definition of B
 
 <!--JN: I would suggest to include the following paragraph, which I think is important to show the current state of the affairs.-->
 The relations between the Shannon entropy and the Boltzmann entropy and their interpretations in landscape ecology are the subject of ongoing discussion.
-@Stepinski2022 and @Huckeba2023 showed that the Shannon entropy is a general form of entropy, and other entropies, including the Boltzmann entropy, could be derived as specific applications of the Shannon entropy.
+@Stepinski2022CurbYour and @Huckeba2023MultiscaleSpatial showed that the Shannon entropy is a general form of entropy, and other entropies, including the Boltzmann entropy, could be derived as specific applications of the Shannon entropy.
 They argue that the newly proposed entropy measures inspired by the Boltzmann equation have no connotation to statistical mechanics and thermodynamics.
 Thus, more research is needed to understand the relations between the entropy measures and how they relate to the environmental processes.
 
 Moreover, many other entropy-based metrics have been proposed for use in landscape ecology.
 The Renyi [@Renyi1961MeasuresEntropy] and Gibbs entropies<!--[REF]-->, which are both generalizations of the Shannon entropy, are applied to quantify the complexity of the landscape.
-The Rao quadratic entropy [@Rao1982DiversityDissimilarity] has also been applied recently [@Rocchini2017MeasuringRao], as it measures not only the relative abundances of elements, but also the pairwise dissimilarities or distances between them.
+The Rao quadratic entropy [@Rao1982DiversityDissimilarity] has also been applied recently [@Rocchini2017MeasuringRaos], as it measures not only the relative abundances of elements, but also the pairwise dissimilarities or distances between them.
 Thus, it can be useful in cases, when the dissimilarities between LULC types, and not only their categories, are relevant.
 Another recent development is the use of Kullback-Leibler divergence (also known as relative entropy), which is a measure of differences between two probability distributions to describe patterns across scales [@Huckeba2023MultiscaleSpatial].
 
@@ -79,7 +79,7 @@ Finally, the grouping of spatial patterns is a many-to-many operation in which s
 
 R packages for such operations include *sf* [@Pebesma2018SimpleFeatures], *terra* [@Hijmans2024TerraSpatial], or *motif* [@Nowosad2021MotifOpensource].
 Popular Python libraries for spatial operations include *Geopandas* [@Jordahl2020GeopandasPython], *Shapely*[@Gillies2024ShapelyPython], or *PySal*[@Rey2010PySALPython].
-The *GeoStats.jl* [@Hoffimann2018GeoStatsJl] and *GeoInterface.jl* [@JuliaGeoandcontributors2024GeoInterfaceJulia] software provide general spatial data operations in the Julia programming language.
+The *GeoStats.jl* [@Hoffimann2018GeoStatsjlHighperformance] and *GeoInterface.jl* [@JuliaGeoandcontributors2024GeoInterfaceJulia] software provide general spatial data operations in the Julia programming language.
 
 <!--JN: I would restructure the above paragraph to highlight what can and cannot be done with the current software. You may decided to replace the above paragraph with the following one:-->
 <!--

@@ -2,4 +2,22 @@
 bibliography: CLER.bib
 ---
 
-<!-- Person responsible: tbd -->
+<!-- Person responsible: Hesselbarth -->
+
+# Discussion {#sec-disc}
+
+Since it emerged in the 1980s [@Turner2005LandscapeEcology], the field of landscape ecology has constantly evolved [@Costanza2019DescribingAnalyzing; @Gustafson2019HowHas] and is now highly depending on computational methods.
+Thus, future progress within the research field will largely depend on available software and analysis tools [@Costanza2019DescribingAnalyzing].
+To maximize the benefits of "Open science", such as shareability, reproducibility, and transparency, the research community will gain the most if both existing and new software are made available under open-source licenses and support script-based workflows [@Powers2019OpenScience; @Vogt2019PatternsSoftware].
+
+Furthermore, landscape ecology will benefit and adapt solutions from technological advancements in other fields.
+This includes advancements in remote sensing technology, with increased data availability and diversity from a range of sources, including large satellites, unmanned aerial vehicles, and ground-based sensor systems. 
+These systems provide both passive sensors such as multispectral, hyperspectral, and thermal sensors, and active optical sensors such as LiDAR [@Crowley2020RemoteSensings].
+In combination with other increasingly available data sources, e.g, citizen science data, ecology enters the era of big data requiring methods that can handle heterogeneous data or high-throughput computing resources [@Farley2018SituatingEcology].
+Due to its high flexibility and performance artificial intelligence has become popular and deep learning and machine learning algorithms can be used for e.g., mapping, classification and feature extraction, modeling, or prediction and simulations [@Christin2019ApplicationsDeep; @Stupariu2022MachineLearning; @Pichler2023MachineLearning].
+Quantum computing offers a potential pathway to surpass the limits of current computational technologies [@Woolnough2023QuantumComputing].
+
+<!-- MH: This is missing final conclusion paragraph -->
+<!-- Increasing complexity of pressing issues on different scales, eg. climate change, biodiversity loss etc. -->
+<!-- LE can contribute to solutions by connection several fields and scales multi-disciplicanry -->
+<!-- Thats cool -->
