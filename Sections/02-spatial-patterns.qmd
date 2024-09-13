@@ -19,50 +19,49 @@ Thus, untangling the history of a landscape and linking its spatial patterns to 
 <!-- Hesselbarth -->
 
 Traditionally and still the most prominent approaches to quantify spatial patterns revolve around raster data using categorical categories based on the patch mosaic model [@Frazier2017LandscapeMetrics; @Costanza2019DescribingAnalyzing].
-The strength of landscape metrics is that they are comparable easy to apply and communicate [@Lausch2015UnderstandingQuantifying], however, they are also critiqued for not being able to realistically represent continuous features of the natural word [@Frazier2017LandscapeMetrics].
+The strength of landscape metrics is that they are comparable easy to apply and communicate [@Lausch2015UnderstandingQuantifying], however, they are also critiqued for not being able to realistically represent continuous features of the natural world [@Frazier2017LandscapeMetrics].
+
 Metrics can be calculated on patch-level (describing each patch), class-level (describing all patches of the same class), or landscape level (describing the entire landscape) and are able to quantify characteristics related to e.g., patch areas and edge lengths, patch shapes, or class aggregation and diversity [@Hesselbarth2019LandscapemetricsOpen].
-Software to calculate landscape metrics include the *landscapemetrics* R package [@Hesselbarth2019LandscapemetricsOpen], the *PyLandStats* python library [@Bosch2019PyLandStatsOpensource], or the stand-alone software *FRAGSTATS* [@McGarigal2023FRAGSTATSV4].
+
+Software to calculate landscape metrics include the *landscapemetrics* R package [@Hesselbarth2019LandscapemetricsOpen], the *PyLandStats* Python library [@Bosch2019PyLandStatsOpensource], or the stand-alone software *FRAGSTATS* [@McGarigal2023FRAGSTATSV4].
 
 ## Entropy
 <!-- Nowosad, Bosch -->
 
-<!-- JN: should we use equations here? -->
-<!-- MH: Personally, I think if possible not -->
 <!-- JN: ask T. Stepinski for review of this section later -->
 
-Entropy measures are mainly derived from information theory and thermodynamics, such as Shannon entropy (and its analogous forms), Boltzmann entropy, or Renyi entropy.
-Entropy in landscape ecology is mainly used to quantify the complexity of the landscape (spatial heterogeneity), and less often unpredictability (temporal heterogeneity) and scale dependence [spatio-temporal heterogeneity\; @Vranken2015ReviewUse].
-However, studies show that insights do not only depend on the formulation of the used entropy, but also on the underlining data model, for example the composition of categories or the co-occurrence matrix [@Zhao2019CalculatingSpatial].
+Entropy measures in landscape ecology are mainly derived from information theory and thermodynamics, such as Shannon entropy (and its analogous forms), Boltzmann entropy, or Renyi entropy.
+Entropy here is mainly used to quantify the complexity of the landscape (spatial heterogeneity), and less often unpredictability (temporal heterogeneity) and scale dependence [spatio-temporal heterogeneity\; @Vranken2015ReviewUse].
+However, studies show that insights do not only depend on the formulation of the selected entropy, but also on the underlining data model, for example the composition of categories or the co-occurrence matrix representation [@Zhao2019CalculatingSpatial].
 
 The Shannon diversity index [@Shannon1948MathematicalTheory] quantifies the richness and evenness of categories in the landscape omitting spatial configuration.
 The index is based on information theory and is an adaptation of the Shannon entropy which measures uncertainty of a random variable.
 Shannon's entropy formula can also be modified to include the landscape's spatial configuration, e.g., by weights calculated from intra- and inter-class distances [@Claramunt2012SpatiotemporalForm].
-However, to quantify the spatial configuration and the total complexity of the landscape, other measures from information theory can be adapted.
+However, to quantify the spatial configuration and the total complexity of the landscape, other measures from information theory must be adapted.
 @Nowosad2019InformationTheory proposed to treat categorical raster as a bivariate random variable $(x,y)$ where $x$ is the category of the focal cell and $y$ is the category of the neighboring cell.
 This approach allows us to compress information about the landscape's composition and configuration into a co-occurrence matrix, which could be used to calculate various entropy measures.
-This includes conditional entropy (representing configurational complexity), joint entropy (representing overall spatial-thematic complexity), mutual information, and relative mutual information (representing the degree of spatial autocorrelation).
+This includes conditional entropy (representing configurational complexity), joint entropy (representing overall spatial-thematic complexity), mutual information, and relative mutual information (both representing the degree of spatial autocorrelation).
 
-Based on notions from thermodynamics initiated by the work of @Cushman2015ThermodynamicsLandscape or @Vranken2015ReviewUse, there was a surge in the development of entropy-based metrics for landscape ecology in the last few years.
-In the late 1800s, Boltzmann formulated a probabilistic interpretation of the second law of thermodynamics using the concepts of macrostate (the general state of a system) and microstate [the configuration of the system elements\; @Gao2019ComputationBoltzmann]. <!-- REF -->
+Based on notions from thermodynamics initiated by the work of @Cushman2015ThermodynamicsLandscape and @Vranken2015ReviewUse, there has been a surge in the development of entropy-based metrics for landscape ecology in the last few years.
+In the late 1800s, Boltzmann formulated a probabilistic interpretation of the second law of thermodynamics using the concepts of macrostate (the general state of a system) and microstate (the configuration of the system elements) (@Gao2019ComputationBoltzmann).
 @Cushman2016CalculatingConfigurational proposed to relate the edge length to the microstate of the landscape, and use the proportion of microstates to compute the relative Boltzmann entropy of a landscape mosaic.
-This approach was generalized for calculations based on raster's surface model and point patterns [@Cushman2021EntropyLandscape].
+This approach was later generalized for calculations based on raster's surface model and point patterns [@Cushman2021EntropyLandscape].
 Subsequently, @Gao2017HierarchybasedSolution proposed to use the Boltzmann entropy to quantify the complexity of a landscape surface by transforming the input raster into a series of landscape surfaces with different levels of detail (microstate) and calculating the Boltzmann entropy based on the total number of microstates that are able to generate the observed macrostate.
 Recently, @Zhang2020CalculatingWasserstein extended the original definition of Boltzmann entropy to incorporate information about the adjacency of the same categories in the landscape mosaic by using the number of contiguous patches of the same category.
 
-<!--
+<!--JN: I would suggest to include the following paragraph, which I think is important to show the current state of the affairs.-->
 The relations between the Shannon entropy and the Boltzmann entropy and their interpretations in landscape ecology are the subject of ongoing discussion.
 @Stepinski2022 and @Huckeba2023 showed that the Shannon entropy is a general form of entropy, and other entropies, including the Boltzmann entropy, could be derived as specific applications of the Shannon entropy.
 They argue that the newly proposed entropy measures inspired by the Boltzmann equation have no connotation to statistical mechanics and thermodynamics.
 Thus, more research is needed to understand the relations between the entropy measures and how they relate to the environmental processes.
--->
 
 Moreover, many other entropy-based metrics have been proposed for use in landscape ecology.
-The Renyi [@Renyi1961MeasuresEntropy] and Gibbs entropies <!--[REF]-->, which are both generalizations of the Shannon entropy, are applied to quantify the complexity of the landscape.
+The Renyi [@Renyi1961MeasuresEntropy] and Gibbs entropies<!--[REF]-->, which are both generalizations of the Shannon entropy, are applied to quantify the complexity of the landscape.
 The Rao quadratic entropy [@Rao1982DiversityDissimilarity] has also been applied recently [@Rocchini2017MeasuringRao], as it measures not only the relative abundances of elements, but also the pairwise dissimilarities or distances between them.
 Thus, it can be useful in cases, when the dissimilarities between LULC types, and not only their categories, are relevant.
 Another recent development is the use of Kullback-Leibler divergence (also known as relative entropy), which is a measure of differences between two probability distributions to describe patterns across scales [@Huckeba2023MultiscaleSpatial].
 
-Entropy metrics are available in various software such as *landscapemetrics*, *PyLandStats*, *besspatial* [@Nowosad2024BespatialBoltzmann], *rasterdiv* [@Rocchini2021RasterdivInformation], or *LandComp* [@Konrad2023AdaptingMultiscale].
+Entropy metrics are available in various software such as R's *landscapemetrics*, *bespatial* [@Nowosad2024BespatialBoltzmann], *rasterdiv* [@Rocchini2021RasterdivInformation], *LandComp* [@Konrad2023AdaptingMultiscale], or Python's *PyLandStats*.
 
 <!-- Kolmogorov, etc. -->
 <!-- "Fractal dimension seems directly related to entropy." @cushmanThermodynamicsLandscapeEcology2015a -->
@@ -70,19 +69,32 @@ Entropy metrics are available in various software such as *landscapemetrics*, *P
 ## Operations on spatial patterns
 
 Spatial patterns can be analyzed through a range of computational operations, such as comparing, searching, or grouping [@Turner1990SpatialTemporal; @Wickham1994MappingAnalyzing; @Jasiewicz2015GeoPATToolbox; @Remmel2020DistributionsHyperlocal; @Nowosad2021MotifOpensource].
-These operations are based on spatial signatures which are multi-numerical representations of landscape pattern, and dissimilarity measures which are functions that quantify differences between the signatures.
+These operations are based on spatial signatures which are multi-numerical representations of landscape pattern, and dissimilarity measures which are functions that quantify differences between these signatures.
 
 Spatial patterns can be compared between different areas, or for the same area at two different moments in time.
 Comparing spatial patterns is often used to analyze landscape dynamics, e.g., to detect changes in landscape structure over time [@Duncan2023MonitoringSpatial].
 Furthermore, pattern-based search is a one-to-many operation in which the spatial signature of a query area is compared to the signatures of all other areas.
 This allows to find areas with similar patterns compared to the query area, e.g., areas with similar environmental conditions [@Jasiewicz2014LandscapeSimilarity].
 Finally, the grouping of spatial patterns is a many-to-many operation in which spatial signatures are calculated for all areas and clustered based on their similarity [@Nowosad2021PatternbasedIdentification].
+
 R packages for such operations include *sf* [@Pebesma2018SimpleFeatures], *terra* [@Hijmans2024TerraSpatial], or *motif* [@Nowosad2021MotifOpensource].
 Popular Python libraries for spatial operations include *Geopandas* [@Jordahl2020GeopandasPython], *Shapely*[@Gillies2024ShapelyPython], or *PySal*[@Rey2010PySALPython].
 The *GeoStats.jl* [@Hoffimann2018GeoStatsJl] and *GeoInterface.jl* [@JuliaGeoandcontributors2024GeoInterfaceJulia] software provide general spatial data operations in the Julia programming language.
 
+<!--JN: I would restructure the above paragraph to highlight what can and cannot be done with the current software. You may decided to replace the above paragraph with the following one:-->
+<!--
+R, Python, and Julia have a wide range of packages for spatial operations, including *sf* [@Pebesma2018SimpleFeatures], *terra* [@Hijmans2024TerraSpatial] in R, *GeoPandas* [@Jordahl2020GeopandasPython], *rasterio* [@gillies2019] in Python, and *GeoInterface.jl* [@JuliaGeoandcontributors2024GeoInterfaceJulia] in Julia. 
+-->
+<!--raster package in Julia??-->
+<!--
+These packages together with additional statistical and machine learning libraries allow for a wide range of spatial operations, such as spatial clustering, spatial regression, or spatial interpolation.
+Additionally, the *motif* R package [@Nowosad2021MotifOpensource] provides a set of functions for spatial pattern operations, such as comparing, searching, or grouping spatial patterns customized for landscape ecology.
+-->
+
 ## Landscape mosaic
 <!-- Bosch -->
+
+<!-- JN: this section seems a bit disconnected from the rest of the text. One option may be to integrate it a bit with the landscape metrics section, and just highlight the most important points.-->
 
 <!-- MH: Is the landscape mosaic after e.g., Vogt et al. 10.1371/journal.pone.0304215 the same as the patch mosaic model and landscape metrics? I think there is some confusion here. We already discuss metrics above. I think it would be more valuable to discuss the LLM and the most recent additions after Vogt et al. here? -->
 
@@ -184,14 +196,17 @@ Note that all approaches (landscape metrics, graph and surface - TODO: what abou
 ## Surface metrics
 <!-- Bosch, Hesselbarth -->
 
+<!-- JN: I would suggest to move all of the metrics subsections (landscape, entropy, surface, vector) to the beginning of the section, and just then do the operations on spatial patterns. This would make the text more coherent. -->
+
 <!-- MH: What about Spectral and Wavelet Analysis? -->
 
 Surface metrics are based on the gradient surface model using raster data and continuous values [@McGarigal2009SurfaceMetrics; @Cushman2010GradientParadigm] and were adapted from microscopy and molecular physics [@McGarigal2009SurfaceMetrics; @Kedron2018SurfaceMetrics].
 The gradient surface model can increase the resemblance of the data model and the natural world because it allows to include more heterogeneity within each grid cell [@Cushman2010GradientParadigm; @Kedron2018SurfaceMetrics].
 Surface metrics are able to quantify various characteristics, such as roughness, skewness and kurtosis, total and relative amplitudes, curvatures of local peaks, or surface bearing area ratios [@Cushman2010GradientParadigm].
 Many surface metrics have analogous landscape metrics [@Cushman2010GradientParadigm], however, using surface metrics allows to reveal different or additional patterns and potentially pattern-process links [@McGarigal2009SurfaceMetrics; @Borthwick2020AlternativeQuantifications].
+
 Yet, software to calculate these metrics is still rare and further research is needed into the specific pattern-process links and ecological meaningful interpretations [@Kedron2018SurfaceMetrics; @Frazier2019EmergingTrajectories].
-However, the *geodiv* R package [@Smith2021GeodivPackage] provides various surface metrics.
+Nonetheless, the *geodiv* R package [@Smith2021GeodivPackage] provides various surface metrics.
 
 ## Vector metrics
 <!-- Nowosad, Hesselbarth -->
@@ -205,15 +220,16 @@ Yet, nowadays, vector data is increasingly available, and most geospatial softwa
 
 Hundreds of metrics have already been developed for raster data, so the most straightforward approach is to reimplement the same metrics for vector data.
 This is possible for most of the metrics, with only several exceptions of metrics that are specifically related to the raster data model [@Yao2022VecLIFramework].
-Yet, the vector data model has been widely used in other fields, such as geography or urban studies.
+At the same, the vector data model has been widely used in other fields, such as geography or urban studies.
 For example, in urban planning vector metrics are applied to quantify the shapes of urban areas and characterize the complexity of building footprints [@Basaraner2017PerformanceShape].
-Earlier approaches included four categories of compactness measures for vector data, namely perimeter-area, single parameters of related circles, dispersion of elements of the area around a centroid, and direct comparison to standard shapes [@Maceachren1985CompactnessGeographic].
+
+Earlier approaches of quantifying shape complexity  included four categories of compactness measures for vector data, namely perimeter-area, single parameters of related circles, dispersion of elements of the area around a centroid, and direct comparison to standard shapes [@Maceachren1985CompactnessGeographic].
 More recently, a unified theoretical foundation for measuring shape compactness was introduced using a set of ten distinct properties of a circle and metrics associated with each of these properties [@Angel2010TenCompactness]
 
 Vector-based metrics also have their limitations.
 The most important is computational complexity, which makes calculations of vector metrics slower than their raster equivalents.
-<!-- MH: What does topologically correct mean?-->
-Another technical issue is the need for the data to be topologically correct, which is often problematic especially for data from different sources.
+Another technical issue is the need for the data to be topologically correct (e.g., geometries cannot overlap), which is often problematic especially for data from different sources.
 Last, the pattern-process link is still less explored for vector-based metrics compared to raster-based metrics.
-The *vectormetrics* R package, currently under development [@Matuszek2024VectormetricsLandscape], is specifically designed for vector metrics. 
+
+The *vectormetrics* R package [@Matuszek2024VectormetricsLandscape] is specifically designed for vector metrics. 
 However, all the general software frameworks mentioned earlier, which support vector data handling, can also be used to calculate basic metrics.
