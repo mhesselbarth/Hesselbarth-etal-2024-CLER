@@ -6,15 +6,15 @@ bibliography: CLER.bib
 
 # Connectivity {#sec-connectivity}
 
-Connectivity describes how movement among resources patches is facilitated or hindered by landscape features such as types, amounts, and arrangement of LULC [@Taylor1993ConnectivityVital; @Taylor2006LandscapeConnectivity].
-While structural connectivity focuses on physical and spatial relationships among resource patches, functional connectivity also includes the movement or flow of individuals and populations through the landscape [@Taylor2006LandscapeConnectivity].
-Connectivity underpins ecosystem functionality and maintains biodiversity and populations, and plays a large role in many conservation actions [@CorreaAyram2016HabitatConnectivity; @Hilty2020GuidelinesConserving].
-Thus, in the past multiple approaches how to measure connectivity were developed [@Simpkins2018AssessingPerformance; @Keeley2021ConnectivityMetrics].
 
-<!-- 
-Connectivity modelling in conservation science https://doi.org/10.1038/s41598-022-20370-w
--->
+Landscape connectivity is a fundamental concept in spatial ecology. It refers to the degree to which the landscape the landscape facilitates or impedes movement among resource patches [@@Taylor1993ConnectivityVital; @Taylor2006LandscapeConnectivity]. Landscape connectivity can be divided into two fundamental types, structural and functional. Structural connectivity describes the physical arrangement of landscape elements, focusing on spatial aspects such as continuity and adjacency. It is solely a landscape feature and is independent of any particular species' characteristics [@Tischendorf2000LandscapeConnectivity; @CorreaAyram2016HabitatConnectivity]. Functional connectivity, in contrast, integrates landscape structure with the perceptual, behavioural, and dispersal characteristics of a particular species, or set of species, making it both species- and landscape-specific [@Adriaensen2003LCP; @Taylor2006LandscapeConnectivity]. An often conflated term, habitat connectivity, specifically refers to the degree of functional connectivity between patches of optimal habitat for a species. 
 
+Connectivity underpins ecosystem functionality and maintains biodiversity and populations, and plays a large role in many conservation actions [@CorreaAyram2016HabitatConnectivity; @Hilty2020GuidelinesConserving]. Thus, in the past multiple approaches how to measure connectivity were developed [@Simpkins2018AssessingPerformance; @Keeley2021ConnectivityMetrics].
+
+## Estimating connectivity
+While connectivity is key to many modern conservation theories and practices, quantifying it has proven both technically and conceptually challenging (Calabrese & Fagan 2004; Taylor et al. 2006).  If we restrict ourselves to thinking about the dispersal of organisms from a patch in search of new breeding habitat (e.g., natal dispersal) then what do we need to measure to quantify connectivity? Ideally, we would have information for many organisms about the location they started from, high-resolution information about their movement trajectory and the location they ‘finished’ in (or their point of mortality if that occurred).  Depending on the question of interest, the endpoint of movement could represent a range of alternatives from the short-term movement to access food resources to finding and establishing a territory and successfully breeding. From this information, we may be able to infer the elements in the landscape that organisms prefer to move through and how their behaviour changes in them drawing on behavioural landscape ecology (Lima & Zollner 1996) and statistical tools such as statistical state-space models (Jonsen et al. 2013).  While high-resolution biotelemetry has made tracking animal movement at high-resolution possible (Kays et al. 2015), it is still logistically challenging to track many animals over long periods at high spatial resolution. Furthermore, we are often interested in predicting the consequences of changes in structural connectivity before they occur. Many disciplines (e.g., geography, archaeology, ecology, physics and chemistry) are interested in how matter and energy flow through heterogeneous media (including landscapes), and hence several methods have been developed to quantify connectivity.  As described above, because dispersal is a fundamental component of metapopulation, metacommunity and metaecosystem theory, adequately describing connectivity is vital for their empirical evaluation.
+
+<!--
 ## Landscape metrics
 
 There are several landscape metrics that are traditionally used to measure landscape connectivity.
@@ -22,7 +22,9 @@ For example, the habitat amount within a buffer zone of focal patches, the neare
 However, these metrics are frequently criticized for being to simple and especially the link to functional connectivity is often ambiguous. 
 Thus, more functionality needs to be included using additional ecological meaningful metrics, such as the core area [e.g., @Kupfer2012LandscapeEcology].
 More recently there is also an increasing focus in within-patch connectivity using metrics such as the effective mesh size in addition to the usual measure between-patch connectivity [@Spanowicz2019MeasuringLandscape].
+-->
 
+<!--
 ## Resistance surfaces
 
 Resistance surfaces are one of the most popular approaches to model connectivity and developed from simple isolation-by-distance approaches. 
@@ -32,13 +34,17 @@ The resistance surface can be used to model movement based on different approach
 However, resistance surfaces are not free of critique including missing spatial-temporal variability or context dependency [@UnnithanKumar2022ConnectivityModelling; @UnnithanKumar2022MovingLandscape].
 Thus, recent developments include the combination with more processes-based modelling approaches [@Schumaker2018HexSimModeling; @Bocedi2021RangeShifterExtended; @UnnithanKumar2022PathwalkerNew], modelling of dynamic landscape connectivity [@Zeller2020UnderstandingImportance], inclusion of stochasticity and spatial context [@Ribeiro2017LandScapeCorridors], using genetic optimization algorithms [@Peterman2018ResistanceGAPackage], or computational improvements [@Leonard2017GlowSoftware].
 Software to model connectivity based on resistance surfaces include *ConScape.jl* [@vanMoorter2023AcceleratingAdvances], *Omniscape.jl* [@Landau2021OmniscapeJl], *lconnect* [@Mestre2023LconnectPackage], *grainscape* [@Chubaty2020ToolboxGrainscape], or *Circuitscape* [@Anantharaman2019CircuitscapeJulia].
+-->
 
 <!-- What about multi-species approaches? -->
 
+<!--
 ## Graph theory 
 
 Graph theory describes a landscape as a set of nodes representing habitat patches and edges as potential links between the nodes.
 Thus, graph theory is a powerful tool to model landscape connectivity, especially in a metapopulation context [@Urban2001LandscapeConnectivity].
+
+-->
 
 <!--
 Coupling landscape graph modeling and biological data https://doi.org/10.1007/s10980-020-00998-7
@@ -48,7 +54,9 @@ Comparison of landscape graph modelling methods https://doi.org/10.1007/s10980-0
 
 -->
 
+<!--
 ## Other approaches
+-->
 
 <!--
 A stochastic movement simulator improves estimates of landscape connectivity https://doi.org/10.1890/14-1690.1
