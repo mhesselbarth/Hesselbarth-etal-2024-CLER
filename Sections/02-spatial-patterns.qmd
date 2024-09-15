@@ -19,11 +19,32 @@ Thus, untangling the history of a landscape and linking its spatial patterns to 
 <!-- Hesselbarth -->
 
 Traditionally and still the most prominent approaches to quantify spatial patterns revolve around raster data using categorical categories based on the patch mosaic model [@Frazier2017LandscapeMetrics; @Costanza2019DescribingAnalyzing].
-The strength of landscape metrics is that they are comparable easy to apply and communicate [@Lausch2015UnderstandingQuantifying], however, they are also critiqued for not being able to realistically represent continuous features of the natural world [@Frazier2017LandscapeMetrics].
+<!-- The strength of landscape metrics is that they are comparable easy to apply and communicate [@Lausch2015UnderstandingQuantifying], however, they are also critiqued for not being able to realistically represent continuous features of the natural word [@Frazier2017LandscapeMetrics]. -->
+The strength of landscape metrics is that they are comparable easy to apply and communicate [@Lausch2015UnderstandingQuantifying], however, major limitations have been identified regarding their ability to quantify the spatial structure of landscapes as well as their sensitivity to both spatial scale and thematic resolution [@Gustafson1998QuantifyingLandscape; @Li2004UseMisuse; @Dramstad2009SpatialMetrics; @Kupfer2012LandscapeEcology; @Lausch2015UnderstandingQuantifying; @Frazier2017LandscapeMetrics].
 
 Metrics can be calculated on patch-level (describing each patch), class-level (describing all patches of the same class), or landscape level (describing the entire landscape) and are able to quantify characteristics related to e.g., patch areas and edge lengths, patch shapes, or class aggregation and diversity [@Hesselbarth2019LandscapemetricsOpensource].
 
-Software to calculate landscape metrics include the *landscapemetrics* R package [@Hesselbarth2019LandscapemetricsOpensource], the *PyLandStats* Python library [@Bosch2019PyLandStatsOpensource], or the stand-alone software *FRAGSTATS* [@McGarigal2023FRAGSTATSV4].
+<!-- MB: I think we can put the part below within the "landscape metrics" section, otherwise we could add a subsection or even subsubsection entitled "Fundamental components of landscape patterns" or "redundancy and parsimony in landscape metrics"-->
+While recent years have seen the development of a large body of landscape metrics, the growing number of available metrics poses a major challenge in terms of their correlation and redundancy. <!-- [@Frazier2017LandscapeMetrics]. -->
+To address these limitations, researchers have used techniques such as factor analysis, classification trees [@Breiman2017] and principal component analysis (PCA).
+For instance, the seminal study of Riitters et al. [@Riitters1995] computed multiple metrics across a variety of landscapes and applied multivariate factor analysis to identify six main components of landscape pattern. <!-- namely average patch compaction, image texture, average patch shape, patch perimeter-area scaling, number of attribute classes and large-patch density-area scaling. -->
+Another comprehensive work by Cushman et al. [@Cushman2008Parsimony] performed a PCA to isolate the structural components of a set of diverse landscapes, and extended the analysis to assess their strength (proportion of variance explained, which can be measured by the component eigenvalue), universality (how present they are accross landscapes) and consistency (how stable they are accross landscapes).
+<!-- At the class level, they find seven "highly universal and consistent structure components" (page 700), namely edge contrast, patch shape complexity, aggregation, nearest neighbor distance, patch dispersion, large patch dominance and neighborhood similarity. At the landscape level, five components are identified, namely contagion/diversity (similar to image texture in Riitters et al. [@Riitters1995]), large patch dominance, interspersion/juxtaposition, edge contrast, patch shape variability, proximity and nearest neighbor distance. Overall, components are more consistent and universal at the landscape level than at the class level. -->
+<!-- MB: I suppose we can ommit these:
+- Uuemaa et al. [@Uuemaa2011] find four main components: dominance (also identified by Riitters et al. [@Riitters1995] and Cushman et al. [@Cushman2008Parsimony]), contrast, shape complexity and composition.
+- Additionally, multicollinearity in landscape metrics can be assessed using the Variance Inflation Factor (VIF) [@Plexida2014].
+-->
+<!-- More recently, the study of [@Nowosad2018] divided the entire Earth's land cover map into landscape blocks and performed PCA over a set of landscape metrics. The results suggest that there -->
+More recently, Nowosad and Stepinski [@Nowosad2018] conducted PCA over a set of landscape blocks covering the entire terrestial landmass and resolved two main components of landscape configuration, namely complexity and aggregation (which together explain a 70% of the dataset variance).
+The findings are in line with recent views [@Gustafson2019; @Riitters2019] suggesting that there are two fundamental components of landscape patterns, namely amount and adjacency - which are respectively connected to the complexity and aggregation components of Nowosad and Stepinski [@Nowosad2018].
+<!-- Actually, some suggest that maybe only amount matters (Fahrig 2013; 2017). -->
+<!-- MB: I wonder if we could already mention [@Nowosad2019InformationTheory] here since it presents the same two-component view of landscapes and links with the following section quite naturally -->
+
+Software to calculate landscape metrics include the *landscapemetrics* R package [@Hesselbarth2019LandscapemetricsOpen], the *PyLandStats* Python library [@Bosch2019PyLandStatsOpensource], or the stand-alone software *FRAGSTATS* [@McGarigal2023FRAGSTATSV4].
+<!-- Software: Besides FRAGSTATS (to compute metrics), most studies use old-school software such as SAS and CANOCO4 (e.g., [@Cushman2008Parsimony]), STATISTICA (e.g., [@Uuemaa2011]), SPSS (e.g., [@Plexida2014]) -->
+<!-- MB: should we ommit SAS and SPSS? -->
+Given the computed landscape metrics, PCA and other dimension reduction techniques can be performed with stand-alone software such as SAS or SPSS, the R programming language or Python libraries such as statsmodels [@Seabold2010] or scikit-learn [@Pedregosa2011].
+<!-- MB: Are there any libraries to perform factor analysis in R that are kind of specific to landscape ecology? I have had a draft on how to perform factor analysis with pylandstats https://github.com/martibosch/pylandstats-notebooks/blob/main/notebooks/05-cluster-analysis.ipynb, hopefully I will include it in the next release before -->
 
 ## Entropy
 <!-- Nowosad, Bosch -->
@@ -99,11 +120,7 @@ Additionally, the *motif* R package [@Nowosad2021MotifOpensource] provides a set
 <!-- MH: Is the landscape mosaic after e.g., Vogt et al. 10.1371/journal.pone.0304215 the same as the patch mosaic model and landscape metrics? I think there is some confusion here. We already discuss metrics above. I think it would be more valuable to discuss the LLM and the most recent additions after Vogt et al. here? -->
 
 <!-- https://doi.org/10.1371/journal.pone.0304215 -->
-Despite the extensive use of the landscape mosaic model and metrics based on it, major limitations have been identified regarding both its ability to quantify the spatial structure of landscapes and their relationship to ecological processes [@Gustafson1998QuantifyingLandscape; @Li2004UseMisuse; @Dramstad2009SpatialMetrics; @Kupfer2012LandscapeEcology; @Lausch2015UnderstandingQuantifying; @Frazier2017LandscapeMetrics].
-<!-- two key considerations to select metrics: (i) ability to consistently identify structural landscape components and (ii) ability to explain relationships with ecological processes (ecological relevance), e.g., biodiversity, often referred to as functional metrics - the challenge of matching the scales of observation to the ecological scales affecting organisms or processes of interest, i.e., the characteristic scales (from "Spatial dependence of predictions from image segmentation: a variogram-based method to determine appropriate scales for producing land-management information") -->
-<!-- Here we focus on the first issue, namely the ability of landscape metrics to consistently capture the spatial structure of landscapes. -->
-<!-- Key issues of structural metrics [@Dramstad2009]: sensitivity to scale, i.e., resolution and extent, sensitivity to the choice of LULC scheme, redundancy and interpretation. Let us go through them in a different order: -->
-Here, we review four major issues of landscape metrics, namely their sensitivity to both spatial scale and thematic resolution, redundancy and interpretation [@Dramstad2009SpatialMetrics].
+
 
 ### Sensitivity to spatial scale and thematic resolution
 
@@ -155,27 +172,6 @@ This involves three fundamental steps, i) considering scope guidelines when desi
 <!-- (ii) choice of LULC scheme/thematic resolution and image processing/classification procedure: https://doi.org/10.1016/j.foreco.2009.12.016 https://doi.org/10.1016/j.isprsjprs.2007.03.004 https://doi.org/10.1007/s10021-005-0119-1 https://doi.org/10.1007/s10980-006-9035-9 https://doi.org/10.1007/s10980-022-01546-1 -->
 <!-- Scale and heterogeneity are inherently linked (Wu 2007), so it is not surprising that the results indicate downscaling accuracy varies with heterogeneity. -->
 <!-- TODO: sensitivity to thematic resolution [@Huang2006; @Bailey2007; @Buyantuyev2007; @Castilla2009]. -->
-
-### Redundancy
-<!-- (iii) selecting metrics -->
-
-<!-- MH: I think most of this is either not relevant here because not computational focused or already covered above -->
-
-<!-- TODO
-
-- Factor analysis of Riitters et al. [@Riitters1995] found six main components: average patch compaction, image texture, average patch shape, patch perimeter-area scaling, number of attribute classes and large-patch density-area scaling.
-
-- Cushman et al. [@Cushman2008Parsimony] not only isolate the components but also assess their strength (proportion of variance explained), universality (how present they are accross landscapes) and consistency (how stable they are accross landscapes). At the class level, they find seven "highly universal and consistent structure components" (page 700), namely edge contrast, patch shape complexity, aggregation, nearest neighbor distance, patch dispersion, large patch dominance and neighborhood similarity. At the landscape level, five components are identified, namely contagion/diversity (similar to image texture in Riitters et al. [@Riitters1995], large patch dominance, interspersion/juxtaposition, edge contrast, patch shape variability, proximity and nearest neighbor distance. Overall, components are more consistent and universal at the landscape level than at the class level.
-
-- Uuemaa et al. [@Uuemaa2011] find four main components: dominance (also identified by Riitters et al. [@Riitters1995] and Cushman et al. [@Cushman2008Parsimony]), contrast, shape complexity and composition.
-
-- Amount (composition) and adjacency (configuration) are the fundamental elements of pattern [@Riitters2019]
-
-- Entropy [@Nowosad2019a]
-
-- Spatial signatures [@Nowosad2021a]
-
--->
 
 ### Interpretability
 <!-- (iv) interpretatability -->
