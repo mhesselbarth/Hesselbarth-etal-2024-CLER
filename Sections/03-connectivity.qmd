@@ -2,23 +2,34 @@
 bibliography: CLER.bib
 ---
 
-<!-- Person responsible: Hesselbarth, Gerber?, Simpkins? -->
+<!-- Person responsible: Gerber?, Simpkins? -->
 
 # Connectivity {#sec-connectivity}
 
+Landscape connectivity is a fundamental concept in spatial ecology. 
+It refers to the degree to which the landscape the landscape facilitates or impedes movement among resource patches [@Taylor1993ConnectivityVital; @Taylor2006LandscapeConnectivity]. 
+Landscape connectivity can be divided into two fundamental types, structural and functional. 
+Structural connectivity describes the physical arrangement of landscape elements, focusing on spatial aspects such as continuity and adjacency. 
+It is solely a landscape feature and is independent of any particular species' characteristics [@Tischendorf2000LandscapeConnectivity; @CorreaAyram2016HabitatConnectivity]. 
+Functional connectivity, in contrast, integrates landscape structure with the perceptual, behavioural, and dispersal characteristics of a particular species, or set of species, making it both species- and landscape-specific [@Adriaensen2003LCP; @Taylor2006LandscapeConnectivity]. 
+An often conflated term, habitat connectivity, specifically refers to the degree of functional connectivity between patches of optimal habitat for a species. 
 
-Landscape connectivity is a fundamental concept in spatial ecology. It refers to the degree to which the landscape the landscape facilitates or impedes movement among resource patches [@@Taylor1993ConnectivityVital; @Taylor2006LandscapeConnectivity]. Landscape connectivity can be divided into two fundamental types, structural and functional. Structural connectivity describes the physical arrangement of landscape elements, focusing on spatial aspects such as continuity and adjacency. It is solely a landscape feature and is independent of any particular species' characteristics [@Tischendorf2000LandscapeConnectivity; @CorreaAyram2016HabitatConnectivity]. Functional connectivity, in contrast, integrates landscape structure with the perceptual, behavioural, and dispersal characteristics of a particular species, or set of species, making it both species- and landscape-specific [@Adriaensen2003LCP; @Taylor2006LandscapeConnectivity]. An often conflated term, habitat connectivity, specifically refers to the degree of functional connectivity between patches of optimal habitat for a species. 
-
-Connectivity underpins ecosystem functionality and maintains biodiversity and populations, and plays a large role in many conservation actions [@CorreaAyram2016HabitatConnectivity; @Hilty2020GuidelinesConserving]. Thus, in the past multiple approaches how to measure connectivity were developed [@Simpkins2018AssessingPerformance; @Keeley2021ConnectivityMetrics].
+Connectivity underpins ecosystem functionality and maintains biodiversity and populations, and plays a large role in many conservation actions [@CorreaAyram2016HabitatConnectivity; @Hilty2020GuidelinesConserving]. 
+Thus, in the past multiple approaches how to measure connectivity were developed [@Simpkins2018AssessingPerformance; @Keeley2021ConnectivityMetrics].
 
 ## Estimating connectivity
-While connectivity is key to many modern conservation theories and practices, directly quantifying it has proven both technically and conceptually challenging [@Calabrese2004ConnectivityMetrics; @Taylor2006LandscapeConnectivity). Data from many individuals recording the start location, trajectory, and endpoint of a movement is required to directly observe connectivity [@Simpkins2018AssessingPerformance]. Using this data one may be able to infer the elements in the landscape that individuals preferentially move through. While constantly improving technlogies has made tracking animal movement at high-resolution possible [@Kays2015AnimalTracking], it is still logistically challenging to track high numbers of individuals for the required time periods and spatial resolution. As such in practice connectivity is primarily determined by indirect estimation. @Calabrese2004ConnectivityMetrics distinguised three types of connectivity estimates:
+While connectivity is key to many modern conservation theories and practices, directly quantifying it has proven both technically and conceptually challenging [@Calabrese2004ConnectivityMetrics; @Taylor2006LandscapeConnectivity). 
+Data from many individuals recording the start location, trajectory, and endpoint of a movement is required to directly observe connectivity [@Simpkins2018AssessingPerformance]. 
+Using this data one may be able to infer the elements in the landscape that individuals preferentially move through. 
+While constantly improving technlogies has made tracking animal movement at high-resolution possible [@Kays2015AnimalTracking], it is still logistically challenging to track high numbers of individuals for the required time periods and spatial resolution. 
+As such in practice connectivity is primarily determined by indirect estimation. @Calabrese2004ConnectivityMetrics distinguised three types of connectivity estimates:
 - Structural connectivity: determined by the physical attributes of the landscape (as described above).
 - Potential connectivity: a combination of the physical attributes of the landscape and limited information about the dispersal capabilities of the target species, to estimate how connected a given landscape or patch is for that species.
-- Actual connectivity: Related to observations of individuals moving through a landscape or between patches, providing solid estimates of the linkages between landscpae elements or habitat patches.
+- Actual connectivity: Related to observations of individuals moving through a landscape or between patches, providing solid estimates of the linkages between landscape elements or habitat patches.
 
 ### Structural Connectivity Estimation Methods
-Landscape metrics, produced using software such as `landscapemetrics` [@Hesselbarth2019LandscapemetricsOpen], are commonly used to quantify various aspects of landscape structure, decomposed into composition and configuration. These metrics describe structural connectivity in terms of:
+Landscape metrics, produced using software such as `landscapemetrics` [@Hesselbarth2019LandscapemetricsOpen], are commonly used to quantify various aspects of landscape structure, decomposed into composition and configuration. 
+These metrics describe structural connectivity in terms of:
 - Amount of habitat: Total area of habitat types present.
 - Patch size: Average size of habitat patches.
 - Patch isolation: Average nearest-neighbour distance between patches.
@@ -27,13 +38,17 @@ Landscape metrics, produced using software such as `landscapemetrics` [@Hesselba
 More recently there has been an increasing focus on within-patch connectivity using metrics such as the effective mesh size in addition to the usual metrics [@Spanowicz2019MeasuringLandscape].
 
 ### Estimating Functional Connectivity Using Resistance Surfaces
-Functional connectivity estimation involves integrating species-specific movement data with landscape features. This estimation normally involves the usage of graph-theoretic approaches, though these details are often obscured for convenience by software [@McRae2008UsingCircuit]. Two primary base approaches are usually applied in modern connectivity estimation:
+Functional connectivity estimation involves integrating species-specific movement data with landscape features. 
+This estimation normally involves the usage of graph-theoretic approaches, though these details are often obscured for convenience by software [@McRae2008UsingCircuit]. 
+Two primary base approaches are usually applied in modern connectivity estimation:
 - Least-cost paths (LCP)
 - Circuit theory
 
 A large number of software applications have been developed, with these approaches as a base, to estimate connectivity including *ConScape.jl* [@vanMoorter2023AcceleratingAdvances], *Omniscape.jl* [@Landau2021OmniscapeJl], *lconnect* [@Mestre2023LconnectPackage], *grainscape* [@Chubaty2020ToolboxGrainscape], or *Circuitscape* [@Anantharaman2019CircuitscapeJulia]. 
 
-These methods all rely on resistance surfaces to represent the landscape [@Zeller2012EstimatingLandscape]. A resistance surface is a grid-based representation of a landscape where each cell is assigned a value representing the difficulty (or cost) for an individual of a particular species to traverse that cell [@Etherington2016LeastcostModelling]. The values are based on landscape features and represent factors influencing movement, such as habitat type, topography, or barriers.
+These methods all rely on resistance surfaces to represent the landscape [@Zeller2012EstimatingLandscape]. 
+A resistance surface is a grid-based representation of a landscape where each cell is assigned a value representing the difficulty (or cost) for an individual of a particular species to traverse that cell [@Etherington2016LeastcostModelling]. 
+The values are based on landscape features and represent factors influencing movement, such as habitat type, topography, or barriers.
 
 Creating a resistance surface involves:
 - Collecting data: Obtaining landscape data for the area of interest along with a sufficiently large buffer area to avoid edge artifacts [@Dutta2022OverviewComputational].
@@ -45,15 +60,22 @@ Creating a resistance surface involves:
   - Pathway data: High-frequency relocation data allowing for movement track inference (e.g., GPS tracking).
   - Genetic data: Genetic samples used to calculate genetic distances between populations.
 
-Resistance surfaces are not free of critique including missing spatial-temporal variability or context dependency [@UnnithanKumar2022ConnectivityModelling; @UnnithanKumar2022MovingLandscape]. Thus, recent developments include the combination with more processes-based modelling approaches [@Schumaker2018HexSimModeling; @Bocedi2021RangeShifterExtended; @UnnithanKumar2022PathwalkerNew], modelling of dynamic landscape connectivity [@Zeller2020UnderstandingImportance], inclusion of stochasticity and spatial context [@Ribeiro2017LandScapeCorridors], using genetic optimization algorithms [@Peterman2018ResistanceGAPackage], or computational improvements [@Leonard2017GlowSoftware].
+Resistance surfaces are not free of critique including missing spatial-temporal variability or context dependency [@UnnithanKumar2022ConnectivityModelling; @UnnithanKumar2022MovingLandscape]. 
+Thus, recent developments include the combination with more processes-based modelling approaches [@Schumaker2018HexSimModeling; @Bocedi2021RangeShifterExtended; @UnnithanKumar2022PathwalkerNew], modelling of dynamic landscape connectivity [@Zeller2020UnderstandingImportance], inclusion of stochasticity and spatial context [@Ribeiro2017LandScapeCorridors], using genetic optimization algorithms [@Peterman2018ResistanceGAPackage], or computational improvements [@Leonard2017GlowSoftware].
 
 #### Least-cost paths (LCP)
-LCP is among the most widely used methods for quantifying functional connectivity. The underlying assumption is that organisms will move through landscapes in ways that minimize the cumulative cost of traversing different landscape elements. LCP models assume that individuals have perfect knowledge of the landscape and will choose the path that minimizes resistance costs perfectly with no deviations [@Adriaensen2003LCP]. The creation of LCPs is a well established technique and as such there are highly optimised algorithms available for its calculation, often making the approach more computationally effient than others 
+LCP is among the most widely used methods for quantifying functional connectivity. 
+The underlying assumption is that organisms will move through landscapes in ways that minimize the cumulative cost of traversing different landscape elements. 
+LCP models assume that individuals have perfect knowledge of the landscape and will choose the path that minimizes resistance costs perfectly with no deviations [@Adriaensen2003LCP]. 
+The creation of LCPs is a well established technique and as such there are highly optimised algorithms available for its calculation, often making the approach more computationally effcient than others 
 
-By calculating the LCP between two points using a resistance surface, researchers can estimate connectivity between these points based on the accumulated cost along the path. This method can also generate accumulated cost surfaces depicting the minimum cost from a single point to all other locations, helping identify reachable areas within a cost threshold.
+By calculating the LCP between two points using a resistance surface, researchers can estimate connectivity between these points based on the accumulated cost along the path. 
+This method can also generate accumulated cost surfaces depicting the minimum cost from a single point to all other locations, helping identify reachable areas within a cost threshold.
 
 #### Circuit theory
-Circuit theory considers all possible pathways between locations simultaneously [@McRae2008UsingCircuit]. In this model, the landscape is represented as a network where nodes are connected by resistors (weighted by the values in the resistance surface), and movement is analogous to electrical current flow. Circuit theory does not assume that organisms have perfect knowledge of the landscape and is particularly useful when multiple alternative pathways are available.
+Circuit theory considers all possible pathways between locations simultaneously [@McRae2008UsingCircuit]. 
+In this model, the landscape is represented as a network where nodes are connected by resistors (weighted by the values in the resistance surface), and movement is analogous to electrical current flow. 
+Circuit theory does not assume that organisms have perfect knowledge of the landscape and is particularly useful when multiple alternative pathways are available.
 
 Key measures from circuit theory are:
 - Resistance distance: The isolation between pairs of locations measured by incorporating multiple pathways. Locations connected by many low-resistance pathways have lower resistance distances.
