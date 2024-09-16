@@ -18,16 +18,17 @@ Landscape simulators are typically used as null hypotheses, baselines, or scenar
 Landscape simulators can be classified into two major categories, namely pattern-based and process-based approaches [@Peer2013SimpleProcessbased; @Langhammer2019AgriculturalLandscape].
 
 Pattern-based approaches simulate landscapes without assuming any underlying abiotic or biotic processes [i.e., neutral landscape model\; @Gardner1987NeutralModels].
-The earliest neutral models are based on percolation theory and assign LULC types randomly to cells in the landscape[@Gardner1987NeutralModels] or hierarchical models that consider different spatial scales while assigning cell values [@ONeill1992HierarchicalNeutral].
+The earliest neutral models are based on percolation theory and assign LULC types randomly to cells in the landscape [@Gardner1987NeutralModels] or hierarchical models that consider different spatial scales while assigning cell values [@ONeill1992HierarchicalNeutral].
 Landscapes characterized by continuous values can be simulated by fractal models, such as Brownian motion [@Palmer1992CoexistenceSpecies].
 Borrowing from computer graphics, more recent neutral landscape models make use of spectral synthesis [e.g., Perlin noise\; @Etherington2022PerlinNoise] or binary space partitioning [@Etherington2022BinarySpace].
 Neutral landscape models are also able to simulate landscapes dominated by anthropogenic activities using based on least-cost networks [@Etherington2024LeastcostNetwork].
 In order to ensure realistic neutral landscapes several approaches exist that use comparisons with real landscapes [@Inkoom2017DesigningNeutral] or are based on target values optimization [@vanStrien2016ImprovedNeutral; @Justeau-Allaire2022FragmentedLandscape].
-In order to make multiple neutral landscape model algorithms accessible, several software libraries are available in prominent programming languages including Python [NLMpy\; @Etherington2015NLMpyPython], R [NLMR; @Sciaini2018NLMRLandscapetools], Julia [NeutralLandscapes.jl; @Poisot2023NeutralLandscapesJulia], or stand-alone software [GradientLand; @Cambui2015GradientLandSoftware]
+In order to make multiple neutral landscape model algorithms accessible, several software libraries are available in prominent programming languages including Python [NLMpy\; @Etherington2015NLMpyPython], R [NLMR\; @Sciaini2018NLMRLandscapetools], Julia [NeutralLandscapes.jl\; @Poisot2023NeutralLandscapesJulia], or stand-alone software [GradientLand\; @Cambui2015GradientLandSoftware].
 
 Contrastingly, processes-based approaches explicitly include abiotic or biotic pattern-forming processes [i.e., landscape generators\; @Langhammer2019AgriculturalLandscape; @Salecker2019EFForTSLGrafLandscape].
 Several earlier landscape generators are based on cellular automata models and are able to simulate urban growth [@Clarke1998LoosecouplingCellular] or deforestation [@Soares-Filho2002DinamicaStochastic].
-More recent landscape generators allow to simulate patchy landscapes based on Gibbs processes [@Gaucherel2006NeutralModels], deforestation based on road and agricultural fields access [@Peer2013SimpleProcessbased], agricultural areas dominated by smallholders [@Salecker2019EFForTSLGrafLandscape], or vegetation surround watering points in semi-arid savanna rangelands [combining pattern- and process-bases approaches\; @Hess2020PioLaGPiosphere].
+More recent landscape generators allow to simulate patchy landscapes based on Gibbs processes [@Gaucherel2006NeutralModels], deforestation based on road and agricultural fields access [@Peer2013SimpleProcessbased], loss of wetlands, expansion of an open-pit mine and increase in croplands using Ising model [@Stepinski2023KineticIsing], agricultural areas dominated by smallholders [@Salecker2019EFForTSLGrafLandscape], or vegetation surround watering points in semi-arid savanna rangelands [combining pattern- and process-bases approaches\; @Hess2020PioLaGPiosphere].
+<!--JN: software??-->
 
 ## Individual-based models
 
@@ -36,11 +37,13 @@ In landscape ecology individual-based models are increasingly used to model espe
 In order to facilitate future model developments, recent progress includes adaptable modeling frameworks [@Schumaker2018HexSimModeling] or reusable building block [@Berger2024ReusableBuilding].
 Furthermore, hybrid approaches that couple or even integrated different model types with individual-based models could benefit from rich development history or facilitate corresponding strengths [@OSullivan2016StrategicDirections], e.g., linking an individual-based and ecosystem model [@Polhill2011AgentbasedModelling].
 
-## Digital twins
+## Digital Twins
 
-Digital Twins include three connected elements, namely a physical object or system, its digital representation, and a data exchange between the former two [@Jones2020CharacterisingDigital; @deKoning2023DigitalTwins] and there is an increasing interest and use of them in both the industry and academia [@Jones2020CharacterisingDigital].
+The Digital Twins concept include three connected elements, namely a physical object or system, its digital representation, and a data exchange between the former two [@Jones2020CharacterisingDigital; @deKoning2023DigitalTwins] and there is an increasing interest and use of them in both the industry and academia [@Jones2020CharacterisingDigital].
 The need for timely and evidence-based decision making in combination with increasing data availability makes them a powerful tool for ecology [@deKoning2023DigitalTwins].
 Digital twins are increasingly applied in agricultural landscapes research, including topics such as crop and land cultivation, livestock farming, controlled environment farming, or fertilization management [@Cesco2023SmartAgriculture; @Purcell2023DigitalTwins].
 Further applications include planning of rural ecological landscapes [@Tan2024DigitalTwin], or exploration of relationships between urban expansion and vegetation coverage [@Zhao2022ApplyingDigital].
 The use of general data processing, statistical and mechanistic models, or artificial intelligence allows them to constantly update the digital representation and analyze, visualize, or predict the physical counterpart.
+<!-- JN: "Digital Twins can" or "Digital Twins will" or "Digital Twins aims to"? -->
 Thus, Digital Twins can provide real-time state of nature measurements, early detection of conservation trends, relationships of ecosystem trends and environmental conditions, impact assessments of interventions, or identify uncertainties and information gaps [@deKoning2023DigitalTwins].
+<!--JN: software??-->

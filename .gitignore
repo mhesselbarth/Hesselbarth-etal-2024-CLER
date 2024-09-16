@@ -9,3 +9,4 @@ Manuscript.tex
 *.log
 /.quarto/
 *_files/
+*.pptx

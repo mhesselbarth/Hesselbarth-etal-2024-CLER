@@ -7,19 +7,19 @@ bibliography: CLER.bib
 # Spatial conservation planning {#sec-spatialplanning}
 
 Spatial planning uses decision theory to identify and allocate areas to specific purposes, such as reserve selection through spatial conservation prioritization [@Margules2000SystematicConservation; @Kukkala2013CoreConcepts; @Jung2024AssessmentState].
-In the context of landscape-ecology, it provides a pattern-process link <!-- (see section @sec-spatialpattern) -->, and outcomes related to decision making by distinguishing between structure, function and scales [@Hersperger2021LandscapeEcological].
+In the context of landscape-ecology, it provides a pattern-process link<!-- (see section @sec-spatialpattern) -->, and outcomes related to decision making by distinguishing between structure, function and scales [@Hersperger2021LandscapeEcological].
 As an integrative approach most spatial planning approaches can benefit from various computational advances in landscape ecology, for example through using simulation model outputs <!-- (see section @sec-simulation) --> as input features  <!-- (see also @daigle2020operationalizing) -->, there have been several recent advances in considering landscape patterns directly in spatial planning.
- 
+
 Generally, spatial patterns influence planning outcomes because of their compactness, contiguity and connectedness.
 Furthermore, aggregation can be important because of ecological or practical reasons, for example by ensuring that selected areas satisfy minimum patch size constraints [@Smith2010ApproachEnsuring; @Justeau-Allaire2021ConstrainedOptimization].
 Novel computational approaches make use of graph theory to identify valuable landscape areas in terms of compact core habitat and reducing boundary exposure [@Weerasena2023SequentialApproach].
 Similar, contiguity and connectivity are generally considered important to ensure that landscapes or habitat patches are connected, such as river networks [@Beger2010IncorporatingAsymmetric].
 In particular, recently the direct consideration of connectivity <!-- (see also section @sec-connectivity) --> has received increasing attention in spatial conservation planning and new computational methods are developed [@Hanson2019ConventionalMethods; @Daigle2020OperationalizingEcological; @Hanson2022ComparisonApproaches; @Beger2022DemystifyingEcological].
 
-Particular noteworthy are two advances that incorporate landscape indices in spatial planning.
+Particular noteworthy are two advances that incorporate landscape metrics in spatial planning.
 One is the use of graph theory in linear programming to guide conservation and restoration efforts [@Justeau-Allaire2021ConstrainedOptimization; @Hamonic2023CumulativeEffects].
 These spatial networks approaches have the potential to be provide more cost-effective and precise solutions to design reserve networks [@Hamonic2023CumulativeEffects].
-For example, @Justeau-Allaire2021ConstrainedOptimization used landscape ecology theory and indicators to spatially optimize restoration efforts, aiming to maximize broader landscape connectivity in New Caledonia.
+For example, @Justeau-Allaire2021ConstrainedOptimization used landscape ecology theory and metrics to spatially optimize restoration efforts, aiming to maximize broader landscape connectivity in New Caledonia.
 
 A second main development is the increasing use of deep reinforcement learning, a machine learning approach based not on patterns but agents and pathway.
 Reinforcement learning can be used to identify cost-efficient solutions to area-based conservation planning [@Silvestro2022ImprovingBiodiversity].
@@ -37,5 +37,5 @@ The *prioritizr* R package [@Hanson2024PrioritizrSystematic] supports a range of
 Similarly, the *coco* R package uses connectivity constraints in an integer linear planning framework to identify potential outcomes that minimize further fragmentation of the landscape [@vanMantgem2023CocoConservation].
 The *restoptr* R package uses constrained programming to identify restoration areas that would most effectively contribute to improved landscape connectivity [@Justeau-Allaire2023RestoptrPackage].
 Innovatively, it uses landscape ecology indices not as constraints, but as specific targets, e.g., where one could optimize the effective mesh size in a region.
-The *CAPTAIN* software suite implements reinforcement learning for area-based conservation efforts [@Silvestro2022ImprovingBiodiversity].
+The *CAPTAIN* Python software suite implements reinforcement learning for area-based conservation efforts [@Silvestro2022ImprovingBiodiversity].
 However, many spatial planning software still requires substantial prior knowledge on spatial optimization and statistics, which can create a barrier to more widespread adoption.
