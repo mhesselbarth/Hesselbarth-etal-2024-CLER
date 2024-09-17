@@ -31,7 +31,7 @@ affiliations:
   - id: 1
     name: International Institute for Applied Systems Analysis, Biodiversity, Ecology, and Conservation Group, Laxenburg, Austria
   - id: 2
-    name: Adam Mickiewicz University, Poznan, Poland
+    name: Adam Mickiewicz University, Poznań, Poland
   - id: 3
     name: University of Münster, Münster, Germany
   - id: 4
