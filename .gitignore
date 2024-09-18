@@ -5,6 +5,7 @@
 .DS_Store
 nul
 Manuscript.pdf
+Manuscript.docx
 Manuscript.tex
 *.log
 /.quarto/

@@ -26,6 +26,14 @@ author:
     orcid: 0000-0003-1223-6654
     email: adeflamingh@gmail.com
     affil-id: 5
+  - name: Gemma Gerber
+    orcid: 0000-0002-8722-3113
+    email: gerber@iiasa.ac.at
+    affil-id: 1
+  - name: Craig E. Simpkins
+    orcid: 0000-0003-3212-1379
+    email: simpkinscraig063@gmail.com
+    affil-id: 6
 
 affiliations: 
   - id: 1
@@ -38,7 +46,9 @@ affiliations:
     name: École polytechnique fédérale de Lausanne, Lausanne, Switzerland
   - id: 5
     name: Carl R. Woese Institute for Genomic Biology, University of Illinois at Urbana-Champaign, Urbana, IL, USA
-	
+  - id: 6
+    name: Auckland Council, Environmental Services Department, Auckland, New Zealand
+
 format:
   pdf:
     keep-tex: true
