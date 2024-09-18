@@ -6,7 +6,7 @@ bibliography: CLER.bib
 
 # Discussion {#sec-disc}
 
-Since emerging in the 1980s [@Turner2005LandscapeEcology], the field of landscape ecology has constantly evolved [@Costanza2019DescribingAnalyzing; @Gustafson2019HowHas] and is now highly depending on computational methods.
+Since emerging in the 1980s <!-- REF -->, the field of landscape ecology has constantly evolved [@Costanza2019DescribingAnalyzing; @Gustafson2019HowHas] and is now highly depending on computational methods.
 Thus, future progress within the research field will largely depend on available software and analysis tools [@Costanza2019DescribingAnalyzing].
 To maximize the benefits of "Open science", such as shareability, reproducibility, and transparency, the research community will gain the most if both existing and new software support script-based workflows and are made available under open-source licenses [@Powers2019OpenScience; @Vogt2019PatternsSoftware].
 <!--JN: maybe add a sentence or two summarizing the previous sections (e.g., that this paper presents various computational methods used in landscape ecology)-->

@@ -18,13 +18,13 @@ Traditionally and still the most prominent approaches to quantify spatial patter
 The strength of landscape metrics is that they are comparable easy to apply and communicate [@Lausch2015UnderstandingQuantifying], however, also limitations have been identified regarding their ability to quantify the spatial structure of landscapes, sensitivity to both spatial scale and thematic resolution, or correlation and redundancy between metrics [e.g., @Li2004UseMisuse; @Dramstad2009SpatialMetrics; @Kupfer2012LandscapeEcology].
 
 <!-- MH: Make sure this includes all similar papers, e.g., Uuemaa2011 -->
-To address some limitations, such as correlation and consistency, multivariate factor analysis [@Riitters1995], principal component analysis [@Cushman2008Parsimony], the variance inflation factor [@Plexida2014], or classification trees [@Breiman2017] were used to identify main components of landscape patterns.
+To address some limitations, such as correlation and consistency, multivariate factor analysis [@Riitters1995FactorAnalysis], principal component analysis [@Cushman2008ParsimonyLandscape], the variance inflation factor [@Plexida2014SelectingLandscape], or classification trees were used to identify main components of landscape patterns.
 <!-- MH: Add one sentence summarising studies above if possible -->
 More recently, principal component analysis over a set of landscapes blocks revealed two main components of landscape configuration, namely complexity and aggregation which together explain about 70% of variance [@Nowosad2018GlobalInventory].
-This is in line with various reviews [e.g., @Gustafson2019HowHas; @Riitters2019PatternMetrics] suggesting that there are two fundamental components of landscape patterns, namely amount and adjacency, which are connected to complexity and aggregation as suggested by @Nowosad2018.
+This is in line with various reviews [e.g., @Gustafson2019HowHas; @Riitters2019PatternMetrics] suggesting that there are two fundamental components of landscape patterns, namely amount and adjacency, which are connected to complexity and aggregation as suggested by @Nowosad2018GlobalInventory.
 <!-- MB: I wonder if we could already mention [@Nowosad2019InformationTheory] here since it presents the same two-component view of landscapes and links with the following section quite naturally -->
 
-Software to calculate landscape metrics include the *landscapemetrics* R package [@Hesselbarth2019LandscapemetricsOpen], the *PyLandStats* Python library [@Bosch2019PyLandStatsOpensource], or the stand-alone software *FRAGSTATS* [@McGarigal2023FRAGSTATSV4].
+Software to calculate landscape metrics include the *landscapemetrics* R package [@Hesselbarth2019LandscapemetricsOpensource], the *PyLandStats* Python library [@Bosch2019PyLandStatsOpensource], or the stand-alone software *FRAGSTATS* [@McGarigal2023FRAGSTATSV4].
 <!-- MB: Are there any libraries to perform factor analysis in R that are kind of specific to landscape ecology? I have had a draft on how to perform factor analysis with pylandstats https://github.com/martibosch/pylandstats-notebooks/blob/main/notebooks/05-cluster-analysis.ipynb, hopefully I will include it in the next release before -->
 <!-- MH: Would not mention PCA or similar here. Thats a general statistical issue and outside scope imho -->
 
@@ -113,7 +113,7 @@ Furthermore, pattern-based search is a one-to-many operation in which the spatia
 This allows to find areas with similar patterns compared to the query area, e.g., areas with similar environmental conditions [@Jasiewicz2014LandscapeSimilarity].
 Finally, the grouping of spatial patterns is a many-to-many operation in which spatial signatures are calculated for all areas and clustered based on their similarity [@Nowosad2021PatternbasedIdentification].
 
-R, Python, and Julia have a wide range of packages for spatial operations, including *sf* [@Pebesma2018SimpleFeatures], *terra* [@Hijmans2024TerraSpatial], or *motif* [@Nowosad2021MotifOpensource] in R, *GeoPandas* [@Jordahl2020GeopandasPython], or *rasterio* [@gillies2019] in Python, and GeoStats.jl* [@Hoffimann2018GeoStatsjlHighperformance] or *GeoInterface.jl* [@JuliaGeoandcontributors2024GeoInterfaceJulia] in Julia. 
+R, Python, and Julia have a wide range of packages for spatial operations, including *sf* [@Pebesma2018SimpleFeatures], *terra* [@Hijmans2024TerraSpatial], or *motif* [@Nowosad2021MotifOpensource] in R, *GeoPandas* [@Jordahl2020GeopandasPython], or *rasterio* [@Gillies2013RasterioGeospatial] in Python, and GeoStats.jl* [@Hoffimann2018GeoStatsjlHighperformance] or *GeoInterface.jl* [@JuliaGeoandcontributors2024GeoInterfaceJulia] in Julia. 
 These packages together with additional statistical and machine learning libraries allow for a wide range of spatial operations.
 Additionally, the *motif* R package [@Nowosad2021MotifOpensource] provides a set of functions for spatial pattern operations, such as comparing, searching, or grouping spatial patterns customized for landscape ecology.
 
