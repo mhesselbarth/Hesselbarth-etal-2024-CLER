@@ -13,7 +13,7 @@ To maximize the benefits of "Open science", such as shareability, reproducibilit
 
 <!-- JN: the next sentence seems to be broken -->
 Furthermore, landscape ecology will benefit and adapt solutions from technological advancements in other fields.
-This includes advancements in remote sensing technology, with increased data availability and diversity from a range of sources, including large satellites, unmanned aerial vehicles, and ground-based sensor systems. 
+This includes advancements in remote sensing technology, with increased data availability and diversity from a range of sources, including large satellites, unmanned aerial vehicles, and ground-based sensor systems.
 These systems provide both passive sensors such as multispectral, hyperspectral, and thermal sensors, and active optical sensors such as LiDAR and SAR[@Crowley2020RemoteSensings].
 In combination with other increasingly available data sources, e.g, citizen science data, ecology is in the era of increasingly large data requiring methods that can handle heterogeneous data or high-throughput computing resources [@Farley2018SituatingEcology].
 Due to its high flexibility and performance, artificial intelligence has become popular and deep learning and machine learning algorithms can be used for e.g., mapping, classification and feature extraction, modeling, or prediction and simulations [@Christin2019ApplicationsDeep; @Stupariu2022MachineLearning; @Pichler2023MachineLearning].
@@ -22,7 +22,7 @@ Quantum computing may additionally offer a potential pathway to surpass the limi
 <!-- MH: Add refs to this -->
 Climate change as well as the biodiversity crisis are two intervened and complex issues that need integrative, multi-disciplinary, and scale-dependent solutions to face them.
 Landscape ecology is well equipped to provide answers because it connects several research fields at multiple scales, such as social sciences, geography, and ecology and evolution.
-However, up-to-date and constantly evolving computational methods are required to meet the increasing complexity of research questions. 
+However, up-to-date and constantly evolving computational methods are required to meet the increasing complexity of research questions.
 Here we provided a review of the latest developments, nevertheless, a review of these methods can always be only a snapshot in time and hopefully new computational approaches will emerge in the future.
 
 <!-- JN: additional possible topics to discuss here is that the computational methods are also related to the developments in computer science; thus, new frameworks, tools, good practices, etc. are constantly emerging, and not everything is about new methods, but also about new ways to implement them, new ways to share them, better ways to document them, more consistent syntaxes, etc. -->

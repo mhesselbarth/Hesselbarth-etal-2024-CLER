@@ -7,87 +7,88 @@ bibliography: CLER.bib
 # Connectivity {#sec-connectivity}
 
 Landscape connectivity describes how landscapes facilitate or impede movement among resource patches [@Taylor1993ConnectivityVital; @Taylor2006LandscapeConnectivity].
-It underpins ecosystem functionality, maintains biodiversity and populations, and plays a large role in many conservation actions [@CorreaAyram2016HabitatConnectivity; @Hilty2020GuidelinesConserving] and multiple approaches how to measure connectivity were developed [@Simpkins2018AssessingPerformance; @Keeley2021ConnectivityMetrics].
+It underpins ecosystem functionality, maintains biodiversity and populations, and plays a large role in many conservation actions [@CorreaAyram2016HabitatConnectivity; @Hilty2020GuidelinesConserving].
+Thus, multiple approaches how to measure connectivity were developed [@Simpkins2018AssessingPerformance; @Keeley2021ConnectivityMetrics].
 Connectivity can be divided into structural and functional connectivity.
-Structural connectivity describes the physical arrangement of landscape elements, focusing on spatial aspects such as continuity and adjacency. 
-It is solely a landscape feature and independent of species' characteristics [@Tischendorf2000UsageMeasurement; @CorreaAyram2016HabitatConnectivity]. 
-Functional connectivity, in contrast, integrates landscape structure with the perceptual, behavioural, and dispersal characteristics of species, making it both species- and landscape-specific [@Adriaensen2003ApplicationLeastcost; @Taylor2006LandscapeConnectivity]. 
+Structural connectivity describes the physical arrangement of landscape elements, focusing on spatial aspects such as continuity and adjacency.
+It is solely a landscape feature and independent of species' characteristics [@Tischendorf2000UsageMeasurement; @CorreaAyram2016HabitatConnectivity].
+Functional connectivity, in contrast, integrates landscape structure with the perceptual, behavioural, and dispersal characteristics of species, making it both species- and landscape-specific [@Adriaensen2003ApplicationLeastcost; @Taylor2006LandscapeConnectivity].
 
-## Estimating connectivity 
+## Estimating connectivity
 
 <!-- MH: Potential shorten here -->
 
-While connectivity is key to many modern conservation theories and practices, quantifying it has proven both technically and conceptually challenging [@Calabrese2004ComparisonshoppersGuide; @Taylor2006LandscapeConnectivity]. 
-Data from many individuals recording the start location, trajectory, and endpoint of movement is required to infer the elements in the landscape that individuals preferentially move through [@Simpkins2018AssessingPerformance]. 
-While improving technologies have made tracking animal movement at high-resolution possible [@Kays2015TerrestrialAnimal; Nathan2022BigdataApproaches], it is still logistically challenging to track high numbers of individuals for the required tempo-spatial resolutions. 
-Thus, in practice connectivity is primarily determined by indirect estimation. 
+While connectivity is key to many modern conservation theories and practices, quantifying it has proven both technically and conceptually challenging [@Calabrese2004ComparisonshoppersGuide; @Taylor2006LandscapeConnectivity].
+Data from many individuals recording the start location, trajectory, and endpoint of movement is required to infer the elements in the landscape that individuals preferentially move through [@Simpkins2018AssessingPerformance].
+While improving technologies have made tracking animal movement at high-resolution possible [@Kays2015TerrestrialAnimal; Nathan2022BigdataApproaches], it is still logistically challenging to track high numbers of individuals for the required tempo-spatial resolutions.
+Thus, in practice connectivity is primarily determined by indirect estimation.
 @Calabrese2004ComparisonshoppersGuide distinguished three types of estimates: i) structural connectivity determined by the physical attributes of the landscape, ii) potential connectivity as a combination of the physical attributes of the landscape and limited information about dispersal capabilities of species, and iii) actual connectivity related to observations of individuals moving through a landscape.
 
 ### Structural Connectivity Estimation Methods
 
-Landscape metrics, produced using software such as `landscapemetrics`, are commonly used to quantify various aspects of landscape structure decomposed into composition and configuration. 
+Landscape metrics, produced using software such as `landscapemetrics`, are commonly used to quantify various aspects of landscape structure decomposed into composition and configuration.
 These metrics describe structural connectivity in terms of total habitat amount, patch size and isolation, or possible connections between habitat patches.
 Additionally, more recently there has been an increasing focus on within-patch connectivity using metrics such as the effective mesh size. [@Spanowicz2019MeasuringLandscape].
 
 ### Estimating Functional Connectivity Using Resistance Surfaces
 
-Functional connectivity estimation involves integrating species-specific movement data with landscape features. 
-This estimation normally involves the usage of graph-theoretic approaches, though these details are often obscured for convenience by software [@McRae2008UsingCircuit]. 
+Functional connectivity estimation involves integrating species-specific movement data with landscape features.
+This estimation normally involves the usage of graph-theoretic approaches, though these details are often obscured for convenience by software [@McRae2008UsingCircuit].
 Two primary base approaches are usually applied in modern connectivity estimation, namely least-cost paths (LCP) and circuit theory.
 
-The methods all rely on resistance surfaces to represent the landscape [@Zeller2012EstimatingLandscape]. 
-A resistance surface is a grid-based representation of a landscape where each cell is assigned a value representing the difficulty (or cost) for an individual of a particular species to traverse that cell [@Etherington2016LeastcostModelling]. 
+The methods all rely on resistance surfaces to represent the landscape [@Zeller2012EstimatingLandscape].
+A resistance surface is a grid-based representation of a landscape where each cell is assigned a value representing the difficulty (or cost) for an individual of a particular species to traverse that cell [@Etherington2016LeastcostModelling].
 The values are based on landscape features and represent factors influencing movement, such as habitat type, topography, or barriers.
 
-Creating a resistance surface involves obtaining landscape data for the area of interest along with a sufficiently large buffer area to avoid edge artifacts [@Dutta2022OverviewComputational]. 
-Next, the cost value for each cell need to be quantified using empirical movement data. 
+Creating a resistance surface involves obtaining landscape data for the area of interest along with a sufficiently large buffer area to avoid edge artifacts [@Dutta2022OverviewComputational].
+Next, the cost value for each cell need to be quantified using empirical movement data.
 This can included expert opinion [widely used due to low cost, however, difficult to measure accuracy\; @Krueger2012RoleExpert], detection data (single point locations of unknown individuals), relocation data (multiple sequential locations of the same individual but at low frequency), pathway data (high-frequency relocation data allowing for movement track inference), or genetic data (Genetic samples used to calculate genetic distances between populations).
 
-A large number of software applications have been developed, with these approaches as a base, to estimate connectivity including *ConScape.jl* [@vanMoorter2023AcceleratingAdvances], *Omniscape.jl* [@Landau2021OmniscapejlSoftware], *lconnect* [@Mestre2023LconnectPackage], *grainscape* [@Chubaty2020ToolboxGrainscape], or *Circuitscape* [@Anantharaman2019CircuitscapeJulia]. 
+A large number of software applications have been developed, with these approaches as a base, to estimate connectivity including *ConScape.jl* [@vanMoorter2023AcceleratingAdvances], *Omniscape.jl* [@Landau2021OmniscapejlSoftware], *lconnect* [@Mestre2023LconnectPackage], *grainscape* [@Chubaty2020ToolboxGrainscape], or *Circuitscape* [@Anantharaman2019CircuitscapeJulia].
 
-Resistance surfaces are not free of critique including missing spatial-temporal variability or context dependency [@UnnithanKumar2022ConnectivityModelling; @UnnithanKumar2022MovingLandscape]. 
+Resistance surfaces are not free of critique including missing spatial-temporal variability or context dependency [@UnnithanKumar2022ConnectivityModelling; @UnnithanKumar2022MovingLandscape].
 Thus, recent developments include the combination with more processes-based modelling approaches [@Schumaker2018HexSimModeling; @Bocedi2021RangeShifter20; @UnnithanKumar2022PathwalkerNew], modelling of dynamic landscape connectivity [@Zeller2020UnderstandingImportance], inclusion of stochasticity and spatial context [@Ribeiro2017LandScapeCorridors], using genetic optimization algorithms [@Peterman2018ResistanceGAPackage], or computational improvements [@Leonard2017GlowSoftware].
 
 #### Least-cost paths (LCP)
 
-LCP models assume that individuals have perfect knowledge of the landscape and will choose the path that minimizes resistance costs perfectly with no deviations [@Adriaensen2003ApplicationLeastcost]. 
-By calculating the LCP between two points using a resistance surface, researchers can estimate connectivity between these points based on the accumulated cost along the path. 
+LCP models assume that individuals have perfect knowledge of the landscape and will choose the path that minimizes resistance costs perfectly with no deviations [@Adriaensen2003ApplicationLeastcost].
+By calculating the LCP between two points using a resistance surface, researchers can estimate connectivity between these points based on the accumulated cost along the path.
 This method can also generate accumulated cost surfaces depicting the minimum cost from a single point to all other locations, helping identify reachable areas within a threshold.
 The creation of LCPs is a well established technique and there are highly optimised and efficient algorithms available for its calculation.
 
 #### Circuit theory
 
-Circuit theory considers all possible pathways between locations simultaneously [@McRae2008UsingCircuit]. 
-In this approach, the landscape is represented as a network where nodes are connected by resistors (weighted by the values in the resistance surface), and movement is analogous to electrical current flow. 
+Circuit theory considers all possible pathways between locations simultaneously [@McRae2008UsingCircuit].
+In this approach, the landscape is represented as a network where nodes are connected by resistors (weighted by the values in the resistance surface), and movement is analogous to electrical current flow.
 Circuit theory does not assume that organisms have perfect knowledge of the landscape and is particularly useful when multiple alternative pathways are available.
-Key measures from circuit theory are the resistance distance and the current flow. 
+Key measures from circuit theory are the resistance distance and the current flow.
 The former can describes isolation by measuring multiple low- or high resistance pathways, the later identifies areas of high movement probability, highlighting important corridors and bottlenecks in the landscape
 
 #### Graph theory
 
-Following the formative work of @Urban2001LandscapeConnectivity, graph theory has rapidly developed into a cornerstone approach to studying landscape connectivity by integrating changes in landscape spatial structure and species movement or dispersal in a landscape graph [or habitat network\; @Cushman2013BiologicalCorridors]. 
-In graph-based landscape connectivity studies, the system boundary is usually delineated as the spatial extent of the modeled landscape. 
-Within the landscape, discrete habitat patches (suitable areas for a species) are modeled as nodes, and the potential dispersal pathways or species movements between habitat patches are modeled as edges. 
+Following the formative work of @Urban2001LandscapeConnectivity, graph theory has rapidly developed into a cornerstone approach to studying landscape connectivity by integrating changes in landscape spatial structure and species movement or dispersal in a landscape graph [or habitat network\; @Cushman2013BiologicalCorridors].
+In graph-based landscape connectivity studies, the system boundary is usually delineated as the spatial extent of the modeled landscape.
+Within the landscape, discrete habitat patches (suitable areas for a species) are modeled as nodes, and the potential dispersal pathways or species movements between habitat patches are modeled as edges.
 The edges can be binary (or "unweighted"), representing whether a connection between two nodes exists or weighted by a value representing individual dispersal effort from one habitat patch to another [@Petsas2021LandscapeConnectivity].
 
-From the modeled landscape graphs, landscape connectivity can be quantified through various graph-theoretical metrics. 
-Each metric provides complementary connectivity information, and some can be used to determine the relative importance of a patch in maintaining connectivity. 
+From the modeled landscape graphs, landscape connectivity can be quantified through various graph-theoretical metrics.
+Each metric provides complementary connectivity information, and some can be used to determine the relative importance of a patch in maintaining connectivity.
 Currently, a new generation of graph-theoretical metrics, commonly reported in combination [@Hashemi2022ReviewEcological], have been developed to account for landscape features critical for a species’s spatial use and movement [@Petsas2021LandscapeConnectivity].
 Widely reported landscape connectivity metrics include the probability of connectivity index [PC\; for details see @Saura2007NewHabitat], a habitat availability metric quantifying potential and functional connectivity within a landscape [@Saura2010CommonCurrency; @Pietsch2018ContributionConnectivity], and the integral index of connectivity [IIC\; @Pascual-Hortal2006ComparisonDevelopment], which is based on a simple, binary connection model in which two habitat patches are either connected by an edge or not [@Saura2010CommonCurrency].
 
-Graph theory and connectivity metrics have broad utility in landscape connectivity studies, and can be applied over various geographical contexts and for various species [@Foltete2020CouplingLandscape], and require very little data input [@Godet2021ComparisonLandscape]. 
-This approach can provide key information for conservation planning and management. 
-For example, it can be used to identify critical habitat patches and their edges that facilitate movement or dispersal within a landscape. 
+Graph theory and connectivity metrics have broad utility in landscape connectivity studies, and can be applied over various geographical contexts and for various species [@Foltete2020CouplingLandscape], and require very little data input [@Godet2021ComparisonLandscape].
+This approach can provide key information for conservation planning and management.
+For example, it can be used to identify critical habitat patches and their edges that facilitate movement or dispersal within a landscape.
 This information can assist in planning corridors that facilitate wildlife movement [e.g., @Wang2023OptimalConfiguration], planning infrastructure (e.g., roads) placement to minimize lost connectivity due to habitat fragmentation [@Pietsch2018ContributionConnectivity], and identifying which habitat patches could be prioritized for protection and restoration to maintain overall landscape connectivity [@Liu2020UsingLandscape].
 
-Graph theory and associated connectivity metrics in landscape connectivity studies are constantly evolving. 
-The modeling framework, initially only applied to one species at a time, is increasingly being applied to model multispecies landscapes [@Clauzel2018CouplingLandscapebased; @Modica2021ImplementationMultispecies; @Liang2023MultispeciesApproach], which account for multiple species’ different movement abilities and habitat preferences, and can be used to design conservation strategies that benefit a more comprehensive range of species. 
-In addition, newer methodologies offer promising novel avenues to model not only spatial graphs, but spatiotemporal graphs, where the nodes and edges are represented in space and time through a multiple-layer graph approach [@Dale2017SpatiotemporalGraphs; @Uroy2021HowAssess]. 
-Modeling the temporal dynamics of connectivity helps researchers identify habitat patches that have changed in connectivity, or not, over time, and how these changes affect(ed) biodiversity patterns [@Uroy2021HowAssess]. 
-In addition, new connectivity metrics are frequently being developed [@Hashemi2022ReviewEcological], often building upon and addressing the caveats of previous metrics. 
+Graph theory and associated connectivity metrics in landscape connectivity studies are constantly evolving.
+The modeling framework, initially only applied to one species at a time, is increasingly being applied to model multispecies landscapes [@Clauzel2018CouplingLandscapebased; @Modica2021ImplementationMultispecies; @Liang2023MultispeciesApproach], which account for multiple species’ different movement abilities and habitat preferences, and can be used to design conservation strategies that benefit a more comprehensive range of species.
+In addition, newer methodologies offer promising novel avenues to model not only spatial graphs, but spatiotemporal graphs, where the nodes and edges are represented in space and time through a multiple-layer graph approach [@Dale2017SpatiotemporalGraphs; @Uroy2021HowAssess].
+Modeling the temporal dynamics of connectivity helps researchers identify habitat patches that have changed in connectivity, or not, over time, and how these changes affect(ed) biodiversity patterns [@Uroy2021HowAssess].
+In addition, new connectivity metrics are frequently being developed [@Hashemi2022ReviewEcological], often building upon and addressing the caveats of previous metrics.
 
-Despite the robust theoretical underpinnings of graph theory and its powerful application in landscape connectivity research, there are many ways to construct a habitat graph with different sources of information, which could lead to different results. 
-For example, @Godet2021ComparisonLandscape modeled the same landscape using three different types of data, all of which resulted in large differences in the statistical distribution of connectivity values. 
+Despite the robust theoretical underpinnings of graph theory and its powerful application in landscape connectivity research, there are many ways to construct a habitat graph with different sources of information, which could lead to different results.
+For example, @Godet2021ComparisonLandscape modeled the same landscape using three different types of data, all of which resulted in large differences in the statistical distribution of connectivity values.
 In many cases, data availability limits the models' representation of the studied landscape, with subsequent implications for the calculated connectivity metrics and inferences of landscape connectivity [Foltete2020CouplingLandscape].
 
 Currently, graph-theoretical landscape graphs and connectivity indices can be calculated using several open-source software, including *Conefor* [@Saura2009ConeforSensinode], *Graphab* [@Foltete2012SoftwareTool], R packages *lconnect* [@Mestre2023LconnectPackage], *GRAINSCAPE* [@Chubaty2020ToolboxGrainscape], and Julia’s *ConScape* library [@vanMoorter2023AcceleratingAdvances], among others.

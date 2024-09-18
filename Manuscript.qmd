@@ -35,7 +35,7 @@ author:
     email: simpkinscraig063@gmail.com
     affil-id: 6
 
-affiliations: 
+affiliations:
   - id: 1
     name: International Institute for Applied Systems Analysis, Biodiversity, Ecology, and Conservation Group, Laxenburg, Austria
   - id: 2
@@ -52,10 +52,10 @@ affiliations:
 format:
   pdf:
     keep-tex: true
-    template-partials: 
+    template-partials:
       - title.tex
-    include-in-header: 
-      text: | 
+    include-in-header:
+      text: |
         \usepackage{lineno}\linenumbers
         \usepackage[noblocks]{authblk}
         \usepackage{setspace}

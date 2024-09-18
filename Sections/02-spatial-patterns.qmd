@@ -99,7 +99,7 @@ The most important is computational complexity, which makes calculations of vect
 Another technical issue is the need for the data to be topologically correct (e.g., geometries cannot overlap), which is often problematic especially for data from different sources.
 Last, the pattern-process link is still less explored for vector-based metrics compared to raster-based metrics.
 
-The *vectormetrics* R package [@Matuszek2024VectormetricsLandscape] is specifically designed for vector metrics. 
+The *vectormetrics* R package [@Matuszek2024VectormetricsLandscape] is specifically designed for vector metrics.
 However, all the general software frameworks mentioned earlier, which support vector data handling, can also be used to calculate basic metrics.
 
 ## Operations on spatial patterns
@@ -113,7 +113,7 @@ Furthermore, pattern-based search is a one-to-many operation in which the spatia
 This allows to find areas with similar patterns compared to the query area, e.g., areas with similar environmental conditions [@Jasiewicz2014LandscapeSimilarity].
 Finally, the grouping of spatial patterns is a many-to-many operation in which spatial signatures are calculated for all areas and clustered based on their similarity [@Nowosad2021PatternbasedIdentification].
 
-R, Python, and Julia have a wide range of packages for spatial operations, including *sf* [@Pebesma2018SimpleFeatures], *terra* [@Hijmans2024TerraSpatial], or *motif* [@Nowosad2021MotifOpensource] in R, *GeoPandas* [@Jordahl2020GeopandasPython], or *rasterio* [@Gillies2013RasterioGeospatial] in Python, and GeoStats.jl* [@Hoffimann2018GeoStatsjlHighperformance] or *GeoInterface.jl* [@JuliaGeoandcontributors2024GeoInterfaceJulia] in Julia. 
+R, Python, and Julia have a wide range of packages for spatial operations, including *sf* [@Pebesma2018SimpleFeatures], *terra* [@Hijmans2024TerraSpatial], or *motif* [@Nowosad2021MotifOpensource] in R, *GeoPandas* [@Jordahl2020GeopandasPython], or *rasterio* [@Gillies2013RasterioGeospatial] in Python, and GeoStats.jl* [@Hoffimann2018GeoStatsjlHighperformance] or *GeoInterface.jl* [@JuliaGeoandcontributors2024GeoInterfaceJulia] in Julia.
 These packages together with additional statistical and machine learning libraries allow for a wide range of spatial operations.
 Additionally, the *motif* R package [@Nowosad2021MotifOpensource] provides a set of functions for spatial pattern operations, such as comparing, searching, or grouping spatial patterns customized for landscape ecology.
 
@@ -147,7 +147,7 @@ Dealing with the MAUP in the context of landscape metrics include the identifica
 <!-- While selecting the adequate scale should be based on the phenomenon of interest, researchers are often constrained by the availability of data. -->
 <!-- Therefore, a thorough understanding of these relationships is essential in order to compare spatial patterns measured at different scales. -->
 <!-- Several types of responses of landscape metrics to changing scale have been identified in computational experiments by changing both the spatial resolution (grain) and extent. -->
-The scale effects of landscape metrics can be assessed by computing scalograms, i.e., the response curves of metrics to changing scales. 
+The scale effects of landscape metrics can be assessed by computing scalograms, i.e., the response curves of metrics to changing scales.
 Some metrics related to the number of patches, edges show consistent linear and power-law scaling relationships to changing grain, while other metrics exhibit less predictable responses [@Turner1989EffectsChanging; @Saura2001SensitivityLandscape; @Wu2002EmpiricalPatterns; @Wu2004EffectsChanging; @Saura2007ScalingFunctions; @Simova2012LandscapeIndices; @Arganaraz2014ScalingFunctions; @Frazier2023ScalingSpatial].
 <!-- Advancing the science of scaling in landscape ecology is key to "permit the prediction and inference of quantities measured at one scale to another" [@Frazier2023ScalingSpatial] -->
 <!-- also multi-scale is key to habitat assessment, see "Multi-scale habitat selection modeling: a review and outlook" -->
@@ -176,7 +176,7 @@ This involves three fundamental steps, i) considering scope guidelines when desi
 - normalized metrics [@Wang2011]
 - [@Frazier2021]
 
-CLOSING THOUGHTS AND BRIDGING WITH THE NEXT SECTION 
+CLOSING THOUGHTS AND BRIDGING WITH THE NEXT SECTION
 Responses:
 - incorporating aspects of ecological function into landscape metrics (e.g., core area, least-cost distances) and moving towards graph-based and circuit theory approaches [@Kupfer2012].
 - point-data analysis [@Gustafson1998] and gradient surface model [@Lausch2015] require fewer assumptions regarding LULC categorization schemes or spatial scale

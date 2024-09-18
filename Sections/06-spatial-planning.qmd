@@ -33,7 +33,7 @@ Multiple open-source software solutions have been developed to support integrati
 Most software are based on linear or constrained programming approaches requiring a solver to create any outputs.
 Unfortunately there is still a gap between open-source and proprietary solvers in terms of computational efficiency [@Hanson2019OptimalityPrioritizing].
 
-The *prioritizr* R package [@Hanson2024PrioritizrSystematic] supports a range of compactness and contiguity constraints, penalties, and generally allows to flexible create planning problems in multiple configurations. 
+The *prioritizr* R package [@Hanson2024PrioritizrSystematic] supports a range of compactness and contiguity constraints, penalties, and generally allows to flexible create planning problems in multiple configurations.
 Similarly, the *coco* R package uses connectivity constraints in an integer linear planning framework to identify potential outcomes that minimize further fragmentation of the landscape [@vanMantgem2023CocoConservation].
 The *restoptr* R package uses constrained programming to identify restoration areas that would most effectively contribute to improved landscape connectivity [@Justeau-Allaire2023RestoptrPackage].
 Innovatively, it uses landscape ecology indices not as constraints, but as specific targets, e.g., where one could optimize the effective mesh size in a region.

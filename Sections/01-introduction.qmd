@@ -18,5 +18,5 @@ Additionally, because landscape ecology is a cross-disciplinary field [including
 Here, we aim to introduce the latest developments of computational methods in landscape ecology.
 However, we do not provide a systematic literature review, or a general introduction to (computational) landscape ecology.
 For a more comprehensive and general introductions to landscape ecology, please see @Turner2015LandscapeEcology, @Gergel2017LearningLandscape, or @With2019EssentialsLandscape.
-Here, we introduce recent computational developments in some important topics of landscape ecology including software that implements or is potentially capable of implementing them. 
+Here, we introduce recent computational developments in some important topics of landscape ecology including software that implements or is potentially capable of implementing them.
 In this context, we are focusing on open-source software and specifically scripting languages such as R, Python, and Julia.
