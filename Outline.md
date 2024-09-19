@@ -33,7 +33,7 @@
   - Neutral landscape 
   - Process-based simulation
   - Digital twins
-- 6. Spatial planning (**Jung**)
 - 7. Landscape genetics (**de Flamingh**)
+- 6. Spatial planning (**Jung**)
 - 9. Discussion
   - Future needs

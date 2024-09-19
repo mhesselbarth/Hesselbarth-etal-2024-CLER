@@ -15,20 +15,18 @@ Functional connectivity, in contrast, integrates landscape structure with the pe
 
 Multiple approaches how to measure connectivity have been developed [@Simpkins2018AssessingPerformance; @Keeley2021ConnectivityMetrics], however, quantifying connectivity has proven both technically and conceptually challenging [@Calabrese2004ComparisonshoppersGuide; @Taylor2006LandscapeConnectivity].
 Movement data from many individuals is required to infer the elements in the landscape that individuals preferentially move through [@Simpkins2018AssessingPerformance].
-While improving technologies have made tracking animal movement at high tempo-spatial resolution available [@Kays2015TerrestrialAnimal; Nathan2022BigdataApproaches], it is still logistically challenging to track high numbers of individuals.
+While improving technologies have made tracking animal movement at high tempo-spatial resolution available [@Kays2015TerrestrialAnimal; @Nathan2022BigdataApproaches], it is still logistically challenging to track high numbers of individuals.
 Thus, in practice connectivity is primarily determined by indirect estimations.
 @Calabrese2004ComparisonshoppersGuide distinguished three types of estimates: i) structural connectivity determined by the physical attributes of the landscape, ii) potential connectivity as a combination of physical landscape attributes and limited information about dispersal capabilities of species, and iii) actual connectivity related to observations of individuals moving through a landscape.
 
-### Estimating structural connectivity
+## Estimating structural connectivity
 
 Landscape metrics are commonly used to quantify various aspects of landscape structure decomposed into composition and configuration.
 These metrics describe structural connectivity in terms of total habitat amount, patch size and isolation, or possible connections between habitat patches.
 Additionally, more recently there has been an increasing focus on within-patch connectivity using metrics such as the effective mesh size [@Spanowicz2019MeasuringLandscape].
-However, landscape metrics are frequently criticized for an ambiguous link to functional connectivity, however, functionality can be partly included by using ecological meaningful metrics, such as the core area [e.g., @Kupfer2012].
+However, landscape metrics are frequently criticized for an ambiguous link to functional connectivity, however, functionality can be partly included by using ecological meaningful metrics, such as the core area [e.g., @Kupfer2012LandscapeEcology].
 
-### Estimating functional connectivity
-
-#### Resistance surfaces
+## Resistance surfaces
 
 Many modern connectivity estimation approaches rely on resistance surfaces to represent the landscape [@Zeller2012EstimatingLandscape].
 A resistance surface is a grid-based representation of a landscape where each cell is assigned a value representing the difficulty (or cost) for an individual of a particular species to traverse that cell based on landscape features such as habitat type, topography, or barriers [@Etherington2016LeastcostModelling].
@@ -50,7 +48,7 @@ It can describes isolation by measuring multiple low- or high resistance pathway
 However, resistance surfaces are not free of critique including missing spatial-temporal variability or context dependency [@UnnithanKumar2022ConnectivityModelling; @UnnithanKumar2022MovingLandscape].
 Thus, recent developments include the combination with more processes-based modelling approaches [@Schumaker2018HexSimModeling; @Bocedi2021RangeShifter20; @UnnithanKumar2022PathwalkerNew], modelling of dynamic landscape connectivity [@Zeller2020UnderstandingImportance], inclusion of stochasticity and spatial context [@Ribeiro2017LandScapeCorridors], using genetic optimization algorithms [@Peterman2018ResistanceGAPackage], or computational improvements [@Leonard2017GlowSoftware].
 
-#### Graph theory
+## Graph theory
 
 Following the formative work of @Urban2001LandscapeConnectivity, graph theory has developed into a cornerstone approach to studying landscape connectivity by integrating landscape features and species movement in landscape graphs [@Cushman2013BiologicalCorridors].
 Graph theory and connectivity metrics based on it can be applied over various geographical contexts and for various species [@Foltete2020CouplingLandscape], require very little data inputs [@Godet2021ComparisonLandscape], and can provide key information for conservation planning and management.
