@@ -19,4 +19,5 @@ Here, we introduce recent computational developments in some important topics of
 In this context, we are focusing on open-source software and specifically scripting languages such as R, Python, and Julia.
 However, we do not provide a systematic literature review, or a general introduction to (computational) landscape ecology.
 For a more comprehensive and general introductions to landscape ecology, please see @Turner2015LandscapeEcology, @Gergel2017LearningLandscape, or @With2019EssentialsLandscape.
-![Overview of landscape ecology topics for which computational developments are discussed.](Fig-1.png)
+
+![Overview of landscape ecology topics for which computational developments are discussed.](Figures/Fig-1.png){width=80%}

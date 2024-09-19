@@ -10,6 +10,14 @@ author:
     orcid: 0000-0002-1057-3721
     email: nowosad.jakub@gmail.com
     affil-id: 2,3
+  - name: Craig E. Simpkins
+    orcid: 0000-0003-3212-1379
+    email: simpkinscraig063@gmail.com
+    affil-id: 4
+  - name: Martin Jung
+    orcid: 0000-0002-7569-1390
+    email: jung@iiasa.ac.at
+    affil-id: 1
   - name: Gemma Gerber
     orcid: 0000-0002-8722-3113
     email: gerber@iiasa.ac.at
@@ -17,14 +25,6 @@ author:
   - name: Alida de Flamingh
     orcid: 0000-0003-1223-6654
     email: adeflamingh@gmail.com
-    affil-id: 4
-  - name: Martin Jung
-    orcid: 0000-0002-7569-1390
-    email: jung@iiasa.ac.at
-    affil-id: 1
-  - name: Craig E. Simpkins
-    orcid: 0000-0003-3212-1379
-    email: simpkinscraig063@gmail.com
     affil-id: 5
   - name: Martí Bosch
     orcid: 0000-0001-8735-9144
@@ -39,9 +39,9 @@ affiliations:
   - id: 3
     name: University of Münster, Münster, Germany
   - id: 4
-    name: Carl R. Woese Institute for Genomic Biology, University of Illinois at Urbana-Champaign, Urbana, IL, USA
-  - id: 5
     name: Auckland Council, Environmental Services Department, Auckland, New Zealand
+  - id: 5
+    name: Carl R. Woese Institute for Genomic Biology, University of Illinois at Urbana-Champaign, Urbana, IL, USA
   - id: 6
     name: École polytechnique fédérale de Lausanne, Lausanne, Switzerland
 
