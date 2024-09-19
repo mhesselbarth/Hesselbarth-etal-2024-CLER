@@ -75,7 +75,22 @@ csl: springer-basic-author-date.csl
 
 # Abstract {.unnumbered}
 
-This is a test!
+## Purpose of Review {.unnumbered}
+
+Landscapes can be defined as mosaics of different land covers, habitats, ecosystems, or land-use systems. 
+The link between spatial heterogeneity and ecological processes is the core concept in the research field of landscape ecology. 
+Due to its cross-disciplinary nature, the increasing availability of data, and the complexity of landscape systems, advanced computational methods are essential.
+
+## Recent findings {.unnumbered}
+
+This review provides an overview of recent developments in computational methods that have advanced landscape ecology research. 
+We focus on key topics such as spatial patterns, connectivity, simulations and modeling, landscape genetics, and spatial planning.
+
+## Summary {.unnumbered}
+
+The review highlights key innovations, challenges, and potential future directions in the field, emphasizing the role of computational methods in addressing complex ecological questions.
+
+{{< pagebreak >}}
 
 {{< include Sections/01-introduction.qmd >}}
 {{< include Sections/02-spatial-patterns.qmd >}}
