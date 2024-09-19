@@ -1,8 +1,6 @@
 ---
 title: "Computational methods in landscape ecology"
 
-keywords: spatial data, spatial patterns, open-source, scientific software
-
 author:
   - name: Maximilian H.K. Hesselbarth
     orcid: 0000-0003-1125-9918
@@ -73,18 +71,20 @@ bibliography: CLER.bib
 csl: springer-basic-author-date.csl
 ---
 
+\noindent Keywords: (1) spatial data, (2) spatial patterns, (3) pattern-process link (4) open-source, (5) scientific software
+
 # Abstract {.unnumbered}
 
 ## Purpose of Review {.unnumbered}
 
-Landscapes can be defined as mosaics of different land covers, habitats, ecosystems, or land-use systems. 
-The link between spatial heterogeneity and ecological processes is the core concept in the research field of landscape ecology. 
-Due to its cross-disciplinary nature, the increasing availability of data, and the complexity of landscape systems, advanced computational methods are essential.
+Landscapes can be defined as mosaics of different land covers, habitats, ecosystems, or land-use systems.
+The link between spatial heterogeneity and ecological processes is the core concept in the research field of landscape ecology.
+Nowadays, advanced computational methods are essential to the field due to its cross-disciplinary nature, the increasing availability of data, and the complexity of landscape systems.
 
 ## Recent findings {.unnumbered}
 
-This review provides an overview of recent developments in computational methods that have advanced landscape ecology research. 
-We focus on key topics such as spatial patterns, connectivity, simulations and modeling, landscape genetics, and spatial planning.
+This review provides an overview of recent developments in computational methods that have advanced the research field of landscape ecology.
+We focus on key topics such as spatial patterns, connectivity, simulations and modelling, landscape genetics, and spatial planning.
 
 ## Summary {.unnumbered}
 
@@ -103,7 +103,7 @@ The review highlights key innovations, challenges, and potential future directio
 
 # Acknowledgments {.unnumbered}
 
-We are thankful to the anonymous reviewers and the Editors who provided valuable comments to improve the manuscript.
+We are thankful to the anonymous reviewers and the editors who provided valuable comments to improve the manuscript.
 
 ## Funding {.unnumbered}
 
