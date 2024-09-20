@@ -3,32 +3,18 @@ title: "Computational methods in landscape ecology"
 
 author:
   - name: Maximilian H.K. Hesselbarth
-    orcid: 0000-0003-1125-9918
-    email: mhk.hesselbarth@gmail.com
     affil-id: 1
   - name: Jakub Nowosad
-    orcid: 0000-0002-1057-3721
-    email: nowosad.jakub@gmail.com
     affil-id: 2,3
-  - name: Craig E. Simpkins
-    orcid: 0000-0003-3212-1379
-    email: simpkinscraig063@gmail.com
-    affil-id: 4
-  - name: Martin Jung
-    orcid: 0000-0002-7569-1390
-    email: jung@iiasa.ac.at
-    affil-id: 1
   - name: Alida de Flamingh
-    orcid: 0000-0003-1223-6654
-    email: adeflamingh@gmail.com
+    affil-id: 4
+  - name: Craig E. Simpkins
     affil-id: 5
+  - name: Martin Jung
+    affil-id: 1
   - name: Gemma Gerber
-    orcid: 0000-0002-8722-3113
-    email: gerber@iiasa.ac.at
     affil-id: 1
   - name: Martí Bosch
-    orcid: 0000-0001-8735-9144
-    email: marti.bosch@epfl.ch
     affil-id: 6
 
 affiliations:
@@ -39,9 +25,9 @@ affiliations:
   - id: 3
     name: University of Münster, Münster, Germany
   - id: 4
-    name: Auckland Council, Environmental Services, Auckland, New Zealand
+    name: Carl R. Woese Institute for Genomic Biology, University of Illinois at Urbana-Champaign, Urbana, IL, USA 
   - id: 5
-    name: Carl R. Woese Institute for Genomic Biology, University of Illinois at Urbana-Champaign, Urbana, IL, USA
+    name: Auckland Council, Environmental Services, Auckland, New Zealand
   - id: 6
     name: École polytechnique fédérale de Lausanne, Lausanne, Switzerland
 
@@ -52,15 +38,18 @@ format:
       - title.tex
     include-in-header:
       text: |
+        \usepackage{academicons}
+        \usepackage{fontawesome5}
         \usepackage{lineno}\linenumbers
         \usepackage[noblocks]{authblk}
         \usepackage{setspace}
-        \renewcommand*{\Authsep}{, }
-        \renewcommand*{\Authand}{, }
-        \renewcommand*{\Authands}{, }
-        \renewcommand\Affilfont{\small}
+        \renewcommand\Affilfont{\footnotesize}
+        \newcommand{\orcid}[1]{\href{https://orcid.org/#1}{\textcolor[HTML]{A6CE39}{\aiOrcid#1}}}
+        \newcommand{\mail}[1]{\href{mailto:#1}{\textcolor[HTML]{052E81}{\faEnvelope#1}}}
+
 papersize: a4paper
-fontsize: 10pt
+mainfont: Garamond
+fontsize: 11pt
 geometry: margin=25mm
 indent: 2m
 linestretch: 1.5
@@ -70,7 +59,21 @@ bibliography: CLER.bib
 csl: springer-basic-author-date.csl
 ---
 
-\noindent Keywords: (1) spatial data, (2) spatial patterns, (3) pattern-process link (4) open-source, (5) scientific software
+\noindent \footnotesize M.H.K. Hesselbarth \orcid{0000-0003-1125-9918} \mail{mhk.hesselbarth@gmail.com}
+
+\noindent \footnotesize J. Nowosad \orcid{0000-0002-1057-3721}
+
+\noindent \footnotesize A. de Flamingh \orcid{0000-0003-1223-6654}
+
+\noindent \footnotesize C.E. Simpkins \orcid{0000-0003-3212-1379}
+
+\noindent \footnotesize M. Jung \orcid{0000-0002-7569-1390}
+
+\noindent \footnotesize G. Gerber \orcid{0000-0002-8722-3113}
+
+\noindent \footnotesize M. Bosch \orcid{0000-0001-8735-9144}
+
+\noindent \small \textit{Keywords: (1) spatial data, (2) spatial patterns, (3) pattern-process link (4) open-source, (5) scientific software}
 
 # Abstract
 
@@ -88,8 +91,6 @@ We focus on key topics such as spatial patterns, connectivity, simulations and m
 ## Summary
 
 The review highlights key innovations, challenges, and potential future directions in the field, emphasizing the role of computational methods in addressing complex ecological questions.
-
-{{< pagebreak >}}
 
 {{< include Sections/01-introduction.qmd >}}
 {{< include Sections/02-spatial-patterns.qmd >}}
@@ -120,8 +121,6 @@ The authors declare no competing interests.
 ## Human and Animal Rights and Informed Consent
 
 This article does not contain any studies with human or animal subjects performed by any of the authors.
-
-{{< pagebreak >}}
 
 # References
 
