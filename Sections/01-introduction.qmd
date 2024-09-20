@@ -20,4 +20,4 @@ In this context, we are focusing on open-source software and specifically script
 However, we do not provide a systematic literature review, or a general introduction to (computational) landscape ecology.
 For a more comprehensive and general introduction to landscape ecology, please see @Turner2015LandscapeEcology, @Gergel2017LearningLandscape, or @With2019EssentialsLandscape.
 
-![Overview of landscape ecology topics for which computational methods are discussed.](Figures/Fig-1.png){width=100%}
+![Overview of landscape ecology topics for which computational methods are discussed. Contains modified Copernicus Sentinel data 2024-09-07 for Sentinel data.](Figures/Fig-1.png)

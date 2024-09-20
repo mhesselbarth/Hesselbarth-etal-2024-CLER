@@ -48,7 +48,6 @@ format:
         \newcommand{\mail}[1]{\href{mailto:#1}{\textcolor[HTML]{052E81}{\faEnvelope#1}}}
 
 papersize: a4paper
-mainfont: Garamond
 fontsize: 11pt
 geometry: margin=25mm
 indent: 2m
@@ -56,7 +55,7 @@ linestretch: 1.5
 number-sections: false
 
 bibliography: CLER.bib
-csl: springer-basic-author-date.csl
+csl: springer-basic-brackets-no-et-al.csl
 ---
 
 \noindent \footnotesize M.H.K. Hesselbarth \orcid{0000-0003-1125-9918} \mail{mhk.hesselbarth@gmail.com}
@@ -74,6 +73,28 @@ csl: springer-basic-author-date.csl
 \noindent \footnotesize M. Bosch \orcid{0000-0001-8735-9144}
 
 \noindent \small \textit{Keywords: (1) spatial data, (2) spatial patterns, (3) pattern-process link (4) open-source, (5) scientific software}
+
+\noindent \textbf{Acknowledgments}
+
+We are thankful to the anonymous reviewers and the editors who provided valuable comments to improve the manuscript.
+
+\noindent \textbf{Funding}
+
+No external funding was received.
+
+\noindent \textbf{Author contributions}
+
+All authors contributed particular sections to the manuscript coordinated by MHKH.
+
+Correspondence to [Maximilian H.K. Hesselbarth](mailto:mhk.hesselbarth@gmail.com)
+
+\noindent \textbf{Conflict of Interest}
+
+The authors declare no competing interests.
+
+\noindent \textbf{Human and Animal Rights and Informed Consent}
+
+This article does not contain any studies with human or animal subjects performed by any of the authors.
 
 # Abstract
 
@@ -99,28 +120,21 @@ The review highlights key innovations, challenges, and potential future directio
 {{< include Sections/05-simulations.qmd >}}
 {{< include Sections/06-genetics.qmd >}}
 {{< include Sections/07-spatial-planning.qmd >}}
-{{< include Sections/08-discussion.qmd >}}
+{{< include Sections/08-conclusion.qmd >}}
 
-# Acknowledgments
+# Key references
 
-We are thankful to the anonymous reviewers and the editors who provided valuable comments to improve the manuscript.
+**Frazier (2019) Emerging trajectories for spatial pattern analysis in landscape ecology. Landscape Ecology 34:2073–2082.** The paper describes how interdisciplinary perspectives have contributed to spatial pattern analysis and introduces new innovative developments.
 
-## Funding
+**Unnithan Kumar et al. (2022) Moving beyond landscape resistance: Considerations for the future of connectivity modelling and conservation science. Landscape Ecology 37:2465–2480.** The paper provides a historical overview of connectivity modelling with a focus on resistance surfaces and discusses current missing aspects and how to address them.  
 
-No external funding was received.
+**Zuckerberg et al. (2020) A review of overlapping landscapes: Pseudoreplication or a red herring in landscape ecology? Current Landscape Ecology Reports 5:140–148.** The paper discusses theoretical and practical implications over overlapping landscapes in the context of landscape buffers of varying sizes surrounding sampling sites.
 
-## Author contributions
+**Synes et al. (2016) Emerging opportunities for landscape ecological modelling. Current Landscape Ecology Reports 1:146–167.** The paper identifies existing gaps in landscape ecological modelling while highlighting potential emerging opportunities.
 
-All authors contributed particular sections to the manuscript coordinated by MHKH.
-Correspondence to [Maximilian H.K. Hesselbarth](mailto:mhk.hesselbarth@gmail.com)
+**Manel and Holderegger (2013) Ten years of landscape genetics. Trends in Ecology & Evolution 28:614–621.** Ten years after their first paper introducing landscape genetics, this paper reviews the state-of-the-art and describes main topics that have contributed to the progress of landscape genetics.
 
-## Conflict of Interest
-
-The authors declare no competing interests.
-
-## Human and Animal Rights and Informed Consent
-
-This article does not contain any studies with human or animal subjects performed by any of the authors.
+**Jung et al. (2024) An assessment of the state of conservation planning in europe. Philosophical Transactions of the Royal Society B 379:20230015.** The paper assesses where and how spatial conservation planning have been applied across Europe. 
 
 # References
 

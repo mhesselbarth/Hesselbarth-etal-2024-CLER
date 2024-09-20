@@ -4,7 +4,7 @@ bibliography: CLER.bib
 
 <!-- Person responsible: Hesselbarth -->
 
-# Discussion {#sec-disc}
+# Conclusion {#sec-disc}
 
 Since it emerged in the 1980s [@With2019EssentialsLandscape], the research field of landscape ecology has constantly evolved and is now highly dependent on computational methods.
 Thus, future progress within the field will largely depend on available software and analysis tools [@Costanza2019DescribingAnalyzing].
