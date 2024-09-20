@@ -6,58 +6,22 @@ bibliography: CLER.bib
 
 # Sampling in landscape ecology {#sec-sampling}
 
-<!--MB: the following comments were for the introduction I first wrote when I was thinking of also including zonal analysis (e.g., pattern-based regionalization in this section. But at the end I think it is better to focus on sampling for pattern-process inference only. ->
-<!-- MB: As introduced in previous sections, spatial patterns can be represented by spatial signatures such as vectors of computed landcape metrics. Nevertheless, computing spatial signatures in large landscapes can be problematic, not only because of the incurred computational costs, but also because involves reducing large complex spatial patterns into a few scalar values that can thus be hard to interpret. Instead, large spatial extents are usually divided into a set of zones, which can collectively cover the entire spatial extent or alternatively represent a sample of it. -->
-<!-- MB: we could make the keywords "synoptic" or "wall-to-wall" [@Ramezani2013] explicit when referring to computing a single metric for the (large) landscape  -->
-<!-- MB: The definition of landscape zones can be generally divided into two main categories, namely regular tesselations (e.g., grids) and irregular zones (e.g., administrative boundaries). -->
-<!-- MB: I think it be interesting to also talk about other sampling devices such as gradient/transect analysis -->
+Establishing a pattern-process link usually requires fieldwork and data collection.
+Given the cost of collecting field observations across landscapes, computational sampling tools have been designed to optimize the study designs [@Pasher2013OptimizingLandscape; @Zuckerberg2020ReviewOverlapping].
+To improve the statistical significance of the relationships between landscape features and field observations, several aspects need to be considered when selecting sampling sites for data collection.
+First, selected sites should cover the maximum possible range of landscape heterogeneity to maximize the variance of response variables.
+Second, statistical power can be improved by ensuring independence between sites and consequently response variables.
+Finally, since many landscape features that influence response variables are spatially dependent, it is essential to evaluate spatial autocorrelation.
 
-<!-- When designing landscape ecology studies, the selection of landscapes is a critical step. -->
-<!-- Overall, the criteria considered at this stage depend largely on the objectives of the study. -->
-Establishing relationships between landscape patterns and ecological (e.g., species abundance) usually requires fieldwork and data collection. 
-Given the considerable cost of collecting field observations accross multiple locations, computational sampling tools have been designed to optimize the study design [@Brennan2002; @Eigenbrod2011; @Pasher2013; @Zuckerberg2020].
-<!-- MB: feel free to uncomment the two sentences below -->
-<!-- Sampling methods can also been used as a cost-effective estimation of landscape metrics for large maps [@Hunsaker1994; @Ramezani2013]. Nevertheless, given the increasing availability of computational power and global remotely sensed data, variables describing landscape pattern are in most cases easier to obtain than those measuring ecological processes. -->
-<!-- MB: regardless of whether the two previous sentences are included, we can resume here -->
-In order to improve the statistical significance of the relationships between field observations and its corresponding patch and landscape pattern, several key aspects need to be carefully considered when selecting landscape sites for data collection.
+Furthermore, identifying scales at which the ecological processes of interest operate is a crucial step [@Jackson2015AreEcologists].
+However, in practice, the appropriate scales may not be obvious, or data at such scales may not be available.
+Nevertheless, analyses at multiple spatial scales can help to identify the scales of interest.
+For instance, scalograms can be used to reveal scale thresholds that maximize landscape heterogeneity [@Pasher2013OptimizingLandscape], or show the strongest relationships with response variables [@Huais2024MultilandrPackage].
 
-## Characteristic scales of landscape patterns and ecological processes
+Directly related to the location and extent of sampling sites is the issue of overlapping landscapes which can result in a lower range of landscape heterogeneity, lack of statistical independence, or pseudo-replications [@Hurlbert1984PseudoreplicationDesign; @Zuckerberg2020ReviewOverlapping].
+Nonetheless, the lack of independence between sites is likely more related to spatial autocorrelation and thus not necessarily prevented by using non-overlapping landscapes [@Zuckerberg2020ReviewOverlapping].
+Instead, spatial autocorrelation between sampling sites can be evaluated using comparisons of similarity measures (e.g., Moran's I) between sampling approaches or spatial scales [@Pasher2013OptimizingLandscape].
+Furthermore spatial autocorrelation in model residuals can be diagnosed using the similarity between two sites as a function of the distance between them, i.e., correlograms [@Dormann2007MethodsAccount].
+If spatial autocorrelation is detected, researchers may either consider further data collection, or use modelling methods to accommodate for spatial dependencies [@Zuckerberg2020ReviewOverlapping], such as mixed models [Dormann2007MethodsAccount], or apply smoothing kernels that compute distance-weighted averages surrounding the sites [@Heaton2011SpatialRegression].
 
-A central element of the study design is the definition of the size and spatial extent of each landscape.
-To this end, identifying scales at which the ecological processes of interest operate, i.e., characteristic scales, is a crucial first step towards establishing relationships between pattern and process [@Levin1992ProblemPattern; @Brennan2002; @Holland2004; @Wu2007ScaleScaling; @Cushman2008LandscapeMetrics; @Eigenbrod2011; @Jackson2015; @Zuckerberg2020].
-<!-- For each heterogeneity metric and for each extent (1 km × 1 km up to 7.5 km × 7.5 km), we calculated the coefficient of variation (CV) across all potential study landscapes. Based on a plot of CV versus landscape extent, we selected a threshold extent beyond which insufficient variability existed among potential sample landscapes. {@Pasher2013] -->
-<!-- The scale of effect would indicate the spatial scale at which the response variable exhibits the strongest relationship with the evaluated landscape attribute, supported by the strongest statistical model (e.g. the model with the highest R2 value or the lowest value for the Akaike Information Criterion) [@Huais2024] -->
-However, in practice, the appropriate landscape scale may not obvious or the data at such a scale may not be avaiable.
-Under these circumstances, analysis can be conducted at multiple scales (e.g., landscape extent sizes) so that it is possible to select the spatial scales of interest.
-For instance, scalograms can be used to determine thresholds or characteristic scales that maximize landscape heterogeneity [@Pasher2013] or show the strongest relationships with the response variables [@Holland2004; @Jackson2015; @Huais2024].
-<!-- MB: maybe we could also mention here the block size effect in regionalization/pattern-based spatial analysis, e.g., Table 2 of [@Nowosad2018]. -->
-
-Software to perform multi-scale analysis include the R package multilandr [@Huais2024], ZonalMetrics [@Adamczyk2017] or PyLandStats [@Bosch2019PyLandStatsOpensource] libraries in Python. 
-<!-- TODO: add more? -->
-
-## Common statistical pitfalls in landscape selection
-
-The design of the landscape sampling strategy should address several statistical considerations [@Brennan2002; @Eigenbrod2011; @Pasher2013].
-First, with the aim of maximizing the variance within the independent variables, the selected sites should cover the maximum possible range of landscape heterogeneity.
-<!-- Additionally, statistical power is improved by ensuring independence between predictor variables. As reviewed in the spatial patterns section, this -->
-Secondly, statistical power is improved by ensuring independence between samples and predictor variables. 
-This concerns both the selection of landscape extents and landscape metrics used to characterize them (see the section on spatial patterns above regarding landscape metrics redundancy and spatial signatures). 
-Finally, since many environmental factors that influence variables of interest are spatially dependent, it is essential to evaluate spatial autocorrelation.
-
-The choice of landscape locations and extent sizes is critical because it can lead to overlapping landscapes with lower range of variation and lack of statistical independence [@Brennan2002; @Eigenbrod2011; @Pasher2013]. 
-In fact, many landscape ecology researchers consider the issue of overlapping landscapes to be a form of pseudoreplication [@Hurlbert1984], which can increase the chance of Type I errors [@Legendre1993].
-<!-- MB: should we add the definition of pseudoreplication when citing [@Hulrbert1984], e.g., something like "namely when statistical inference is employed to test for relationships when samples are not statistically independent"? -->
-<!-- more broad (less landscape ecology centric references about pseudoreplication: [@Oksanen2001; @Davies2015]) -->
-Nonetheless, the lack of independence between landscape samples is likely more related to spatial autocorrelation and thus not prevented by using non-overlapping extents [@Schooley2006; @Zuckerberg2012; @Zuckerberg2020].
-Additionally, preventing overlapping landscapes can be logistically challenging and complicate experimental design, leading to reduced sample sizes, failure to capture sufficient landscape heterogeneity, omision of characteristic scales (e.g., by excluding large buffers around sites) and even increase spatial autocorrelation in the model residuals [@Zuckerberg2012].
-
-<!-- While systematic sampling designs can limit spatial autocorrelation [@Pasher2013; @Zuckerberg2020] -->
-Instead, spatial autocorrelation can be evaluated at the study design stage by computing a measure of similarity, e.g., Moran's I [@Moran1950], on the landscape metrics that correspond to each sampling approach, e.g., combination of sample locations and extent sizes [@Pasher2013].
-However, selecting landscapes that are not spatially autocorrelated is not always feasible based on logistics or environmental constraints of the study region.
-<!-- In presence of spatial autocorrelation, its influence in model residuals can be diagnosed using correlograms, i.e., a measure of similarity between two samples plotted as a function of the distance between them -->
-The presence of spatial autocorrelation in the model residuals can be diagnosed using correlograms, i.e., a measure of similarity between two samples plotted as a function of the distance between them [@Dormann2007].
-As suggested by Zuckerberg et al. [@Zuckerberg2020], when residual spatial autocorrelation is detected, researchers may either consider further data collection and check whether that reduces spatial autocorrelation, or use modelling methods to accomodate spaital dependencies such as mixed models [@Dormann2007; @Beale2010; @Arnqvist2020] or apply smoothing kernels that compute distance-weighted averages of landscape patterns surrounding the sampling sites [@Heaton2011; @Chandler2016].
-
-<!-- TODO: I do not know if we want to measure software that is less landscape ecology centric/more general spatial analysis. If so, please complete the packages (based on [@Beale2010] I found glmm for R as well as SAS and Stata, but you probably know more about it, especially for R). -->
-Software to conduct diagnostics of spatial autocorrelation include PySAL [@Rey2007]. Mixed effects models are available in the statsmodels [@Seabold2010] and PySAL [@Rey2007] libraries in Python. 
-Spatial weights based on kernel functions can be computed using the PySAL [@Rey2007] library in Python.
+Software to perform multi-scale analysis include the R package *multilandr*, or the Python libraries *ZonalMetrics* [@Adamczyk2017ZonalMetricsPython], and *PyLandStats*.

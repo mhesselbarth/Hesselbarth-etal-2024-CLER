@@ -95,8 +95,7 @@ The review highlights key innovations, challenges, and potential future directio
 {{< include Sections/01-introduction.qmd >}}
 {{< include Sections/02-spatial-patterns.qmd >}}
 {{< include Sections/03-connectivity.qmd >}}
-<!-- JN: Max, should this be uncommented? -->
-<!-- {{< include Sections/04-sampling.qmd >}} -->
+{{< include Sections/04-sampling.qmd >}}
 {{< include Sections/05-simulations.qmd >}}
 {{< include Sections/06-genetics.qmd >}}
 {{< include Sections/07-spatial-planning.qmd >}}
