@@ -12,15 +12,15 @@ Here, we present and summarize some recent developments of computational methods
 In this context, we highlight open-source software as a cornerstone of "Open Science" which offers key advantages like shareability, reproducibility, and transparency, providing great benefits to the research community [@Powers2019OpenScience; @Vogt2019PatternsSoftware].
 
 Alongside the previously introduced methodological advances specific to landscape ecology, the research field will also benefit from technological innovations from related disciplines.
-This includes advances in remote sensing technology, with increasing data availability and diversity from a range of sources, including large satellites, unmanned aerial vehicles, and ground-based sensor systems.
+This includes advances in remote sensing technology, with increasing data availability and diversity from a range of sources, including satellites, unmanned aerial vehicles, and ground-based sensor systems.
 These systems provide both passive sensors such as multispectral, hyperspectral, and thermal sensors, and active optical sensors such as LiDAR and SAR [@Crowley2020RemoteSensings].
 Related to this, there is a growing number of up- and downscaling approaches for remote sensing data which makes a wider range of products accessible for research studies [@Markham2023ReviewMethods].
-In combination with other increasingly available data sources, e.g, citizen science data, ecology is entering the era of big data, requiring methods that can handle heterogeneous data and high-throughput computing resources [@Farley2018SituatingEcology].
+In combination with other increasingly available data sources, e.g, citizen science data, ecology has entered the era of big data, requiring methods that can handle heterogeneous data and high-throughput computing resources [@Farley2018SituatingEcology].
 Due to its high flexibility and performance, artificial intelligence has become popular in ecology and deep learning and machine learning algorithms can be used for e.g., mapping, classification and feature extraction, modelling, or predicting [@Christin2019ApplicationsDeep; @Stupariu2022MachineLearning; @Pichler2023MachineLearning].
 Furthermore, quantum computing may additionally offer a potential pathway to surpass the limits of current computational technologies [@Woolnough2023QuantumComputing].
 Last, landscape ecology will, as many other research fields, benefit from a general paradigm shift related to data sharing, management, and documentation [@Tenopir2020DataSharing].
 
 Climate change as well as the biodiversity crisis are two intervening and complex issues that need integrative, multi-disciplinary, and scale-dependent solutions to face them [@Pettorelli2021TimeIntegrate; @Portner2023OvercomingCoupled].
 Landscape ecology is well equipped to provide answers because it connects several research fields at multiple scales, such as social sciences, geography, and ecology and evolution [@With2019EssentialsLandscape].
-However, up-to-date and constantly evolving computational methods are required to meet the increasing complexity of research questions.
-Nevertheless, the review provided here that showcases current computational methods in landscape ecology will hopefully only be a snapshot in time because of the development and emergence of future analytical approaches.
+Up-to-date and constantly evolving computational methods are required to meet the increasing complexity of research questions.
+Nevertheless, the review provided here that showcases current computational methods in landscape ecology will only be a snapshot in time because of the development and emergence of future analytical approaches.
