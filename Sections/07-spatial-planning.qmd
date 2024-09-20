@@ -12,19 +12,19 @@ As an integrative approach most spatial planning approaches can benefit from var
 For example, there have been several recent advances in considering landscape patterns directly in spatial planning, or through using simulation model outputs as input features [e.g., @Daigle2020OperationalizingEcological].
 
 Generally, spatial patterns influence planning outcomes because of their compactness, contiguity and connectedness.
-Furthermore, aggregation can be important because of ecological or practical reasons, for example by ensuring that selected areas satisfy minimum patch size constraints [@Smith2010ApproachEnsuring; @Justeau-Allaire2021ConstrainedOptimization].
+Furthermore, aggregation can be important because of ecological or practical reasons, for example, by ensuring that selected areas satisfy minimum patch size constraints [@Smith2010ApproachEnsuring; @Justeau-Allaire2021ConstrainedOptimization].
 Novel computational approaches make use of graph theory to identify valuable landscape areas in terms of compact core habitat and reducing boundary exposure [@Weerasena2023SequentialApproach].
-Similar, contiguity and connectivity are generally considered important to ensure that landscapes or habitat patches are connected, such as river networks [@Beger2010IncorporatingAsymmetric].
+Similarly, contiguity and connectivity are generally considered important to ensure that landscapes or habitat patches are connected, such as river networks [@Beger2010IncorporatingAsymmetric].
 In particular, recently the direct consideration of connectivity has received increasing attention in spatial conservation planning and new computational methods are developed [@Hanson2019ConventionalMethods; @Daigle2020OperationalizingEcological; @Hanson2022ComparisonApproaches; @Beger2022DemystifyingEcological].
 
-Particular noteworthy are two advances that incorporate landscape metrics in spatial planning.
+Particularly noteworthy are two advances that incorporate landscape metrics in spatial planning.
 One is the use of graph theory in linear programming to guide conservation and restoration efforts [@Justeau-Allaire2021ConstrainedOptimization; @Hamonic2023CumulativeEffects].
-These spatial networks approaches have the potential to be provide more cost-effective and precise solutions to design reserve networks [@Hamonic2023CumulativeEffects].
+These spatial networks approaches have the potential to provide more cost-effective and precise solutions to design reserve networks [@Hamonic2023CumulativeEffects].
 For example, @Justeau-Allaire2021ConstrainedOptimization used landscape ecology theory and metrics to spatially optimize restoration efforts, aiming to maximize broader landscape connectivity in New Caledonia.
 
 A second main development is the increasing use of deep reinforcement learning, a machine learning approach based not on patterns but agents and pathways.
 Reinforcement learning can be used to identify cost-efficient solutions to area-based conservation planning [@Silvestro2022ImprovingBiodiversity].
-Additionally, it can be applied to identify best possible solutions to improve landscape connectivity indices [@Equihua2024ConnectivityConservation], such as the integral index of connectivity [@Pascual-Hortal2006ComparisonDevelopment].
+Additionally, it can be applied to identify the best possible solutions to improve landscape connectivity indices [@Equihua2024ConnectivityConservation], such as the integral index of connectivity [@Pascual-Hortal2006ComparisonDevelopment].
 Advantages of reinforcement learning include the ease of incorporating both linear and non-linear functions, as well as the scalability of spatio-temporal processes to larger spatial extents [@Equihua2024ConnectivityConservation].
 However, this comes with the drawback of reduced interpretability.
 
@@ -32,9 +32,9 @@ Multiple open-source software solutions have been developed to support integrati
 Most software are based on linear or constrained programming approaches and require a solver to create any outputs.
 Unfortunately there is still a gap between open-source and proprietary solvers in terms of computational efficiency [@Hanson2019OptimalityPrioritizing].
 
-The *prioritizr* R package [@Hanson2024PrioritizrSystematic] supports a range of compactness and contiguity constraints, penalties, and generally allows to flexible create planning problems in multiple configurations.
+The *prioritizr* R package [@Hanson2024PrioritizrSystematic] supports a range of compactness and contiguity constraints, penalties, and generally allows flexibility to create planning problems in multiple configurations.
 Similarly, the *coco* R package uses connectivity constraints in an integer linear planning framework to identify potential outcomes that minimize further fragmentation of the landscape [@vanMantgem2023CocoConservation].
 The *restoptr* R package uses constrained programming to identify restoration areas that would most effectively contribute to improved landscape connectivity [@Justeau-Allaire2023RestoptrPackage].
 Innovatively, it uses landscape ecology indices not as constraints, but as specific targets, e.g., where one could optimize the effective mesh size in a region.
 The *CAPTAIN* Python software library implements reinforcement learning for area-based conservation efforts [@Silvestro2022ImprovingBiodiversity].
-However, many spatial planning software still requires substantial prior knowledge on spatial optimization and statistics, which can create a barrier to more widespread adoption.
+However, many spatial planning software still require substantial prior knowledge on spatial optimization and statistics, which can create a barrier to more widespread adoption.
