@@ -8,7 +8,7 @@ Please read the [`CONTRIBUTING.md`](CONTRIBUTING.md) file before pushing to this
 
 The repository contains the following files (besides others):
 
-**/R-Scripts**: All `R` scripts used to prepare manuscript (if needed).
+**/Figures**: Folder storing Figures.
 
 **/Sections**: Folder storing all `quarto` files for individual sections.
 

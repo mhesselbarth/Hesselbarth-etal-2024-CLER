@@ -14,26 +14,25 @@
 - 1. Introduction (**Hesselbarth**)
   - Introduction of landscape ecology
   - Definition of computational methods
-  - Computational aspects of landscape ecology, data models <!-- MH: 08-software section could be shortened and moved here -->
+  - Computational aspects of landscape ecology, data models
   - Purpose of this paper
 - 2. Spatial patterns
   - Patterns general (**Hesselbarth**)
   - Landscape metrics (**Hesselbarth**)
   - Entropy (**Nowosad**)
-  - Operations on spatial patterns (**Nowosad**)
   - Landscape Mosaic (**Bosch**) <!-- MH: This should be shortened -->
-  - Surface metrics (**Hesselbarth**, **Bosch?**)
-  - Vector metrics (**Nowosad**, **Hesselbarth**)
-- 3. Connectivity / Movement / Dispersal (**Hesselbarth**, **Simpkins?**, **Gerber?**)
-  - Landscape metrics (**Hesselbarth**)
-  - Resistance surface (**Hesselbarth**, **Simpkins?**)
-  - Graph theory (**Gerber?**)
-- 4. Sampling (and aggregation?) in landscape ecology (**Bosch?**)
+  - Surface metrics (**Hesselbarth**)
+  - Vector metrics (**Nowosad**)
+  - Operations on spatial patterns (**Nowosad**)
+- 3. Connectivity (**Simpkins**, **Gerber**)
+  - Structural connectivity (**Simpkins**)
+  - Resistance surface (**Simpkins**)
+  - Graph theory (**Gerber**)
+- 4. Sampling in landscape ecology (**Bosch**)
 - 5. Simulations and models (**Hesselbarth**)
-  - Neutral landscape 
-  - Process-based simulation
+  - Landscape simulators
+  - IBMs
   - Digital twins
-- 7. Landscape genetics (**de Flamingh**)
-- 6. Spatial planning (**Jung**)
-- 9. Discussion
-  - Future needs
+- 6. Landscape genetics (**de Flamingh**)
+- 7. Spatial planning (**Jung**)
+- 8. Discussion
