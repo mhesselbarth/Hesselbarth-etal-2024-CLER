@@ -18,4 +18,4 @@ Such studies may explore interactions between complex evolutionary processes, in
 
 Given the importance of connectivity, all previously discussed connectivity software are also relevant for landscape genetics.
 Additionally, popular software for landscape genetics includes the R packages *graph4lg* [@Savary2021Graph4lgPackage], or *landgenreport* [@Gruber2015LandgenreportNew], among others.
-Furthermore, series of Python scripts have been developed for use in landscape genetics studies [@Etherington2011PythonBased], or GIS-based toolboxes written in Python exist that provide landscape genetics functionality [e.g., Brown2017SDMtoolbox20].
+Furthermore, series of Python scripts have been developed for use in landscape genetics studies [@Etherington2011PythonBased], or GIS-based toolboxes written in Python exist that provide landscape genetics functionality [e.g., @Brown2017SDMtoolbox20].

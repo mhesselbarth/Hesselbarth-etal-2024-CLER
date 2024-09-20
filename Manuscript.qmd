@@ -95,6 +95,7 @@ The review highlights key innovations, challenges, and potential future directio
 {{< include Sections/01-introduction.qmd >}}
 {{< include Sections/02-spatial-patterns.qmd >}}
 {{< include Sections/03-connectivity.qmd >}}
+<!-- JN: Max, should this be uncommented? -->
 <!-- {{< include Sections/04-sampling.qmd >}} -->
 {{< include Sections/05-simulations.qmd >}}
 {{< include Sections/06-genetics.qmd >}}
@@ -103,6 +104,7 @@ The review highlights key innovations, challenges, and potential future directio
 
 # Acknowledgments {.unnumbered}
 
+<!-- JN: Are we proactively thankful? I would suggest to uncomment this sentence and reinstate it when the final version of the paper is accepted -->
 We are thankful to the anonymous reviewers and the editors who provided valuable comments to improve the manuscript.
 
 ## Funding {.unnumbered}
