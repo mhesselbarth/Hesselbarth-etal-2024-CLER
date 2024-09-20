@@ -59,13 +59,12 @@ format:
         \renewcommand*{\Authand}{, }
         \renewcommand*{\Authands}{, }
         \renewcommand\Affilfont{\small}
-
 papersize: a4paper
 fontsize: 10pt
 geometry: margin=25mm
 indent: 2m
 linestretch: 1.5
-number-sections: true
+number-sections: false
 
 bibliography: CLER.bib
 csl: springer-basic-author-date.csl
@@ -73,20 +72,20 @@ csl: springer-basic-author-date.csl
 
 \noindent Keywords: (1) spatial data, (2) spatial patterns, (3) pattern-process link (4) open-source, (5) scientific software
 
-# Abstract {.unnumbered}
+# Abstract
 
-## Purpose of Review {.unnumbered}
+## Purpose of Review
 
 Landscapes can be defined as mosaics of different land covers, habitats, ecosystems, or land-use systems.
 The link between spatial heterogeneity and ecological processes is the core concept in the research field of landscape ecology.
 Nowadays, advanced computational methods are essential to the field due to its cross-disciplinary nature, the increasing availability of data, and the complexity of landscape systems.
 
-## Recent findings {.unnumbered}
+## Recent findings
 
 This review provides an overview of recent developments in computational methods that have advanced the research field of landscape ecology.
 We focus on key topics such as spatial patterns, connectivity, simulations and modelling, landscape genetics, and spatial planning.
 
-## Summary {.unnumbered}
+## Summary
 
 The review highlights key innovations, challenges, and potential future directions in the field, emphasizing the role of computational methods in addressing complex ecological questions.
 
@@ -101,30 +100,30 @@ The review highlights key innovations, challenges, and potential future directio
 {{< include Sections/07-spatial-planning.qmd >}}
 {{< include Sections/08-discussion.qmd >}}
 
-# Acknowledgments {.unnumbered}
+# Acknowledgments
 
 We are thankful to the anonymous reviewers and the editors who provided valuable comments to improve the manuscript.
 
-## Funding {.unnumbered}
+## Funding
 
 No external funding was received.
 
-## Author contributions {.unnumbered}
+## Author contributions
 
 All authors contributed particular sections to the manuscript coordinated by MHKH.
 Correspondence to [Maximilian H.K. Hesselbarth](mailto:mhk.hesselbarth@gmail.com)
 
-## Conflict of Interest {.unnumbered}
+## Conflict of Interest
 
 The authors declare no competing interests.
 
-## Human and Animal Rights and Informed Consent {.unnumbered}
+## Human and Animal Rights and Informed Consent
 
 This article does not contain any studies with human or animal subjects performed by any of the authors.
 
 {{< pagebreak >}}
 
-# References {.unnumbered}
+# References
 
 \footnotesize
 \setstretch{1.0}
