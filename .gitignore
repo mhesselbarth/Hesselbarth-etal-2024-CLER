@@ -4,10 +4,10 @@
 .Ruserdata
 .DS_Store
 nul
-Manuscript.pdf
-Manuscript.docx
-Manuscript.tex
 *.log
 /.quarto/
 *_files/
 *.pptx
+*.docx
+*.pdf
+Manuscript.tex
