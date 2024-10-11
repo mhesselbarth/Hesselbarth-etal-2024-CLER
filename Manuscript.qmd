@@ -33,7 +33,6 @@ affiliations:
 
 format:
   pdf:
-    keep-tex: true
     template-partials:
       - title.tex
     include-in-header:
@@ -76,25 +75,24 @@ csl: springer-basic-brackets-no-et-al.csl
 
 \noindent \textbf{Acknowledgments}
 
-We are thankful to the anonymous reviewers and the editors who provided valuable comments to improve the manuscript.
+\noindent We are thankful to the anonymous reviewers and the editors who provided valuable comments to improve the manuscript.
 
 \noindent \textbf{Funding}
 
-No external funding was received.
+\noindent No external funding was received.
 
 \noindent \textbf{Author contributions}
 
-All authors contributed particular sections to the manuscript coordinated by MHKH.
-
+\noindent All authors contributed particular sections to the manuscript coordinated by MHKH.
 Correspondence to [mhk.hesselbarth@gmail.com](mailto:mhk.hesselbarth@gmail.com)
 
 \noindent \textbf{Conflict of Interest}
 
-The authors declare no competing interests.
+\noindent The authors declare no competing interests.
 
 \noindent \textbf{Human and Animal Rights and Informed Consent}
 
-This article does not contain any studies with human or animal subjects performed by any of the authors.
+\noindent This article does not contain any studies with human or animal subjects performed by any of the authors.
 
 # Abstract
 
@@ -113,6 +111,8 @@ We focus on key topics such as spatial patterns, connectivity, simulations and m
 
 The review highlights key innovations, challenges, and potential future directions in the field, emphasizing the role of computational methods in addressing complex ecological questions.
 
+<!-- R1: Figure 1. The links between Spatial sampling, Spatial planning, and Genetics, towards Landscape mean? The figure would be more meaningful with an explanation of these links, either in the caption or directly on the figure. Also, for other topics (e.g. connectivity), a keyword (or short sentence) summarizing the contribution of the topic to Landscape Ecology would be great. -->
+
 {{< include Sections/01-introduction.qmd >}}
 {{< include Sections/02-spatial-patterns.qmd >}}
 {{< include Sections/03-connectivity.qmd >}}
@@ -124,17 +124,17 @@ The review highlights key innovations, challenges, and potential future directio
 
 # Key references
 
-**Frazier (2019) Emerging trajectories for spatial pattern analysis in landscape ecology. Landscape Ecology 34:2073–2082.** The paper describes how interdisciplinary perspectives have contributed to spatial pattern analysis and introduces new innovative developments.
+\noindent _Frazier (2019) Emerging trajectories for spatial pattern analysis in landscape ecology. Landscape Ecology 34:2073–2082._ The paper describes how interdisciplinary perspectives have contributed to spatial pattern analysis and introduces new innovative developments.
 
-**Unnithan Kumar et al. (2022) Moving beyond landscape resistance: Considerations for the future of connectivity modelling and conservation science. Landscape Ecology 37:2465–2480.** The paper provides a historical overview of connectivity modelling with a focus on resistance surfaces and discusses current missing aspects and how to address them.  
+\noindent _Unnithan Kumar et al. (2022) Moving beyond landscape resistance: Considerations for the future of connectivity modelling and conservation science. Landscape Ecology 37:2465–2480._ The paper provides a historical overview of connectivity modelling with a focus on resistance surfaces and discusses current missing aspects and how to address them.  
 
-**Zuckerberg et al. (2020) A review of overlapping landscapes: Pseudoreplication or a red herring in landscape ecology? Current Landscape Ecology Reports 5:140–148.** The paper discusses theoretical and practical implications over overlapping landscapes in the context of landscape buffers of varying sizes surrounding sampling sites.
+\noindent _Zuckerberg et al. (2020) A review of overlapping landscapes: Pseudoreplication or a red herring in landscape ecology? Current Landscape Ecology Reports 5:140–148._ The paper discusses theoretical and practical implications over overlapping landscapes in the context of landscape buffers of varying sizes surrounding sampling sites.
 
-**Synes et al. (2016) Emerging opportunities for landscape ecological modelling. Current Landscape Ecology Reports 1:146–167.** The paper identifies existing gaps in landscape ecological modelling while highlighting potential emerging opportunities.
+\noindent _Synes et al. (2016) Emerging opportunities for landscape ecological modelling. Current Landscape Ecology Reports 1:146–167._ The paper identifies existing gaps in landscape ecological modelling while highlighting potential emerging opportunities.
 
-**Manel and Holderegger (2013) Ten years of landscape genetics. Trends in Ecology & Evolution 28:614–621.** Ten years after their first paper introducing landscape genetics, this paper reviews the state-of-the-art and describes main topics that have contributed to the progress of landscape genetics.
+\noindent _Manel and Holderegger (2013) Ten years of landscape genetics. Trends in Ecology & Evolution 28:614–621._ Ten years after their first paper introducing landscape genetics, this paper reviews the state-of-the-art and describes main topics that have contributed to the progress of landscape genetics.
 
-**Jung et al. (2024) An assessment of the state of conservation planning in europe. Philosophical Transactions of the Royal Society B 379:20230015.** The paper assesses where and how spatial conservation planning have been applied across Europe. 
+\noindent _Jung et al. (2024) An assessment of the state of conservation planning in europe. Philosophical Transactions of the Royal Society B 379:20230015._ The paper assesses where and how spatial conservation planning have been applied across Europe. 
 
 # References
 

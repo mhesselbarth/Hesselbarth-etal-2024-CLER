@@ -4,6 +4,7 @@ bibliography: CLER.bib
 
 <!-- Person responsible: Jung -->
 
+<!-- R1: Spatial conservation planning -> spatial planning -->
 # Spatial conservation planning {#sec-spatialplanning}
 
 Spatial planning uses decision theory to identify and allocate areas to specific purposes, such as reserve selection through spatial conservation prioritization [@Margules2000SystematicConservation; @Kukkala2013CoreConcepts; @Jung2024AssessmentState].
@@ -18,11 +19,13 @@ Similarly, contiguity and connectivity are generally considered important to ens
 In particular, recently the direct consideration of connectivity has received increasing attention in spatial conservation planning and new computational methods are developed [@Hanson2019ConventionalMethods; @Daigle2020OperationalizingEcological; @Hanson2022ComparisonApproaches; @Beger2022DemystifyingEcological].
 
 Particularly noteworthy are two advances that incorporate landscape metrics in spatial planning.
+<!-- R1: Reference 204 relies on constraint programming, not linear programming; Justeau-Allaire2021ConstrainedOptimization -->
 One is the use of graph theory in linear programming to guide conservation and restoration efforts [@Justeau-Allaire2021ConstrainedOptimization; @Hamonic2023CumulativeEffects].
 These spatial networks approaches have the potential to provide more cost-effective and precise solutions to design reserve networks [@Hamonic2023CumulativeEffects].
 For example, @Justeau-Allaire2021ConstrainedOptimization used landscape ecology theory and metrics to spatially optimize restoration efforts, aiming to maximize broader landscape connectivity in New Caledonia.
 
 A second main development is the increasing use of deep reinforcement learning, a machine learning approach based not on patterns but agents and pathways.
+<!-- R1: Beware, deep reinforcement learning is not an exact approach, and thus cannot provide guarantees that the best possible solution has been found. Its strength mainly lies in the fact that, for large problems where exact approaches are currently inefficient, it can approximate high-quality solutions -->
 Reinforcement learning can be used to identify cost-efficient solutions to area-based conservation planning [@Silvestro2022ImprovingBiodiversity].
 Additionally, it can be applied to identify the best possible solutions to improve landscape connectivity indices [@Equihua2024ConnectivityConservation], such as the integral index of connectivity [@Pascual-Hortal2006ComparisonDevelopment].
 Advantages of reinforcement learning include the ease of incorporating both linear and non-linear functions, as well as the scalability of spatio-temporal processes to larger spatial extents [@Equihua2024ConnectivityConservation].
@@ -30,6 +33,7 @@ However, this comes with the drawback of reduced interpretability.
 
 Multiple open-source software solutions have been developed to support integration of landscape ecology theory and indicators into spatial planning.
 Most software are based on linear or constrained programming approaches and require a solver to create any outputs.
+<!-- R1: Be careful with such statements, it is extremely complex to objectively compare two solvers, and almost impossible to state the general superiority of one state-of-the-art solver against another one. Indeed, some solvers may be very efficient for some kinds of problems while very inefficient for others. Also, modelling and solver parametrization can make a lot of differences in solving efficiency and has often a lot of impact on performances. They are solver competitions, however, they are based on benchmarks, therefore classic and well-known problems that do not always reflect common uses of solvers. A solver fine-tuned to be good on such benchmarks will not necessarily perform well on any problem. There are many excellent open-source solvers (in MILP, CP, and SAT), and their openness offers a lot more possibilities for extension and fine-tuning to specific problems -->
 Unfortunately there is still a gap between open-source and proprietary solvers in terms of computational efficiency [@Hanson2019OptimalityPrioritizing].
 
 The *prioritizr* R package [@Hanson2024PrioritizrSystematic] supports a range of compactness and contiguity constraints, penalties, and generally allows flexibility to create planning problems in multiple configurations.

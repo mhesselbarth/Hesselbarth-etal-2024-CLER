@@ -1,0 +1,133 @@
+---
+title: "Reviewer Comments"
+format:
+  pdf:
+    keep-tex: false
+    include-in-header:
+      text: |
+        \setlength\parindent{0pt}
+
+papersize: a4paper
+fontsize: 11pt
+geometry: margin=25mm
+---
+
+**Reviewer 1**
+
+This manuscript provides a timely overview of recent developments in computational methods applied to landscape ecology. It is organized around 6 main topics: spatial patterns, simulation models, connectivity, genetics, spatial planning, and spatial sampling. Overall, I found the manuscript's content very comprehensive, well-written, and well-documented with numerous references. Some parts could be made more accessible to readers unfamiliar with computing methods since they could be among the main audience for such a review. Apart from a few minor details listed below, I do not have any major issues to report in the content.
+
+\textcolor[HTML]{0BB67D}{Reply: Thank you very much for the encouraging words. We will use the valuable and helpful feedback to improve the manuscript.}
+
+On the other hand, I think that the structure of the manuscript could be improved to make it clearer, and better organized, and to give it a logical thread which is somehow missing at the moment. Indeed, the current structure seems like a ‘listing’ of topics, with no obvious link between them. This sometimes leads to redundancy and a lack of clarity. As an example, I found the subsection "Vector metrics" a bit confusing, mainly because, as you say in L159-160, most landscape metrics can be computed on both raster and vector data. Another example: I did not find the subsection "Structural connectivity" very consistent with the other two ("Resistance surface" and "Graph theory"). In addition to being very short, I wonder why this section was included without another on functional connectivity, and why it was distinguished from "Graph theory" (in terms of manuscript structure), since structural (as long as functional) connectivity can be modelled with graph theory.
+
+\textcolor[HTML]{0BB67D}{Reply:}
+
+In conclusion, my main recommendation is to revise the structure of the manuscript, without needing to change the content and richness of what it contains. One possibility could be to start with a section focused on data: which types of data structures are available to represent a landscape (e.g. raster, hexagonal grids, vectors, graphs)? Then, you could introduce spatial patterns, emphasizing the fact that their measurement needs to be supported by a suitable data structure, and then other topics.
+
+\textcolor[HTML]{0BB67D}{Reply:}
+
+**Other comments:**
+
+L54. Data-driven and model-driven
+
+\textcolor[HTML]{0BB67D}{Reply: We added the term model-driven as suggested.}
+
+L62. Very good idea to suggest software implementing methodological developments. It would be even better with a recapitulative table.
+
+\textcolor[HTML]{0BB67D}{Reply:}
+
+L77. They are also naturally extracted from remote sensing products (raster data), which often makes them easier to monitor over time.
+
+\textcolor[HTML]{0BB67D}{Reply: We agree that landscape metrics can be extracted straightforwardly from raster data, and we are adding this as another advantage of using them.}
+
+L92. Missing subsection title?
+
+\textcolor[HTML]{0BB67D}{Reply: Indeed we forgot to add a subsection title which is added now.}
+
+L104. "of the selected entropy [measure]"?
+
+\textcolor[HTML]{0BB67D}{Reply: Added as suggested.}
+
+L119. "the edge length" -> Could you specify a bit?
+
+\textcolor[HTML]{0BB67D}{Reply:}
+
+L143. I guess that such metrics are also very scale dependent
+
+\textcolor[HTML]{0BB67D}{Reply: Similar to landscape metrics also surface metrics are scale-dependent because both are designed to quantify landscape heterogeneity - which is inherently scale-dependent. We added this explanation including an according literature references.}
+
+L182. As defined here, it looks to me that this operation is not necessarily linked to a query area, but rather to a spatial signature which can be directly specified or extracted from a query area.
+
+\textcolor[HTML]{0BB67D}{Reply:}
+
+L175-190. I think that this could be clearer by introducing spatial patterns operation and queries as an extension of the relational data model to spatial data. I'm not sure if it is useful to use database jargon such as "one-to-many" or "many-to-many" without defining them, as it could be confusing to readers not familiar with databases. You could either avoid using these terms, define them, or illustrate the operations with a figure.
+
+\textcolor[HTML]{0BB67D}{Reply:}
+
+L175. This subsection is missing in the summary Figure 1.
+
+\textcolor[HTML]{0BB67D}{Reply:}
+
+Figure 1. The links between Spatial sampling, Spatial planning, and Genetics, towards Landscape mean?  The figure would be more meaningful with an explanation of these links, either in the caption or directly on the figure. Also, for other topics (e.g. connectivity), a keyword (or short sentence) summarizing the contribution of the topic to Landscape Ecology would be great.
+
+\textcolor[HTML]{0BB67D}{Reply:}
+
+L192. "facilitate or impeded movement [and flow]"
+
+\textcolor[HTML]{0BB67D}{Reply:}
+
+L200. "movement [and dispersal] data"
+
+\textcolor[HTML]{0BB67D}{Reply:}
+
+L201. "that individuals preferentially move [or disperse] through"
+
+\textcolor[HTML]{0BB67D}{Reply:}
+
+L192-207. Here connectivity seems to be described through the prism of animals, you should modify it slightly to include plants, which do not move, but disperse through different vectors, e.g. animals, gravity, wind, or water.
+
+\textcolor[HTML]{0BB67D}{Reply:}
+
+L219. "to traverse [or disperse through] that cell"
+
+\textcolor[HTML]{0BB67D}{Reply:}
+
+L221-222. Please explain what "edge artifacts" are. I could not find any explanation in the cited reference.
+
+\textcolor[HTML]{0BB67D}{Reply:}
+
+L227. Least cost path is just the result of a mathematically formulated problem, so I don't think that it assumes anything. Assumptions are rather in how such results are used in an ecological context.
+
+\textcolor[HTML]{0BB67D}{Reply:}
+
+L255-257. Edges can be weighted or unweighted. They also can be directed or undirected.
+
+\textcolor[HTML]{0BB67D}{Reply:}
+
+L273-274. I don't think that it is specific to graphs. Any data-dependant model will be sensitive to input data. This highlights the importance of data.
+
+\textcolor[HTML]{0BB67D}{Reply:}
+
+L326. Note that there, although the methods in reference 146 effectively rely on target values optimization (i.e. the model aims to get as close as possible to target values), the methods in reference 147 are rather based on target value satisfaction (the model guarantees that target values are strictly satisfied, or guarantees that they cannot be satisfied).
+
+\textcolor[HTML]{0BB67D}{Reply:}
+
+L354-358. You could also mention the increasing availability and accessibility of sensors deployed by drones along with data processing tools (e.g. drone photogrammetry, LiDAR) which enable high-frequency, high-resolution monitoring of 2D and 3D landscape models.
+
+\textcolor[HTML]{0BB67D}{Reply:}
+
+L388. Spatial conservation planning -> spatial planning
+
+\textcolor[HTML]{0BB67D}{Reply:}
+
+L405. Reference 204 relies on constraint programming, not linear programming
+
+\textcolor[HTML]{0BB67D}{Reply:}
+
+L412. Beware, deep reinforcement learning is not an exact approach, and thus cannot provide guarantees that the best possible solution has been found. Its strength mainly lies in the fact that, for large problems where exact approaches are currently inefficient, it can approximate high-quality solutions.
+
+\textcolor[HTML]{0BB67D}{Reply:}
+
+L418-419. Be careful with such statements, it is extremely complex to objectively compare two solvers, and almost impossible to state the general superiority of one state-of-the-art solver against another one. Indeed, some solvers may be very efficient for some kinds of problems while very inefficient for others. Also, modelling and solver parametrization can make a lot of differences in solving efficiency and has often a lot of impact on performances. They are solver competitions, however, they are based on benchmarks, therefore classic and well-known problems that do not always reflect common uses of solvers. A solver fine-tuned to be good on such benchmarks will not necessarily perform well on any problem. There are many excellent open-source solvers (in MILP, CP, and SAT), and their openness offers a lot more possibilities for extension and fine-tuning to specific problems.
+
+\textcolor[HTML]{0BB67D}{Reply:}
