@@ -1,0 +1,28 @@
+---
+bibliography: CLER.bib
+---
+
+<!-- Person responsible: Hesselbarth, Nowosad -->
+
+# Data {#sec-data}
+
+<!-- The choice of the data type, model, and scale are crucial for the analysis's results because every type is a simplified model of the natural world. -->
+
+There are two fundamental data models used to represents landscapes, namely the raster data and the vector data model. 
+Raster data uses regularly spaced grid cells, while vector data uses points, lines, and polygons to represent landscape features [@With2019EssentialsLandscape].
+The issue of scale is closely related to the used data model. 
+This includes the extent of the study area and resolution of the data (i.e., the smallest data unit).
+Additionally, thematic resolution in landscape ecology often refers to the values describing landscape features, e.g., the number of discrete LULC categories.
+Various classification systems are relevant at local, regional, and global extent, such as the National Land Cover Database (NLCD), the Coordination of Information on the Environment (CORINE), or the Food and Agriculture Organization (FAO) systems [@Nedd2021SynthesisLand].
+Finally, also temporal scales are relevant both in terms of extent and resolution.
+
+Less frequently discussed, but often critical, is the spatial reference system of the data. 
+Cartesian coordinate reference systems measure distances between two points in Euclidean distances, typically in meters. 
+In contrast, geographic coordinate reference systems are based on degrees and measure distances as great-circle distances.
+Numerous coordinate reference systems exist, each with distinct properties that may distort areas, distances, angles, or all three. 
+Therefore, it is essential to choose the appropriate spatial reference system based on the available data and the specific research question
+
+Data quality is generally variable, and data products are not flawless and can contain errors and biases.
+For example, global land cover products typically have an overall accuracy of 70 to 80%, indicating that 20 to 30% of the grid cells may be misclassified.
+Furthermore, these misclassification is not random, but are often correlated with specific LULC types, regions, and seasonal variations [@Liu2021FinerresolutionMapping].
+Despite this, many landscape ecology studies tend to accept the data at face value, neglecting its accuracy and inherent uncertainty.

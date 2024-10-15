@@ -8,7 +8,7 @@ bibliography: CLER.bib
 
 <!-- R1: Here connectivity seems to be described through the prism of animals, you should modify it slightly to include plants, which do not move, but disperse through different vectors, e.g. animals, gravity, wind, or water -->
 <!-- R1: facilitate or impeded movement and flow -->
-Landscape connectivity describes how landscape features facilitate or impede movement [@Taylor2006LandscapeConnectivity] and can be divided into structural and functional connectivity.
+Landscape connectivity describes how landscape features facilitate or impede movement, flow, and dispersal of organisms, e.g., direct movement of animals, but dispersal of sessile plants by wind or water, and can be divided into structural and functional connectivity [@Taylor2006LandscapeConnectivity].
 It underpins ecosystem functionality, maintains biodiversity and populations, and plays an important role in many conservation actions [@CorreaAyram2016HabitatConnectivity].
 Structural connectivity describes the physical arrangement of landscape elements, focusing on spatial aspects such as continuity and adjacency.
 It is solely a landscape feature and independent of species characteristics [@Tischendorf2000UsageMeasurement; @CorreaAyram2016HabitatConnectivity].
@@ -17,7 +17,7 @@ Functional connectivity, in contrast, integrates landscape structure with the pe
 Although multiple approaches that measure connectivity have been developed [@Simpkins2018AssessingPerformance; @Keeley2021ConnectivityMetrics], the technical and conceptual quantification of connectivity has proven challenging [@Calabrese2004ComparisonshoppersGuide; @Taylor2006LandscapeConnectivity].
 <!-- R1: movement and dispersal data -->
 <!-- R1: that individuals preferentially move [or disperse] through -->
-Generally, movement data from individuals is required to infer the elements in the landscape that individuals preferentially move through [@Simpkins2018AssessingPerformance].
+Generally, movement and dispersal data from individuals is required to infer the elements in the landscape that individuals preferentially move or disperse through [@Simpkins2018AssessingPerformance].
 While improving technologies have made tracking animal movement at high tempo-spatial resolution available [@Kays2015TerrestrialAnimal; @Nathan2022BigdataApproaches], it is still logistically challenging to track high numbers of individuals.
 Thus, in practice connectivity is primarily determined by indirect estimations.
 @Calabrese2004ComparisonshoppersGuide distinguished three types of estimates: i) structural connectivity determined by the physical attributes of the landscape, ii) potential connectivity as a combination of physical landscape attributes and limited information about dispersal characteristics of species, and iii) actual connectivity related to observations of individuals moving through a landscape.
@@ -33,13 +33,13 @@ However, landscape metrics are frequently criticized for an ambiguous link to fu
 
 Many modern connectivity estimation approaches rely on resistance surfaces to represent the landscape [@Zeller2012EstimatingLandscape].
 <!-- R1: to traverse or disperse through that cell -->
-A resistance surface is a grid-based representation of a landscape where each cell is assigned a value representing the difficulty (or cost) for an individual of a particular species to traverse that cell based on landscape features such as habitat type, topography, or barriers [@Etherington2016LeastcostModelling].
+A resistance surface is a grid-based representation of a landscape where each cell is assigned a value representing the difficulty (or cost) for an individual of a particular species to traverse or disperse that cell based on landscape features such as habitat type, topography, or barriers [@Etherington2016LeastcostModelling].
 <!-- R1: Please explain what "edge artifacts" are. I could not find any explanation in the cited reference -->
-Creating resistance surfaces involves obtaining landscape data for the area of interest along with a sufficiently large buffer area to avoid edge artifacts [@Dutta2022OverviewComputational] and quantifying cost values for each cell using movement data.
+Creating resistance surfaces involves obtaining landscape data for the area of interest, quantifying cost values for each cell using movement and dispersal data, and finally analyzing the surfaces [@Dutta2022OverviewComputational].
 This can include expert opinion [widely used due to low effort, however, difficult to measure accuracy\; @Krueger2012RoleExpert], detection data (single point locations of unknown individuals), relocation data (multiple sequential locations of the same individual but at low frequency), pathway data (high-frequency relocation data allowing for movement track inference), or genetic data (samples used to calculate genetic distances between populations).
 
 <!-- R!: Least cost path is just the result of a mathematically formulated problem, so I don't think that it assumes anything. Assumptions are rather in how such results are used in an ecological context -->
-Least-cost paths assume that individuals have perfect knowledge of the landscape and will choose the path that minimizes resistance costs perfectly with no deviations [@Adriaensen2003ApplicationLeastcost].
+Least-cost modelling identifies potential paths between two points that minimizes the related movement or dispersal costs based on the resistance surface [@Adriaensen2003ApplicationLeastcost].
 By calculating paths between two points, it is possible to estimate connectivity between these points based on the accumulated cost along the path.
 This method can also generate accumulated cost surfaces depicting the minimum cost from a single point to all other locations, helping to identify reachable areas within a threshold.
 The creation of least-cost paths is a well established technique and there are highly optimized and efficient algorithms available for its calculation.
@@ -58,9 +58,9 @@ Following the formative work of @Urban2001LandscapeConnectivity, graph theory ha
 Graph theory and related connectivity metrics based on it can be applied over various geographical contexts and for various species [@Foltete2020CouplingLandscape], require very little data inputs [@Godet2021ComparisonLandscape], and can provide key information for conservation planning and management.
 For example, graph theory based metrics can assist wildlife movement corridor planning [e.g., @Wang2023OptimalConfiguration], assist infrastructure placement while minimizing habitat fragmentation [@Pietsch2018ContributionConnectivity], or identify habitat patches that maintain overall landscape connectivity [@Liu2020UsingLandscape].
 
-Within the landscape, discrete habitat patches are modeled as nodes, and the potential movement between patches is modeled as edges.
+Within the landscape, discrete habitat patches are modeled as nodes, and the potential movement and dispersal between patches is modeled as edges.
 <!-- R1: Edges can be weighted or unweighted. They also can be directed or undirected -->
-The edges can be binary, i.e., representing whether a connection between two nodes either exists or does not exists, or edges can be weighted by cost values representing movement efforts from one patch to another [@Petsas2021LandscapeConnectivity].
+The edges can be binary representing whether a connection between two nodes either exists or does not exists, weighted by cost values representing movement efforts from one patch to another, or undirected or directed allowing movement and dispersal in both or only one direction [@Urban2001LandscapeConnectivity; @Petsas2021LandscapeConnectivity].
 Connectivity can be quantified through various graph-theoretical metrics describing different aspects, such as the importance of specific patches in maintaining connectivity.
 Widely reported connectivity metrics include the probability of connectivity index [@Saura2007NewHabitat], habitat availability metrics quantifying potential and functional connectivity [@Saura2010CommonCurrency; @Pietsch2018ContributionConnectivity], or the integral index of connectivity [@Pascual-Hortal2006ComparisonDevelopment] which is based on a binary connection model [@Saura2010CommonCurrency].
 
@@ -74,4 +74,6 @@ However, despite the robust theoretical underpinnings of graph theory and its po
 In many cases, data availability limits the representation of the modelled landscape with subsequent implications for the calculated connectivity metrics and inferences of connectivity [@Foltete2020CouplingLandscape].
 For example, @Godet2021ComparisonLandscape modelled the same landscape using three different data types which resulted in different distribution of connectivity values.
 
+<!--
 A large number of graph theory based software applications have been developed to estimate connectivity including *ConScape.jl* [Julia\; @vanMoorter2023AcceleratingAdvances], *Omniscape.jl* [Julia\;@Landau2021OmniscapejlSoftware], *lconnect* [R\; @Mestre2023LconnectPackage], *grainscape* [R\; @Chubaty2020ToolboxGrainscape], *Circuitscape* [@Anantharaman2019CircuitscapeJulia], *Conefor* [@Saura2009ConeforSensinode], *Graphab* [@Foltete2012SoftwareTool], among others.
+-->

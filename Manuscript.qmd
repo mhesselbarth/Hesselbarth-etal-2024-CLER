@@ -114,13 +114,14 @@ The review highlights key innovations, challenges, and potential future directio
 <!-- R1: Figure 1. The links between Spatial sampling, Spatial planning, and Genetics, towards Landscape mean? The figure would be more meaningful with an explanation of these links, either in the caption or directly on the figure. Also, for other topics (e.g. connectivity), a keyword (or short sentence) summarizing the contribution of the topic to Landscape Ecology would be great. -->
 
 {{< include Sections/01-introduction.qmd >}}
-{{< include Sections/02-spatial-patterns.qmd >}}
-{{< include Sections/03-connectivity.qmd >}}
-{{< include Sections/04-sampling.qmd >}}
-{{< include Sections/05-simulations.qmd >}}
-{{< include Sections/06-genetics.qmd >}}
-{{< include Sections/07-spatial-planning.qmd >}}
-{{< include Sections/08-conclusion.qmd >}}
+{{< include Sections/02-data.qmd >}}
+{{< include Sections/03-spatial-patterns.qmd >}}
+{{< include Sections/04-connectivity.qmd >}}
+{{< include Sections/05-sampling.qmd >}}
+{{< include Sections/06-simulations.qmd >}}
+{{< include Sections/07-genetics.qmd >}}
+{{< include Sections/08-spatial-planning.qmd >}}
+{{< include Sections/09-conclusion.qmd >}}
 
 # Key references
 
