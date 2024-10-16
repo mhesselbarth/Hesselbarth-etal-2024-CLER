@@ -43,8 +43,8 @@ format:
         \usepackage[noblocks]{authblk}
         \usepackage{setspace}
         \renewcommand\Affilfont{\footnotesize}
-        \newcommand{\orcid}[1]{\href{https://orcid.org/#1}{\textcolor[HTML]{A6CE39}{\aiOrcid#1}}}
-        \newcommand{\mail}[1]{\href{mailto:#1}{\textcolor[HTML]{052E81}{\faEnvelope#1}}}
+        \newcommand{\orcid}[1]{\href{https://orcid.org/#1}{\textcolor[HTML]{A6CE39}{\aiOrcid\hspace{1mm}#1}}}
+        \newcommand{\mail}[1]{\href{mailto:#1}{\textcolor[HTML]{052E81}{\faEnvelope\hspace{1mm}#1}}}
 
 papersize: a4paper
 fontsize: 11pt
@@ -57,7 +57,7 @@ bibliography: CLER.bib
 csl: springer-basic-brackets-no-et-al.csl
 ---
 
-\noindent \footnotesize M.H.K. Hesselbarth \orcid{0000-0003-1125-9918} \mail{mhk.hesselbarth@gmail.com}
+\noindent \footnotesize M.H.K. Hesselbarth \orcid{0000-0003-1125-9918} \hspace{5mm} \mail{mhk.hesselbarth@gmail.com}
 
 \noindent \footnotesize J. Nowosad \orcid{0000-0002-1057-3721}
 
