@@ -9,8 +9,8 @@ bibliography: CLER.bib
 <!-- The choice of the data type, model, and scale are crucial for the analysis's results because every type is a simplified model of the natural world. -->
 
 There are two fundamental data models used to represents landscapes, namely the raster data and the vector data model. 
-Raster data uses regularly spaced grid cells, while vector data uses points, lines, and polygons to represent landscape features [@With2019EssentialsLandscape].
-Often, the choice of the data model is driven by data and software availability or the familiarity with the approach [@Costanza2019DescribingAnalyzing].
+The raster data model uses regularly spaced grid cells, while the vector data model uses points, lines, and polygons to represent landscape features [@With2019EssentialsLandscape].
+Often, the choice of the data model is driven by data and software availability or by familiarity with the approach [@Costanza2019DescribingAnalyzing].
 For example, many LULC maps are provided as raster data as they often relate to underlying remote sensing products.
 
 The issue of scale is closely related to the used data model. 
@@ -25,7 +25,7 @@ In contrast, geographic coordinate reference systems are based on degrees and me
 Numerous coordinate reference systems exist, each with distinct properties that may distort areas, distances, angles, or all three. 
 Therefore, it is essential to choose the appropriate spatial reference system based on the available data and the specific research question.
 
-Data quality is generally variable, and data products are not flawless and can contain errors and biases.
+Data quality is generally variable and data products are not flawless potentially containing errors and biases.
 For example, global land cover products typically have an overall accuracy of 70 to 80%, indicating that 20 to 30% of the grid cells may be misclassified.
 Furthermore, these misclassifications are not random, but are often correlated with specific LULC types, regions, and seasonal variations [@Liu2021FinerresolutionMapping].
 Despite this, many landscape ecology studies tend to accept the data at face value, neglecting its accuracy and inherent uncertainty.

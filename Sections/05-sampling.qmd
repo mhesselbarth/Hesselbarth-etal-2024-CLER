@@ -7,11 +7,11 @@ bibliography: CLER.bib
 # Sampling in landscape ecology {#sec-sampling}
 
 Establishing a pattern-process link usually requires fieldwork and data collection.
-Given the cost of collecting field observations across landscapes computational sampling tools have been designed to optimize the study designs [@Pasher2013OptimizingLandscape; @Zuckerberg2020ReviewOverlapping].
+Given the cost of collecting field observations across landscapes, computational sampling tools have been designed to optimize the study designs [@Pasher2013OptimizingLandscape; @Zuckerberg2020ReviewOverlapping].
 To improve the statistical significance of the relationships between landscape features and field observations several aspects need to be considered when selecting sampling sites for data collection.
 First, selected sites should cover the maximum possible range of landscape heterogeneity to maximize the variance of response variables.
 Second, statistical power can be improved by ensuring independence between sites and consequently response variables.
-Finally, since many landscape features that influence response variables are spatially dependent it is essential to evaluate spatial autocorrelation.
+Finally, since many landscape features that influence response variables are spatially dependent, it is essential to evaluate spatial autocorrelation.
 
 Furthermore, identifying scales at which the ecological processes of interest operate is a crucial step [@Jackson2015AreEcologists].
 However, in practice, the appropriate scales may not be obvious or data at such scales may not be available.
@@ -20,9 +20,9 @@ For instance, scalograms can be used to reveal scale thresholds that maximize la
 
 Directly related to the location and extent of sampling sites is the issue of overlapping landscapes which can result in a lower range of landscape heterogeneity, lack of statistical independence, or pseudo-replications [@Hurlbert1984PseudoreplicationDesign; @Zuckerberg2020ReviewOverlapping].
 Nonetheless, the lack of independence between sites is likely more related to spatial autocorrelation and thus not necessarily prevented by using non-overlapping landscapes [@Zuckerberg2020ReviewOverlapping].
-Instead, spatial autocorrelation between sampling sites can be evaluated using comparisons of similarity measures (e.g., Moran's I) between sampling approaches or spatial scales [@Pasher2013OptimizingLandscape].
-Furthermore spatial autocorrelation in model residuals can be diagnosed using the similarity between two sites as a function of the distance between them, i.e., correlograms [@Dormann2007MethodsAccount].
-If spatial autocorrelation is detected researchers may either consider further data collection or use modelling methods to accommodate for spatial dependencies [@Zuckerberg2020ReviewOverlapping], such as mixed models [@Dormann2007MethodsAccount], or apply smoothing kernels that compute distance-weighted averages surrounding the sites [@Heaton2011SpatialRegression].
+Instead, spatial autocorrelation between sampling sites can be evaluated using comparisons of similarity measures between sampling approaches or spatial scales (e.g., Moran's I) [@Pasher2013OptimizingLandscape].
+Furthermore, spatial autocorrelation in model residuals can be diagnosed using the similarity between two sites as a function of the distance between them, i.e., correlograms [@Dormann2007MethodsAccount].
+If spatial autocorrelation is detected researchers may either consider further data collection or use modelling methods to accommodate for spatial dependencies [@Zuckerberg2020ReviewOverlapping], such as mixed models [@Dormann2007MethodsAccount] or apply smoothing kernels that compute distance-weighted averages surrounding the sites [@Heaton2011SpatialRegression].
 
 <!--
 Software to perform multi-scale analysis include the R package *multilandr*, or the Python libraries *ZonalMetrics* [@Adamczyk2017ZonalMetricsPython], and *PyLandStats*.
