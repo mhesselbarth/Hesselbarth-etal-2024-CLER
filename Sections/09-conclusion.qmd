@@ -24,11 +24,10 @@ In this context, we highlight open-source software as a cornerstone of "Open Sci
 | Spatial patterns | R | LandComp | [@Konrad2023AdaptingMultiscale] |
 | Spatial patterns | R | geodiv | [@Smith2021GeodivPackage] |
 | Spatial patterns | R | glcm | [@Zvoleff2020GlcmCalculate] |
-| Spatial patterns | R | GraySpatCon | [@Riitters2023MappingLandscape] |
 | Spatial patterns | R | vectormetrics | [@Matuszek2024VectormetricsLandscape] |
 | Spatial patterns | R | motif | [@Nowosad2021MotifOpensource] |
 | Spatial patterns | Python | GeoPandas | [@Jordahl2020GeopandasPython] |
-| Spatial patterns | Python | rasterio | [@Gillies2013RasterioGeospatial] |
+| Spatial patterns | Python | Rasterio | [@Gillies2013RasterioGeospatial] |
 | Spatial patterns | Python | PyLandStats | [@Bosch2019PyLandStatsOpensource] |
 | Spatial patterns | Julia | GeoStats | [@Hoffimann2018GeoStatsjlHighperformance] |
 | Spatial patterns | Julia | GeoInterface | [@JuliaGeoandcontributors2024GeoInterfaceJulia] |
@@ -42,12 +41,11 @@ In this context, we highlight open-source software as a cornerstone of "Open Sci
 | Connectivity | Julia | Omniscape | [@Landau2021OmniscapejlSoftware] |
 | Connectivity | Stand-alone software | Graphab | [@Foltete2012SoftwareTool] |
 | Connectivity | Stand-alone software | Conefor | [@Saura2009ConeforSensinode] |
-| Connectivity | Stand-alone software | lscorridors | [@Ribeiro2017LandScapeCorridors] |
-| Connectivity | Stand-alone software | GFLOW | [@Leonard2017GlowSoftware] |
+| Connectivity | Stand-alone software | LSCorridors | [@Ribeiro2017LandScapeCorridors] |
 | Sampling | Python | ZonalMetrics | [@Adamczyk2017ZonalMetricsPython] |
 | Simulations | R | NLMR | [@Sciaini2018NLMRLandscapetools] |
 | Simulations | R | rflsgen | [@Justeau-Allaire2022FragmentedLandscape] |
-| Simulations | Python | NeutralLandscapes | [@Poisot2023NeutralLandscapesJulia] |
+| Simulations | Python | NLMpy | [@Etherington2015NLMpyPython] |
 | Simulations | Python | Pathwalker | [@UnnithanKumar2022PathwalkerNew] |
 | Simulations | Julia | NeutralLandscapes | [@Poisot2023NeutralLandscapesJulia] |
 | Simulations | NetLogo | EFForTS-LGraf | [@Salecker2019EFForTSLGrafLandscape] |
@@ -62,7 +60,7 @@ In this context, we highlight open-source software as a cornerstone of "Open Sci
 | Genetics | Python | Python based scripts | [@Etherington2011PythonBased] |
 | Genetics | Python | SDMtoolbox 2.0 | [@Brown2017SDMtoolbox20] |
 | Planning | R | prioritizr | [@Hanson2024PrioritizrSystematic] |
-| Planning | R | coco | [@vanMantgem2023CocoConservation] |
+| Planning | R | CoCo | [@vanMantgem2023CocoConservation] |
 | Planning | R | restoptr | [@Justeau-Allaire2023RestoptrPackage] |
 | Planning | Python | CAPTAIN | [@Silvestro2022ImprovingBiodiversity] |
 
