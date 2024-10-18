@@ -15,9 +15,9 @@ Thus, untangling a landscape's history and linking its spatial patterns to ecolo
 
 Traditionally and at present, many prominent approaches that quantify spatial patterns revolve around raster data using categorical values based on the patch mosaic model [@Frazier2017LandscapeMetrics; @Costanza2019DescribingAnalyzing].
 <!-- R1: They are also naturally extracted from remote sensing products (raster data), which often makes them easier to monitor over time -->
-The strength of landscape metrics is that they are easy to apply, communicate, and can be extracted straightforwardly from raster data based on remote sensing products [@Dramstad2009SpatialMetrics; @Lausch2015UnderstandingQuantifying].
-However, also limitations have been identified. 
-These limitations include shortcomings in their ability to quantify the spatial structure, sensitivity to both spatial scale and thematic resolution, and correlation and redundancy between metrics [@Li2004UseMisuse; @Dramstad2009SpatialMetrics; @Kupfer2012LandscapeEcology].
+The strength of landscape metrics is that they are easy to apply, communicate, and can be extracted straightforwardly from raster data based on remote sensing derived products [@Dramstad2009SpatialMetrics; @Lausch2015UnderstandingQuantifying].
+However, also limitations have been identified for many landscape metrics. 
+These limitations include shortcomings to quantify the spatial structure, sensitivity to both spatial scale and thematic resolution, and correlation and redundancy between metrics [@Li2004UseMisuse; @Dramstad2009SpatialMetrics; @Kupfer2012LandscapeEcology].
 
 To address limitations related to correlation and redundancy several approaches have been used to identify core metrics that capture main components of landscape patterns, such as multivariate factor analysis [@Riitters1995FactorAnalysis], multivariate statistics [@Lustig2015MorePredictable], principal component analysis [@Cushman2008ParsimonyLandscape], or the variance inflation factor [@Plexida2014SelectingLandscape].
 More recently, principal component analysis over a set of landscape blocks revealed two main components of landscape configuration, namely complexity and aggregation which together explain about 70% of variance [@Nowosad2018GlobalInventory].
@@ -44,10 +44,10 @@ The Shannon diversity index [@Shannon1948MathematicalTheory] quantifies the rich
 Shannon's entropy can also be modified to include the landscape's spatial configuration, e.g., by weights calculated from intra- and interclass distances [@Claramunt2012SpatiotemporalForm].
 However, to quantify the spatial configuration and the total complexity of the landscape, other measures from information theory must be adapted.
 @Nowosad2019InformationTheory proposed to compress information about the landscape's composition and configuration into a co-occurrence matrix which could be used to calculate various entropy measures.
-This includes conditional entropy (representing configurational complexity), joint entropy (representing overall spatial-thematic complexity), mutual information, and relative mutual information (both representing the degree of spatial autocorrelation).
+This includes conditional entropy (representing complexity in configuration), joint entropy (representing overall spatial-thematic complexity), mutual information, and relative mutual information (both representing the degree of spatial autocorrelation).
 
 Based on concepts from thermodynamics initiated by the work of @Cushman2015ThermodynamicsLandscape and @Vranken2015ReviewUse, in the last few years, there has been a surge in the development of entropy-based metrics for landscape ecology.
-In the late 1800s, Boltzmann formulated a probabilistic interpretation of the second law of thermodynamics using the concepts of macrostate (the general state of a system) and microstate (the configuration of the system elements) [@Gao2019ComputationBoltzmann].
+In the late 1800s, Boltzmann formulated a probabilistic interpretation of the second law of thermodynamics using the concepts of 'macrostate' (the general state of a system) and 'microstate' (the configuration of the system elements) [@Gao2019ComputationBoltzmann].
 <!-- R1: the edge length -> Could you specify a bit -->
 @Cushman2016CalculatingConfigurational proposed to relate the edge length (defined as the side lengths of neighboring cells with different LULC classes) to the microstate of the landscape and use the proportion of microstates to compute the relative Boltzmann entropy of a landscape mosaic.
 This approach was later generalized for calculations based on the raster surface model and point patterns [@Cushman2021EntropyLandscape].
@@ -77,8 +77,7 @@ Related to surface metrics, another recent approach to quantifying the gradient 
 
 <!-- R1: As an example, I found the subsection "Vector metrics" a bit confusing, mainly because, as you say in L159-160, most landscape metrics can be computed on both raster and vector data. -->
 
-As hundreds of metrics have already been developed for raster data, the most straightforward approach may be to reimplement these same metrics for vector data.
-Although this is possible for many metrics, there are also metrics specifically related to the corresponding data models [@Yao2022VecLIFramework].
+As hundreds of metrics have already been developed for gridded raster data, the most straightforward approach may be to reimplement these same metrics for vector data. Although this is possible for many metrics, there are also metrics specifically related to the corresponding data models [@Yao2022VecLIFramework].
 For example, in urban planning vector-based metrics are applied to quantify the shapes of urban areas and characterize the complexity of building footprints [@Basaraner2017PerformanceShape].
 Earlier approaches to quantifying shape complexity included four categories of compactness measures: perimeter-area, single parameters of related circles, dispersion of elements of the area around a centroid, and direct comparison to standard shapes [@Maceachren1985CompactnessGeographic].
 More recently, a unified theoretical foundation for measuring shape compactness was introduced using a set of ten distinct properties of a circle and metrics associated with each of these properties [@Angel2010TenCompactness].

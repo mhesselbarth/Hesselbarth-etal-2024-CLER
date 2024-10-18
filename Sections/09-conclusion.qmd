@@ -7,8 +7,8 @@ bibliography: CLER.bib
 # Conclusion {#sec-disc}
 
 Since its emergence in the 1980s [@With2019EssentialsLandscape], landscape ecology research has constantly evolved and is now highly dependent on computational methods.
-Thus, future progress within the field will largely depend on available software and computational tools [@Costanza2019DescribingAnalyzing].
-Here, we present and summarize some recent developments of computational methods related to spatial patterns, connectivity, simulations and modeling, landscape genetics and spatial planning.
+Thus, future progress within the field will largely depend on integration of novel data sources and available software and computational tools [@Costanza2019DescribingAnalyzing].
+Here, we present and summarize some recent developments of computational methods related to spatial patterns, connectivity, simulations and modelling, landscape genetics and spatial planning.
 In this context, we highlight open-source software as a cornerstone of "Open Science" offering key advantages like shareability, reproducibility, and transparency, which provide great benefits to the research community [@Powers2019OpenScience; @Vogt2019PatternsSoftware].
 
 <!-- MH: Double check programming languages -->
@@ -26,6 +26,7 @@ In this context, we highlight open-source software as a cornerstone of "Open Sci
 | Spatial patterns | R | glcm | [@Zvoleff2020GlcmCalculate] |
 | Spatial patterns | R | vectormetrics | [@Matuszek2024VectormetricsLandscape] |
 | Spatial patterns | R | motif | [@Nowosad2021MotifOpensource] |
+| Spatial patterns | Python | LecoS | [@jung2016lecos] |
 | Spatial patterns | Python | GeoPandas | [@Jordahl2020GeopandasPython] |
 | Spatial patterns | Python | Rasterio | [@Gillies2013RasterioGeospatial] |
 | Spatial patterns | Python | PyLandStats | [@Bosch2019PyLandStatsOpensource] |
@@ -64,12 +65,11 @@ In this context, we highlight open-source software as a cornerstone of "Open Sci
 | Planning | R | restoptr | [@Justeau-Allaire2023RestoptrPackage] |
 | Planning | Python | CAPTAIN | [@Silvestro2022ImprovingBiodiversity] |
 
-: Software and models that implement recent methodological advances in landscace ecology.
+: Software and models that implement recent methodological advances in landscape ecology.
 
-Alongside the previously introduced methodological advances specific to landscape ecology, the research field will also benefit from technological innovations from related disciplines.
-This includes advances in remote sensing technology with increasing data availability and diversity from a range of sources, including satellites, unmanned aerial vehicles, and ground-based sensor systems.
+Alongside the previously introduced methodological advances specific to landscape ecology, the research field will also benefit from technological innovations from related disciplines. This includes advances in remote sensing technology with increasing data availability and diversity from a range of sources, including satellites, unmanned aerial vehicles, and ground-based sensor systems.
 These systems provide both passive sensors, such as multispectral, hyperspectral, and thermal sensors and active optical sensors, such as LiDAR and SAR [@Crowley2020RemoteSensings].
-Related to this, there is a growing number of up- and downscaling approaches for remote sensing data which makes a wider range of products accessible [@Markham2023ReviewMethods].
+Related to this, there is a growing number of up- and downscaling approaches for remote sensing data which makes a wider range of products accessible to scientists and spatial planners [@Markham2023ReviewMethods].
 In combination with other increasingly available data sources, e.g, citizen science data, ecology has entered the era of big data, requiring methods that can handle heterogeneous data and high-throughput computing resources [@Farley2018SituatingEcology].
 Due to its high flexibility and performance artificial intelligence has become popular in ecology, and deep learning and machine learning algorithms can be used for, e.g., mapping, classifying and extracting features, modeling, or predicting [@Christin2019ApplicationsDeep; @Stupariu2022MachineLearning; @Pichler2023MachineLearning].
 Furthermore, quantum computing may additionally offer a potential pathway to surpass the limits of current computational technologies [@Woolnough2023QuantumComputing].

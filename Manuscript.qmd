@@ -83,7 +83,7 @@ csl: springer-basic-brackets-no-et-al.csl
 
 \noindent \textbf{Author contributions}
 
-\noindent All authors contributed particular sections to the manuscript coordinated by MHKH.
+\noindent All authors contributed particular sections to the manuscript and assisted with the revision. Overall coordination, first and revised draft was led by MHKH.
 Correspondence to [mhk.hesselbarth@gmail.com](mailto:mhk.hesselbarth@gmail.com)
 
 \noindent \textbf{Conflict of Interest}
@@ -99,7 +99,7 @@ Correspondence to [mhk.hesselbarth@gmail.com](mailto:mhk.hesselbarth@gmail.com)
 ## Purpose of Review
 
 Landscapes can be defined as mosaics of different land covers, habitats, ecosystems, or land-use systems.
-The link between spatial heterogeneity and ecological processes is the core concept in the research field of landscape ecology.
+The link between spatial heterogeneous patterns and ecological processes is the core concept in the research field of landscape ecology.
 Nowadays, advanced computational methods are essential to the field due to its cross-disciplinary nature, the increasing availability of data, and the complexity of landscape systems.
 
 ## Recent findings
