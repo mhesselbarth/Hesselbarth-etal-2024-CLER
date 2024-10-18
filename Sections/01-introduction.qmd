@@ -17,7 +17,7 @@ Computational ecology is crucial for landscape ecology as a research field becau
 Additionally, because landscape ecology is a cross-disciplinary field [@With2019EssentialsLandscape], the general increase of data availability [@Jaric2020IEcologyHarnessing], and the complexity of landscape systems [@Newman2019ScalingComplexity], there is the need for advanced computational methods.
 
 <!-- R1: Very good idea to suggest software implementing methodological developments. It would be even better with a recapitulative table -->
-Here, we introduce recent computational developments in multiple key topics of landscape ecology (Fig. 1), including software that implements or is potentially capable of implementing them (Tab. 1).
+Here, we introduce recent computational developments in multiple key topics of landscape ecology (Fig. 1), including software that implements or is potentially capable of executing them (Tab. 1).
 In this context, we are focusing on open-source software and scripting languages such as R, Python, and Julia.
 However, we do not provide a systematic literature review or a general introduction to (computational) landscape ecology.
 For such, please see @Turner2015LandscapeEcology, @Gergel2017LearningLandscape, or @With2019EssentialsLandscape.
