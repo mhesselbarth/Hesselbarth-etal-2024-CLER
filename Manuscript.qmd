@@ -104,8 +104,8 @@ Nowadays, advanced computational methods are essential to the field due to its c
 
 ## Recent findings
 
-This review provides an overview of recent developments in computational methods that in our eyes have advanced the research field of landscape ecology.
-We focus on key topics such as spatial patterns, connectivity, simulations and modelling, landscape genetics, and spatial planning.
+This review provides an overview of recent developments in computational methods that have advanced the research field of landscape ecology.
+We focus on key topics such as spatial patterns, connectivity, simulations and modeling, landscape genetics, and spatial planning.
 
 ## Summary
 
@@ -127,11 +127,11 @@ The review highlights key innovations, challenges, and potential future directio
 
 \noindent _Frazier (2019) Emerging trajectories for spatial pattern analysis in landscape ecology. Landscape Ecology 34:2073–2082._ The paper describes how interdisciplinary perspectives have contributed to spatial pattern analysis and introduces new innovative developments.
 
-\noindent _Unnithan Kumar et al. (2022) Moving beyond landscape resistance: Considerations for the future of connectivity modelling and conservation science. Landscape Ecology 37:2465–2480._ The paper provides a historical overview of connectivity modelling with a focus on resistance surfaces and discusses current missing aspects and how to address them.  
+\noindent _Unnithan Kumar et al. (2022) Moving beyond landscape resistance: Considerations for the future of connectivity modeling and conservation science. Landscape Ecology 37:2465–2480._ The paper provides a historical overview of connectivity modeling with a focus on resistance surfaces and discusses current missing aspects and how to address them.  
 
 \noindent _Zuckerberg et al. (2020) A review of overlapping landscapes: Pseudoreplication or a red herring in landscape ecology? Current Landscape Ecology Reports 5:140–148._ The paper discusses theoretical and practical implications over overlapping landscapes in the context of landscape buffers of varying sizes surrounding sampling sites.
 
-\noindent _Synes et al. (2016) Emerging opportunities for landscape ecological modelling. Current Landscape Ecology Reports 1:146–167._ The paper identifies existing gaps in landscape ecological modelling while highlighting potential emerging opportunities.
+\noindent _Synes et al. (2016) Emerging opportunities for landscape ecological modeling. Current Landscape Ecology Reports 1:146–167._ The paper identifies existing gaps in landscape ecological modeling while highlighting potential emerging opportunities.
 
 \noindent _Manel and Holderegger (2013) Ten years of landscape genetics. Trends in Ecology & Evolution 28:614–621._ Ten years after their first paper introducing landscape genetics, this paper reviews the state-of-the-art and describes main topics that have contributed to the progress of landscape genetics.
 
