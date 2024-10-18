@@ -24,10 +24,6 @@ More recently, principal component analysis over a set of landscape blocks revea
 These components of landscape patterns are in line with recent reviews that have similarly suggested that there are two fundamental components of landscape patterns, namely amount and adjacency [@Gustafson2019HowHas; @Riitters2019PatternMetrics].
 These components are connected to complexity and aggregation as suggested by @Nowosad2018GlobalInventory and later formalized in @Nowosad2019InformationTheory.
 
-<!-- 
-Software to calculate landscape metrics include the *landscapemetrics* [@Hesselbarth2019LandscapemetricsOpensource] and *multilandr* [@Huais2024MultilandrPackage] R packages, the *PyLandStats* Python library [@Bosch2019PyLandStatsOpensource], or the stand-alone software *FRAGSTATS* [@McGarigal2023FRAGSTATSV4].
--->
-
 <!-- R1: Missing subsection title -->
 ## Landscape mosaic method
 
@@ -65,10 +61,6 @@ The Rao quadratic entropy [@Rao1982DiversityDissimilarity] has also been applied
 Thus, it can be useful in cases where the dissimilarities between LULC classes are relevant.
 Another recent development to describe patterns across scales is the use of Kullback-Leibler divergence (also known as relative entropy) which is a measure of differences between two probability distributions [@Huckeba2023MultiscaleSpatial].
 
-<!-- 
-Entropy metrics are available in various software such as the R packages *landscapemetrics*, *bespatial* [@Nowosad2024BespatialBoltzmann], *rasterdiv* [@Rocchini2021RasterdivInformation], *LandComp* [@Konrad2023AdaptingMultiscale], or the Python package *PyLandStats*.
--->
-
 ## Surface metrics
 
 Surface metrics are based on the gradient surface model using raster data and continuous values [@McGarigal2009SurfaceMetrics; @Cushman2010GradientParadigm]. 
@@ -81,12 +73,7 @@ Nevertheless, similar to landscape metrics, also surface metrics are scale-depen
 Software to calculate these metrics is still rare and further research is needed into the specific pattern-process links and ecologically meaningful interpretations [@Kedron2018SurfaceMetrics; @Frazier2019EmergingTrajectories].
 Related to surface metrics, another recent approach to quantifying the gradient surface model is based on frequencies and local adjacencies of continuous input pixel values [@Riitters2023MappingLandscape].
 
-<!--
-Nonetheless, the *geodiv* R package [@Smith2021GeodivPackage] provides various surface metrics, and related textures from grey-level co-occurrence matrices are provided by the *glcm* R package [@Zvoleff2020GlcmCalculate].
-Another approach to quantify the gradient surface model is based on frequencies and local adjacencies of continuous input pixel values as implemented in the *GraySpatCon* software [@Riitters2023MappingLandscape].
--->
-
-## Vector-based metrics
+## Vector metrics
 
 <!-- R1: As an example, I found the subsection "Vector metrics" a bit confusing, mainly because, as you say in L159-160, most landscape metrics can be computed on both raster and vector data. -->
 
@@ -100,11 +87,6 @@ The most important limitation relates to computational complexity, which makes c
 Another technical issue is the requirement for topologically correct data (e.g., geometries cannot overlap), which is often problematic, especially for data from different sources.
 Last, the pattern-process link for vector-based metrics remains underexplored compared to raster-based metrics.
 
-<!--
-The *vectormetrics* R package [@Matuszek2024VectormetricsLandscape] is specifically designed for vector metrics.
-However, all general software frameworks designed for spatial data handling which support vector data can theoretically be used to calculate basic vector metrics.
--->
-
 ## Operations on spatial patterns 
 <!-- R1: I think that this could be clearer by introducing spatial patterns operation and queries as an extension of the relational data model to spatial data. I'm not sure if it is useful to use database jargon such as "one-to-many" or "many-to-many" without defining them, as it could be confusing to readers not familiar with databases. You could either avoid using these terms, define them, or illustrate the operations with a figure -->
 <!-- R1: This section is missing in the summary Figure 1 --> 
@@ -115,10 +97,5 @@ Comparing spatial signatures is often used to analyze landscape dynamics, e.g., 
 <!-- R1: As defined here, it looks to me that this operation is not necessarily linked to a query area, but rather to a spatial signature which can be directly specified or extracted from a query area -->
 Furthermore, signature-based searches can be used to compare the spatial signature of a focal area to the spatial signatures of multiple other areas.
 This allows for the identification of areas with similar signatures compared to the focal area, e.g., areas with similar environmental conditions [@Jasiewicz2014LandscapeSimilarity].
-Additionally, it is possible to calculate spatial signatures for multiple areas and group them into similar clusters based on their signatures [@Nowosad2021PatternbasedIdentification].
 
-<!--
-R, Python, and Julia have a wide range of packages for spatial operations, including *sf* [@Pebesma2018SimpleFeatures], or *terra* [@Hijmans2024TerraSpatial] in R, *GeoPandas* [@Jordahl2020GeopandasPython], or *rasterio* [@Gillies2013RasterioGeospatial] in Python, and *GeoStats.jl* [@Hoffimann2018GeoStatsjlHighperformance], or *GeoInterface.jl* [@JuliaGeoandcontributors2024GeoInterfaceJulia] in Julia.
-These packages together with additional statistical and machine learning libraries allow for a wide range of spatial operations.
-Additionally, the *motif* R package [@Nowosad2021MotifOpensource] provides a set of functions for spatial pattern operations, such as comparing, searching, or grouping spatial patterns customized for the use in landscape ecology.
--->
+Additionally, it is possible to calculate spatial signatures for multiple areas and group them to similar clusters based on their signatures [@Nowosad2021PatternbasedIdentification].

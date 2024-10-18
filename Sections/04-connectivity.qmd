@@ -72,7 +72,3 @@ However, despite the robust theoretical underpinnings of graph theory and its po
 <!-- R1: I don't think that it is specific to graphs. Any data-dependent model will be sensitive to input data. This highlights the importance of data -->
 In many cases, data availability limits the representation of the modelled landscape with subsequent implications for the calculated connectivity metrics and inferences of connectivity [@Foltete2020CouplingLandscape].
 For example, @Godet2021ComparisonLandscape modelled the same landscape using three different data types which resulted in different distribution of connectivity values.
-
-<!--
-A large number of graph theory based software applications have been developed to estimate connectivity including *ConScape.jl* [Julia\; @vanMoorter2023AcceleratingAdvances], *Omniscape.jl* [Julia\;@Landau2021OmniscapejlSoftware], *lconnect* [R\; @Mestre2023LconnectPackage], *grainscape* [R\; @Chubaty2020ToolboxGrainscape], *Circuitscape* [@Anantharaman2019CircuitscapeJulia], *Conefor* [@Saura2009ConeforSensinode], *Graphab* [@Foltete2012SoftwareTool], among others.
--->

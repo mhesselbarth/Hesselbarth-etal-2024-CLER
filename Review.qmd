@@ -64,11 +64,11 @@ L175-190. I think that this could be clearer by introducing spatial patterns ope
 
 L175. This subsection is missing in the summary Figure 1.
 
-\textcolor[HTML]{e93c26}{Reply: TODO Thanks for pointing this out. We added it to the figure.}
+\textcolor[HTML]{e93c26}{Reply: Thank you for pointing this out. We added it to the figure.}
 
 Figure 1. The links between Spatial sampling, Spatial planning, and Genetics, towards Landscape mean?  The figure would be more meaningful with an explanation of these links, either in the caption or directly on the figure. Also, for other topics (e.g. connectivity), a keyword (or short sentence) summarizing the contribution of the topic to Landscape Ecology would be great.
 
-\textcolor[HTML]{e93c26}{Reply: TODO}
+\textcolor[HTML]{007895}{Reply: The figure caption now includes more details how the different topcis of the figure are interlinked.}
 
 L192. "facilitate or impeded movement [and flow]"
 

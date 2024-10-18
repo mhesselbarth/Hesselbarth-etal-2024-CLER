@@ -23,7 +23,3 @@ Nonetheless, the lack of independence between sites is likely more related to sp
 Instead, spatial autocorrelation between sampling sites can be evaluated using comparisons of similarity measures between sampling approaches or spatial scales (e.g., Moran's I) [@Pasher2013OptimizingLandscape].
 Furthermore, spatial autocorrelation in model residuals can be diagnosed using the similarity between two sites as a function of the distance between them, i.e., correlograms [@Dormann2007MethodsAccount].
 If spatial autocorrelation is detected researchers may either consider further data collection or use modelling methods to accommodate for spatial dependencies [@Zuckerberg2020ReviewOverlapping], such as mixed models [@Dormann2007MethodsAccount] or apply smoothing kernels that compute distance-weighted averages surrounding the sites [@Heaton2011SpatialRegression].
-
-<!--
-Software to perform multi-scale analysis include the R package *multilandr*, or the Python libraries *ZonalMetrics* [@Adamczyk2017ZonalMetricsPython], and *PyLandStats*.
--->
