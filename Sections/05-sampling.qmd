@@ -14,9 +14,8 @@ Second, statistical power can be improved by ensuring independence between sites
 Finally, since many landscape features that influence response variables are spatially dependent, it is essential to evaluate spatial autocorrelation.
 
 Furthermore, identifying scales at which the ecological processes of interest operate is a crucial step [@Jackson2015AreEcologists].
-However, in practice, the appropriate scales may not be obvious or data at such scales may not be available.
-Nevertheless, analyses at multiple spatial scales can help to identify the scales of interest.
-For instance, scalograms can be used to reveal scale thresholds that maximize landscape heterogeneity [@Pasher2013OptimizingLandscape] or show the strongest relationships with response variables [@Huais2024MultilandrPackage].
+However, in practice, the appropriate scales may not be obvious or data at such scales may not be available and landscape-wide and local process interactions can occur across multiple scales [@miguet2016determines].
+Here analyses at multiple spatial scales can help to identify the scales of interest. For instance, scalograms can be used to reveal scale thresholds that maximize landscape heterogeneity [@Pasher2013OptimizingLandscape] or show the strongest relationships with response variables [@Huais2024MultilandrPackage].
 
 Directly related to the location and extent of sampling sites is the issue of overlapping landscapes which can result in a lower range of landscape heterogeneity, lack of statistical independence, or pseudo-replications [@Hurlbert1984PseudoreplicationDesign; @Zuckerberg2020ReviewOverlapping].
 Nonetheless, the lack of independence between sites is likely more related to spatial autocorrelation and thus not necessarily prevented by using non-overlapping landscapes [@Zuckerberg2020ReviewOverlapping].

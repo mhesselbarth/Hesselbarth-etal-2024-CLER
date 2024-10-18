@@ -6,7 +6,7 @@ bibliography: CLER.bib
 
 # Simulation models {#sec-simulation}
 
-Simulation models are a powerful tool to study complex adaptive ecological systems in controllable, reproducible, and replicable settings [@Petrovskii2012ComputationalEcology].
+Simulation models are a powerful tool to study complex adaptive socio-ecological systems in controllable, reproducible, and replicable settings [@Petrovskii2012ComputationalEcology].
 Thus, simulations can be seen as experimental systems that allow all imaginable manipulations which would be impossible in natural systems in order to advance theoretical developments or test hypotheses [@Peck2004SimulationExperiment].
 Due to the spatio-temporal scales, complex interactions and feedbacks, or scale mismatches between patterns and processes, simulation models are one of the major approaches in landscape ecology [@Schroder2006AnalysisPattern; @Synes2016EmergingOpportunities].
 In general, simulation models can be classified using two major divisions, namely *i)* predictive or exploratory models, and *ii)* pattern- or process-based models [@Peck2004SimulationExperiment; @Synes2016EmergingOpportunities].
@@ -27,24 +27,24 @@ In order to ensure realistic neutral landscapes several approaches exist that us
 
 Contrastingly, processes-based approaches explicitly include abiotic or biotic pattern-forming processes (i.e., landscape generators) [@Langhammer2019AgriculturalLandscape; @Salecker2019EFForTSLGrafLandscape].
 Several earlier landscape generators are based on cellular automata models and are able to simulate urban growth [@Clarke1998LoosecouplingCellular] or deforestation [@Soares-Filho2002DinamicaStochastic].
-More recent, landscape generators have allowed to simulate patchy landscapes based on Gibbs processes [@Gaucherel2006NeutralModels], deforestation based on road and agricultural fields access [@Peer2013SimpleProcessbased], loss of wetlands, expansion of mining and croplands using the Ising model [@Stepinski2023KineticIsing], agricultural areas dominated by smallholders [@Salecker2019EFForTSLGrafLandscape], or vegetation surrounding watering points in semi-arid savanna rangelands (combining pattern- and process-bases approaches) [@Hess2020PioLaGPiosphere].
+More recent, landscape generators have allowed to simulate patchy landscapes based on Gibbs processes [@Gaucherel2006NeutralModels], deforestation based on road and agricultural fields access [@Peer2013SimpleProcessbased], loss of wetlands, expansion of mining and croplands using the Ising model [@Stepinski2023KineticIsing], agricultural areas dominated by smallholders [@Salecker2019EFForTSLGrafLandscape], or vegetation surrounding watering points in semi-arid savanna rangelands (combining pattern- and process-bases approaches) [@Hess2020PioLaGPiosphere]. 
 
 ## Individual-based models
 
 Individual-based models (or agent-based models) simulate discrete entities that are described by attributes and behavior.
 Patterns emerge from bottom-up interactions of individuals with each other and their environment [@DeAngelis2014IndividualbasedModels].
-In landscape ecology individual-based models are increasingly used to model social-ecological systems [@Carauta2018CanPreferential; @Dislich2018LanduseChange; @Gonzalez-Redin2019ExploringSustainable], but also disturbances [@Seidl2017ClimateChange; @Spies2017UsingAgentbased; @Kamimura2019AgentbasedModelling], or connectivity [@Day2020IndividualbasedModeling].
+In landscape ecology individual-based models are increasingly used to model social-ecological systems [@Carauta2018CanPreferential; @Dislich2018LanduseChange; @Gonzalez-Redin2019ExploringSustainable], but also disturbances [@Seidl2017ClimateChange; @Spies2017UsingAgentbased; @Kamimura2019AgentbasedModelling], or connectivity [@Day2020IndividualbasedModeling]. They can also incorporate a range of socio-economic, political and governance information to influence how agents (such as farmers) interact within a landscape [@murray2014combining].
 In order to facilitate future model developments recent progress includes adaptable modelling frameworks [@Schumaker2018HexSimModeling] or reusable building blocks [@Berger2024ReusableBuilding].
 Furthermore, hybrid approaches, coupling or integrating different model types with individual-based models, could benefit from rich development histories or facilitate corresponding strengths [@OSullivan2016StrategicDirections], e.g., linking an individual-based and ecosystem model [@Polhill2011AgentbasedModelling].
 
 ## Digital Twins
 
-The digital twins concept include three connected elements, namely *i)* a physical object or system, *ii)* its digital representation, *iii)* and a data exchange between the former two [@Jones2020CharacterisingDigital; @deKoning2023DigitalTwins]. 
+The digital twins concept include three connected elements, namely *i)* a physical object or system, *ii)* its digital representation, *iii)* and a data exchange between the former two [@Jones2020CharacterisingDigital; @deKoning2023DigitalTwins]. Digital twins are particular useful for real-time workflows that allow now- and forecasting of complex dynamics in a landscape.
 The need for timely and evidence-based decision making in combination with increasing data availability make digital twins a powerful tool for landscape ecology [@deKoning2023DigitalTwins].
 They aim to provide real-time state of nature measurements, early detection of conservation trends, relationships of ecosystem trends and environmental conditions, impact assessments of interventions, or to identify uncertainties and information gaps [@deKoning2023DigitalTwins].
-Thus, there is increasing interest and use of digital twins in both the industry and academia [@Jones2020CharacterisingDigital].
-Digital twins are increasingly applied in agricultural landscapes research, e.g., for livestock farming, controlled environment farming, or fertilization management [@Cesco2023SmartAgriculture; @Purcell2023DigitalTwins].
-Further applications include planning of rural ecological landscapes [@Tan2024DigitalTwin] or exploration of relationships between urban expansion and vegetation coverage [@Zhao2022ApplyingDigital].
-The use of general data processing, statistical and mechanistic models, or artificial intelligence allows digital twins to constantly update the digital representation and analyze, visualize, or predict the physical counterpart.
 <!-- R1: You could also mention the increasing availability and accessibility of sensors deployed by drones along with data processing tools (e.g. drone photogrammetry, LiDAR) which enable high-frequency, high-resolution monitoring of 2D and 3D landscape models -->
-This is further facilitated by the increasing rate of data generation in ecology, e.g., due to sensors deployed on airplane, satellites, or unmanned aerial vehicle [@Farley2018SituatingEcology].
+This is further facilitated by the increasing rate of novel sources of data generation in ecology, e.g., due to sensors deployed on airplane, satellites, or unmanned aerial vehicle [@Farley2018SituatingEcology]. 
+
+Thus, there is increasing interest and use of digital twins in both the industry and academia [@Jones2020CharacterisingDigital].
+Digital twins are increasingly applied in agricultural landscapes research, e.g., for livestock farming, controlled environment farming, or fertilization management [@Cesco2023SmartAgriculture; @Purcell2023DigitalTwins]. Further applications include planning of rural ecological landscapes [@Tan2024DigitalTwin] or exploration of relationships between urban expansion and vegetation coverage [@Zhao2022ApplyingDigital].
+The use of general data processing, statistical and mechanistic models, or artificial intelligence allows digital twins to constantly update the digital representation and analyze, visualize, or predict the physical counterpart.
