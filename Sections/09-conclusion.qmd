@@ -11,7 +11,7 @@ Thus, future progress within the field will largely depend on available software
 Here, we present and summarize some recent developments of computational methods related to spatial patterns, connectivity, simulations and modelling, landscape genetics and spatial planning.
 In this context, we highlight open-source software as a cornerstone of "Open Science" offering key advantages like shareability, reproducibility, and transparency, which provide great benefits to the research community [@Powers2019OpenScience; @Vogt2019PatternsSoftware].
 
-<!-- MH: Check connectivity, simulations sections again for 'hidden' software -->
+<!-- MH: Double check programming languages -->
 
 | Topic | Programming language | Software | Reference |
 |:---:|:---:|:---:|:---:|
@@ -43,12 +43,18 @@ In this context, we highlight open-source software as a cornerstone of "Open Sci
 | Connectivity | Stand-alone software | Graphab | [@Foltete2012SoftwareTool] |
 | Connectivity | Stand-alone software | Conefor | [@Saura2009ConeforSensinode] |
 | Connectivity | Stand-alone software | lscorridors | [@Ribeiro2017LandScapeCorridors] |
+| Connectivity | Stand-alone software | GFLOW | [@Leonard2017GlowSoftware] |
 | Sampling | Python | ZonalMetrics | [@Adamczyk2017ZonalMetricsPython] |
 | Simulations | R | NLMR | [@Sciaini2018NLMRLandscapetools] |
-| Simulations | Python | NLMpy | [@Etherington2015NLMpyPython] |
+| Simulations | R | rflsgen | [@Justeau-Allaire2022FragmentedLandscape] |
+| Simulations | Python | NeutralLandscapes | [@Poisot2023NeutralLandscapesJulia] |
+| Simulations | Python | Pathwalker | [@UnnithanKumar2022PathwalkerNew] |
 | Simulations | Julia | NeutralLandscapes | [@Poisot2023NeutralLandscapesJulia] |
+| Simulations | NetLogo | EFForTS-LGraf | [@Salecker2019EFForTSLGrafLandscape] |
 | Simulations | Stand-alone software | GradientLand | [@Cambui2015GradientLandSoftware] |
+| Simulations | Stand-alone software | Landscape Generator | [@vanStrien2016ImprovedNeutral] |
 | Simulations | Stand-alone software | HexSim | [@Schumaker2018HexSimModeling] |
+| Simulations | Stand-alone software | RangeShifter2.0 | [@Bocedi2021RangeShifter20] |
 | Genetics | R | graph4lg | [@Savary2021Graph4lgPackage] |
 | Genetics | R | landgenreport | [@Gruber2015LandgenreportNew] |
 | Genetics | R | adegenet | [@Jombart2008AdegenetPackage] |
@@ -60,7 +66,7 @@ In this context, we highlight open-source software as a cornerstone of "Open Sci
 | Planning | R | restoptr | [@Justeau-Allaire2023RestoptrPackage] |
 | Planning | Python | CAPTAIN | [@Silvestro2022ImprovingBiodiversity] |
 
-: Software implementing methodological developments in landscace ecology. 
+: Software and models that implement recent methodological advances in landscace ecology.
 
 Alongside the previously introduced methodological advances specific to landscape ecology, the research field will also benefit from technological innovations from related disciplines.
 This includes advances in remote sensing technology with increasing data availability and diversity from a range of sources, including satellites, unmanned aerial vehicles, and ground-based sensor systems.
