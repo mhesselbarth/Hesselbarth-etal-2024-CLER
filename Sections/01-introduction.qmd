@@ -17,11 +17,11 @@ Computational ecology is crucial for landscape ecology as a research field becau
 Additionally, because landscape ecology is a cross-disciplinary field [@With2019EssentialsLandscape], the general increase of data availability [@Jaric2020IEcologyHarnessing], and the complexity of landscape systems [@Newman2019ScalingComplexity], there is the need for advanced computational methods.
 
 <!-- R1: Very good idea to suggest software implementing methodological developments. It would be even better with a recapitulative table -->
-Here, we introduce recent computational developments in multiple key topics of landscape ecology (Fig. 1), including software that implements or is potentially capable of implementing them (Tab. 1).
+Here, we introduce recent computational developments in multiple key topics of landscape ecology (Fig. 1), including software that implements or is potentially capable of executing them (Tab. 1).
 In this context, we are focusing on open-source software and scripting languages such as R, Python, and Julia.
 However, we do not provide a systematic literature review or a general introduction to (computational) landscape ecology.
 For such, please see @Turner2015LandscapeEcology, @Gergel2017LearningLandscape, or @With2019EssentialsLandscape.
 
 <!-- R1: The links between Spatial sampling, Spatial planning, and Genetics, towards Landscape mean?  The figure would be more meaningful with an explanation of these links, either in the caption or directly on the figure. Also, for other topics (e.g. connectivity), a keyword (or short sentence) summarizing the contribution of the topic to Landscape Ecology would be great. -->
 
-![Overview of landscape ecology topics for which computational methods are discussed. Contains modified Copernicus Sentinel data 2024-09-07 for Sentinel data.](Figures/Fig-1.jpg)
+![Overview of landscape ecology topics for which computational methods are discussed. The image uses modified Copernicus Sentinel-2 data from 2024-09-07.](Figures/Fig-1.jpg)
