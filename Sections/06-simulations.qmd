@@ -34,7 +34,7 @@ More recent, landscape generators have allowed to simulate patchy landscapes bas
 Individual-based models (or agent-based models) simulate discrete entities that are described by attributes and behavior.
 Patterns emerge from bottom-up interactions of individuals with each other and their environment [@DeAngelis2014IndividualbasedModels].
 In landscape ecology individual-based models are increasingly used to model social-ecological systems [@Carauta2018CanPreferential; @Dislich2018LanduseChange; @Gonzalez-Redin2019ExploringSustainable], but also disturbances [@Seidl2017ClimateChange; @Spies2017UsingAgentbased; @Kamimura2019AgentbasedModelling], or connectivity [@Day2020IndividualbasedModeling].
-In order to facilitate future model developments recent progress includes adaptable modelling frameworks [@Schumaker2018HexSimModeling] or reusable building blocks [@Berger2024ReusableBuilding].
+In order to facilitate future model developments recent progress includes adaptable modeling frameworks [@Schumaker2018HexSimModeling] or reusable building blocks [@Berger2024ReusableBuilding].
 Furthermore, hybrid approaches, coupling or integrating different model types with individual-based models, could benefit from rich development histories or facilitate corresponding strengths [@OSullivan2016StrategicDirections], e.g., linking an individual-based and ecosystem model [@Polhill2011AgentbasedModelling].
 
 ## Digital Twins

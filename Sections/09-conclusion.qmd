@@ -8,7 +8,7 @@ bibliography: CLER.bib
 
 Since its emergence in the 1980s [@With2019EssentialsLandscape], landscape ecology research has constantly evolved and is now highly dependent on computational methods.
 Thus, future progress within the field will largely depend on available software and computational tools [@Costanza2019DescribingAnalyzing].
-Here, we present and summarize some recent developments of computational methods related to spatial patterns, connectivity, simulations and modelling, landscape genetics and spatial planning.
+Here, we present and summarize some recent developments of computational methods related to spatial patterns, connectivity, simulations and modeling, landscape genetics and spatial planning.
 In this context, we highlight open-source software as a cornerstone of "Open Science" offering key advantages like shareability, reproducibility, and transparency, which provide great benefits to the research community [@Powers2019OpenScience; @Vogt2019PatternsSoftware].
 
 <!-- MH: Double check programming languages -->
@@ -71,7 +71,7 @@ This includes advances in remote sensing technology with increasing data availab
 These systems provide both passive sensors, such as multispectral, hyperspectral, and thermal sensors and active optical sensors, such as LiDAR and SAR [@Crowley2020RemoteSensings].
 Related to this, there is a growing number of up- and downscaling approaches for remote sensing data which makes a wider range of products accessible [@Markham2023ReviewMethods].
 In combination with other increasingly available data sources, e.g, citizen science data, ecology has entered the era of big data, requiring methods that can handle heterogeneous data and high-throughput computing resources [@Farley2018SituatingEcology].
-Due to its high flexibility and performance artificial intelligence has become popular in ecology, and deep learning and machine learning algorithms can be used for, e.g., mapping, classifying and extracting features, modelling, or predicting [@Christin2019ApplicationsDeep; @Stupariu2022MachineLearning; @Pichler2023MachineLearning].
+Due to its high flexibility and performance artificial intelligence has become popular in ecology, and deep learning and machine learning algorithms can be used for, e.g., mapping, classifying and extracting features, modeling, or predicting [@Christin2019ApplicationsDeep; @Stupariu2022MachineLearning; @Pichler2023MachineLearning].
 Furthermore, quantum computing may additionally offer a potential pathway to surpass the limits of current computational technologies [@Woolnough2023QuantumComputing].
 Last, landscape ecology will, as many other research fields, benefit from a general paradigm shift related to data sharing, management, and documentation [@Tenopir2020DataSharing].
 

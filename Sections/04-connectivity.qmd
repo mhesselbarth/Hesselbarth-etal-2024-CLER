@@ -38,7 +38,7 @@ Creating resistance surfaces involves obtaining landscape data for the area of i
 This can include expert opinion (widely used due to low effort, however, difficult to measure accuracy) [@Krueger2012RoleExpert], detection data (single point locations of unknown individuals), relocation data (multiple sequential locations of the same individual but at low frequency), pathway data (high-frequency relocation data allowing for movement track inference), or genetic data (samples used to calculate genetic distances between populations).
 
 <!-- R!: Least cost path is just the result of a mathematically formulated problem, so I don't think that it assumes anything. Assumptions are rather in how such results are used in an ecological context -->
-Least-cost modelling identifies potential pathways between two points that minimizes the related movement or dispersal costs based on the resistance surface [@Adriaensen2003ApplicationLeastcost].
+Least-cost modeling identifies potential pathways between two points that minimizes the related movement or dispersal costs based on the resistance surface [@Adriaensen2003ApplicationLeastcost].
 By calculating pathways between two points it is possible to estimate connectivity between these points based on the accumulated cost along the path.
 This method can also generate accumulated cost surfaces depicting the minimum cost from a single point to all other locations helping to identify reachable areas within a threshold.
 The creation of least-cost paths is a well established technique and there are highly optimized and efficient algorithms available for its calculation.
@@ -49,7 +49,7 @@ Circuit theory is particularly useful when multiple alternative pathways are ava
 It can describe isolation by measuring multiple low- or high resistance pathways and identify areas of high movement probability highlighting important corridors and bottlenecks in the landscape [@Cushman2013BiologicalCorridors].
 
 However, resistance surfaces are not free of critique including missing spatio-temporal variability or context dependency [@UnnithanKumar2022ConnectivityModelling; @UnnithanKumar2022MovingLandscape].
-Thus, recent developments have shifted towards a combination of both resistance and processes-based modelling approaches [@Schumaker2018HexSimModeling; @Bocedi2021RangeShifter20; @UnnithanKumar2022PathwalkerNew], modelling of dynamic landscape connectivity [@Zeller2020UnderstandingImportance], inclusion of stochasticity and spatial context [@Ribeiro2017LandScapeCorridors], genetic optimization algorithms [@Peterman2018ResistanceGAPackage], or general computational improvements [@Leonard2017GlowSoftware].
+Thus, recent developments have shifted towards a combination of both resistance and processes-based modeling approaches [@Schumaker2018HexSimModeling; @Bocedi2021RangeShifter20; @UnnithanKumar2022PathwalkerNew], modeling of dynamic landscape connectivity [@Zeller2020UnderstandingImportance], inclusion of stochasticity and spatial context [@Ribeiro2017LandScapeCorridors], genetic optimization algorithms [@Peterman2018ResistanceGAPackage], or general computational improvements [@Leonard2017GlowSoftware].
 
 ## Graph theory
 
@@ -64,9 +64,9 @@ Connectivity can be quantified through various graph-theoretical metrics describ
 Widely reported connectivity metrics include the probability of connectivity index [@Saura2007NewHabitat], habitat availability metrics quantifying potential and functional connectivity [@Saura2010CommonCurrency; @Pietsch2018ContributionConnectivity], or the integral index of connectivity which is based on a binary connection model [@Pascual-Hortal2006ComparisonDevelopment; @Saura2010CommonCurrency].
 
 Recently, a new generation of graph-theoretical metrics, commonly reported in combination [@Hashemi2022ReviewEcological], have been developed to account for landscape features that are critical for space use and species-specific movement or dispersal [@Petsas2021LandscapeConnectivity].
-Furthermore, the modelling framework was initially only applied to single species, but is increasingly being used to model multispecies landscapes to account for interspecific movement and dispersal abilities and habitat preferences [@Clauzel2018CouplingLandscapebased; @Modica2021ImplementationMultispecies; @Liang2023MultispeciesApproach].
-In addition, modern multiple-layer graph approaches enable the modelling of not only spatial but also spatio-temporal graphs [@Dale2017SpatiotemporalGraphs; @Uroy2021HowAssess].
-Modelling the temporal dynamics helps to identify habitat patches that impact connectivity over time and the corresponding effects on biodiversity patterns [@Uroy2021HowAssess].
+Furthermore, the modeling framework was initially only applied to single species, but is increasingly being used to model multispecies landscapes to account for interspecific movement and dispersal abilities and habitat preferences [@Clauzel2018CouplingLandscapebased; @Modica2021ImplementationMultispecies; @Liang2023MultispeciesApproach].
+In addition, modern multiple-layer graph approaches enable the modeling of not only spatial but also spatio-temporal graphs [@Dale2017SpatiotemporalGraphs; @Uroy2021HowAssess].
+Modeling the temporal dynamics helps to identify habitat patches that impact connectivity over time and the corresponding effects on biodiversity patterns [@Uroy2021HowAssess].
 
 However, despite the robust theoretical underpinnings of graph theory and its powerful application in landscape connectivity research, contradictory results could emerge from different methods used to construct a graph or various data sources.
 <!-- R1: I don't think that it is specific to graphs. Any data-dependent model will be sensitive to input data. This highlights the importance of data -->
