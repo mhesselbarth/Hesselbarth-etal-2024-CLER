@@ -8,7 +8,7 @@ bibliography: CLER.bib
 
 Since its emergence in the 1980s [@With2019EssentialsLandscape], landscape ecology research has constantly evolved and is now highly dependent on computational methods.
 Thus, future progress within the field will largely depend on integration of novel data sources and available software and computational tools [@Costanza2019DescribingAnalyzing].
-Here, we present and summarize some recent developments of computational methods related to spatial patterns, connectivity, simulations and modelling, landscape genetics and spatial planning.
+Here, we present and summarize some recent developments of computational methods related to spatial patterns, connectivity, simulations and modeling, landscape genetics and spatial planning.
 In this context, we highlight open-source software as a cornerstone of "Open Science" offering key advantages like shareability, reproducibility, and transparency, which provide great benefits to the research community [@Powers2019OpenScience; @Vogt2019PatternsSoftware].
 
 <!-- MH: Double check programming languages -->
