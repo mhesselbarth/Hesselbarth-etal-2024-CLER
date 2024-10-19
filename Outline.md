@@ -22,10 +22,9 @@
   - Entropy (**Nowosad**)
   - Landscape Mosaic (**Bosch**) <!-- MH: This should be shortened -->
   - Surface metrics (**Hesselbarth**)
-  - Vector metrics (**Nowosad**)
+  - Vector-based metrics (**Nowosad**)
   - Operations on spatial patterns (**Nowosad**)
 - 3. Connectivity (**Simpkins**, **Gerber**)
-  - Structural connectivity (**Simpkins**)
   - Resistance surface (**Simpkins**)
   - Graph theory (**Gerber**)
 - 4. Sampling in landscape ecology (**Bosch**)

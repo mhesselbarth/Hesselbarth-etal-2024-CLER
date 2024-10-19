@@ -22,45 +22,45 @@ On the other hand, I think that the structure of the manuscript could be improve
 
 In conclusion, my main recommendation is to revise the structure of the manuscript, without needing to change the content and richness of what it contains. One possibility could be to start with a section focused on data: which types of data structures are available to represent a landscape (e.g. raster, hexagonal grids, vectors, graphs)? Then, you could introduce spatial patterns, emphasizing the fact that their measurement needs to be supported by a suitable data structure, and then other topics.
 
-\textcolor[HTML]{007895}{Reply: This is a very helpful comment about the general structure of the manuscript and we tried to address it as much as possible. This included several points. First, we agree that a general section on data is useful for readers. Thus, we added such a section at the beginning of the manuscript. Second, we modified especially the first paragraphs of most (sub-)sections in the "Spatial patterns" section to improve the logical flow of the manuscript. Third, we rearranged and modified the "Connectivity" section as well. We removed the "Structural connectivity" sub-section by including the key statements into the general paragraph about connectivity.}
+\textcolor[HTML]{007895}{Reply: This is a very helpful comment about the general structure of the manuscript and we tried to address it the best possible. This included several points. First, we agree that a general section on data models is useful for readers. Thus, we added such a section at the beginning of the manuscript (L65 - 92). Second, we modified especially the first paragraphs of most (sub-)sections in the "Spatial patterns" section to improve the logical flow of the manuscript (L93 - 202). Third, we rearranged and modified the "Connectivity" section as well. We removed the "Structural connectivity" sub-section by including the key statements into the general paragraph about connectivity (L207 - 212).}
 
 **Other comments:**
 
 L54. Data-driven and model-driven
 
-\textcolor[HTML]{007895}{Reply: We added the term "model-driven" as suggested.}
+\textcolor[HTML]{007895}{Reply: We added the term "model-driven" as suggested (L53 - 55).}
 
 L62. Very good idea to suggest software implementing methodological developments. It would be even better with a recapitulative table.
 
-\textcolor[HTML]{007895}{Reply: Indeed, such a table is very helpful. Thus, we removed all paragraphs that only list software from the specific sections and now list all software in a central table (Tab. 1).}
+\textcolor[HTML]{007895}{Reply: Indeed, such a table is very helpful. Thus, we removed all paragraphs that list software from the specific sections and include all software in a central table (Tab. 1).}
 
 L77. They are also naturally extracted from remote sensing products (raster data), which often makes them easier to monitor over time.
 
-\textcolor[HTML]{007895}{Reply: We agree that landscape metrics can be extracted straightforwardly from raster data, and we are adding this as an advantage related to them.}
+\textcolor[HTML]{007895}{Reply: We agree that landscape metrics can be extracted straightforwardly from raster data, and we are adding this as an advantage related to them (L102 - 104).}
 
 L92. Missing subsection title?
 
-\textcolor[HTML]{007895}{Reply: Indeed, we forgot to add a sub-section title which is added now.}
+\textcolor[HTML]{007895}{Reply: Indeed, we forgot to add a sub-section title which is added now (L116).}
 
 L104. "of the selected entropy [measure]"?
 
-\textcolor[HTML]{007895}{Reply: We replaced "entropy" with "measure".}
+\textcolor[HTML]{007895}{Reply: We replaced "entropy" with "measure" (L128 - 130).}
 
 L119. "the edge length" -> Could you specify a bit?
 
-\textcolor[HTML]{007895}{Reply: We added a brief definition of edge length in this context.}
+\textcolor[HTML]{007895}{Reply: We added a brief definition of edge length in this context (L144 - 146).}
 
 L143. I guess that such metrics are also very scale dependent
 
-\textcolor[HTML]{007895}{Reply: Similar to landscape metrics, also surface metrics are scale-dependent because both are designed to quantify landscape heterogeneity - which is inherently scale-dependent. We added this explanation including an according literature reference.}
+\textcolor[HTML]{007895}{Reply: Similar to landscape metrics, also surface metrics are scale-dependent because both are designed to quantify landscape heterogeneity - which is inherently scale-dependent. We added this explanation including an according literature reference (L172 - 173).}
 
 L182. As defined here, it looks to me that this operation is not necessarily linked to a query area, but rather to a spatial signature which can be directly specified or extracted from a query area.
 
-\textcolor[HTML]{007895}{Reply: We removed the term "query" from the sentence because we agree that it is a source of confusion. However, we believe that the sentence using only "areas" instead is clear enough for readers to follow.}
+\textcolor[HTML]{007895}{Reply: We removed the term "query" from the sentence because we agree that it is a source of confusion. However, we believe that the sentence using only "areas" instead is clear enough for readers to follow (L193-201).}
 
 L175-190. I think that this could be clearer by introducing spatial patterns operation and queries as an extension of the relational data model to spatial data. I'm not sure if it is useful to use database jargon such as "one-to-many" or "many-to-many" without defining them, as it could be confusing to readers not familiar with databases. You could either avoid using these terms, define them, or illustrate the operations with a figure.
 
-\textcolor[HTML]{007895}{Reply: We agree that the whole section was confusing for readers unfamiliar with the topic. Thus, we reworded it to make it easier to follow by removing a lot of the database jargon.}
+\textcolor[HTML]{007895}{Reply: We agree that the whole section was confusing for readers unfamiliar with the topic. Thus, we reworded it to make it easier to follow by removing a lot of the database jargon (L193-201).}
 
 L175. This subsection is missing in the summary Figure 1.
 
@@ -72,60 +72,60 @@ Figure 1. The links between Spatial sampling, Spatial planning, and Genetics, to
 
 L192. "facilitate or impeded movement [and flow]"
 
-\textcolor[HTML]{007895}{Reply: We added "flow" as suggested.}
+\textcolor[HTML]{007895}{Reply: We added "flow" as suggested (L204 - 205).}
 
 L200. "movement [and dispersal] data"
 
-\textcolor[HTML]{007895}{Reply: We added "dispersal" as suggested.}
+\textcolor[HTML]{007895}{Reply: We added "dispersal" as suggested (L217 - 219).}
 
 L201. "that individuals preferentially move [or disperse] through"
 
-\textcolor[HTML]{007895}{Reply: We added dispersal as suggested.}
+\textcolor[HTML]{007895}{Reply: We added dispersal as suggested (L217 - 219).}
 
 L192-207. Here connectivity seems to be described through the prism of animals, you should modify it slightly to include plants, which do not move, but disperse through different vectors, e.g. animals, gravity, wind, or water.
 
-\textcolor[HTML]{007895}{Reply: We added the specification that movement also includes dispersal of plants. Furthermore, we believe that this aspect is now also highlighted due to the other suggestions of the reviewer that we implemented in this section. Generally, we added this each time movement is mentioned in the section.}
+\textcolor[HTML]{007895}{Reply: We added the specification that movement also includes dispersal of plants. Furthermore, we believe that this aspect is now also highlighted due to the other suggestions of the reviewer that we implemented in this section. Generally, we added this each time movement is mentioned in the section (L204 - 284).}
 
 L219. "to traverse [or disperse through] that cell"
 
-\textcolor[HTML]{007895}{Reply: We added "disperse" as suggested.}
+\textcolor[HTML]{007895}{Reply: We added "disperse" as suggested (L227 - 230).}
 
 L221-222. Please explain what "edge artifacts" are. I could not find any explanation in the cited reference.
 
-\textcolor[HTML]{007895}{Reply: We are unsure why the point about edge artifacts was added to the manuscript. Thus, we completely removed it here since we think it adds more confusion than helping the readers.}
+\textcolor[HTML]{007895}{Reply: We are unsure why the point about edge artifacts was added to the manuscript. Thus, we completely removed it here since we think it adds more confusion than helping the readers (L230 - 232).}
 
 L227. Least cost path is just the result of a mathematically formulated problem, so I don't think that it assumes anything. Assumptions are rather in how such results are used in an ecological context.
 
-\textcolor[HTML]{007895}{Reply: We agree that the original statement about underlying assumptions was unclear and reworded the sentence.}
+\textcolor[HTML]{007895}{Reply: We agree that the original statement about underlying assumptions was unclear and reworded the sentence (L237 - 239).}
 
 L255-257. Edges can be weighted or unweighted. They also can be directed or undirected.
 
-\textcolor[HTML]{007895}{Reply: We added this specification as suggested.}
+\textcolor[HTML]{007895}{Reply: We added this specification as suggested (L263 - 266).}
 
 L273-274. I don't think that it is specific to graphs. Any data-dependant model will be sensitive to input data. This highlights the importance of data.
 
-\textcolor[HTML]{007895}{Reply: We agree that this statement is true for most if not all methods presented in this manuscript. However, we believe it is also helpful to keep it in this section specifically. However, we added a new short "Data" section at the beginning of the manuscript in which we also highlight importance of input data specifically.}
+\textcolor[HTML]{007895}{Reply: We agree that this statement is true for most if not all methods presented in this manuscript. However, we believe it is also helpful to keep it in this section specifically. However, we added a new short "Data" section at the beginning of the manuscript in which we also highlight importance of input data specifically (L86 - 92).}
 
 L326. Note that there, although the methods in reference 146 effectively rely on target values optimization (i.e. the model aims to get as close as possible to target values), the methods in reference 147 are rather based on target value satisfaction (the model guarantees that target values are strictly satisfied, or guarantees that they cannot be satisfied).
 
-\textcolor[HTML]{007895}{Reply: Thank you very much for adding this insightful remark about the references. We reworded the sentence to ensure the remarks are reflected in the manuscript.}
+\textcolor[HTML]{007895}{Reply: Thank you very much for adding this insightful remark about the references. We reworded the sentence to ensure the remarks are reflected in the manuscript (L331 - 334)}
 
 L354-358. You could also mention the increasing availability and accessibility of sensors deployed by drones along with data processing tools (e.g. drone photogrammetry, LiDAR) which enable high-frequency, high-resolution monitoring of 2D and 3D landscape models.
 
-\textcolor[HTML]{007895}{Reply: We added that digital twins benefit from the increasing rate of data generation in ecology.}
+\textcolor[HTML]{007895}{Reply: We added that digital twins benefit from the increasing rate of data generation in ecology (L365 - 367).}
 
 L388. Spatial conservation planning -> spatial planning
 
-\textcolor[HTML]{007895}{Reply: We renamed the section as suggested.}
+\textcolor[HTML]{007895}{Reply: We renamed the section as suggested (L392).}
 
 L405. Reference 204 relies on constraint programming, not linear programming
 
-\textcolor[HTML]{007895}{Reply: We reworded the sentence being more specific about the corresponding references.}
+\textcolor[HTML]{007895}{Reply: We reworded the sentence being more specific about the corresponding references (L408 - 410).}
 
 L412. Beware, deep reinforcement learning is not an exact approach, and thus cannot provide guarantees that the best possible solution has been found. Its strength mainly lies in the fact that, for large problems where exact approaches are currently inefficient, it can approximate high-quality solutions.
 
-\textcolor[HTML]{007895}{Reply: Thank you for pointing out this detail. We added this as another potentail drawback of the method.}
+\textcolor[HTML]{007895}{Reply: Thank you for pointing out this detail. We added this as another potentail drawback of the method (L418 - 421).}
 
 L418-419. Be careful with such statements, it is extremely complex to objectively compare two solvers, and almost impossible to state the general superiority of one state-of-the-art solver against another one. Indeed, some solvers may be very efficient for some kinds of problems while very inefficient for others. Also, modelling and solver parametrization can make a lot of differences in solving efficiency and has often a lot of impact on performances. They are solver competitions, however, they are based on benchmarks, therefore classic and well-known problems that do not always reflect common uses of solvers. A solver fine-tuned to be good on such benchmarks will not necessarily perform well on any problem. There are many excellent open-source solvers (in MILP, CP, and SAT), and their openness offers a lot more possibilities for extension and fine-tuning to specific problems.
 
-\textcolor[HTML]{007895}{Reply: We reworded the sentence stating that there are differences between solvers and that the optimal solver depends on the specific problem. However, the best solver could potentially not be accessible due to software licenses.}
+\textcolor[HTML]{007895}{Reply: We reworded the sentence stating that there are differences between solvers and that the optimal solver depends on the specific problem. However, the best solver could potentially not be accessible due to software licenses (424 - 429).}

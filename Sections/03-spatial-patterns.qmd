@@ -97,5 +97,4 @@ Comparing spatial signatures is often used to analyze landscape dynamics, e.g., 
 <!-- R1: As defined here, it looks to me that this operation is not necessarily linked to a query area, but rather to a spatial signature which can be directly specified or extracted from a query area -->
 Furthermore, signature-based searches can be used to compare the spatial signature of a focal area to the spatial signatures of multiple other areas.
 This allows for the identification of areas with similar signatures compared to the focal area, e.g., areas with similar environmental conditions [@Jasiewicz2014LandscapeSimilarity].
-
 Additionally, it is possible to calculate spatial signatures for multiple areas and group them to similar clusters based on their signatures [@Nowosad2021PatternbasedIdentification].
