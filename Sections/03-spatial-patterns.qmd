@@ -73,7 +73,7 @@ Nevertheless, similar to landscape metrics, also surface metrics are scale-depen
 Software to calculate these metrics is still rare and further research is needed into the specific pattern-process links and ecologically meaningful interpretations [@Kedron2018SurfaceMetrics; @Frazier2019EmergingTrajectories].
 Related to surface metrics, another recent approach to quantifying the gradient surface model is based on frequencies and local adjacencies of continuous input pixel values [@Riitters2023MappingLandscape].
 
-## Vector metrics
+## Vector-based metrics
 
 <!-- R1: As an example, I found the subsection "Vector metrics" a bit confusing, mainly because, as you say in L159-160, most landscape metrics can be computed on both raster and vector data. -->
 
