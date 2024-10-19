@@ -68,7 +68,7 @@ In this context, we highlight open-source software as a cornerstone of "Open Sci
 : Software and models that implement recent methodological advances in landscape ecology.
 
 Alongside the previously introduced methodological advances specific to landscape ecology, the research field will also benefit from technological innovations from related disciplines. 
-This includes advances in remote sensing technology with increasing data availability and diversity from a range of sources, including satellites, unmanned aerial vehicles, and ground-based sensor systems.
+This includes advances in remote sensing technology with increasing data availability and diversity from a range of sources, including satellites, unmanned aerial vehicles, and ground-based sensor systems [@Yu2019LandscapeEcology; @Crowley2020RemoteSensings].
 These systems provide both passive sensors, such as multispectral, hyperspectral, and thermal sensors and active optical sensors, such as LiDAR and SAR [@Crowley2020RemoteSensings].
 Related to this, there is a growing number of up- and downscaling approaches for remote sensing data which makes a wider range of products accessible [@Markham2023ReviewMethods].
 In combination with other increasingly available data sources, e.g, citizen science data, ecology has entered the era of big data, requiring methods that can handle heterogeneous data and high-throughput computing resources [@Farley2018SituatingEcology].
