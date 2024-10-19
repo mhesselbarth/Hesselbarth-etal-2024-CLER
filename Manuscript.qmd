@@ -83,7 +83,7 @@ csl: springer-basic-brackets-no-et-al.csl
 
 \noindent \textbf{Author contributions}
 
-\noindent All authors contributed particular sections to the manuscript and assisted with the revision. Overall coordination, first and revised draft was led by MHKH.
+\noindent All authors contributed particular sections to the manuscript and assisted with the revision. sOverall coordination, first and revised draft was led by MHKH.
 Correspondence to [mhk.hesselbarth@gmail.com](mailto:mhk.hesselbarth@gmail.com)
 
 \noindent \textbf{Conflict of Interest}

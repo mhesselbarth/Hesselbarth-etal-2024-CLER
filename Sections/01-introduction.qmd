@@ -10,16 +10,17 @@ Landscapes are typically defined in landscape ecology as mosaics of different ec
 Linking spatial heterogeneity and ecological processes, including potential interactions between heterogeneity and processes, is the fundamental concept of landscape ecology [@Turner2015LandscapeEcology].
 Typical research topics include, but are not limited to, pattern-process links, landscape complexity, ecological flows, scale effects, landscape modeling, conservation, drivers and consequences of land use and land cover (LULC) change, and human activities within landscapes [@Wu2013KeyConcepts].
 
-The use of computational science to abstract core mechanisms and research questions using data and algorithms and is one of the most important tools of modern science [@Wilson2014BestPractices] and by extension landscape ecology as such.
+Computational science analyzes abstracted core mechanisms of research questions using data and algorithms and is one of the most important tools of modern science [@Wilson2014BestPractices].
 <!-- R1: Data-driven and model-driven -->
 Following, computational ecology can be defined as computational science that is used to address ecological research questions with focus on data-driven and model-driven approaches [@Poisot2019DatabasedSynthesisdriven].
 Computational ecology is crucial for landscape ecology as a research field because data is often context- and scale-dependent, making it challenging to design controllable, reproducible, and replicable experiments [@Petrovskii2012ComputationalEcology; but see @Wiersma2022ReviewLandscape for a review of experimental studies].
-Additionally, because landscape ecology is a cross-disciplinary field [@With2019EssentialsLandscape], the availability of data increases steadily [@Jaric2020IEcologyHarnessing], and because of the complexity of landscape systems [@Newman2019ScalingComplexity], there is often a need to more advanced computational methods.
+Additionally, because landscape ecology is a cross-disciplinary field [@With2019EssentialsLandscape], the availability of data increases steadily [@Jaric2020IEcologyHarnessing], and the complexity of landscape systems [@Newman2019ScalingComplexity], there is a need for advanced computational methods.
 
 <!-- R1: Very good idea to suggest software implementing methodological developments. It would be even better with a recapitulative table -->
-Here, we introduce recent computational developments in multiple key topics of landscape ecology (Fig. 1), including software that implements or is potentially capable of creating novel insights in these topics (Tab. 1).
+Here, we provide a perspective on recent developments and advances in computational methods in multiple key topics of landscape ecology (Fig. 1), including software that implements them or is potentially capable of creating novel insights in these topics (Tab. 1).
 In this context, we are focusing on open-source software and scripting languages such as R, Python, and Julia.
-We do not aim to provide a systematic literature review or a general introduction to (computational) landscape ecology, but rather a perspective on recent developments and advances in computational methods. For a set of more comprehensive reviews we refer to @Turner2015LandscapeEcology, @Gergel2017LearningLandscape, or @With2019EssentialsLandscape.
+However, we do not aim to provide a systematic literature review or a general introduction to (computational) landscape ecology.
+For such, please see @Turner2015LandscapeEcology, @Gergel2017LearningLandscape, or @With2019EssentialsLandscape.
 
 <!-- R1: The links between Spatial sampling, Spatial planning, and Genetics, towards Landscape mean?  The figure would be more meaningful with an explanation of these links, either in the caption or directly on the figure. Also, for other topics (e.g. connectivity), a keyword (or short sentence) summarizing the contribution of the topic to Landscape Ecology would be great. -->
 
