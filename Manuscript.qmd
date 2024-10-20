@@ -44,7 +44,7 @@ format:
         \usepackage{setspace}
         \renewcommand\Affilfont{\footnotesize}
         \newcommand{\orcid}[1]{\href{https://orcid.org/#1}{\textcolor[HTML]{A6CE39}{\aiOrcid\hspace{1mm}#1}}}
-        \newcommand{\mail}[1]{\href{mailto:#1}{\textcolor[HTML]{052E81}{\faEnvelope\hspace{1mm}#1}}}
+        \newcommand{\mail}[1]{\href{mailto:#1}{\textcolor[HTML]{32B2DA}{\faEnvelope\hspace{1mm}#1}}}
 
 papersize: a4paper
 fontsize: 11pt

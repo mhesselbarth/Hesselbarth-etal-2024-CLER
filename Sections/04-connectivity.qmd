@@ -7,12 +7,13 @@ bibliography: CLER.bib
 # Connectivity {#sec-connectivity}
 
 <!-- R1: I did not find the subsection "Structural connectivity" very consistent with the other two ("Resistance surface" and "Graph theory"). In addition to being very short, I wonder why this section was included without another on functional connectivity, and why it was distinguished from "Graph theory" (in terms of manuscript structure), since structural (as long as functional) connectivity can be modelled with graph theory. -->
-
 <!-- R1: Here connectivity seems to be described through the prism of animals, you should modify it slightly to include plants, which do not move, but disperse through different vectors, e.g. animals, gravity, wind, or water -->
+
 <!-- R1: facilitate or impeded movement and flow -->
 Landscape connectivity describes how landscape features facilitate or impede movement, flow, and dispersal of organisms (e.g., active movement of animals, or dispersal of sessile plants by wind or water). 
 It underpins ecosystem functionality, maintains biodiversity and populations, and plays an important role in many conservation actions [@CorreaAyram2016HabitatConnectivity].
 Connectivity can be divided into structural and functional connectivity [@Taylor2006LandscapeConnectivity].
+
 Structural connectivity describes the physical arrangement of landscape elements, focusing on spatial aspects such as continuity and adjacency.
 It is solely a landscape feature and independent of species characteristics [@Tischendorf2000UsageMeasurement; @CorreaAyram2016HabitatConnectivity].
 Landscape metrics are commonly used to describe structural connectivity in terms of, e.g., total habitat amount, patch size, or patch isolation.

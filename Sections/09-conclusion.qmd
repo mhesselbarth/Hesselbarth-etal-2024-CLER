@@ -11,8 +11,6 @@ Thus, future progress within the field will largely depend on integration of nov
 Here, we present and summarize some recent developments of computational methods related to spatial patterns, connectivity, simulations and modeling, landscape genetics and spatial planning.
 In this context, we highlight open-source software as a cornerstone of "Open Science" offering key advantages like shareability, reproducibility, and transparency, which provide great benefits to the research community [@Powers2019OpenScience; @Vogt2019PatternsSoftware].
 
-<!-- MH: Double check programming languages -->
-
 | Topic | Programming language | Software | Reference |
 |:---:|:---:|:---:|:---:|
 | Spatial patterns | R | sf | [@Pebesma2018SimpleFeatures] |
@@ -67,7 +65,7 @@ In this context, we highlight open-source software as a cornerstone of "Open Sci
 
 : Software and models that implement recent methodological advances in landscape ecology.
 
-Alongside the previously introduced methodological advances specific to landscape ecology, the research field will also benefit from technological innovations from related disciplines. 
+Alongside the previously introduced methodological advances specific to landscape ecology, the research field will also benefit from technological innovations from related disciplines.
 This includes advances in remote sensing technology with increasing data availability and diversity from a range of sources, including satellites, unmanned aerial vehicles, and ground-based sensor systems [@Yu2019LandscapeEcology; @Crowley2020RemoteSensings].
 These systems provide both passive sensors, such as multispectral, hyperspectral, and thermal sensors and active optical sensors, such as LiDAR and SAR [@Crowley2020RemoteSensings].
 Related to this, there is a growing number of up- and downscaling approaches for remote sensing data which makes a wider range of products accessible [@Markham2023ReviewMethods].

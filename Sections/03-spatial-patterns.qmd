@@ -68,9 +68,11 @@ These metrics are mostly adapted from microscopy and molecular physics [@McGarig
 The gradient surface model can increase the resemblance of the data to the natural world because it allows for the inclusion of more heterogeneity within each grid cell [@Cushman2010GradientParadigm; @Kedron2018SurfaceMetrics].
 Many surface metrics have analogous landscape metrics [@Cushman2010GradientParadigm], however, using surface metrics allows for the exploration of different or additional patterns and potentially pattern-process links [@McGarigal2009SurfaceMetrics; @Borthwick2020AlternativeQuantifications].
 The metrics are able to quantify various characteristics, such as roughness, skewness and kurtosis, total and relative amplitudes, curvatures of local peaks, or surface bearing area ratios [@Cushman2010GradientParadigm].
+
 <!-- R1: I guess that such metrics are also very scale dependent -->
 Nevertheless, similar to landscape metrics, also surface metrics are scale-dependent because they are used to quantify landscape heterogeneity which is itself scale-dependent [@Frazier2016SurfaceMetrics].
 Software to calculate these metrics is still rare and further research is needed into the specific pattern-process links and ecologically meaningful interpretations [@Kedron2018SurfaceMetrics; @Frazier2019EmergingTrajectories].
+
 Related to surface metrics, another recent approach to quantifying the gradient surface model is based on frequencies and local adjacencies of continuous input pixel values [@Riitters2023MappingLandscape].
 
 ## Vector-based metrics
@@ -82,6 +84,7 @@ Although this is possible for many metrics, there are also metrics specifically 
 For example, in urban planning vector-based metrics are applied to quantify the shapes of urban areas and characterize the complexity of building footprints [@Basaraner2017PerformanceShape].
 Earlier approaches to quantifying shape complexity included four categories of compactness measures: perimeter-area, single parameters of related circles, dispersion of elements of the area around a centroid, and direct comparison to standard shapes [@Maceachren1985CompactnessGeographic].
 More recently, a unified theoretical foundation for measuring shape compactness was introduced using a set of ten distinct properties of a circle and metrics associated with each of these properties [@Angel2010TenCompactness].
+
 However, also vector-based metrics have limitations.
 The most important limitation relates to computational complexity, which makes calculations of vector-based metrics slower than their raster equivalents.
 Another technical issue is the requirement for topologically correct data (e.g., geometries cannot overlap), which is often problematic, especially for data from different sources.

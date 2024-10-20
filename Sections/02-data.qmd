@@ -13,14 +13,14 @@ The raster data model typically uses regularly spaced grid cells, while the vect
 Often, the choice of the data model is driven by data and software availability or by familiarity with the approach [@Costanza2019DescribingAnalyzing].
 For example, many LULC maps are provided as gridded raster data as they often relate to underlying remote sensing products.
 
-Similarly the issue of scale is closely related to the used data model. 
+Similarly, the issue of scale is closely related to the used data model.
 This includes the extent of the study area and resolution of the data (i.e., the smallest data unit).
 Additionally, thematic resolution in landscape ecology often refers to the values describing landscape features, e.g., the number of discrete LULC categories or habitats
 [@Jung2020GlobalMap].
 Various classification systems are relevant at local, regional, and global extent, such as the National Land Cover Database (NLCD), the Coordination of Information on the Environment (CORINE), or the Food and Agriculture Organization (FAO) systems [@Nedd2021SynthesisLand].
 Lastly, temporal scales are relevant in terms of extent and resolution, but also with regards to the detail of captured ecological processes.
 
-The spatial reference system of the data is less frequently discussed but often critical. 
+The spatial reference system of the data is less frequently discussed but often critical.
 Cartesian coordinate reference systems measure distances between two points in Euclidean distances, typically in meters. 
 In contrast, geographic coordinate reference systems are based on degrees and measure distances as great-circle distances.
 Numerous coordinate reference systems exist and novel projections are constantly being developed to improve spatial cohesion, efficiency and accuracy [@Bauer-Marschallinger2014OptimisationGlobal].
