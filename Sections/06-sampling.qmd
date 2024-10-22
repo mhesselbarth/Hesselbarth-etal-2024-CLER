@@ -9,7 +9,7 @@ bibliography: CLER.bib
 Establishing a pattern-process link usually requires fieldwork and data collection.
 Given the cost of collecting field observations across landscapes, computational sampling tools have been designed to optimize the study designs [@Pasher2013OptimizingLandscape; @Zuckerberg2020ReviewOverlapping].
 To improve the statistical significance of the relationships between landscape features and field observations several aspects need to be considered when selecting sampling sites for data collection.
-First, selected sites should cover the maximum possible range of landscape heterogeneity to maximize the variance of response variables.
+First, selected sites should cover the maximum possible range of landscape heterogeneity to maximize the variance of independent variables.
 Second, statistical power can be improved by ensuring independence between sites and consequently response variables.
 Finally, since many landscape features that influence response variables are spatially dependent, it is essential to evaluate spatial autocorrelation.
 

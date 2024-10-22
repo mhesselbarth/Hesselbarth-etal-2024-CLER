@@ -16,12 +16,12 @@ Thus, untangling a landscape's history and linking its spatial patterns to ecolo
 Traditionally and at present, many prominent approaches that quantify spatial patterns revolve around raster data using categorical values based on the patch mosaic model [@Frazier2017LandscapeMetrics; @Costanza2019DescribingAnalyzing].
 <!-- R1: They are also naturally extracted from remote sensing products (raster data), which often makes them easier to monitor over time -->
 The strength of landscape metrics is that they are easy to apply, communicate, and can be calculated straightforwardly from raster data based on remote sensing derived products [@Dramstad2009SpatialMetrics; @Lausch2015UnderstandingQuantifying].
-However, also limitations have been identified for many landscape metrics.
-These limitations include shortcomings to quantify the spatial structure, sensitivity to both spatial scale and thematic resolution, and correlation and redundancy between metrics [@Li2004UseMisuse; @Dramstad2009SpatialMetrics; @Kupfer2012LandscapeEcology].
+However, limitations have also been identified for many landscape metrics.
+These include shortcomings to quantify the spatial structure, sensitivity to both spatial scale and thematic resolution, and correlation and redundancy between metrics [@Li2004UseMisuse; @Dramstad2009SpatialMetrics; @Kupfer2012LandscapeEcology].
 
 To address limitations related to correlation and redundancy several approaches have been used to identify core metrics that capture main components of landscape patterns, such as multivariate factor analysis [@Riitters1995FactorAnalysis], multivariate statistics [@Lustig2015MorePredictable], principal component analysis [@Cushman2008ParsimonyLandscape], or the variance inflation factor [@Plexida2014SelectingLandscape].
 More recently, principal component analysis over a set of landscape blocks revealed two main components of landscape configuration, namely complexity and aggregation which together explain about 70% of variance [@Nowosad2018GlobalInventory].
-These components of landscape patterns are in line with recent reviews that have similarly suggested that there are two fundamental components of landscape patterns, namely amount and adjacency [@Gustafson2019HowHas; @Riitters2019PatternMetrics].
+These results are in line with recent reviews that have similarly suggested that there are two fundamental components of landscape patterns, namely amount and adjacency [@Gustafson2019HowHas; @Riitters2019PatternMetrics].
 These components are connected to complexity and aggregation as suggested by @Nowosad2018GlobalInventory and later formalized in @Nowosad2019InformationTheory.
 
 <!-- R1: Missing subsection title -->

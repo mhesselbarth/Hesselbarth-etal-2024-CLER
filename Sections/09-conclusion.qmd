@@ -11,6 +11,9 @@ Thus, future progress within the field will largely depend on integration of nov
 Here, we present and summarize some recent developments of computational methods related to spatial patterns, connectivity, simulations and modeling, landscape genetics and spatial planning.
 In this context, we highlight open-source software as a cornerstone of "Open Science" offering key advantages like shareability, reproducibility, and transparency, which provide great benefits to the research community [@Powers2019OpenScience; @Vogt2019PatternsSoftware].
 
+\newpage
+\setstretch{1.0}
+
 | Topic | Programming language | Software | Reference |
 |:---:|:---:|:---:|:---:|
 | Spatial patterns | R | sf | [@Pebesma2018SimpleFeatures] |
@@ -41,29 +44,32 @@ In this context, we highlight open-source software as a cornerstone of "Open Sci
 | Connectivity | Stand-alone software | Graphab | [@Foltete2012SoftwareTool] |
 | Connectivity | Stand-alone software | Conefor | [@Saura2009ConeforSensinode] |
 | Connectivity | Stand-alone software | LSCorridors | [@Ribeiro2017LandScapeCorridors] |
+| Landscape genetics | R | graph4lg | [@Savary2021Graph4lgPackage] |
+| Landscape genetics | R | landgenreport | [@Gruber2015LandgenreportNew] |
+| Landscape genetics | R | adegenet | [@Jombart2008AdegenetPackage] |
+| Landscape genetics | R | ape | [@Paradis2019Ape50] |
+| Landscape genetics | Python | Python based scripts | [@Etherington2011PythonBased] |
+| Landscape genetics | Python | SDMtoolbox 2.0 | [@Brown2017SDMtoolbox20] |
 | Sampling | Python | ZonalMetrics | [@Adamczyk2017ZonalMetricsPython] |
-| Simulations | R | NLMR | [@Sciaini2018NLMRLandscapetools] |
-| Simulations | R | rflsgen | [@Justeau-Allaire2022FragmentedLandscape] |
-| Simulations | Python | NLMpy | [@Etherington2015NLMpyPython] |
-| Simulations | Python | Pathwalker | [@UnnithanKumar2022PathwalkerNew] |
-| Simulations | Julia | NeutralLandscapes | [@Poisot2023NeutralLandscapesJulia] |
-| Simulations | NetLogo | EFForTS-LGraf | [@Salecker2019EFForTSLGrafLandscape] |
-| Simulations | Stand-alone software | GradientLand | [@Cambui2015GradientLandSoftware] |
-| Simulations | Stand-alone software | Landscape Generator | [@vanStrien2016ImprovedNeutral] |
-| Simulations | Stand-alone software | HexSim | [@Schumaker2018HexSimModeling] |
-| Simulations | Stand-alone software | RangeShifter2.0 | [@Bocedi2021RangeShifter20] |
-| Genetics | R | graph4lg | [@Savary2021Graph4lgPackage] |
-| Genetics | R | landgenreport | [@Gruber2015LandgenreportNew] |
-| Genetics | R | adegenet | [@Jombart2008AdegenetPackage] |
-| Genetics | R | ape | [@Paradis2019Ape50] |
-| Genetics | Python | Python based scripts | [@Etherington2011PythonBased] |
-| Genetics | Python | SDMtoolbox 2.0 | [@Brown2017SDMtoolbox20] |
-| Planning | R | prioritizr | [@Hanson2024PrioritizrSystematic] |
-| Planning | R | CoCo | [@vanMantgem2023CocoConservation] |
-| Planning | R | restoptr | [@Justeau-Allaire2023RestoptrPackage] |
-| Planning | Python | CAPTAIN | [@Silvestro2022ImprovingBiodiversity] |
+| Simulation models | R | NLMR | [@Sciaini2018NLMRLandscapetools] |
+| Simulation models | R | rflsgen | [@Justeau-Allaire2022FragmentedLandscape] |
+| Simulation models | Python | NLMpy | [@Etherington2015NLMpyPython] |
+| Simulation models | Python | Pathwalker | [@UnnithanKumar2022PathwalkerNew] |
+| Simulation models | Julia | NeutralLandscapes | [@Poisot2023NeutralLandscapesJulia] |
+| Simulation models | Stand-alone software | GradientLand | [@Cambui2015GradientLandSoftware] |
+| Simulation models | Stand-alone software | Landscape Generator | [@vanStrien2016ImprovedNeutral] |
+| Simulation models | Stand-alone software | HexSim | [@Schumaker2018HexSimModeling] |
+| Simulation models | Stand-alone software | RangeShifter2.0 | [@Bocedi2021RangeShifter20] |
+| Spatial planning | R | prioritizr | [@Hanson2024PrioritizrSystematic] |
+| Spatial planning | R | CoCo | [@vanMantgem2023CocoConservation] |
+| Spatial planning | R | restoptr | [@Justeau-Allaire2023RestoptrPackage] |
+| Spatial planning | Python | CAPTAIN | [@Silvestro2022ImprovingBiodiversity] |
 
 : Software and models that implement recent methodological advances in landscape ecology.
+
+\newpage
+\normalsize
+\setstretch{1.5}
 
 Alongside the previously introduced methodological advances specific to landscape ecology, the research field will also benefit from technological innovations from related disciplines.
 This includes advances in remote sensing technology with increasing data availability and diversity from a range of sources, including satellites, unmanned aerial vehicles, and ground-based sensor systems [@Yu2019LandscapeEcology; @Crowley2020RemoteSensings].

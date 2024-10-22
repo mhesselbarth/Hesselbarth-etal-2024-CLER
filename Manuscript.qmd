@@ -94,6 +94,8 @@ Correspondence to [mhk.hesselbarth@gmail.com](mailto:mhk.hesselbarth@gmail.com)
 
 \noindent This article does not contain any studies with human or animal subjects performed by any of the authors.
 
+\newpage
+
 # Abstract
 
 ## Purpose of Review
@@ -117,9 +119,9 @@ The review highlights key innovations, challenges, and potential future directio
 {{< include Sections/02-data.qmd >}}
 {{< include Sections/03-spatial-patterns.qmd >}}
 {{< include Sections/04-connectivity.qmd >}}
-{{< include Sections/05-sampling.qmd >}}
-{{< include Sections/06-simulations.qmd >}}
-{{< include Sections/07-genetics.qmd >}}
+{{< include Sections/05-genetics.qmd >}}
+{{< include Sections/06-sampling.qmd >}}
+{{< include Sections/07-simulations.qmd >}}
 {{< include Sections/08-spatial-planning.qmd >}}
 {{< include Sections/09-conclusion.qmd >}}
 
@@ -140,6 +142,5 @@ The review highlights key innovations, challenges, and potential future directio
 # References
 
 \footnotesize
-\setstretch{1.0}
 ::: {#refs}
 :::
