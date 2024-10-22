@@ -107,7 +107,7 @@ Nowadays, advanced computational methods are essential to the field due to its c
 ## Recent findings
 
 This review provides an overview of recent developments in computational methods that have advanced the research field of landscape ecology.
-We focus on key topics such as spatial patterns, connectivity, simulations and modeling, landscape genetics, and spatial planning.
+We focus on key topics such as spatial patterns, connectivity, landscape genetics, sampling, simulations and modeling, and spatial planning.
 
 ## Summary
 
