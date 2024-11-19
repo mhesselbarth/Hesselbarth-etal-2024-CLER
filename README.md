@@ -1,6 +1,6 @@
-[![DOI](https://img.shields.io/badge/DOI-in_preperation-blue.svg)]() 
+[![DOI](https://img.shields.io/badge/DOI-In_press-blue.svg)]() 
 
-Repository to store manuscript and R scripts for Hesselbarth et al. **Computational methods in landscape ecology**. Current Landscape Ecology Reports
+Repository to store manuscript and R scripts for Hesselbarth, M.H.K., Nowosad, J., de Flamingh, A., Simpkins, C.E., Jung, M., Gerber, G., Bosch, M. (In press) **Computational methods in landscape ecology**. Current Landscape Ecology Reports
 
 Please read the [`CONTRIBUTING.md`](CONTRIBUTING.md) file before pushing to this repository.
 
@@ -14,16 +14,15 @@ The repository contains the following files (besides others):
 
 **`Manuscript.qmd`**: `quarto` file to render final manuscript.
 
-**`CLER.bib`**: Bibliography file with all references (MH will try to keep this as tidy as possible).
+**`CLER.bib`**: Bibliography file with all references.
 
 **`Outline.md`**: Outline of manuscript including assignments to sections.
 
 **`CONTRIBUTING.md`**: Some general instructions on how to contribute.
 
 <br/>
-<br/>
 
-If you have any questions or remarks please open an issue at any time or contact MH directly via email.
+If you have any questions or remarks, please open an issue at any time or contact the correspondence author directly via email.
 
 Correspondence:
-mhk.hesselbarth@gmail.com
+[mhk.hesselbarth@gmail.com](mailto:mhk.hesselbarth@gmail.com).

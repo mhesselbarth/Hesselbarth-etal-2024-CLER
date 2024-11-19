@@ -13,25 +13,40 @@
 # Outline
 - 1. Introduction (**Hesselbarth**)
   - Introduction of landscape ecology
-  - Definition of computational methods
-  - Computational aspects of landscape ecology, data models
+  - Definition of computational methods including landscape ecology
   - Purpose of this paper
-- 2. Spatial patterns
+- 2. Data models (**Hesselbarth**)
+  - Raster vs. vector
+  - Scale
+  - CRS
+  - Data quality
+- 3. Spatial patterns
   - Patterns general (**Hesselbarth**)
   - Landscape metrics (**Hesselbarth**)
+  - Landscape Mosaic (**Bosch**, **Hesselbarth**) <!-- MH: This should be shortened -->
   - Entropy (**Nowosad**)
-  - Landscape Mosaic (**Bosch**) <!-- MH: This should be shortened -->
   - Surface metrics (**Hesselbarth**)
   - Vector-based metrics (**Nowosad**)
   - Operations on spatial patterns (**Nowosad**)
 - 3. Connectivity (**Simpkins**, **Gerber**)
+  - General (**Simpkins**)
   - Resistance surface (**Simpkins**)
   - Graph theory (**Gerber**)
-- 4. Sampling in landscape ecology (**Bosch**)
-- 5. Simulations and models (**Hesselbarth**)
+- 5. Landscape genetics (**de Flamingh**)
+  - General
+  - Recent developments
+- 6. Sampling in landscape ecology (**Bosch**)
+  - Site selection
+  - Scales
+  - Overlapping landscapes
+- 7. Simulations and models (**Hesselbarth**)
   - Landscape simulators
   - IBMs
   - Digital twins
-- 6. Landscape genetics (**de Flamingh**)
-- 7. Spatial planning (**Jung**)
-- 8. Discussion
+- 8. Spatial planning (**Jung**)
+  - General
+  - Graph theory
+  - Landscape metrics
+  - Reinforcement learning
+  - Solver
+- 9. Conclusion
