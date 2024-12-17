@@ -1,6 +1,6 @@
+[![DOI](https://img.shields.io/badge/DOI-10.1007/s40823--024--00104--6-yellow.svg)](https://doi.org/10.1007/s40823-024-00104-6)
 
-Repository to store manuscript and R scripts for: Hesselbarth, M.H.K., Nowosad, J., de Flamingh, A., Simpkins, C.E., Jung, M., Gerber, G., Bosch, M. (2025). _Computational methods in landscape ecology_. Current Landscape Ecology Reports 10, 2.
-https://doi.org/10.1007/s40823-024-00104-6
+Repository to store manuscript and R scripts for: Hesselbarth, M.H.K., Nowosad, J., de Flamingh, A., Simpkins, C.E., Jung, M., Gerber, G., Bosch, M. (2025). *Computational methods in landscape ecology.* Current Landscape Ecology Reports 10, 2.
 
 Please read the [`CONTRIBUTING.md`](CONTRIBUTING.md) file before pushing to this repository.
 
